@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>467c8706-8407-45aa-960d-0c0958029d0a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Maximum Payment Service where
+		the Conditional Approval Payment to Income Maximum Payment is 'Conditional Approval Payment to Income Maximum Payment' , 
+		the Conditional approval Total Debt Service Ratio Maximum Payment is 'Conditional approval Total Debt Service Ratio Maximum Payment' , 
+		the Credit Risk Tier Maximum Payment to Income Ratio is 'Credit Risk Tier Maximum Payment to Income Ratio' , 
+		the Credit Risk Tier Maximum Total Debt Service Ratio is 'Credit Risk Tier Maximum Total Debt Service Ratio' , 
+		the External Credit Score Maximum Payment is 'External Credit Score Maximum Payment' , 
+		the Maximum Payment is 'Maximum Payment' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

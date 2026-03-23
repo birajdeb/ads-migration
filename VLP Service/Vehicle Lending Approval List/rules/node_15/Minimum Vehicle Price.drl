@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Minimum Vehicle Price</name>
+  <uuid>2cbf404c-96fc-4252-8557-b51a63b9de28</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'the vehicle eligibility list' to the vehicle eligibility lists computed from 
+	Application being Application , 
+	Customer being Customer , 
+	Assest being Assest , 
+	Vehicle Inventory being 'Vehicle Inventory';
+set 'Minimum Price' to the minimum of the Vehicle Prices of 'the vehicle eligibility list';
+set 'a Minimum Price Vehicle' to a Vehicle Eligibility List in 'the vehicle eligibility list' where the Vehicle Price of this Vehicle Eligibility List is 'Minimum Price';
+then
+set decision to 'a Minimum Price Vehicle';
+    ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

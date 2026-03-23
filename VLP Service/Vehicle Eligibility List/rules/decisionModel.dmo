@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>fda3b10e-a679-4c5b-a5d8-2c41df0ac8b7</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Application">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Application" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Application"/>
+    </inputData>
+    <decision id="node_1" name="Vehicle Inventory List">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleInventory" collection="true" name="Vehicle Inventory"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleAgeList" collection="true" name="Vehicle Inventory List"/>
+                <rule defaultRule="false" href="node_1/Vehicle%20Inventory%20List.dmt" kind="DecisionTable" name="Vehicle Inventory List"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Vehicle Inventory List" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleAgeList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Vehicle Inventory">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleInventory" collection="true" name="Vehicle Inventory"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Vehicle Inventory" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleInventory[]"/>
+    </inputData>
+    <decision id="node_3" name="Application Credit Risk Tier">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Customer" collection="true" name="Customer"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Tier" collection="true" name="Application Credit Risk Tier"/>
+                <rule defaultRule="false" href="node_3/Application%20Credit%20Risk%20Tier.dmt" kind="DecisionTable" name="Application Credit Risk Tier"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Application Credit Risk Tier" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Tier[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_4" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Customer" collection="true" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Customer" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Customer[]"/>
+    </inputData>
+    <decision id="node_5" name="Vehicle Age Threshold">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Tier" collection="true" name="Application Credit Risk Tier"/>
+                <output bomType="java.lang.Double" collection="false" name="Vehicle Age Threshold"/>
+                <rule defaultRule="false" href="node_5/Vehicle%20Age%20Threshold.dmt" kind="DecisionTable" name="Vehicle Age Threshold"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Vehicle Age Threshold" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Vehicle Eligibility List">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleAgeList" collection="true" name="Vehicle Inventory List"/>
+                <input bomType="java.lang.Double" collection="false" name="Vehicle Age Threshold"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Asset" collection="false" name="Assest"/>
+                <input bomType="java.lang.Double" collection="false" name="Vehicle Loan to Value Threshold"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleEigibilityList" collection="true" name="Vehicle Eligibility List"/>
+                <rule defaultRule="false" href="node_6/Vehicle%20Eligibility%20List.dmt" kind="DecisionTable" name="Vehicle Eligibility List"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Vehicle Eligibility List" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleEigibilityList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_7" name="Assest">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Asset" collection="false" name="Assest"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Assest" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Asset"/>
+    </inputData>
+    <decision id="node_8" name="Vehicle Loan to Value Threshold">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Tier" collection="true" name="Application Credit Risk Tier"/>
+                <output bomType="java.lang.Double" collection="false" name="Vehicle Loan to Value Threshold"/>
+                <rule defaultRule="false" href="node_8/Vehicle%20Loan%20to%20Value%20Threshold.dmt" kind="DecisionTable" name="Vehicle Loan to Value Threshold"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Vehicle Loan to Value Threshold" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

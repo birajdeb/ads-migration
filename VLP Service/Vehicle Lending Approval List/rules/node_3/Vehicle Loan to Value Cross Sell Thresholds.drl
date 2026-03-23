@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Vehicle Loan to Value Cross Sell Thresholds</name>
+  <uuid>687e4a1e-b2c2-4725-bfc7-3f5faaf441d9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Vehicle Loan to Value Cross Sell Thresholds where
+		the Vehicle Loan to Value Downsell Threshold is 'Vehicle Loan to Value Threshold'*0.80 , 
+		the Vehicle Loan to Value Upsell Threshold is 'Vehicle Loan to Value Threshold'*0.20 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

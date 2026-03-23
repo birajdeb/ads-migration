@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Outcome Message</name>
+  <uuid>7e023549-df5d-4ca3-b8ae-845794007224</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the Output of 'Expenses Tier' is Expenses Rejection 
+	or the Output of 'Down Payment Tier' is Down Payment Rejection 
+then
+	set decision to Unfortunately you are not eligible for the car you are interested in but check other car options we can offer you ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

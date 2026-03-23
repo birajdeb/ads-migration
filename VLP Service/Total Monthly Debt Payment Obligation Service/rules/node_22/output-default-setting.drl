@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>ffd32f42-4ab6-4e05-a3f4-1ef53f238263</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Total Monthly Debt Payment Obligation Service where
+
+		the Total Monthly Debt Payment Obligation is 'Total Monthly Debt Payment Obligation' ;
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

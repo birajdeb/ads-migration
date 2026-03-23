@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>1201316c-0147-40dd-8677-6ece93a5729b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Application">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Application" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Application"/>
+    </inputData>
+    <decision id="node_1" name="Tier A PTI LTV Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier A PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_1/Tier%20A%20PTI%20LTV%20Recommended%20Outcome.dmt" kind="DecisionTable" name="Tier A PTI LTV Recommended Outcome"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Tier A PTI LTV Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Tier B PTI LTV Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier B PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_2/Tier%20B%20PTI%20LTV%20Recommended%20Outcome.dmt" kind="DecisionTable" name="Tier B PTI LTV Recommended Outcome"/>
+                <rule defaultRule="true" href="node_2/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Tier B PTI LTV Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Tier C PTI LTV Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier C PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_3/Tier%20C%20PTI%20LTV%20Recommended%20Outcome.dmt" kind="DecisionTable" name="Tier C PTI LTV Recommended Outcome"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Tier C PTI LTV Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Tier D PTI LTV Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier D PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_4/Tier%20D%20PTI%20LTV%20Recommended%20Outcome.dmt" kind="DecisionTable" name="Tier D PTI LTV Recommended Outcome"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Tier D PTI LTV Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Tier E PTI LTV Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier E PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_5/Tier%20E%20PTI%20LTV%20Recommended%20Outcome.dmt" kind="DecisionTable" name="Tier E PTI LTV Recommended Outcome"/>
+                <rule defaultRule="true" href="node_5/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Tier E PTI LTV Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_6" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Customer" collection="true" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_6_ii" name="Customer" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Customer[]"/>
+    </inputData>
+    <decision id="node_9" name="Loan to Value Payment to Income Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier A PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier B PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier C PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier D PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier E PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Customer" collection="true" name="Customer"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Loan to Value Payment to Income Recommended Outcome"/>
+                <rule defaultRule="false" href="node_9/Tier%20A%20PTI%20LTV%20Recommended%20Outcome.drl" kind="BusinessRule" name="Tier A PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_9/Tier%20B%20PTI%20LTV%20Recommended%20Outcome.drl" kind="BusinessRule" name="Tier B PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_9/Tier%20C%20PTI%20LTV%20Recommended%20Outcome.drl" kind="BusinessRule" name="Tier C PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_9/Tier%20D%20PTI%20LTV%20Recommended%20Outcome.drl" kind="BusinessRule" name="Tier D PTI LTV Recommended Outcome"/>
+                <rule defaultRule="false" href="node_9/Tier%20E%20PTI%20LTV%20Recommended%20Outcome.drl" kind="BusinessRule" name="Tier E PTI LTV Recommended Outcome"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Loan to Value Payment to Income Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_13"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_10" name="Total Debt Service Ratio Threshold">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Customer" collection="true" name="Customer"/>
+                <output bomType="java.lang.Double" collection="false" name="Total Debt Service Ratio Threshold"/>
+                <rule defaultRule="false" href="node_10/Total%20Debt%20Service%20Ratio%20Threshold.dmt" kind="DecisionTable" name="Total Debt Service Ratio Threshold"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Total Debt Service Ratio Threshold" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_13"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_11" name="Total Debt Service Ratio Auto Approve Acceptability">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Application" collection="false" name="Application"/>
+                <input bomType="java.lang.Double" collection="false" name="Total Debt Service Ratio Threshold"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Acceptable$NotAcceptable" collection="false" name="Total Debt Service Ratio Auto Approve Acceptability"/>
+                <rule defaultRule="false" href="node_11/Total%20Debt%20Service%20Ratio%20Auto%20Approve%20Acceptability.drl" kind="BusinessRule" name="Total Debt Service Ratio Auto Approve Acceptability"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="Total Debt Service Ratio Auto Approve Acceptability" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Acceptable$NotAcceptable"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Loan Affordability Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Acceptable$NotAcceptable" collection="false" name="Total Debt Service Ratio Auto Approve Acceptability"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Loan to Value Payment to Income Recommended Outcome"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Loan Affordability Recommended Outcome"/>
+                <rule defaultRule="false" href="node_12/Loan%20Affordability%20Recommended%20Outcome.dmt" kind="DecisionTable" name="Loan Affordability Recommended Outcome"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Loan Affordability Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_14" name="Full Results For Loan Affordability Recommended Outcome">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier A PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier B PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier C PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier D PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Tier E PTI LTV Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Loan Affordability Recommended Outcome"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Acceptable$NotAcceptable" collection="false" name="Total Debt Service Ratio Auto Approve Acceptability"/>
+                <input bomType="java.lang.Double" collection="false" name="Total Debt Service Ratio Threshold"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AutoApprove$ManualReview$AutoDecline" collection="false" name="Loan to Value Payment to Income Recommended Outcome"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.LoanAffordabilityRecommendedOutcomeService" collection="false" name="Full Results For Loan Affordability Recommended Outcome"/>
+                <rule defaultRule="false" href="node_14/Final%20Service.drl" kind="BusinessRule" name="Final Service"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_14_ii" name="Full Results For Loan Affordability Recommended Outcome" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.LoanAffordabilityRecommendedOutcomeService"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_13" name="Application Credit Risk Tier Service">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Application Credit Risk Tier Service" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Tier[]"/>
+        <encapsulatedLogic typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Tier[]">
+            <formalParameter name="customer" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Customer[]"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"agull.auto_loan_demo.auto_loan_service.applicationcreditrisktierservice.Application_Credit_Risk_Tier_Service"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

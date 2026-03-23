@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" language="ARL">
+  <name>Auto Loan Variable Set</name>
+  <uuid>1f948a1e-e064-47e3-a17b-d8ef4f930898</uuid>
+  <variables name="Application" type="agull.auto_loan_demo.auto_loan_service.datastructure.Application" initialValue="" verbalization="the Application" jsonName=""/>
+  <variables name="Customer" type="java.util.List&lt;agull.auto_loan_demo.auto_loan_service.datastructure.Customer>" initialValue="" verbalization="the Customer" jsonName=""/>
+  <variables name="ApplicationPreBureauEligibility" type="agull.auto_loan_demo.auto_loan_service.datastructure.ApplicationPreBureauEligibilityService" initialValue="" verbalization="the FullResultsForApplicationPreBureauEligibility" jsonName=""/>
+  <variables name="TotalCreditBureauMonthlyDebtObligation" type="agull.auto_loan_demo.auto_loan_service.datastructure.TDSR$TotalCreditBureauMonthlyDebtObligationService" initialValue="" verbalization="the FullResultsForTotalCreditBureauMonthlyDebtObligation" jsonName=""/>
+  <variables name="DecisionOutputs" type="agull.auto_loan_demo.auto_loan_service.datastructure.DecisionOutputs" initialValue="" verbalization="the DecisionOutputs" jsonName=""/>
+  <variables name="TotalMonthlyDebtPaymentObligation" type="agull.auto_loan_demo.auto_loan_service.datastructure.TotalMonthlyDebtPaymentObligationService" initialValue="" verbalization="the FullResultsForTotalMonthlyDebtPaymentObligation" jsonName=""/>
+  <variables name="TotalDebtServiceRatio" type="double" initialValue="" verbalization="the TotalDebtServiceRatio" jsonName=""/>
+  <variables name="Stipulations" type="agull.auto_loan_demo.auto_loan_service.datastructure.StipulationsService" initialValue="" verbalization="the FullResultsForStipulations" jsonName=""/>
+  <variables name="MaximumPayment" type="agull.auto_loan_demo.auto_loan_service.datastructure.MaximumPaymentService" initialValue="" verbalization="the FullResultsForMaximumPayment" jsonName=""/>
+  <variables name="LoanAffordabilityRecommendedOutcome" type="agull.auto_loan_demo.auto_loan_service.datastructure.LoanAffordabilityRecommendedOutcomeService" initialValue="" verbalization="the FullResultsForLoanAffordabilityRecommendedOutcome" jsonName=""/>
+  <variables name="ConditionalApprovalRecommendedOutcome" type="agull.auto_loan_demo.auto_loan_service.datastructure.ConditionalApprovalRecommendedOutcomeService" initialValue="" verbalization="the FullResultsForConditionalApprovalRecommendedOutcome" jsonName=""/>
+  <variables name="AutoLoanApplicationRecommendedOutcome" type="agull.auto_loan_demo.auto_loan_service.datastructure.AutoLoanApplicationRecommendedOutcomeService" initialValue="" verbalization="the FullResultsForAutoLoanApplicationRecommendedOutcome" jsonName=""/>
+  <variables name="ApplicationCreditRiskTier" type="java.util.List&lt;agull.auto_loan_demo.auto_loan_service.datastructure.Tier>" initialValue="" verbalization="the ApplicationCreditRiskTier" jsonName=""/>
+  <variables name="ApplicationCreditHistoryRecommendedOutcome" type="agull.auto_loan_demo.auto_loan_service.datastructure.ApplicantCreditHistoryRecommendedOutcomeService" initialValue="" verbalization="the FullResultsForApplicationCreditHistoryRecommendedOutcome" jsonName=""/>
+  <variables name="Asset" type="agull.auto_loan_demo.auto_loan_service.datastructure.Asset" initialValue="" verbalization="the Asset" jsonName=""/>
+  <variables name="CreditBureauReportFunctions" type="agull.auto_loan_demo.auto_loan_service.datastructure.CreditBureauReportFunctionsService" initialValue="" verbalization="the FullResultsForCreditBureauReportFunctions" jsonName=""/>
+</ilog.rules.studio.model.base:VariableSet>

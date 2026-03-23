@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Vehicle Lending Approval List</name>
+  <uuid>798da167-447d-4f61-ab29-1c7f9f99d0ce</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+set 'a Auto Loan Application Recommended Outcome' to the auto loan application recommended outcome V2 computed from 
+	Application being Application , 
+	Customer being Customer , 
+	Assest being Assest , 
+	Vehicle Inventory being 'Vehicle Inventory'; 
+set 'a Vehicle Eligibility List' to a Vehicle Eligibility List in the vehicle eligibility lists computed from 
+	Application being Application , 
+	Customer being Customer , 
+	Assest being Assest , 
+	Vehicle Inventory being  'Vehicle Inventory' ;
+set 'a Vehicle Cross Sell Type List' to a Vehicle Cross Sell Type List in 'Vehicle Cross Sell Type List' ; 
+]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['a Auto Loan Application Recommended Outcome' is <an Auto Approve/Manual Review/Auto Decline> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Upsell Downsell of 'a Vehicle Cross Sell Type List' is <an Upsell/Downsell/Match/Reject> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Applied Vehicle of 'a Vehicle Eligibility List' is <an Applied Vehicle> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Vehicle Lending Approval List where
+	the Applied Vehicle is <Applied Vehicle> , 
+	the Approval is <Approval> , 
+	the Upsell Downsell is <Upsell Downsell> , 
+	the Vehicle ID is <Vehicle ID> , 
+	the Vehicle Price is <Vehicle Price> to decision]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Auto Approve]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Match]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Applied Vehicle]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Applied Vehicle of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[Approve]]></Param>
+                                                <Param><![CDATA[Match]]></Param>
+                                                <Param><![CDATA[the Vehicle ID of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[the Vehicle Price of 'a Vehicle Eligibility List']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Cross Sell]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Upsell]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Alternate Vehicle]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Applied Vehicle of 'Minimum Vehicle Price']]></Param>
+                                                <Param><![CDATA[Approve]]></Param>
+                                                <Param><![CDATA[Upsell]]></Param>
+                                                <Param><![CDATA[the Vehicle ID of 'Minimum Vehicle Price']]></Param>
+                                                <Param><![CDATA[the Vehicle Price of 'Minimum Vehicle Price']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Cross Sell]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Downsell]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Alternate Vehicle]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Applied Vehicle of 'Maximum Vehicle Price']]></Param>
+                                                <Param><![CDATA[Approve]]></Param>
+                                                <Param><![CDATA[Downsell]]></Param>
+                                                <Param><![CDATA[the Vehicle ID of 'Maximum Vehicle Price']]></Param>
+                                                <Param><![CDATA[the Vehicle Price of 'Maximum Vehicle Price']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Manual Review]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Match]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Applied Vehicle]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Applied Vehicle of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[Review]]></Param>
+                                                <Param><![CDATA[Match]]></Param>
+                                                <Param><![CDATA[the Vehicle ID of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[the Vehicle Price of 'a Vehicle Eligibility List']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Manual Review]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Upsell]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Alternate Vehicle]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Applied Vehicle of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[Review]]></Param>
+                                                <Param><![CDATA[Upsell]]></Param>
+                                                <Param><![CDATA[the Vehicle ID of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[the Vehicle Price of 'a Vehicle Eligibility List']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Manual Review]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Downsell]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Alternate Vehicle]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Applied Vehicle of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[Review]]></Param>
+                                                <Param><![CDATA[Downsell]]></Param>
+                                                <Param><![CDATA[the Vehicle ID of 'a Vehicle Eligibility List']]></Param>
+                                                <Param><![CDATA[the Vehicle Price of 'a Vehicle Eligibility List']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Auto Decline]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[the Applied Vehicle of 'a Vehicle Eligibility List']]></Param>
+                                <Param><![CDATA[Decline]]></Param>
+                                <Param><![CDATA[-]]></Param>
+                                <Param><![CDATA[the Vehicle ID of 'a Vehicle Eligibility List']]></Param>
+                                <Param><![CDATA[the Vehicle Price of 'a Vehicle Eligibility List']]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Auto Loan Application Recommended Outocme]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[513]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Vehicle Cross Sell Type List]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[Vehicle Eligibility List]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Vehicle Lending Approval List]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

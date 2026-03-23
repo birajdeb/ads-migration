@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>All_Answered Rule</name>
+  <uuid>17af855e-5dc0-4037-bdc9-2ccbf1776443</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+set 'a Question Response' to a Question Response in 'Question Response' , 
+	where the number of elements in 'Question Response' is between 6 and 7;
+if the Answer of 'a Question Response' is not  empty  and  'Question Ranking List' are undefined
+then
+set decision to true ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

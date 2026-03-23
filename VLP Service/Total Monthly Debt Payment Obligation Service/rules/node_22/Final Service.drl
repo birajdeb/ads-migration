@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>f89347b4-e6e0-4373-8f08-fc41596972a0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Total Monthly Debt Payment Obligation Service where
+		the TDSR Housing Payment is 'TDSR Housing Payment' , 
+		the Application Monthly Rent Amounts are 'Application Monthly Rent Amount' , 
+		the Debt Manual Edits Qualifications are 'Debt Manual Edits Qualification' , 
+		the Housing Payment Type is 'Housing Payment Type' , 
+		the Inflation Adjustment Payment is 'Inflation Adjustment Payment' , 
+		the Inflation Adjustment Payment Lists are 'Inflation Adjustment Payment List' , 
+		the Insurance Payment is 'Insurance Payment' , 
+		the Insurance Payment Lists are 'Insurance Payment List' , 
+		the Max Of Application Monthly Rent Amount is 'Max Of Application Monthly Rent Amount' , 
+		the Sum Of Total Open Monthly Mortgage Payment Amount is 'Sum Of Total Open Monthly Mortgage Payment Amount' , 
+		the Total Manually Added Monthly Debt Obligation is 'Total Manually Added Monthly Debt Obligation' , 
+		the Total Manually Added Monthly Debt Obligation Lists are 'Total Manually Added Monthly Debt Obligation List' , 
+		the Total Monthly Debt Payment Obligation is 'Total Monthly Debt Payment Obligation' , 
+		the Total Open Monthly Mortgage Payment Amounts are 'Total Open Monthly Mortgage Payment Amount' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

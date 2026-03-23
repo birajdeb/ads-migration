@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Country Question</name>
+  <uuid>8ee202b0-d156-4f8b-a868-436674109466</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+ set 'a Question Response' to a Question Response in 'Question Response';
+ set 'Questions IDs' to all Questionses in the Question IDs of 'Question Response' ;
+if 
+  the Question ID of 'a Question Response' is Q1 - Age and
+  utils.extractNumericValue(the Answer of 'a Question Response' ) is at least 18 and less than 21 and 'Questions IDs' do not contain FQ1 - Country
+then 
+	add a new Agent Ranking where 
+	the Factored Rank is -1,  
+	the Rank is -1,   
+	the Question ID is FQ1 - Country to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

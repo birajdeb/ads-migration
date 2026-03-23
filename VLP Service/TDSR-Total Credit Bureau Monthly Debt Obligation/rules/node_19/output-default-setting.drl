@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>d13f8fc0-9f4f-4c39-b823-06c118e90179</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new TDSR-Total Credit Bureau Monthly Debt Obligation Service where
+	
+	
+		the Total Credit Bureau Monthly Debt Obligation is 'Total Credit Bureau Monthly Debt Obligation' ; 
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

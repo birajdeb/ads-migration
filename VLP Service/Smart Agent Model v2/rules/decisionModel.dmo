@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>e795401e-bea3-4db0-92e5-007599e978c1</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Car Inventory">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.CarInventory" collection="true" name="Car Inventory"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Car Inventory" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.CarInventory[]"/>
+    </inputData>
+    <decision id="node_2" name="Down Payment Acceptability">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleList" collection="true" name="Vehical List"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.DownPaymentAcceptability" collection="true" name="Down Payment Acceptability"/>
+                <rule defaultRule="false" href="node_2/Downpayment%20Acceptability.dmt" kind="DecisionTable" name="Downpayment Acceptability"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Down Payment Acceptability" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.DownPaymentAcceptability[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_3" name="Question Response">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Question Response" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse[]"/>
+    </inputData>
+    <decision id="node_13" name="Downpayment Ratio">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+                <output bomType="java.lang.Double" collection="false" name="Downpayment Ratio"/>
+                <rule defaultRule="false" href="node_13/Downpayment%20Ratio.dmt" kind="DecisionTable" name="Downpayment Ratio"/>
+                <rule defaultRule="true" href="node_13/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_13_ii" name="Downpayment Ratio" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_16" name="Expense Ratio">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+                <output bomType="java.lang.Double" collection="false" name="Expense Ratio"/>
+                <rule defaultRule="false" href="node_16/Expense%20Ratio.dmt" kind="DecisionTable" name="Expense Ratio"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_16_ii" name="Expense Ratio" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_17" name="Downpayment Tier">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Downpayment Ratio"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Downpayment Tier"/>
+                <rule defaultRule="false" href="node_17/Downpayment%20Tier.dmt" kind="DecisionTable" name="Downpayment Tier"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_17_ii" name="Downpayment Tier" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject"/>
+        <informationRequirement>
+            <requiredInput href="#node_13"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_18" name="Expense Tier">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Expense Ratio"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Expense Tier"/>
+                <rule defaultRule="false" href="node_18/Expense%20Tier.dmt" kind="DecisionTable" name="Expense Tier"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_18_ii" name="Expense Tier" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject"/>
+        <informationRequirement>
+            <requiredInput href="#node_16"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_19" name="Approval Type">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Expense Tier"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Downpayment Tier"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Approval Type"/>
+                <rule defaultRule="false" href="node_19/Approval%20Type.dmt" kind="DecisionTable" name="Approval Type"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_19_ii" name="Approval Type" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject"/>
+        <informationRequirement>
+            <requiredInput href="#node_18"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_17"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_20" name="Car Approval List">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleList" collection="true" name="Vehical List"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.DownPaymentAcceptability" collection="true" name="Down Payment Acceptability"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.CarApprovalList" collection="true" name="Car Approval List"/>
+                <rule defaultRule="false" href="node_20/Car%20Approval%20List.dmt" kind="DecisionTable" name="Car Approval List"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_20_ii" name="Car Approval List" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.CarApprovalList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_22" name="Smart Agent Output">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Approval Type"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Downpayment Tier"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Eligible$NotEligible" collection="false" name="Customer Eligibility"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.CarApprovalList" collection="true" name="Car Approval List"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.SmartAgentOutput" collection="false" name="Smart Agent Output"/>
+                <rule defaultRule="false" href="node_22/Smart%20Agent%20Output.dmt" kind="DecisionTable" name="Smart Agent Output"/>
+                <rule defaultRule="false" href="node_22/Smart%20Agent%20Output%20Match-copy1.dmt" kind="DecisionTable" name="Smart Agent Output Match-copy1"/>
+                <rule defaultRule="false" href="node_22/Upsell.drl" kind="BusinessRule" name="Upsell"/>
+                <rule defaultRule="false" href="node_22/Smart%20Agent%20Output%20Match.dmt" kind="DecisionTable" name="Smart Agent Output Match"/>
+                <rule defaultRule="true" href="node_22/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_22_ii" name="Smart Agent Output" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.SmartAgentOutput"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_17"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_1" name="Vehical List">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.CarInventory" collection="true" name="Car Inventory"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleList" collection="true" name="Vehical List"/>
+                <rule defaultRule="false" href="node_1/Vehicle%20List.dmt" kind="DecisionTable" name="Vehicle List"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Vehical List" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.VehicleList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_24" name="Customer Eligibility">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.DownPaymentAcceptability" collection="true" name="Down Payment Acceptability"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse" collection="true" name="Question Response"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Eligible$NotEligible" collection="false" name="Customer Eligibility"/>
+                <rule defaultRule="false" href="node_24/Customer%20Eligibility.dmt" kind="DecisionTable" name="Customer Eligibility"/>
+                <rule defaultRule="true" href="node_24/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_24_ii" name="Customer Eligibility" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.Eligible$NotEligible"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_23"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_25" name="Application Action">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Upsell$Downsell$Match$Reject" collection="false" name="Approval Type"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.Eligible$NotEligible" collection="false" name="Customer Eligibility"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.ApplicationAction" collection="false" name="Application Action"/>
+                <rule defaultRule="false" href="node_25/Application%20Action.dmt" kind="DecisionTable" name="Application Action"/>
+                <rule defaultRule="true" href="node_25/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_25_ii" name="Application Action" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.ApplicationAction"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_23" name="Agent Next Best Question">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Agent Next Best Question" typeRef="agull.auto_loan_vlp.vlp_service.agentnextbestquestion.Agent_Next_Best_QuestionOutput"/>
+        <encapsulatedLogic typeRef="agull.auto_loan_vlp.vlp_service.agentnextbestquestion.Agent_Next_Best_QuestionOutput">
+            <formalParameter name="questionResponse" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.QuestionResponse[]"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"agull.auto_loan_vlp.vlp_service.agentnextbestquestion.Agent_Next_Best_Question"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

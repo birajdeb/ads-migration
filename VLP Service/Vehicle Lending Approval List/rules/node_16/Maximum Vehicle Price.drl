@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Maximum Vehicle Price</name>
+  <uuid>6384bf60-54a9-4a89-acc1-54f4549ffa4d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'the vehicle eligibility list' to the vehicle eligibility lists computed from 
+	Application being Application , 
+	Customer being Customer , 
+	Assest being Assest , 
+	Vehicle Inventory being 'Vehicle Inventory';
+set 'Maximum Price' to the maximum of the Vehicle Prices of 'the vehicle eligibility list';
+set 'a Maximum Price Vehicle' to a Vehicle Eligibility List in 'the vehicle eligibility list' where the Vehicle Price of this Vehicle Eligibility List is  'Maximum Price';
+then
+set decision to 'a Maximum Price Vehicle' ;
+    ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

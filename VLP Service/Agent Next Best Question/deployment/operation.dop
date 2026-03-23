@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Agent Next Best Question">
+  <name>Agent_Next_Best_Question</name>
+  <uuid>97e79629-ef1d-4224-a16d-d8bec8836f71</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#d1556ade-e859-4577-9c4d-90afb9355d95"/>
+  <targetRuleProject href="../../Agent%20Next%20Best%20Question#6d14182f-4ee9-478a-bf3d-891cec8e3a3e"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Agent_Next_Best_Question"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

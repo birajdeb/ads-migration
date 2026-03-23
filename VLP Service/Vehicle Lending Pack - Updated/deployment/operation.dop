@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Vehicle Lending Pack - Updated">
+  <name>Vehicle_Lending_Pack_Updated</name>
+  <uuid>0210b59e-f4c2-47aa-8490-2f317cd138ab</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#9a2af8e5-981e-4b50-9c24-dd5f8305552f"/>
+  <targetRuleProject href="../../Vehicle%20Lending%20Pack%20-%20Updated#258d9c41-ebf6-4033-8aef-25f7deba31d4"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Vehicle_Lending_Pack_Updated"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

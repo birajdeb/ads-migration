@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>a9418087-e415-49f4-abb4-c0f89f3c863b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Conditional Approval Recommended Outcome Service where
+		the Amortization Threshold In Months is 'Amortization Threshold In Months' , 
+		the Amount to Finance Auto Approve Threshold is 'Amount to Finance Auto Approve Threshold' , 
+		the Amount to Finance Manual Review Threshold is 'Amount to Finance Manual Review Threshold' , 
+		the Conditional Approval Amount to Finance Recommended Outcome is 'Conditional Approval Amount to Finance Recommended Outcome' , 
+		the Conditional Approval Maximum Amount to Finance is 'Conditional Approval Maximum Amount to Finance' , 
+		the Conditional Approval Maximum Payment is 'Conditional Approval Maximum Payment' , 
+		the Conditional Approval Recommended Outcome is 'Conditional Approval Recommended Outcome' , 
+		the Maximum Payment to Income Ratio is 'Maximum Payment to Income Ratio' , 
+		the Maximum Total Debt Service Ratio is 'Maximum Total Debt Service Ratio' , 
+		the Payment to Income Maximum Payment is 'Payment to Income Maximum Payment' , 
+		the Total Debt Service Maximum Payment is 'Total Debt Service Maximum Payment' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Smart Agent Model">
+  <name>Smart_Agent_Model</name>
+  <uuid>275ef379-be80-428c-af0a-777551d00e75</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#1aeead59-5359-448e-8f01-eb85c5b902f1"/>
+  <targetRuleProject href="../../Smart%20Agent%20Model#28fda4d8-81f3-42a5-b80e-8be534c72fc4"/>
+  <tags key="operationDescription">
+    <value><![CDATA["new model trial 1"]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Smart_Agent_Model"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

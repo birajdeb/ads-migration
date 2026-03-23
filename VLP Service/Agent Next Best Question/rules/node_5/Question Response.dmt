@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Question Response</name>
+  <uuid>eb77dcc4-3785-4ae1-86fe-062341018410</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+set 'a Question Response' to a Question Response in 'Question Response'  ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Question ID of 'a Question Response' is <a Questions> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Answer of 'a Question Response' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Question Response where
+	the Answer is <Answer> , 
+	the Answer Type is <Answer Type> , 
+	the Question ID is <Question ID> , 
+	the Question Rank is <Question Rank> to decision]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C2">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Q1 - Age]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Answer of 'a Question Response']]></Param>
+                                        <Param><![CDATA[number]]></Param>
+                                        <Param><![CDATA[Q1 - Age]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Q2 - Employment or Income Source]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Answer of 'a Question Response']]></Param>
+                                        <Param><![CDATA[text { Unemployed , Student , Employed }]]></Param>
+                                        <Param><![CDATA[Q2 - Employment or Income Source]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Q3 - Gross Monthly Income]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Answer of 'a Question Response']]></Param>
+                                        <Param><![CDATA[number]]></Param>
+                                        <Param><![CDATA[Q3 - Gross Monthly Income]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Q4 - Expenses]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Answer of 'a Question Response']]></Param>
+                                        <Param><![CDATA[number]]></Param>
+                                        <Param><![CDATA[Q4 - Expenses]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Q5 - Car Price]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Answer of 'a Question Response']]></Param>
+                                        <Param><![CDATA[number]]></Param>
+                                        <Param><![CDATA[Q5 - Car Price]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Q6 - Down Payment]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Answer of 'a Question Response']]></Param>
+                                        <Param><![CDATA[number]]></Param>
+                                        <Param><![CDATA[Q6 - Down Payment]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[FQ1 - Country]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a string> is not empty]]></Text>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["the Answer of 'a Question Response'"]]></Param>
+                                        <Param><![CDATA[text]]></Param>
+                                        <Param><![CDATA[FQ1 - Country]]></Param>
+                                        <Param><![CDATA[the Question Rank of 'a Question Response']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Question Response]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[814]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[QuestionResponse.QuestionID]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Agent Next Best Question]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

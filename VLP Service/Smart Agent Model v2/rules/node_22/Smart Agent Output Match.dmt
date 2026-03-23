@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Smart Agent Output Match</name>
+  <uuid>7869513d-0876-4a4c-99cc-0717c73aa00a</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+set 'a Car Approval List' to a Car Approval List in 'Car Approval List';
+
+
+]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Approval Type' is <an Upsell/Downsell/Match/Reject>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Customer Eligibility' is <an Eligible/Not Eligible>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['a Car Approval List' is Applied Indicator is <a boolean>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Downpayment Tier' is <an Upsell/Downsell/Match/Reject> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to a new Smart Agent Output where 
+	the Approval is <Approval> , 
+	Applied Indicator is <Applied Indicator> , 
+	the Car Price is <Car Price> , 
+	the Car ID is <Car ID> , 
+	the Upsell Downsell is <Upsell Downsell> ]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                        <Param><![CDATA[{ Downsell , Match , Upsell }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Eligible]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[true]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Approve]]></Param>
+                                                <Param><![CDATA[true]]></Param>
+                                                <Param><![CDATA[the Car Price of 'a Car Approval List']]></Param>
+                                                <Param><![CDATA[the Car ID of 'a Car Approval List']]></Param>
+                                                <Param><![CDATA[the Upsell Downsell of 'a Car Approval List']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Approval Type]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Customer Eligibility]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Downpayment Tier]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[608]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Car Approval List.Applied Indicator]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Smart Agent Output]]></Data>
+            <Data Name="Definitions(C4)#Width"><![CDATA[137]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[138]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

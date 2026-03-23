@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Vehicle Lending Approval List">
+  <name>Vehicle_Lending_Approval_List</name>
+  <uuid>74e74e05-e1f9-49ea-a881-48333e4da9e4</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#f242edde-8ed3-46e3-8009-1db6925ffde2"/>
+  <targetRuleProject href="../../Vehicle%20Lending%20Approval%20List#0ea8c2d3-9758-4f1b-82d7-0088deb0cd1c"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

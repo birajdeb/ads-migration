@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Applicant Debt Problem Outcome</name>
+  <uuid>d7fbfdfc-c060-4aa8-a056-cadb3a1d199d</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType">Web</Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean">true</Property>
+        </Properties>
+        <Preconditions>
+            <Text>definitions 
+	set 'an Applicant Debt Late Payment' to an Auto Approve/Manual Review/Auto Decline in 'Applicant Debt Late Payment Types' ;</Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean">false</Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean">false</Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text>'an Applicant Debt Late Payment' is &lt;an Auto Approve/Manual Review/Auto Decline&gt; </Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean">false</Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean">false</Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text>'Credit Bureau Major Derogatory Outcome' is &lt;an Auto Approve/Manual Review/Auto Decline&gt;</Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <ExpressionDefinition>
+                        <Text>'Count Number Of Qualifying New Tradelines In the Last 6 Months' is &lt;a number&gt; </Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text>add &lt;an Auto Approve/Manual Review/Auto Decline&gt; to decision</Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is one of &lt;objects&gt;</Text>
+                        <Param>{ Major Derogatory , Major Late Payment }</Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param>Auto Decline</Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param>Auto Decline</Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param>Auto Decline</Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is not one of &lt;objects&gt;</Text>
+                        <Param>{ Major Derogatory , Major Late Payment , No Debt Problem }</Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text>&lt;an object&gt; is not &lt;an object&gt;</Text>
+                                <Param>Auto Decline</Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param>Manual Review</Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is not one of &lt;objects&gt;</Text>
+                        <Param>{ Major Derogatory , Major Late Payment }</Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param>Manual Review</Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param>Manual Review</Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is not one of &lt;objects&gt;</Text>
+                        <Param>{ Major Derogatory , Major Late Payment }</Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text>&lt;an object&gt; is not &lt;an object&gt;</Text>
+                                <Param>Auto Decline</Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text>&lt;a number&gt; is at least &lt;a number&gt;</Text>
+                                        <Param>2</Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param>Manual Review</Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is not one of &lt;objects&gt;</Text>
+                        <Param>{ Major Derogatory , Major Late Payment , Minor Late Payment }</Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param>No Derogatory Issue</Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text>&lt;a number&gt; is less than &lt;a number&gt;</Text>
+                                        <Param>2</Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param>No Debt Problem</Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C2)[0]#HeaderText">min</Data>
+            <Data Name="Definitions(C0)#HeaderText">Applicant Debt Late Payment Types</Data>
+            <Data Name="Definitions(C1)#HeaderText">Credit Bureau Major Derogatory Outcome</Data>
+            <Data Name="Definitions(C2)#HeaderText">Count Number Of Qualifying New Tradelines In the Last 6 Months</Data>
+            <Data Name="Definitions(C0)[0]#HeaderText">a number</Data>
+            <Data Name="Definitions(A0)#HeaderText">Applicant Debt Problem Outcome</Data>
+            <Data Name="Definitions(C0)#Width">382</Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

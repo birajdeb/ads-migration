@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Upsell</name>
+  <uuid>24786b49-fba3-4d09-92b6-f0aeceb30e14</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'a Car  Approval List' to all Car Approval Lists in 'Car Approval List' 
+	where the Upsell Downsell of each Car Approval List is Upsell;
+set 'minimum car price' to the minimum of the Car Prices of 'a Car Approval List';
+set 'a minimum car' to a Car Approval List in 'a Car Approval List' where the Car Price of this Car Approval List is  'minimum car price';
+if 'Approval Type' is Match and 'Downpayment Tier' is Upsell
+then
+set decision to a new Smart Agent Output where 
+	the Approval is Approve , 
+	Applied Indicator is false , 
+	the Car Price is the Car Price of 'a minimum car' , 
+	the Car ID is the Car ID of 'a minimum car' , 
+	the Upsell Downsell is the Upsell Downsell of 'a minimum car';]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
