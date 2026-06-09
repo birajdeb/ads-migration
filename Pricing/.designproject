@@ -1,0 +1,11 @@
+{
+  "description" : "Calculate shipping price after applicable discount.",
+  "groupId" : "birajdeb_bluepolaris.com.biraj_test.pricing",
+  "locale" : "en_US",
+  "properties" : {
+    "refactoringEnabled" : false,
+    "tags" : [ ],
+    "indexingEnabled" : false
+  },
+  "extraProperties" : { }
+}

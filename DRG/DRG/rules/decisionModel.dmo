@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>b62c597f-4ae9-415e-8f98-90d7bd4b21d6</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="node_1" name="Decision1">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <output bomType="java.lang.String" collection="false" name="Decision1"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision1" typeRef="java.lang.String"/>
+    </decision>
+    <decision id="node_2" name="Claim History Complexity">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Decision1"/>
+                <input bomType="java.lang.Double" collection="false" name="Past 12 Months Claim Count"/>
+                <output bomType="java.lang.String" collection="false" name="Claim History Complexity"/>
+                <rule defaultRule="false" href="node_2/Claim%20History%20Complexity.dmt" kind="DecisionTable" name="Claim History Complexity"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Claim History Complexity" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Claim Complexity">
+        <description>redhat changes</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Treatment Complexity"/>
+                <input bomType="java.lang.String" collection="false" name="Claim History Complexity"/>
+                <input bomType="java.lang.String" collection="false" name="Diagnosis Complexity"/>
+                <output bomType="java.lang.String" collection="false" name="Claim Complexity"/>
+                <rule defaultRule="false" href="node_3/Claim%20Complexity.dmt" kind="DecisionTable" name="Claim Complexity"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Claim Complexity" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Diagnosis Complexity">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity" collection="false" name="tDiagnosis Complexity"/>
+                <output bomType="java.lang.String" collection="false" name="Diagnosis Complexity"/>
+                <rule defaultRule="false" href="node_4/Diagnosis%20Complexity.dmt" kind="DecisionTable" name="Diagnosis Complexity"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Diagnosis Complexity" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Treatment Complexity">
+        <description>test</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity" collection="false" name="tTreatment Complexity"/>
+                <output bomType="java.lang.String" collection="false" name="Treatment Complexity"/>
+                <rule defaultRule="false" href="node_5/Treatment%20Complexity.dmt" kind="DecisionTable" name="Treatment Complexity"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Treatment Complexity" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_6" name="tDiagnosis Complexity">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity" collection="false" name="tDiagnosis Complexity"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_6_ii" name="tDiagnosis Complexity" typeRef="user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity"/>
+    </inputData>
+    <inputData id="node_7" name="Past 12 Months Claim Count">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Past 12 Months Claim Count"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Past 12 Months Claim Count" typeRef="java.lang.Double"/>
+    </inputData>
+    <inputData id="node_8" name="tTreatment Complexity">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity" collection="false" name="tTreatment Complexity"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_8_ii" name="tTreatment Complexity" typeRef="user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity"/>
+    </inputData>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

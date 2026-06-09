@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="birajdeb_bluepolaris.com.biraj_test.drg:service" ruleAppVersion="1.0.0-SNAPSHOT" packageName="user1.DFM_Internal_Demo.DRG.service" managingXom="true">
+  <name>Service</name>
+  <uuid>aff1edce-176d-4f0f-8a2a-6510069f2d90</uuid>
+  <locales>en_US</locales>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

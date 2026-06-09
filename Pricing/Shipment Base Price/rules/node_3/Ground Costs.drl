@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Ground Costs</name>
+  <uuid>dce0c765-1983-4ee8-aaa8-a963b5ba0601</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to 'Ground Base Price' * 'Ground Tariffs' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

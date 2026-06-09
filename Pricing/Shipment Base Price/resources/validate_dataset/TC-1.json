@@ -1,0 +1,1 @@
+{"operationId":"632bfac0-3d52-4c15-b421-4466ac1e271a","body":{"shipment":{"DistanceInMiles":500,"Size":"Pack 2","Weight":10},"method":{"Pickup":"Pickup","Next Day":true,"Transport":"Ground"}}}

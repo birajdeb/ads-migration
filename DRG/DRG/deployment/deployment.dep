@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="birajdeb_bluepolaris.com.biraj_test.drg:dRG" ruleAppVersion="LATEST-SNAPSHOT" packageName="user1.DFM_Internal_Demo.DRG.drg" managingXom="true">
+  <name>DRG</name>
+  <uuid>8e6c97df-be08-415e-a371-4a969e509d25</uuid>
+  <locales>en_US</locales>
+  <operations operationName="operation">
+    <operation href="operation.dop#eedf076c-2521-4e3e-bde2-b03c0f13420e"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Increment minor version numbers" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
+    <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous versions.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Use the base version numbers" recurrent="true">
+    <description><![CDATA[Uses the numbers provided in the deployment configuration. Replaces the latest version of each ruleset with this release. Used for hot fixes or development.]]></description>
+  </versionPolicies>
+  <versionPolicies label="The user can define the version numbers" ruleset="MANUAL" recurrent="true">
+    <description><![CDATA[Allows you to enter your own version numbers. Used for hot fixes or updates to an earlier release.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

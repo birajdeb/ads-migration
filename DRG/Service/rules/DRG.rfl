@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>DRG</name>
+  <uuid>ad11e824-f359-4a9e-ad2b-3e0f4e537cc1</uuid>
+  <locale>en_US</locale>
+  <rfModel><Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+    <Body>
+        <TaskList>
+            <StartTask Identifier="task_0"/>
+            <StopTask Identifier="task_2"/>
+            <FunctionTask Identifier="task_3">
+                <Invocation FunctionIdentifier="user1.DFM_Internal_Demo.DRG.model.DRG">
+                    <InputBindings>
+                        <Binding Language="bal" Name="tDiagnosisComplexity"><![CDATA[ 'the tDiagnosis Complexity' ]]></Binding>
+                        <Binding Language="bal" Name="past12MonthsClaimCount"><![CDATA[ 'the Past 12 Months Claim Count' ]]></Binding>
+                        <Binding Language="bal" Name="tTreatmentComplexity"><![CDATA[ 'the tTreatment Complexity' ]]></Binding>
+
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="dRGOutput"><![CDATA[DRGOutput of 'decision model' ]]></Binding>
+
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+        </TaskList>
+        <NodeList>
+            <TaskNode Identifier="node_0" Task="task_0"/>
+            <TaskNode Identifier="node_2" Task="task_2"/>
+            <TaskNode Identifier="node_3" Task="task_3"/>
+        </NodeList>
+        <TransitionList>
+            <Transition Identifier="transition_0" Source="node_0" Target="node_3"/>
+            <Transition Identifier="transition_1" Source="node_3" Target="node_2"/>
+        </TransitionList>
+    </Body>
+    <Resources>
+        <ResourceSet Locale="en_US">
+            <Data Name="node_3#label"><![CDATA[DRG]]></Data>
+            <Data Name="node_0#name"><![CDATA[Start node]]></Data>
+            <Data Name="node_2#name"><![CDATA[End node]]></Data>
+            <Data Name="node_3#name"><![CDATA[DRG]]></Data>
+        </ResourceSet>
+    </Resources>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

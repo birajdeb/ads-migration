@@ -1,0 +1,66 @@
+
+package com.ibm.ads.samples.training.decision_tables.data;
+
+
+class Customer
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "customer"
+        #de.generated
+{
+    string name
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "name"
+                #update;
+    com.ibm.ads.samples.training.decision_tables.data.Status status
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "status"
+                #update;
+    Customer(string name, com.ibm.ads.samples.training.decision_tables.data.Status status)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Customer()
+                #dataio.default;
+}
+
+class Result
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "result"
+        #de.generated
+{
+    double discount
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "discount"
+                #update;
+    double loyaltyPoints
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "loyaltyPoints"
+                #update;
+    Result(double discount, double loyaltyPoints)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Result()
+                #dataio.default;
+}
+
+class Status
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "status"
+        #de.generated
+{
+    domain {static Bronze, static Gold, static Silver}
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Status Bronze
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bronze";
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Status Gold
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Gold";
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Status Silver
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Silver";
+}
+

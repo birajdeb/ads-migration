@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>1a921867-8366-4cdd-afc3-c793af58f9c6</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="node_1" name="Price Before Discount">
+        <description>What is the aggregate costs with applied price multipliers for this shipment?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
+                <output bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
+                <rule defaultRule="false" href="node_1/Price%20Before%20Discount.dmt" kind="DecisionTable" name="Price Before Discount"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Price Before Discount" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_2"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_3" name="Method">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Method" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method"/>
+    </inputData>
+    <inputData id="node_4" name="Shipment">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Shipment" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment"/>
+    </inputData>
+    <decision id="node_5" name="Customer Discount">
+        <description>What is the discount for this customer?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer" collection="false" name="Customer"/>
+                <output bomType="java.lang.Double" collection="false" name="Customer Discount"/>
+                <rule defaultRule="false" href="node_5/Customer%20Discount.dmt" kind="DecisionTable" name="Customer Discount"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Customer Discount" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_6" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer" collection="false" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_6_ii" name="Customer" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer"/>
+    </inputData>
+    <decision id="node_7" name="Shipping Price">
+        <description>What is the total shipping price for this shipment?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
+                <input bomType="java.lang.Double" collection="false" name="Customer Discount"/>
+                <output bomType="java.lang.Double" collection="false" name="Shipping Price"/>
+                <rule defaultRule="false" href="node_7/Shipping%20Price.drl" kind="BusinessRule" name="Shipping Price"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Shipping Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_2" name="Shipment Base Price">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Shipment Base Price" typeRef="java.lang.Double"/>
+        <encapsulatedLogic typeRef="java.lang.Double">
+            <formalParameter name="shipment" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment"/>
+            <formalParameter name="method" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.shipmentbaseprice.Shipment_Base_Price"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment,aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

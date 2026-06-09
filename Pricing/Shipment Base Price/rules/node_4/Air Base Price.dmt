@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Air Base Price</name>
+  <uuid>f306cf61-622b-4578-88ac-26ca17f42d82</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[true]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Size of Shipment1 is <a Size Enums>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Weight of Shipment1 is <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Letter]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[0]]></Param>
+                                <Param><![CDATA[1]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[0.7]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Letter]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[1]]></Param>
+                                <Param><![CDATA[2]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[1.2]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Letter]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[2]]></Param>
+                                <Param><![CDATA[3]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[2.3]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 1]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[0]]></Param>
+                                <Param><![CDATA[2]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[3]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 1]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[2]]></Param>
+                                <Param><![CDATA[4]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[5]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 1]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[4]]></Param>
+                                <Param><![CDATA[6]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[8]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 2]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[0]]></Param>
+                                <Param><![CDATA[4]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[6]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 2]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[4]]></Param>
+                                <Param><![CDATA[8]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[8]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 2]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[8]]></Param>
+                                <Param><![CDATA[12]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[10]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 3]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[0]]></Param>
+                                <Param><![CDATA[8]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[10]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 3]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[8]]></Param>
+                                <Param><![CDATA[16]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[12]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pack 3]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Param><![CDATA[16]]></Param>
+                                <Param><![CDATA[24]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[15]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Air Base Price]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Size]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Weight]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

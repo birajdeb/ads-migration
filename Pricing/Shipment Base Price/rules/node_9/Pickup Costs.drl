@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Pickup Costs</name>
+  <uuid>7b320a6f-4ea0-4241-883b-c24812f4395f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[ if 
+	Method  is Next Day is true then 
+	set decision to  'Pickup Tariffs' + 3.00 ;
+    
+else 
+	set decision to 'Pickup Tariffs' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

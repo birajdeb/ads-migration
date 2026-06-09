@@ -1,0 +1,69 @@
+
+package user1.DFM_Internal_Demo.DRG.bom;
+
+class ComorbidityComplexityEnums
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ComorbidityComplexityEnums"
+        #de.generated
+{
+    domain {static low, static high, static moderate}
+    static final readonly user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums low
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "LOW";
+    static final readonly user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums high
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "HIGH";
+    static final readonly user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums moderate
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "MODERATE";
+}
+
+class DiagnosisComplexity
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "DiagnosisComplexity"
+        #de.generated
+{
+    double diagnosisCodeCount
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Diagnosis Code Count"
+                #update;
+    double catastrophicDiagnosisCodeCount
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Catastrophic Diagnosis Code Count"
+                #update;
+    user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums comorbidityComplexity
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Comorbidity Complexity"
+                #update;
+    DiagnosisComplexity(double diagnosisCodeCount, double catastrophicDiagnosisCodeCount, user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums comorbidityComplexity)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    DiagnosisComplexity()
+                #dataio.default;
+}
+
+class ClaimComplexity
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ClaimComplexity"
+        #de.generated
+{
+    double numberOfTreatmentCodes
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Number of Treatment Codes"
+                #update;
+    double maximumSeverityOfListedTreatmentCodes
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Maximum Severity of Listed Treatment Codes"
+                #update;
+    ClaimComplexity(double numberOfTreatmentCodes, double maximumSeverityOfListedTreatmentCodes)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ClaimComplexity()
+                #dataio.default;
+}
+

@@ -1,0 +1,161 @@
+
+package aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure;
+
+
+class AA
+        extends java.lang.Enum
+        property ads.typeId "8"
+        property com.fasterxml.jackson.annotation.JsonTypeName "AA"
+        #de.generated
+{
+    domain {static asdasd, static $2213}
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA $2213
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "12213";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA asdasd
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "asdasd";
+}
+
+class Customer
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Customer"
+        #de.generated
+{
+    java.time.DayOfWeek customerStatus
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Customer Status"
+                #update;
+    Customer(java.time.DayOfWeek customerStatus)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Customer()
+                #dataio.default;
+}
+
+class CustomerStatusEnums
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Customer Status Enums"
+        #de.generated
+{
+    domain {static bronze, static gold, static silver}
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums bronze
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bronze";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums gold
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Gold";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums silver
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Silver";
+}
+
+class Method
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Method"
+        #de.generated
+{
+    boolean nextDay
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Next Day"
+                #update;
+    aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums pickup
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pickup"
+                #update;
+    aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums transport
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Transport"
+                #update;
+    Method(boolean nextDay, aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums pickup, aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums transport)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Method()
+                #dataio.default;
+}
+
+class PickupEnums
+        extends java.lang.Enum
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Pickup Enums"
+        #de.generated
+{
+    domain {static dropoff, static pickup}
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums dropoff
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Dropoff";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums pickup
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pickup";
+}
+
+class Shipment
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Shipment"
+        #de.generated
+{
+    double distanceInMiles
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "DistanceInMiles"
+                #update;
+    aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums size
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Size"
+                #update;
+    double weight
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Weight"
+                #update;
+    Shipment(double distanceInMiles, aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums size, double weight)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Shipment()
+                #dataio.default;
+}
+
+class SizeEnums
+        extends java.lang.Enum
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Size Enums"
+        #de.generated
+{
+    domain {static letter, static pack1, static pack2, static pack3}
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums letter
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Letter";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums pack1
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pack 1";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums pack2
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pack 2";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums pack3
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pack 3";
+}
+
+class TransportEnums
+        extends java.lang.Enum
+        property ads.typeId "7"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Transport Enums"
+        #de.generated
+{
+    domain {static air, static ground, static pickup}
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums air
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Air";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums ground
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Ground";
+    static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums pickup
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pickup";
+}
+

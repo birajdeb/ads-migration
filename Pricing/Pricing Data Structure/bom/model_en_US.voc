@@ -1,0 +1,67 @@
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA#concept.label = AA
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA.$2213#instance.label = 12213
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA.asdasd#instance.label = asdasd
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer#concept.label = Customer
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.Customer(java.time.DayOfWeek)#phrase.navigation = a new {Customer} where {0, Customer Status}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.customerStatus#phrase.action = set the Customer Status of {this} to {Customer Status}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.customerStatus#phrase.navigation = {Customer Status} of {this}
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums#concept.label = Customer Status Enums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums.bronze#instance.label = Bronze
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums.gold#instance.label = Gold
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums.silver#instance.label = Silver
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method#concept.label = Method
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.Method(boolean,aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums,aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums)#phrase.navigation = a new {Method} where {0, Next Day} {1, Pickup} {2, Transport}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.action[0] = {this} gets Next Day only if {Next Day}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.action[1] = make it {Next Day} that {this} is Next Day
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.action[1].deprecated = true
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.navigation = {this} is Next Day
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.negative_predicate = {this} is not Next Day
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.negative_predicate_setter = {this} does not get Next Day
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.nextDay#phrase.positive_predicate_setter = {this} gets Next Day
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.pickup#phrase.action = set the Pickup of {this} to {Pickup}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.pickup#phrase.clearer = clear the Pickup of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.pickup#phrase.navigation = {Pickup} of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.transport#phrase.action = set the Transport of {this} to {Transport}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.transport#phrase.clearer = clear the Transport of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method.transport#phrase.navigation = {Transport} of {this}
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums#concept.label = Pickup Enums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums.dropoff#instance.label = Dropoff
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.PickupEnums.pickup#instance.label = Pickup
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment#concept.label = Shipment
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.Shipment(double,aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums,double)#phrase.navigation = a new {Shipment} where {0, Distance In Miles} {1, Size} {2, Weight}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.distanceInMiles#phrase.action = set the Distance In Miles of {this} to {Distance In Miles}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.distanceInMiles#phrase.addition_setter = add {Distance In Miles} to the Distance In Miles of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.distanceInMiles#phrase.navigation = {Distance In Miles} of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.distanceInMiles#phrase.subtraction_setter = subtract {Distance In Miles} from the Distance In Miles of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.size#phrase.action = set the Size of {this} to {Size}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.size#phrase.clearer = clear the Size of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.size#phrase.navigation = {Size} of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.weight#phrase.action = set the Weight of {this} to {Weight}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.weight#phrase.addition_setter = add {Weight} to the Weight of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.weight#phrase.navigation = {Weight} of {this}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment.weight#phrase.subtraction_setter = subtract {Weight} from the Weight of {this}
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums#concept.label = Size Enums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums.letter#instance.label = Letter
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums.pack1#instance.label = Pack 1
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums.pack2#instance.label = Pack 2
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.SizeEnums.pack3#instance.label = Pack 3
+
+# aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums#concept.label = Transport Enums
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums.air#instance.label = Air
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums.ground#instance.label = Ground
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.TransportEnums.pickup#instance.label = Pickup

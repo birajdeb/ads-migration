@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Air Costs</name>
+  <uuid>f10314a1-e4ae-475c-ab46-3860ce53e522</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to 'Air Base Price' * 'Air Tariffs' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

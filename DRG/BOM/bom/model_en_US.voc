@@ -1,0 +1,33 @@
+
+# user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums
+user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums#concept.label = Comorbidity Complexity Enums
+user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums.low#instance.label = LOW
+user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums.high#instance.label = HIGH
+user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums.moderate#instance.label = MODERATE
+
+# user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity#concept.label = Diagnosis Complexity
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.DiagnosisComplexity(double,double,user1.DFM_Internal_Demo.DRG.bom.ComorbidityComplexityEnums)#phrase.navigation = a new {Diagnosis Complexity} where {0, Diagnosis Code Count} {1, Catastrophic Diagnosis Code Count} {2, Comorbidity Complexity}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.diagnosisCodeCount#phrase.action = set the Diagnosis Code Count of {this} to {Diagnosis Code Count}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.diagnosisCodeCount#phrase.addition_setter = add {Diagnosis Code Count} to the Diagnosis Code Count of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.diagnosisCodeCount#phrase.navigation = {Diagnosis Code Count} of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.diagnosisCodeCount#phrase.subtraction_setter = subtract {Diagnosis Code Count} from the Diagnosis Code Count of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.catastrophicDiagnosisCodeCount#phrase.action = set the Catastrophic Diagnosis Code Count of {this} to {Catastrophic Diagnosis Code Count}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.catastrophicDiagnosisCodeCount#phrase.addition_setter = add {Catastrophic Diagnosis Code Count} to the Catastrophic Diagnosis Code Count of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.catastrophicDiagnosisCodeCount#phrase.navigation = {Catastrophic Diagnosis Code Count} of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.catastrophicDiagnosisCodeCount#phrase.subtraction_setter = subtract {Catastrophic Diagnosis Code Count} from the Catastrophic Diagnosis Code Count of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.comorbidityComplexity#phrase.action = set the Comorbidity Complexity of {this} to {Comorbidity Complexity}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.comorbidityComplexity#phrase.clearer = clear the Comorbidity Complexity of {this}
+user1.DFM_Internal_Demo.DRG.bom.DiagnosisComplexity.comorbidityComplexity#phrase.navigation = {Comorbidity Complexity} of {this}
+
+# user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity#concept.label = Claim Complexity
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.ClaimComplexity(double,double)#phrase.navigation = a new {Claim Complexity} where {0, Number of Treatment Codes} {1, Maximum Severity of Listed Treatment Codes}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.numberOfTreatmentCodes#phrase.action = set the Number of Treatment Codes of {this} to {Number of Treatment Codes}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.numberOfTreatmentCodes#phrase.addition_setter = add {Number of Treatment Codes} to the Number of Treatment Codes of {this}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.numberOfTreatmentCodes#phrase.navigation = {Number of Treatment Codes} of {this}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.numberOfTreatmentCodes#phrase.subtraction_setter = subtract {Number of Treatment Codes} from the Number of Treatment Codes of {this}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.maximumSeverityOfListedTreatmentCodes#phrase.action = set the Maximum Severity of Listed Treatment Codes of {this} to {Maximum Severity of Listed Treatment Codes}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.maximumSeverityOfListedTreatmentCodes#phrase.addition_setter = add {Maximum Severity of Listed Treatment Codes} to the Maximum Severity of Listed Treatment Codes of {this}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.maximumSeverityOfListedTreatmentCodes#phrase.navigation = {Maximum Severity of Listed Treatment Codes} of {this}
+user1.DFM_Internal_Demo.DRG.bom.ClaimComplexity.maximumSeverityOfListedTreatmentCodes#phrase.subtraction_setter = subtract {Maximum Severity of Listed Treatment Codes} from the Maximum Severity of Listed Treatment Codes of {this}

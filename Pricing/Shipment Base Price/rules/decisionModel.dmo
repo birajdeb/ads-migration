@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>3ca4f167-64e9-4f79-a149-3d42a9aeb30a</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Shipment1">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Shipment1" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment"/>
+    </inputData>
+    <decision id="node_1" name="Ground Tariffs">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+                <output bomType="java.lang.Double" collection="false" name="Ground Tariffs"/>
+                <rule defaultRule="false" href="node_1/Ground%20Tariffs.dmt" kind="DecisionTable" name="Ground Tariffs"/>
+                <rule defaultRule="false" href="node_1/Test.dmt" kind="DecisionTable" name="Test"/>
+                <rule defaultRule="false" href="node_1/TestRule.drl" kind="BusinessRule" name="TestRule"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Ground Tariffs" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Ground Base Price">
+        <description>What is the base price for ground transport?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+                <output bomType="java.lang.Double" collection="false" name="Ground Base Price"/>
+                <rule defaultRule="false" href="node_2/Ground%20Base%20Price.dmt" kind="DecisionTable" name="Ground Base Price"/>
+                <rule defaultRule="true" href="node_2/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Ground Base Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Ground Costs">
+        <description>What are the shipping costs for this ground shipment?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Ground Tariffs"/>
+                <input bomType="java.lang.Double" collection="false" name="Ground Base Price"/>
+                <output bomType="java.lang.Double" collection="false" name="Ground Costs"/>
+                <rule defaultRule="false" href="node_3/Ground%20Costs.drl" kind="BusinessRule" name="Ground Costs"/>
+                <rule defaultRule="false" href="node_3/aaa.dmt" kind="DecisionTable" name="aaa"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Ground Costs" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Air Base Price">
+        <description>What is the base price for air transport?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+                <output bomType="java.lang.Double" collection="false" name="Air Base Price"/>
+                <rule defaultRule="false" href="node_4/Air%20Base%20Price.dmt" kind="DecisionTable" name="Air Base Price"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Air Base Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Air Tariffs">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+                <output bomType="java.lang.Double" collection="false" name="Air Tariffs"/>
+                <rule defaultRule="false" href="node_5/Air%20Tariffs.dmt" kind="DecisionTable" name="Air Tariffs"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Air Tariffs" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Air Costs">
+        <description>What are the shipping costs for this air shipment?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Air Base Price"/>
+                <input bomType="java.lang.Double" collection="false" name="Air Tariffs"/>
+                <output bomType="java.lang.Double" collection="false" name="Air Costs"/>
+                <rule defaultRule="false" href="node_6/Air%20Costs.drl" kind="BusinessRule" name="Air Costs"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Air Costs" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_7" name="Method">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Method" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method"/>
+    </inputData>
+    <decision id="node_8" name="Pickup Tariffs">
+        <description>What is the cost in points for pickup shipment tariffs?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <output bomType="java.lang.Double" collection="false" name="Pickup Tariffs"/>
+                <rule defaultRule="false" href="node_8/Pickup%20Tariffs.dmt" kind="DecisionTable" name="Pickup Tariffs"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Pickup Tariffs" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_9" name="Pickup Costs">
+        <description>What are the shipping costs for this pickup?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <input bomType="java.lang.Double" collection="false" name="Pickup Tariffs"/>
+                <output bomType="java.lang.Double" collection="false" name="Pickup Costs"/>
+                <rule defaultRule="false" href="node_9/Pickup%20Costs.drl" kind="BusinessRule" name="Pickup Costs"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Pickup Costs" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Shipment Base Price">
+        <description>What is the base price for this shipment?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="java.lang.Double" collection="false" name="Ground Costs"/>
+                <input bomType="java.lang.Double" collection="false" name="Air Costs"/>
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <input bomType="java.lang.Double" collection="false" name="Pickup Costs"/>
+                <output bomType="java.lang.Double" collection="false" name="Shipment Base Price"/>
+                <rule defaultRule="false" href="node_10/Shipment%20Base%20Price.dmt" kind="DecisionTable" name="Shipment Base Price"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Shipment Base Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_11" name="Decision 11">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment1"/>
+                <output bomType="java.lang.String" collection="false" name="Decision 11"/>
+                <rule defaultRule="false" href="node_11/test.dmt" kind="DecisionTable" name="test"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="Decision 11" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

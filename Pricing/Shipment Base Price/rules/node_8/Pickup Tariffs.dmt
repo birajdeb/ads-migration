@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Pickup Tariffs</name>
+  <uuid>69d8ac0d-51fd-454a-bc74-e8f3db54a611</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[true]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Pickup of 'Method' is <a Pickup Enums>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Size of Shipment1 is <a Size Enums>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pickup]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Letter]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[0.3]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pickup]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Pack 1]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[0.4]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pickup]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Pack 2]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[0.5]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Pickup]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Pack 3]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[0.6]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not <an object>]]></Text>
+                        <Param><![CDATA[Pickup]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[0.1]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Pickup Tariffs]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Pickup]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Size]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>
