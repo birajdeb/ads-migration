@@ -12,7 +12,7 @@
         <Preconditions>
             <Text><![CDATA[definitions 
 set 'shipmentBasePrice' to the shipment base price computed from
-		Shipment being Shipment , 
+		Shipment1 being Shipment , 
 		Method being Method ;]]></Text>
         </Preconditions>
         <Structure>
@@ -37,6 +37,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                     <Expression>
                         <Text><![CDATA[<a number> is less than <a number>]]></Text>
                         <Param><![CDATA[250]]></Param>
+                        <Param/>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -51,6 +52,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
                         <Param><![CDATA[250]]></Param>
                         <Param><![CDATA[500]]></Param>
+                        <Param/>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -65,6 +67,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
                         <Param><![CDATA[500]]></Param>
                         <Param><![CDATA[1000]]></Param>
+                        <Param/>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -79,6 +82,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
                         <Param><![CDATA[1000]]></Param>
                         <Param><![CDATA[5000]]></Param>
+                        <Param/>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -93,6 +97,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                         <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
                         <Param><![CDATA[5000]]></Param>
                         <Param><![CDATA[10000]]></Param>
+                        <Param/>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -106,6 +111,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                     <Expression>
                         <Text><![CDATA[<a number> is at least <a number>]]></Text>
                         <Param><![CDATA[10000]]></Param>
+                        <Param/>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">

@@ -1,0 +1,41 @@
+
+package birajdeb_bluepolaris.com.biraj_test.pricing.test;
+
+
+class Entity
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
+        #de.generated
+{
+    string newAttribute
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute"
+                #update;
+    string newAttribute1
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute1"
+                #update;
+    Entity(string newAttribute, string newAttribute1)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Entity()
+                #dataio.default;
+}
+
+class NewEnum
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "newEnum"
+        #de.generated
+{
+    domain {static newEnumValue, static newEnumValue1}
+    static final readonly birajdeb_bluepolaris.com.biraj_test.pricing.test.NewEnum newEnumValue
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue";
+    static final readonly birajdeb_bluepolaris.com.biraj_test.pricing.test.NewEnum newEnumValue1
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
+}
+

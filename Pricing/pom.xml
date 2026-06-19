@@ -68,6 +68,7 @@
         <module>Pricing Data Structure</module>
         <module>Shipment Base Price</module>
         <module>Shipping Price</module>
+        <module>Test Data</module>
     </modules>
 
     <build>

@@ -46,7 +46,7 @@
         </informationRequirement>
     </decision>
     <decision id="node_3" name="Ground Costs">
-        <description>What are the shipping costs for this ground shipment?</description>
+        <description>What are the shipping costs for this ground shipment? updated</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Double" collection="false" name="Ground Tariffs"/>
@@ -192,6 +192,14 @@
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Decision 12">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <output bomType="java.lang.String" collection="false" name="Decision 12"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Decision 12" typeRef="java.lang.String"/>
     </decision>
 </definitions>
 </definition>

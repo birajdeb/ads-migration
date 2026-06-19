@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>36168e44-51e6-43f6-a8dc-dce050550a3f</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Pre Admission Evaluation Form">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Pre Admission Evaluation Form" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+    </inputData>
+    <decision id="node_1" name="Mobility Current ADL Level">
+        <description>What is the activities of daily living level for relevant current mobility data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="java.lang.Double" collection="false" name="Mobility Current ADL Level"/>
+                <rule defaultRule="false" href="node_1/Mobility%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Mobility Current ADL Level"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Mobility Current ADL Level" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Transfers Current ADL Level">
+        <description>What is the activities of daily living level for relevant current transfers data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="java.lang.Double" collection="false" name="Transfers Current ADL Level"/>
+                <rule defaultRule="false" href="node_2/Transfers%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Transfers Current ADL Level"/>
+                <rule defaultRule="true" href="node_2/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Transfers Current ADL Level" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Feeding Current ADL Level">
+        <description>What is the activities of daily living level for relevant current feeding data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="java.lang.Double" collection="false" name="Feeding Current ADL Level"/>
+                <rule defaultRule="false" href="node_3/Feeding%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Feeding Current ADL Level"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Feeding Current ADL Level" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Toileting Current ADL Level">
+        <description>What is the activities of daily living level for relevant current toileting data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="java.lang.Double" collection="false" name="Toileting Current ADL Level"/>
+                <rule defaultRule="false" href="node_4/Toileting%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Toileting Current ADL Level"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Toileting Current ADL Level" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Dressing Current ADL Level">
+        <description>What is the activities of daily living level for relevant current dressing data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="java.lang.Double" collection="false" name="Dressing Current ADL Level"/>
+                <rule defaultRule="false" href="node_5/Dressing%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Dressing Current ADL Level"/>
+                <rule defaultRule="true" href="node_5/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Dressing Current ADL Level" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Bathing Current ADL Level">
+        <description>What is the activities of daily living level for relevant current bathing data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="java.lang.Double" collection="false" name="Bathing Current ADL Level"/>
+                <rule defaultRule="false" href="node_6/Bathing%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Bathing Current ADL Level"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Bathing Current ADL Level" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_7" name="Ambulatory Level">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Mobility Current ADL Level"/>
+                <input bomType="java.lang.Double" collection="false" name="Transfers Current ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel" collection="false" name="Ambulatory Level"/>
+                <rule defaultRule="false" href="node_7/Ambulatory%20Level.dmt" kind="DecisionTable" name="Ambulatory Level"/>
+                <rule defaultRule="true" href="node_7/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Ambulatory Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_8" name="Selfcare Level">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Feeding Current ADL Level"/>
+                <input bomType="java.lang.Double" collection="false" name="Toileting Current ADL Level"/>
+                <input bomType="java.lang.Double" collection="false" name="Dressing Current ADL Level"/>
+                <input bomType="java.lang.Double" collection="false" name="Bathing Current ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel" collection="false" name="Selfcare Level"/>
+                <rule defaultRule="false" href="node_8/Selfcare%20Level.dmt" kind="DecisionTable" name="Selfcare Level"/>
+                <rule defaultRule="true" href="node_8/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Selfcare Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_9" name="ECOG Scale">
+        <description>What is the eastern cooperative oncology group (ECOG) performance scale for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel" collection="false" name="Ambulatory Level"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel" collection="false" name="Selfcare Level"/>
+                <output bomType="java.lang.Double" collection="false" name="ECOG Scale"/>
+                <rule defaultRule="false" href="node_9/ECOG%20Scale.dmt" kind="DecisionTable" name="ECOG Scale"/>
+                <rule defaultRule="true" href="node_9/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="ECOG Scale" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Pathology Aggressive List">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList" collection="true" name="Pathology Aggressive List"/>
+                <rule defaultRule="false" href="node_10/Pathology%20Aggressive%20List.dmt" kind="DecisionTable" name="Pathology Aggressive List"/>
+                <rule defaultRule="true" href="node_10/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Pathology Aggressive List" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_11" name="Failure to Respond to Treatment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure" collection="false" name="Failure to Respond to Treatment"/>
+                <rule defaultRule="false" href="node_11/Failure%20to%20Respond%20to%20Treatment.dmt" kind="DecisionTable" name="Failure to Respond to Treatment"/>
+                <rule defaultRule="true" href="node_11/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="Failure to Respond to Treatment" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Highly Aggressive Indicator">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure" collection="false" name="Failure to Respond to Treatment"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList" collection="true" name="Pathology Aggressive List"/>
+                <input bomType="java.lang.Double" collection="false" name="ECOG Scale"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive" collection="false" name="Highly Aggressive Indicator"/>
+                <rule defaultRule="false" href="node_12/Highly%20Aggressive%20Indicator.dmt" kind="DecisionTable" name="Highly Aggressive Indicator"/>
+                <rule defaultRule="true" href="node_12/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Highly Aggressive Indicator" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive"/>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_13" name="Cancer Hospice Eligibility">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive" collection="false" name="Highly Aggressive Indicator"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure" collection="false" name="Failure to Respond to Treatment"/>
+                <input bomType="java.lang.Double" collection="false" name="ECOG Scale"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility" collection="false" name="Cancer Hospice Eligibility"/>
+                <rule defaultRule="false" href="node_13/Cancer%20Hospice%20Eligibility.dmt" kind="DecisionTable" name="Cancer Hospice Eligibility"/>
+                <rule defaultRule="true" href="node_13/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_13_ii" name="Cancer Hospice Eligibility" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_14" name="Full Output Of Cancer Hospice Eligibility">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility" collection="false" name="Cancer Hospice Eligibility"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive" collection="false" name="Highly Aggressive Indicator"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure" collection="false" name="Failure to Respond to Treatment"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel" collection="false" name="Ambulatory Level"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList" collection="true" name="Pathology Aggressive List"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel" collection="false" name="Selfcare Level"/>
+                <input bomType="java.lang.Double" collection="false" name="ECOG Scale"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility" collection="false" name="Full Output Of Cancer Hospice Eligibility"/>
+                <rule defaultRule="false" href="node_14/Full%20Output%20of%20Cancer%20Hospice%20Eligibility.drl" kind="BusinessRule" name="Full Output of Cancer Hospice Eligibility"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_14_ii" name="Full Output Of Cancer Hospice Eligibility" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility"/>
+        <informationRequirement>
+            <requiredInput href="#node_13"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

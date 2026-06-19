@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Full Output of Comorbid Conditions</name>
+  <uuid>cf5bb262-ba7c-453b-b7e1-fbba03e843bb</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Full Output  Comorbid Conditions where
+		the Acute Respiratory Failure is 'Acute Respiratory Failure' , 
+		the Anoxic Brain Injury is 'Anoxic Brain Injury' , 
+		the Aspiration Syndrome is 'Aspiration Syndrome' , 
+		the Comorbid Conditionses are 'Comorbid Conditions' , 
+		the Encephalopathy Not Otherwise Specified is 'Encephalopathy Not Otherwise Specified' , 
+		the Heart Failure Unspecified is 'Heart Failure Unspecified' , 
+		the Metabolic Encephalopathy is 'Metabolic Encephalopathy' , 
+		the Rapidly Progressive Skin Wound is 'Rapidly Progressive Skin Wound' , 
+		the Renal Failure Unspecified is 'Renal Failure Unspecified' , 
+		the Sepsis_ is Sepsis_ ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

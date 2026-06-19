@@ -1,0 +1,69 @@
+
+package user1.claims_context.Medical_Claims_Decisions.bom;
+
+class ClaimInput
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ClaimInput"
+        #de.generated
+{
+    string diagnosisComplexity
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "DiagnosisComplexity"
+                #update;
+    string claimHistoryComplexity
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimHistoryComplexity"
+                #update;
+    string treatmentComplexity
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "TreatmentComplexity"
+                #update;
+    string claimMedicalWastageAcceptabilityList
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimMedicalWastageAcceptabilityList"
+                #update;
+    string claimAmountEligibilityIn
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimAmountEligibilityIn"
+                #update;
+    string claimNonDisclosureScoreStatus
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimNonDisclosureScoreStatus"
+                #update;
+    boolean claimUnstructuredData
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimUnstructuredData"
+                #update;
+    string policyGeneralExclusions
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyGeneralExclusions"
+                #update;
+    string policyBenefitEligibility
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyBenefitEligibility"
+                #update;
+    string earlyClaimIndicator
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "EarlyClaimIndicator"
+                #update;
+    boolean claimsFlag
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimsFlag"
+                #update;
+    string claimProductEligibility
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "ClaimProductEligibility"
+                #update;
+    string diagnosisClaimEligibility
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "DiagnosisClaimEligibility"
+                #update;
+    ClaimInput(string diagnosisComplexity, string claimHistoryComplexity, string treatmentComplexity, string claimMedicalWastageAcceptabilityList, string claimAmountEligibilityIn, string claimNonDisclosureScoreStatus, boolean claimUnstructuredData, string policyGeneralExclusions, string policyBenefitEligibility, string earlyClaimIndicator, boolean claimsFlag, string claimProductEligibility, string diagnosisClaimEligibility)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ClaimInput()
+                #dataio.default;
+}
+

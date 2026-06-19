@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Cancer Hospice Eligibility">
+  <name>Cancer_Hospice_Eligibility</name>
+  <uuid>54078ec4-2db3-4087-92d6-a9dbf1cc7c58</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#36168e44-51e6-43f6-a8dc-dce050550a3f"/>
+  <targetRuleProject href="../../Cancer%20Hospice%20Eligibility#e4a32bf5-d791-46e7-8c74-d2db77dc2a35"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Comorbid Conditions">
+  <name>Comorbid_Conditions</name>
+  <uuid>d6212521-063c-47dd-9876-814bf1833ca4</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#548acebc-3ad8-44bf-93bb-b336fd4ace7b"/>
+  <targetRuleProject href="../../Comorbid%20Conditions#c7a29c0b-1d23-46b5-8edb-98fda3e344a5"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

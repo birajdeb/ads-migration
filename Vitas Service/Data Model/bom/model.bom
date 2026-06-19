@@ -1,0 +1,1117 @@
+
+package ankurmore_bluepolaris.com.vitas.vitas_service.datamodel;
+
+
+class ADLChange
+        extends java.lang.Enum
+        property ads.typeId "14"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ADLChange"
+        #de.generated
+{
+    domain {static improvement, static noChange, static severeDecline, static significantDecline, static someDecline, static unavailable}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange improvement
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Improvement";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange noChange
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Change";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange severeDecline
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Severe Decline";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange significantDecline
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Significant Decline";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange someDecline
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Some Decline";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange unavailable
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Unavailable";
+}
+
+class ADLLevel
+        property ads.typeId "30"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ADLLevel"
+        #de.generated
+{
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList ADL
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "ADL"
+                #update;
+    double currentADLLevel
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "CurrentADLLevel"
+                #update;
+    double differenceInADL
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "DifferenceInADL"
+                #update;
+    double previousADLLevel
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "PreviousADLLevel"
+                #update;
+    ADLLevel(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList ADL, double currentADLLevel, double differenceInADL, double previousADLLevel)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ADLLevel()
+                #dataio.default;
+}
+
+class ADLList
+        extends java.lang.Enum
+        property ads.typeId "16"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ADL List"
+        #de.generated
+{
+    domain {static $, static bathing, static dressing, static feeding, static mobility, static toileting, static transfers}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList $
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "-";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList bathing
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bathing";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList dressing
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Dressing";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList feeding
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Feeding";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList mobility
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Mobility";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList toileting
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Toileting";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList transfers
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Transfers";
+}
+
+class ActivitiesOfDailyLivingFunctionalDecline
+        extends java.lang.Enum
+        property ads.typeId "17"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Activities Of Daily Living Functional Decline"
+        #de.generated
+{
+    domain {static noFunctionalDecline, static severeFunctionalDecline, static significantFunctionalDecline, static someFunctionalDecline}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline noFunctionalDecline
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Functional Decline";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline severeFunctionalDecline
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Severe Functional Decline";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline significantFunctionalDecline
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Significant Functional Decline";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline someFunctionalDecline
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Some Functional Decline";
+}
+
+class ActivityLevel
+        extends java.lang.Enum
+        property ads.typeId "11"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ActivityLevel"
+        #de.generated
+{
+    domain {static confinedToBedOrChairMoreThan50$WakingHours, static totallyConfinedToBedOrChair, static upAndAboutMoreThan50$WakingHours}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel confinedToBedOrChairMoreThan50$WakingHours
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Confined to Bed or Chair More Than 50% Waking Hours";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel totallyConfinedToBedOrChair
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Totally Confined to Bed or Chair";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel upAndAboutMoreThan50$WakingHours
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Up and About More Than 50% Waking Hours";
+}
+
+class AmbulatoryLevel
+        extends java.lang.Enum
+        property ads.typeId "18"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Ambulatory Level"
+        #de.generated
+{
+    domain {static disabled, static fullActive, static restricted}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel disabled
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Disabled";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel fullActive
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Full Active";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel restricted
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Restricted";
+}
+
+class Bathing
+        extends java.lang.Enum
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Bathing"
+        #de.generated
+{
+    domain {static $Or2PersonAssist, static bedBath, static noAssistanceNeeded, static showerChair, static sinkBathing, static standByAssistance}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing $Or2PersonAssist
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "1 or 2 Person assist";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing bedBath
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bed Bath";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing noAssistanceNeeded
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Assistance Needed";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing showerChair
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Shower Chair";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing sinkBathing
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Sink Bathing";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing standByAssistance
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Stand by Assistance";
+}
+
+class CancerHospiceEligibility
+        extends java.lang.Enum
+        property ads.typeId "24"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Cancer Hospice Eligibility"
+        #de.generated
+{
+    domain {static hospiceEligible, static reviewEligibility}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility hospiceEligible
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hospice Eligible";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility reviewEligibility
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Review Eligibility";
+}
+
+class CancerHospiceEligibilityCopy
+        extends java.lang.Enum
+        property ads.readonly "false"
+        property ads.typeId "33"
+        property com.fasterxml.jackson.annotation.JsonTypeName "CancerHospiceEligibilityCopy"
+        #de.generated
+        property imported "false"
+{
+    domain {static hospiceEligible, static reviewEligibility}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibilityCopy hospiceEligible
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hospice Eligible";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibilityCopy reviewEligibility
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Review Eligibility";
+}
+
+class CancerStages
+        extends java.lang.Enum
+        property ads.typeId "25"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Cancer Stages"
+        #de.generated
+{
+    domain {static stage1, static stage2, static stage3, static stage4}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages stage1
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Stage 1";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages stage2
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Stage 2";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages stage3
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Stage 3";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages stage4
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Stage 4";
+}
+
+class CancerTreatmentType
+        extends java.lang.Enum
+        property ads.typeId "12"
+        property com.fasterxml.jackson.annotation.JsonTypeName "CancerTreatmentType"
+        #de.generated
+{
+    domain {static chemotherapy, static hormonalTherapy, static immunotherapy, static noTherapy, static otherTreatmentTherapies, static radiationTherapy, static surgery}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType chemotherapy
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Chemotherapy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType hormonalTherapy
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hormonal Therapy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType immunotherapy
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Immunotherapy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType noTherapy
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Therapy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType otherTreatmentTherapies
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Other Treatment Therapies";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType radiationTherapy
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Radiation Therapy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType surgery
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Surgery";
+}
+
+class ComorbidConditions
+        extends java.lang.Enum
+        property ads.typeId "26"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Comorbid Conditions"
+        #de.generated
+{
+    domain 
+    {
+        static acuteRespiratoryFailure,
+        static anoxicBrainInjury,
+        static aspirationSyndrome,
+        static encephalopathyNotOtherwiseSpecified,
+        static heartFailure,
+        static metabolicEncephalopathy,
+        static noCondition,
+        static notAcuteRespiratoryFailure,
+        static notAnoxicBrainInjury,
+        static notAspirationSyndrome,
+        static notEncephalopathyNotOtherwiseSpecified,
+        static notHeartFailure,
+        static notMetabolicEncephalopathy,
+        static notRapidlyProgressiveSkinWound,
+        static notRenalFailure,
+        static notSepsis,
+        static rapidlyProgressiveSkinWound,
+        static renalFailure,
+        static sepsis
+    }
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions acuteRespiratoryFailure
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Acute Respiratory Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions anoxicBrainInjury
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "Anoxic Brain Injury";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions aspirationSyndrome
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Aspiration Syndrome";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions encephalopathyNotOtherwiseSpecified
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "Encephalopathy Not Otherwise Specified";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions heartFailure
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Heart Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions metabolicEncephalopathy
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "Metabolic Encephalopathy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions noCondition
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Condition";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notAcuteRespiratoryFailure
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Acute Respiratory Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notAnoxicBrainInjury
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Anoxic Brain Injury";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notAspirationSyndrome
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Aspiration Syndrome";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notEncephalopathyNotOtherwiseSpecified
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Encephalopathy Not Otherwise Specified";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notHeartFailure
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Heart Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notMetabolicEncephalopathy
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Metabolic Encephalopathy";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notRapidlyProgressiveSkinWound
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Rapidly Progressive Skin Wound";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notRenalFailure
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Renal Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions notSepsis
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Sepsis";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions rapidlyProgressiveSkinWound
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "Rapidly Progressive Skin Wound";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions renalFailure
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Renal Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions sepsis
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Sepsis";
+}
+
+class Complications$NotComplications
+        extends java.lang.Enum
+        property ads.typeId "29"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Complications/NotComplications"
+        #de.generated
+{
+    domain {static complications, static notComplications}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications complications
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Complications";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications notComplications
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Complications";
+}
+
+class Discontinue$NotDiscontinue
+        extends java.lang.Enum
+        property ads.typeId "27"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Discontinue/NotDiscontinue"
+        #de.generated
+{
+    domain {static discontinue, static notDiscontinue}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue discontinue
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Discontinue";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue notDiscontinue
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Discontinue";
+}
+
+class Dressing
+        extends java.lang.Enum
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Dressing"
+        #de.generated
+{
+    domain 
+    {
+        static $Or2PersonAssistance,
+        static canNotAssistInDressing,
+        static limited1$personAssistance$e$g$Socks$,
+        static needsHelpSelectingClothing,
+        static noAssistanceNeeded,
+        static velcroClosures
+    }
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing $Or2PersonAssistance
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "1 or 2 person assistance";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing canNotAssistInDressing
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Can not assist in dressing";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing limited1$personAssistance$e$g$Socks$
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Limited 1-person assistance (e.g. socks)";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing needsHelpSelectingClothing
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Needs help selecting clothing";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing noAssistanceNeeded
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Assistance Needed";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing velcroClosures
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Velcro closures";
+}
+
+class Failure$NotFailure
+        extends java.lang.Enum
+        property ads.typeId "20"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Failure/NotFailure"
+        #de.generated
+{
+    domain {static failure, static notFailure}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure failure
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Failure";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure notFailure
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Failure";
+}
+
+class Feeding
+        extends java.lang.Enum
+        property ads.typeId "8"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Feeding"
+        #de.generated
+{
+    domain {static $Or2PersonAssistance, static adaptiveUtensils, static alteredTexture, static canNotFeedSelf, static needsSetUpAssistance, static noAssistanceNeeded}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding $Or2PersonAssistance
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "1 or 2 Person Assistance";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding adaptiveUtensils
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Adaptive utensils";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding alteredTexture
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Altered texture";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding canNotFeedSelf
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Can not feed self";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding needsSetUpAssistance
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Needs set up assistance";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding noAssistanceNeeded
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Assistance Needed";
+}
+
+class FullOutputActivitiesOfDailyFunctionalDecline
+        property ads.typeId "34"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Full Output Activities Of Daily Functional Decline"
+        #de.generated
+{
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline activitiesOfDailyLivingFunctionalDecline
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "Activities Of Daily Living Functional Decline"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange bathingADLChange
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bathing ADL Change"
+                #update;
+    java.util.List decliningChangeADLLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "Declining Change ADL Lists"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange dressingADLChange
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Dressing ADL Change"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange feedingADLChange
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Feeding ADL Change"
+                #update;
+    java.util.List increasingTimeToTaskADLLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "Increasing Time To Task ADL Lists"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange mobilityADLChange
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Mobility ADL Change"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange toiletingADLChange
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Toileting ADL Change"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange transfersADLChange
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Transfers ADL Change"
+                #update;
+    FullOutputActivitiesOfDailyFunctionalDecline(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline activitiesOfDailyLivingFunctionalDecline, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange bathingADLChange, 
+        java.util.List decliningChangeADLLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange dressingADLChange, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange feedingADLChange, 
+        java.util.List increasingTimeToTaskADLLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange mobilityADLChange, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange toiletingADLChange, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange transfersADLChange)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    FullOutputActivitiesOfDailyFunctionalDecline()
+                #dataio.default;
+    void addTo_decliningChangeADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList decliningChangeADLLists)
+                property collectionAttribute "decliningChangeADLLists"
+                #update;
+    void addTo_increasingTimeToTaskADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList increasingTimeToTaskADLLists)
+                property collectionAttribute "increasingTimeToTaskADLLists"
+                #update;
+    void clear_decliningChangeADLLists()
+                property collectionAttribute "decliningChangeADLLists"
+                #update;
+    void clear_increasingTimeToTaskADLLists()
+                property collectionAttribute "increasingTimeToTaskADLLists"
+                #update;
+    void removeFrom_decliningChangeADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList decliningChangeADLLists)
+                property collectionAttribute "decliningChangeADLLists"
+                #update;
+    void removeFrom_increasingTimeToTaskADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList increasingTimeToTaskADLLists)
+                property collectionAttribute "increasingTimeToTaskADLLists"
+                #update;
+    void set_decliningChangeADLLists(java.util.Collection decliningChangeADLLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList)
+                property collectionAttribute "decliningChangeADLLists"
+                #update;
+    void set_increasingTimeToTaskADLLists(java.util.Collection increasingTimeToTaskADLLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList)
+                property collectionAttribute "increasingTimeToTaskADLLists"
+                #update;
+}
+
+class FullOutputCancerHospiceEligibility
+        property ads.typeId "35"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Full Output Cancer Hospice Eligibility"
+        #de.generated
+{
+    double ECOGScale
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "ECOG Scale"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel ambulatoryLevel
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Ambulatory Level"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility cancerHospiceEligibility
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Cancer Hospice Eligibility"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure failureToRespondToTreatment
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Failure To Respond To Treatment"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive highlyAggressiveIndicator
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Highly Aggressive Indicator"
+                #update;
+    java.util.List pathologyAggressiveLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pathology Aggressive Lists"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel selfcareLevel
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Selfcare Level"
+                #update;
+    FullOutputCancerHospiceEligibility(double ECOGScale, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel ambulatoryLevel, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility cancerHospiceEligibility, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure failureToRespondToTreatment, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive highlyAggressiveIndicator, 
+        java.util.List pathologyAggressiveLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel selfcareLevel)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    FullOutputCancerHospiceEligibility()
+                #dataio.default;
+    void addTo_pathologyAggressiveLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList pathologyAggressiveLists)
+                property collectionAttribute "pathologyAggressiveLists"
+                #update;
+    void clear_pathologyAggressiveLists()
+                property collectionAttribute "pathologyAggressiveLists"
+                #update;
+    void removeFrom_pathologyAggressiveLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList pathologyAggressiveLists)
+                property collectionAttribute "pathologyAggressiveLists"
+                #update;
+    void set_pathologyAggressiveLists(java.util.Collection pathologyAggressiveLists domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList)
+                property collectionAttribute "pathologyAggressiveLists"
+                #update;
+}
+
+class FullOutputComorbidConditions
+        property ads.typeId "36"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Full Output Comorbid Conditions"
+        #de.generated
+{
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions acuteRespiratoryFailure
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Acute Respiratory Failure"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions anoxicBrainInjury
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Anoxic Brain Injury"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions aspirationSyndrome
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Aspiration Syndrome"
+                #update;
+    java.util.List comorbidConditionses domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Comorbid Conditionses"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions encephalopathyNotOtherwiseSpecified
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Encephalopathy Not Otherwise Specified"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions heartFailureUnspecified
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Heart Failure Unspecified"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions metabolicEncephalopathy
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Metabolic Encephalopathy"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions rapidlyProgressiveSkinWound
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Rapidly Progressive Skin Wound"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions renalFailureUnspecified
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Renal Failure Unspecified"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions sepsis_
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Sepsis_"
+                #update;
+    FullOutputComorbidConditions(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions acuteRespiratoryFailure, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions anoxicBrainInjury, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions aspirationSyndrome, 
+        java.util.List comorbidConditionses domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions encephalopathyNotOtherwiseSpecified, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions heartFailureUnspecified, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions metabolicEncephalopathy, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions rapidlyProgressiveSkinWound, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions renalFailureUnspecified, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions sepsis_)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    FullOutputComorbidConditions()
+                #dataio.default;
+    void addTo_comorbidConditionses(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions comorbidConditionses)
+                property collectionAttribute "comorbidConditionses"
+                #update;
+    void clear_comorbidConditionses()
+                property collectionAttribute "comorbidConditionses"
+                #update;
+    void removeFrom_comorbidConditionses(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions comorbidConditionses)
+                property collectionAttribute "comorbidConditionses"
+                #update;
+    void set_comorbidConditionses(java.util.Collection comorbidConditionses domain 0,* class ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions)
+                property collectionAttribute "comorbidConditionses"
+                #update;
+}
+
+class HighlyAggressive$NotHighlyAggressive
+        extends java.lang.Enum
+        property ads.typeId "23"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Highly Aggressive/Not Highly Aggressive"
+        #de.generated
+{
+    domain {static highlyAggressive, static notHighlyAggressive}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive highlyAggressive
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Highly Aggressive";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive notHighlyAggressive
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Highly Aggressive";
+}
+
+class HospiceAdmittance
+        extends java.lang.Enum
+        property ads.typeId "32"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Hospice Admittance"
+        #de.generated
+{
+    domain {static admitToHospice, static furtherReview}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance admitToHospice
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Admit To Hospice";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance furtherReview
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Further Review";
+}
+
+class Mobility
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Mobility"
+        #de.generated
+{
+    domain 
+    {
+        static $Or2PersonAssist$$$Device,
+        static holdsOntoWalls$furniture,
+        static needsCane$walker,
+        static noAssistanceNeeded,
+        static non$ambulatory$WCBound$CannotSelfPropel
+    }
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility $Or2PersonAssist$$$Device
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "1 or 2 person assist +/- Device";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility holdsOntoWalls$furniture
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Holds onto walls/furniture";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility needsCane$walker
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Needs cane/walker";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility noAssistanceNeeded
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Assistance Needed";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility non$ambulatory$WCBound$CannotSelfPropel
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Non-ambulatory/WC Bound/Cannot self propel";
+}
+
+class PathologyAggressiveList
+        extends java.lang.Enum
+        property ads.typeId "19"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Pathology Aggressive List"
+        #de.generated
+{
+    domain 
+    {
+        static boneTumors,
+        static brainAndSpinalCordCancers,
+        static breastCancer,
+        static colorectalCancer,
+        static endometrialCancer,
+        static glioblastoma,
+        static hemotologicMalignancies,
+        static hepatocellularCarcinoma,
+        static neuroendocrineCarcinoma,
+        static non$smallCellLungCancer,
+        static notPathologyAggressive,
+        static pancreaticDuctalAdenocarcinoma
+    }
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList boneTumors
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bone Tumors";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList brainAndSpinalCordCancers
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Brain And Spinal Cord Cancers";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList breastCancer
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Breast Cancer";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList colorectalCancer
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Colorectal Cancer";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList endometrialCancer
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Endometrial Cancer";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList glioblastoma
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Glioblastoma";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList hemotologicMalignancies
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hemotologic Malignancies";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList hepatocellularCarcinoma
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hepatocellular Carcinoma";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList neuroendocrineCarcinoma
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Neuroendocrine Carcinoma";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList non$smallCellLungCancer
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Non-small Cell Lung Cancer";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList notPathologyAggressive
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Pathology Aggressive";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList pancreaticDuctalAdenocarcinoma
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pancreatic Ductal Adenocarcinoma";
+}
+
+class PreAdmissionEvaluationForm
+        property ads.typeId "13"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PreAdmissionEvaluationForm"
+        #de.generated
+{
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel activityLevel
+                property ads.attributeId "27"
+                property com.fasterxml.jackson.annotation.JsonProperty "ActivityLevel"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing bathing3$6MonthsAgo
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bathing3–6MonthsAgo"
+                #update;
+    double bathing3$6MonthsAgoTimeToTask
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bathing3–6MonthsAgoTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing bathingCurrent
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "BathingCurrent"
+                #update;
+    double bathingCurrentTimeToTask
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "BathingCurrentTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages cancerMalignancyStage
+                property ads.attributeId "34"
+                property com.fasterxml.jackson.annotation.JsonProperty "CancerMalignancyStage"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType cancerTreatmentType
+                property ads.attributeId "28"
+                property com.fasterxml.jackson.annotation.JsonProperty "CancerTreatmentType"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed diseaseProgressedDespiteTreatment
+                property ads.attributeId "30"
+                property com.fasterxml.jackson.annotation.JsonProperty "DiseaseProgressedDespiteTreatment"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing dressing3$6MonthsAgo
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Dressing3–6MonthsAgo"
+                #update;
+    double dressing3$6MonthsAgoTimeToTask
+                property ads.attributeId "20"
+                property com.fasterxml.jackson.annotation.JsonProperty "Dressing3–6MonthsAgoTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing dressingCurrent
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "DressingCurrent"
+                #update;
+    double dressingCurrentTimeToTask
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "DressingCurrentTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding feeding3$6MonthsAgo
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Feeding3–6MonthsAgo"
+                #update;
+    double feeding3$6MonthsAgoTimeToTask
+                property ads.attributeId "24"
+                property com.fasterxml.jackson.annotation.JsonProperty "Feeding3–6MonthsAgoTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding feedingCurrent
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "FeedingCurrent"
+                #update;
+    double feedingCurrentTimeToTask
+                property ads.attributeId "23"
+                property com.fasterxml.jackson.annotation.JsonProperty "FeedingCurrentTimeToTask"
+                #update;
+    string functionalDeclineOtherDeficits
+                property ads.attributeId "32"
+                property com.fasterxml.jackson.annotation.JsonProperty "FunctionalDeclineOtherDeficits"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility mobility3$6MonthsAgo
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Mobility3–6MonthsAgo"
+                #update;
+    double mobility3$6MonthsAgoTimeToTask
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "Mobility3–6MonthsAgoTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility mobilityCurrent
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "MobilityCurrent"
+                #update;
+    double mobilityCurrentTimeToTask
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "MobilityCurrentTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue oncologistRecommendsDiscontinuationOfTherapy
+                property ads.attributeId "33"
+                property com.fasterxml.jackson.annotation.JsonProperty "OncologistRecommendsDiscontinuationOfTherapy"
+                #update;
+    boolean oncologistRecommendsTherapyDiscontinuation
+                property ads.attributeId "29"
+                property com.fasterxml.jackson.annotation.JsonProperty "OncologistRecommendsTherapyDiscontinuation"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting toileting3$6MonthsAgo
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Toileting3–6MonthsAgo"
+                #update;
+    double toileting3$6MonthsAgoTimeToTask
+                property ads.attributeId "22"
+                property com.fasterxml.jackson.annotation.JsonProperty "Toileting3–6MonthsAgoTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting toiletingCurrent
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "ToiletingCurrent"
+                #update;
+    double toiletingCurrentTimeToTask
+                property ads.attributeId "21"
+                property com.fasterxml.jackson.annotation.JsonProperty "ToiletingCurrentTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers transfers3$6MonthsAgo
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Transfers3–6MonthsAgo"
+                #update;
+    double transfers3$6MonthsAgoTimeToTask
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "Transfers3–6MonthsAgoTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers transfersCurrent
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "TransfersCurrent"
+                #update;
+    double transfersCurrentTimeToTask
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "TransfersCurrentTimeToTask"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications treatmentComplications
+                property ads.attributeId "31"
+                property com.fasterxml.jackson.annotation.JsonProperty "TreatmentComplications"
+                #update;
+    string whyHospiceNow$
+                property ads.attributeId "25"
+                property com.fasterxml.jackson.annotation.JsonProperty "WhyHospiceNow?"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility workAbility
+                property ads.attributeId "26"
+                property com.fasterxml.jackson.annotation.JsonProperty "WorkAbility"
+                #update;
+    PreAdmissionEvaluationForm(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel activityLevel, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing bathing3$6MonthsAgo, 
+        double bathing3$6MonthsAgoTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing bathingCurrent, 
+        double bathingCurrentTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages cancerMalignancyStage, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType cancerTreatmentType, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed diseaseProgressedDespiteTreatment, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing dressing3$6MonthsAgo, 
+        double dressing3$6MonthsAgoTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing dressingCurrent, 
+        double dressingCurrentTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding feeding3$6MonthsAgo, 
+        double feeding3$6MonthsAgoTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding feedingCurrent, 
+        double feedingCurrentTimeToTask, 
+        string functionalDeclineOtherDeficits, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility mobility3$6MonthsAgo, 
+        double mobility3$6MonthsAgoTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility mobilityCurrent, 
+        double mobilityCurrentTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue oncologistRecommendsDiscontinuationOfTherapy, 
+        boolean oncologistRecommendsTherapyDiscontinuation, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting toileting3$6MonthsAgo, 
+        double toileting3$6MonthsAgoTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting toiletingCurrent, 
+        double toiletingCurrentTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers transfers3$6MonthsAgo, 
+        double transfers3$6MonthsAgoTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers transfersCurrent, 
+        double transfersCurrentTimeToTask, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications treatmentComplications, 
+        string whyHospiceNow$, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility workAbility)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PreAdmissionEvaluationForm()
+                #dataio.default;
+}
+
+class Progressed$NotProgressed
+        extends java.lang.Enum
+        property ads.typeId "28"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Progressed/NotProgressed"
+        #de.generated
+{
+    domain {static notProgressed, static progressed}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed notProgressed
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Progressed";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed progressed
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Progressed";
+}
+
+class Toileting
+        extends java.lang.Enum
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Toileting"
+        #de.generated
+{
+    domain 
+    {
+        static foley,
+        static helpWithFlushing$wiping,
+        static incontinencePad,
+        static incontinentOfUrine,
+        static incontinentOfUrineAndFeces,
+        static noAssistanceNeeded,
+        static occasionalIncontinence
+    }
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting foley
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Foley";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting helpWithFlushing$wiping
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Help with flushing/wiping";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting incontinencePad
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Incontinence Pad";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting incontinentOfUrine
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Incontinent of urine";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting incontinentOfUrineAndFeces
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Incontinent of urine and feces";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting noAssistanceNeeded
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Assistance Needed";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting occasionalIncontinence
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Occasional incontinence";
+}
+
+class Transfers
+        extends java.lang.Enum
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Transfers"
+        #de.generated
+{
+    domain 
+    {
+        static $Or2PersonAssist,
+        static $PersonAssist$$$1MechanicalLift,
+        static doesNotTransfer,
+        static noAssistanceNeeded,
+        static pushesOffArmsOfChair$usesLiftChair,
+        static standByAssistance
+    }
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers $Or2PersonAssist
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "1 or 2 person assist";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers $PersonAssist$$$1MechanicalLift
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "2 person assist +/-1 mechanical lift";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers doesNotTransfer
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Does not transfer";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers noAssistanceNeeded
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Assistance Needed";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers pushesOffArmsOfChair$usesLiftChair
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pushes off arms of chair/uses lift chair";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers standByAssistance
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Stand by Assistance";
+}
+
+class VitasServiceFullOutput
+        property ads.typeId "31"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Vitas Service Full Output"
+        #de.generated
+{
+    string comorbidityList
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Comorbidity List"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline fullOutputOfActivitiesOfDailyLivingFunction
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Full Output Of Activities Of Daily Living Function"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility fullOutputOfCancerHospiceEligibility
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Full Output Of Cancer Hospice Eligibility"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions fullOutputOfComorbidConditions
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Full Output Of Comorbid Conditions"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance hospiceAdmittance
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hospice Admittance"
+                #update;
+    VitasServiceFullOutput(string comorbidityList, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline fullOutputOfActivitiesOfDailyLivingFunction, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility fullOutputOfCancerHospiceEligibility, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions fullOutputOfComorbidConditions, 
+        ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance hospiceAdmittance)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    VitasServiceFullOutput()
+                #dataio.default;
+}
+
+class WorkAbility
+        extends java.lang.Enum
+        property ads.typeId "9"
+        property com.fasterxml.jackson.annotation.JsonTypeName "WorkAbility"
+        #de.generated
+{
+    domain {static full, static lightOrSedentary, static none}
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility full
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Full";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility lightOrSedentary
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Light or Sedentary";
+    static final readonly ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility none
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "None";
+}
+

@@ -1,0 +1,13 @@
+
+# birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity
+birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity#concept.label = Entity
+birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity.Entity(java.lang.String,java.lang.String)#phrase.navigation = a new {Entity} where {0, new attribute} {1, new attribute 1}
+birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity.newAttribute#phrase.action = set the new attribute of {this} to {new attribute}
+birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity.newAttribute#phrase.navigation = {new attribute} of {this}
+birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity.newAttribute1#phrase.action = set the new attribute 1 of {this} to {new attribute 1}
+birajdeb_bluepolaris.com.biraj_test.pricing.test.Entity.newAttribute1#phrase.navigation = {new attribute 1} of {this}
+
+# birajdeb_bluepolaris.com.biraj_test.pricing.test.NewEnum
+birajdeb_bluepolaris.com.biraj_test.pricing.test.NewEnum#concept.label = new enum
+birajdeb_bluepolaris.com.biraj_test.pricing.test.NewEnum.newEnumValue#instance.label = new enum value
+birajdeb_bluepolaris.com.biraj_test.pricing.test.NewEnum.newEnumValue1#instance.label = new enum value 1

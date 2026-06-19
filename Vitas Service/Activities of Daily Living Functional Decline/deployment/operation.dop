@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Activities of Daily Living Functional Decline">
+  <name>Activities_of_Daily_Living_Functional_Decline</name>
+  <uuid>38f4b145-95fb-490d-a895-5f9b425967a0</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#bc1a75b0-5b8a-484b-a698-5910538a6b59"/>
+  <targetRuleProject href="../../Activities%20of%20Daily%20Living%20Functional%20Decline#26310d80-c8e1-4340-94f6-a25bc2be46a3"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

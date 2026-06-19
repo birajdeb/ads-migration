@@ -1,0 +1,11 @@
+{
+  "description" : "1.2 General Exclusion Indicator",
+  "groupId" : "birajdeb_bluepolaris.com.biraj_test.medical_claims_decisions",
+  "locale" : "en_US",
+  "properties" : {
+    "refactoringEnabled" : false,
+    "tags" : [ ],
+    "indexingEnabled" : false
+  },
+  "extraProperties" : { }
+}

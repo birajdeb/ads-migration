@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>bc1a75b0-5b8a-484b-a698-5910538a6b59</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Pre Admission Evaluation Form">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Pre Admission Evaluation Form" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+    </inputData>
+    <decision id="node_6" name="Transfers ADL Change">
+        <description>What type of activities of daily living change is there for transfers data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Transfers ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Transfers ADL Change"/>
+                <rule defaultRule="false" href="node_6/Transfers%20ADL%20Change.dmt" kind="DecisionTable" name="Transfers ADL Change"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Transfers ADL Change" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange"/>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_9" name="Bathing ADL Change">
+        <description>What type of activities of daily living change is there for bathing data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Bathing ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Bathing ADL Change"/>
+                <rule defaultRule="false" href="node_9/Bathing%20ADL%20Change.dmt" kind="DecisionTable" name="Bathing ADL Change"/>
+                <rule defaultRule="true" href="node_9/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Bathing ADL Change" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange"/>
+        <informationRequirement>
+            <requiredInput href="#node_26"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Dressing ADL Change">
+        <description>What type of activities of daily living change is there for dressing data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Dressing ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Dressing ADL Change"/>
+                <rule defaultRule="false" href="node_12/Dressing%20ADL%20Change.dmt" kind="DecisionTable" name="Dressing ADL Change"/>
+                <rule defaultRule="true" href="node_12/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Dressing ADL Change" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange"/>
+        <informationRequirement>
+            <requiredInput href="#node_27"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_15" name="Toileting ADL Change">
+        <description>What type of activities of daily living change is there for toileting data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Toileting ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Toileting ADL Change"/>
+                <rule defaultRule="false" href="node_15/Toileting%20ADL%20Change.dmt" kind="DecisionTable" name="Toileting ADL Change"/>
+                <rule defaultRule="true" href="node_15/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_15_ii" name="Toileting ADL Change" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange"/>
+        <informationRequirement>
+            <requiredInput href="#node_25"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_18" name="Feeding ADL Change">
+        <description>What type of activities of daily living change is there for feeding data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Feeding ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Feeding ADL Change"/>
+                <rule defaultRule="false" href="node_18/Feeding%20ADL%20Change.dmt" kind="DecisionTable" name="Feeding ADL Change"/>
+                <rule defaultRule="true" href="node_18/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_18_ii" name="Feeding ADL Change" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange"/>
+        <informationRequirement>
+            <requiredInput href="#node_28"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_19" name="Increasing Time to Task ADL List">
+        <description>What is the list of activities of daily living that have increasing time to task from previous 3-6 months prior evaluation for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList" collection="true" name="Increasing Time to Task ADL List"/>
+                <rule defaultRule="false" href="node_19/Increasing%20Time%20to%20Task%20ADL%20List.dmt" kind="DecisionTable" name="Increasing Time to Task ADL List"/>
+                <rule defaultRule="true" href="node_19/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_19_ii" name="Increasing Time to Task ADL List" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_20" name="Declining Change ADL List">
+        <description>What is the list of activities of daily living that have declining change from previous 3-6 months prior evaluation for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Feeding ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Toileting ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Transfers ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Dressing ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Mobility ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Bathing ADL Change"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList" collection="true" name="Declining Change ADL List"/>
+                <rule defaultRule="false" href="node_20/Declining%20Change%20ADL%20List.dmt" kind="DecisionTable" name="Declining Change ADL List"/>
+                <rule defaultRule="true" href="node_20/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_20_ii" name="Declining Change ADL List" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_18"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_15"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_21" name="Activities of Daily Living Functional Decline">
+        <description>Is there evidence of functional decline from activities of daily living for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList" collection="true" name="Increasing Time to Task ADL List"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList" collection="true" name="Declining Change ADL List"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline" collection="false" name="Activities of Daily Living Functional Decline"/>
+                <rule defaultRule="false" href="node_21/Activities%20of%20Daily%20Living%20Functional%20Decline.dmt" kind="DecisionTable" name="Activities of Daily Living Functional Decline"/>
+                <rule defaultRule="true" href="node_21/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_21_ii" name="Activities of Daily Living Functional Decline" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_22" name="Mobility ADL Level">
+        <description>What is the activities of daily living level for relevant current and previous mobility data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Mobility ADL Level"/>
+                <rule defaultRule="false" href="node_22/Mobility%20ADL%20Level.dmt" kind="DecisionTable" name="Mobility ADL Level"/>
+                <rule defaultRule="false" href="node_22/Mobility%20Difference.drl" kind="BusinessRule" name="Mobility Difference"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_22_ii" name="Mobility ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_23" name="Mobility ADL Change">
+        <description>What type of activities of daily living change is there for mobility data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Mobility ADL Level"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Mobility ADL Change"/>
+                <rule defaultRule="false" href="node_23/Mobility%20ADL%20Change.dmt" kind="DecisionTable" name="Mobility ADL Change"/>
+                <rule defaultRule="true" href="node_23/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_23_ii" name="Mobility ADL Change" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange"/>
+        <informationRequirement>
+            <requiredInput href="#node_22"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_24" name="Transfers ADL Level">
+        <description>What is the activities of daily living level for relevant current and previous transfers data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Transfers ADL Level"/>
+                <rule defaultRule="false" href="node_24/Transfers%20ADL%20Level.dmt" kind="DecisionTable" name="Transfers ADL Level"/>
+                <rule defaultRule="false" href="node_24/Difference%20in%20ADL%20Level.drl" kind="BusinessRule" name="Difference in ADL Level"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_24_ii" name="Transfers ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_25" name="Toileting ADL Level">
+        <description>What is the activities of daily living level for relevant current and previous toileting data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Toileting ADL Level"/>
+                <rule defaultRule="false" href="node_25/Toileting%20ADL%20Level.dmt" kind="DecisionTable" name="Toileting ADL Level"/>
+                <rule defaultRule="false" href="node_25/Difference%20in%20Toileting%20ADL%20Level.drl" kind="BusinessRule" name="Difference in Toileting ADL Level"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_25_ii" name="Toileting ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_26" name="Bathing ADL Level">
+        <description>What is the activities of daily living level for relevant current and previous bathing data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Bathing ADL Level"/>
+                <rule defaultRule="false" href="node_26/Bathing%20ADL%20Level.dmt" kind="DecisionTable" name="Bathing ADL Level"/>
+                <rule defaultRule="false" href="node_26/Difference%20in%20Bathing%20ADL%20Level.drl" kind="BusinessRule" name="Difference in Bathing ADL Level"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_26_ii" name="Bathing ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_27" name="Dressing ADL Level">
+        <description>What is the activities of daily living level for relevant current and previous dressing data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Dressing ADL Level"/>
+                <rule defaultRule="false" href="node_27/Dressing%20ADL%20Level.dmt" kind="DecisionTable" name="Dressing ADL Level"/>
+                <rule defaultRule="false" href="node_27/Difference%20in%20Dressing%20ADL%20Level.drl" kind="BusinessRule" name="Difference in Dressing ADL Level"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_27_ii" name="Dressing ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_28" name="Feeding ADL Level">
+        <description>What is the activities of daily living level for relevant current and previous feeding data for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Feeding ADL Level"/>
+                <rule defaultRule="false" href="node_28/Feeding%20ADL%20Level.dmt" kind="DecisionTable" name="Feeding ADL Level"/>
+                <rule defaultRule="false" href="node_28/Difference%20in%20Feeding%20ADL%20Level.drl" kind="BusinessRule" name="Difference in Feeding ADL Level"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_28_ii" name="Feeding ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_29" name="Full Output of Activities of Daily Living Functional Decline">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList" collection="true" name="Increasing Time to Task ADL List"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Feeding ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Toileting ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Mobility ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Dressing ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Transfers ADL Change"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline" collection="false" name="Activities of Daily Living Functional Decline"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList" collection="true" name="Declining Change ADL List"/>
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange" collection="false" name="Bathing ADL Change"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline" collection="false" name="Full Output of Activities of Daily Living Functional Decline"/>
+                <rule defaultRule="false" href="node_29/Full%20Output%20of%20Activities%20of%20Daily%20Living%20Functional%20Decline.drl" kind="BusinessRule" name="Full Output of Activities of Daily Living Functional Decline"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_29_ii" name="Full Output of Activities of Daily Living Functional Decline" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_18"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_15"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_21"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

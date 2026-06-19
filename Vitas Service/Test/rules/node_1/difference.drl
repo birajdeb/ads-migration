@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>difference</name>
+  <uuid>eca90a29-a726-470b-bb09-941c5f63221d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a copy of decision where the Difference in ADL is the Current ADL Level of decision - the Previous ADL Level of decision; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

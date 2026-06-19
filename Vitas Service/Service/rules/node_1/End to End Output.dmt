@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>End to End Output</name>
+  <uuid>661c8c48-b153-4393-8dae-9f9b86b29a67</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+set 'a Activities of Daily Living Functional Decline' to  the activities of daily living functional decline computed from Pre Admission Evaluation Form being 'Pre Admission Evaluation Form'; 
+set 'a Cancer Hospice Eligibility' to the cancer hospice eligibility computed from Pre Admission Evaluation Form being 'Pre Admission Evaluation Form';
+set 'a Comorbid Conditions List' to the comorbid conditions computed from Pre Admission Evaluation Form being 'Pre Admission Evaluation Form'  ; 
+set 'a Comorbid Condition' to a Comorbid Conditions in the  Comorbid Conditionses of 'a Comorbid Conditions List' ;
+
+
+    ]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Cancer Hospice Eligibility of 'a Cancer Hospice Eligibility' is <a Cancer Hospice Eligibility> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Activities of Daily Living Functional Decline of 'a Activities of Daily Living Functional Decline'  is <an Activities of Daily Living Functional Decline> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['a Comorbid Condition' is <a Comorbid Conditions> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to a new Vitas Service Full Output where 
+	the Hospice Admittance is <Hospice Admittance> , 
+	the Comorbid Condition is <Comorbid Condition> , 
+	the Full Output of Comorbid Conditions is 'a Comorbid Conditions List' , 
+	the Full Output of Cancer Hospice Eligibility is 'a Cancer Hospice Eligibility' , 
+	the Full Output of Activities of Daily Living Function is 'a Activities of Daily Living Functional Decline' ]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Hospice Eligible]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[Admit to Hospice]]></Param>
+                                <Param><![CDATA["Comorbid Conditions"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Review Eligibility]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Severe Functional Decline]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                        <Param><![CDATA[No Condition]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Admit to Hospice]]></Param>
+                                                <Param><![CDATA["Comorbid Conditions"]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Review Eligibility]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                <Param><![CDATA[Severe Functional Decline]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Further Review]]></Param>
+                                        <Param><![CDATA["-"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Cancer Hospice Eligibility]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[422]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Activities of Daily Functional Decline]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[Comorid Conditions]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Vitas Service Full Output]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

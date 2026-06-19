@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>1ff90c10-acff-4758-a5d1-594960a1fc04</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Pre Admission Evaluation Form">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Pre Admission Evaluation Form" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+    </inputData>
+    <decision id="node_1" name="Vitas Service Full Output">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput" collection="false" name="Vitas Service Full Output"/>
+                <rule defaultRule="false" href="node_1/End%20to%20End%20Output.dmt" kind="DecisionTable" name="End to End Output"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Vitas Service Full Output" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_2"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_3"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_4"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_5"/>
+        </knowledgeRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_2" name="Activities of Daily Living Functional Decline">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Activities of Daily Living Functional Decline" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline"/>
+        <encapsulatedLogic typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline">
+            <formalParameter name="preAdmissionEvaluationForm" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.vitas.vitas_service.activitiesofdailylivingfunctionaldecline.Activities_of_Daily_Living_Functional_Decline"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_3" name="Cancer Hospice Eligibility">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Cancer Hospice Eligibility" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility"/>
+        <encapsulatedLogic typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility">
+            <formalParameter name="preAdmissionEvaluationForm" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.vitas.vitas_service.cancerhospiceeligibility.Cancer_Hospice_Eligibility"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_4" name="Comorbid Conditions">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Comorbid Conditions" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions[]"/>
+        <encapsulatedLogic typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions[]">
+            <formalParameter name="preAdmissionEvalutionForm" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.vitas.vitas_service.comorbidconditions.Comorbid_Conditions"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_5" name="Test">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Test" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.test.TestOutput"/>
+        <encapsulatedLogic typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.test.TestOutput">
+            <formalParameter name="preAdmissionEvaluationForm" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.vitas.vitas_service.test.Test"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

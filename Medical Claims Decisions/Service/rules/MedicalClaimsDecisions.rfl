@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>MedicalClaimsDecisions</name>
+  <uuid>5309ed2b-b5f7-4b7e-80d4-eeaf7738bc83</uuid>
+  <locale>en_US</locale>
+  <rfModel><Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+    <Body>
+        <TaskList>
+            <StartTask Identifier="task_0"/>
+            <StopTask Identifier="task_2"/>
+            <FunctionTask Identifier="task_3">
+                <Invocation FunctionIdentifier="user1.claims_context.Medical_Claims_Decisions.model.MedicalClaimsDecisions">
+                    <InputBindings>
+                        <Binding Language="bal" Name="claimProductEligibility"><![CDATA[ 'the Claim Product Eligibility' ]]></Binding>
+                        <Binding Language="bal" Name="diagnosisClaimEligibility"><![CDATA[ 'the Diagnosis Claim Eligibility' ]]></Binding>
+                        <Binding Language="bal" Name="diagnosisComplexity"><![CDATA[ 'the Diagnosis Complexity' ]]></Binding>
+                        <Binding Language="bal" Name="claimAmountEligibilityIn"><![CDATA[ 'the Claim Amount Eligibility In' ]]></Binding>
+                        <Binding Language="bal" Name="claimsFlag"><![CDATA[ 'the Claims Flag' ]]></Binding>
+                        <Binding Language="bal" Name="claimHistoryComplexity"><![CDATA[ 'the Claim History Complexity' ]]></Binding>
+                        <Binding Language="bal" Name="claimMedicalWastageAcceptabilityList"><![CDATA[ 'the Claim Medical Wastage Acceptability List' ]]></Binding>
+                        <Binding Language="bal" Name="policyGeneralExclusions"><![CDATA[ 'the Policy General Exclusions' ]]></Binding>
+                        <Binding Language="bal" Name="claimUnstructuredData"><![CDATA[ 'the Claim Unstructured Data' ]]></Binding>
+                        <Binding Language="bal" Name="treatmentComplexity"><![CDATA[ 'the Treatment Complexity' ]]></Binding>
+                        <Binding Language="bal" Name="claimNonDisclosureScoreStatus"><![CDATA[ 'the Claim Non-Disclosure Score Status' ]]></Binding>
+                        <Binding Language="bal" Name="policyBenefitEligibility"><![CDATA[ 'the Policy Benefit Eligibility' ]]></Binding>
+                        <Binding Language="bal" Name="earlyClaimIndicator"><![CDATA[ 'the Early Claim Indicator' ]]></Binding>
+
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="medicalClaimsDecisionsOutput"><![CDATA[Medical Claims Decisions Output of 'decision model' ]]></Binding>
+
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+        </TaskList>
+        <NodeList>
+            <TaskNode Identifier="node_0" Task="task_0"/>
+            <TaskNode Identifier="node_2" Task="task_2"/>
+            <TaskNode Identifier="node_3" Task="task_3"/>
+        </NodeList>
+        <TransitionList>
+            <Transition Identifier="transition_0" Source="node_0" Target="node_3"/>
+            <Transition Identifier="transition_1" Source="node_3" Target="node_2"/>
+        </TransitionList>
+    </Body>
+    <Resources>
+        <ResourceSet Locale="en_US">
+            <Data Name="node_3#label"><![CDATA[MedicalClaimsDecisions]]></Data>
+            <Data Name="node_0#name"><![CDATA[Start node]]></Data>
+            <Data Name="node_2#name"><![CDATA[End node]]></Data>
+            <Data Name="node_3#name"><![CDATA[MedicalClaimsDecisions]]></Data>
+        </ResourceSet>
+    </Resources>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

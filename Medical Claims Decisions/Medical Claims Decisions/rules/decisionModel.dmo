@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore"
+                                                        xmlns:xmi="http://www.omg.org/XMI"
+                                                        xmi:version="2.0">
+   <name>decisionModel</name>
+   <uuid>00fa9d0a-7f1c-4bd9-87bb-93ceb9bc61be</uuid>
+   <locale>en_US</locale>
+   <definition>
+      <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                   id="decisions"
+                   name="diagram"
+                   namespace="">
+         <extensionElements>
+            <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+         </extensionElements>
+         <decision id="node_1" name="Determine Claim Eligibility">
+            <description></description>
+            <extensionElements>
+               <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim Product Eligibility"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Diagnosis Claim Eligibility"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim Amount Eligibility In"/>
+                  <output bomType="java.lang.String"
+                          collection="false"
+                          name="Determine Claim Eligibility"/>
+               </ruleset>
+            </extensionElements>
+            <variable id="node_1_i"
+                      name="Determine Claim Eligibility"
+                      typeRef="java.lang.String"/>
+            <informationRequirement>
+               <requiredInput href="#node_6"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_7"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_9"/>
+            </informationRequirement>
+         </decision>
+         <decision id="node_2" name="Determine Claim Status">
+            <description></description>
+            <extensionElements>
+               <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                  <input bomType="java.lang.String"
+                         collection="false"
+                         name="Determine Claim Complexity"/>
+                  <input bomType="java.lang.String"
+                         collection="false"
+                         name="Determine Claim Validity"/>
+                  <input bomType="java.lang.String"
+                         collection="false"
+                         name="Determine Claim Medical Wastage"/>
+                  <input bomType="java.lang.String"
+                         collection="false"
+                         name="Determine Claim Eligibility"/>
+                  <output bomType="java.lang.String"
+                          collection="false"
+                          name="Determine Claim Status"/>
+               </ruleset>
+            </extensionElements>
+            <variable id="node_2_ii"
+                      name="Determine Claim Status"
+                      typeRef="java.lang.String"/>
+            <informationRequirement>
+               <requiredInput href="#node_3"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_5"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_4"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_1"/>
+            </informationRequirement>
+         </decision>
+         <decision id="node_3" name="Determine Claim Complexity">
+            <description></description>
+            <extensionElements>
+               <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim History Complexity"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Treatment Complexity"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Diagnosis Complexity"/>
+                  <output bomType="java.lang.String"
+                          collection="false"
+                          name="Determine Claim Complexity"/>
+               </ruleset>
+            </extensionElements>
+            <variable id="node_3_iii"
+                      name="Determine Claim Complexity"
+                      typeRef="java.lang.String"/>
+            <informationRequirement>
+               <requiredInput href="#node_11"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_15"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_8"/>
+            </informationRequirement>
+         </decision>
+         <decision id="node_4" name="Determine Claim Medical Wastage">
+            <description></description>
+            <extensionElements>
+               <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim Medical Wastage Acceptability List"/>
+                  <output bomType="java.lang.String"
+                          collection="false"
+                          name="Determine Claim Medical Wastage"/>
+               </ruleset>
+            </extensionElements>
+            <variable id="node_4_iiii"
+                      name="Determine Claim Medical Wastage"
+                      typeRef="java.lang.String"/>
+            <informationRequirement>
+               <requiredInput href="#node_12"/>
+            </informationRequirement>
+         </decision>
+         <decision id="node_5" name="Determine Claim Validity">
+            <description></description>
+            <extensionElements>
+               <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim Unstructured Data"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claims Flag"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Policy Benefit Eligibility"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim Non-Disclosure Score Status"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Claim Amount Eligibility In"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Policy General Exclusions"/>
+                  <input bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                         collection="false"
+                         name="Early Claim Indicator"/>
+                  <output bomType="java.lang.String"
+                          collection="false"
+                          name="Determine Claim Validity"/>
+               </ruleset>
+            </extensionElements>
+            <variable id="node_5_iiiii"
+                      name="Determine Claim Validity"
+                      typeRef="java.lang.String"/>
+            <informationRequirement>
+               <requiredInput href="#node_14"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_10"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_17"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_16"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_9"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_13"/>
+            </informationRequirement>
+            <informationRequirement>
+               <requiredInput href="#node_18"/>
+            </informationRequirement>
+         </decision>
+         <inputData id="node_6" name="Claim Product Eligibility">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claim Product Eligibility"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_6_iiiiii"
+                      name="Claim Product Eligibility"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_7" name="Diagnosis Claim Eligibility">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Diagnosis Claim Eligibility"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_7_iiiiiii"
+                      name="Diagnosis Claim Eligibility"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_8" name="Diagnosis Complexity">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Diagnosis Complexity"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_8_iiiiiiii"
+                      name="Diagnosis Complexity"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_9" name="Claim Amount Eligibility In">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claim Amount Eligibility In"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_9_iiiiiiiii"
+                      name="Claim Amount Eligibility In"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_10" name="Claims Flag">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claims Flag"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_10_iiiiiiiiii"
+                      name="Claims Flag"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_11" name="Claim History Complexity">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claim History Complexity"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_11_iiiiiiiiiii"
+                      name="Claim History Complexity"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_12" name="Claim Medical Wastage Acceptability List">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claim Medical Wastage Acceptability List"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_12_iiiiiiiiiiii"
+                      name="Claim Medical Wastage Acceptability List"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_13" name="Policy General Exclusions">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Policy General Exclusions"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_13_iiiiiiiiiiiii"
+                      name="Policy General Exclusions"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_14" name="Claim Unstructured Data">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claim Unstructured Data"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_14_iiiiiiiiiiiiii"
+                      name="Claim Unstructured Data"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_15" name="Treatment Complexity">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Treatment Complexity"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_15_iiiiiiiiiiiiiii"
+                      name="Treatment Complexity"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_16" name="Claim Non-Disclosure Score Status">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Claim Non-Disclosure Score Status"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_16_iiiiiiiiiiiiiiii"
+                      name="Claim Non-Disclosure Score Status"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_17" name="Policy Benefit Eligibility">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Policy Benefit Eligibility"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_17_iiiiiiiiiiiiiiiii"
+                      name="Policy Benefit Eligibility"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+         <inputData id="node_18" name="Early Claim Indicator">
+            <description></description>
+            <extensionElements>
+               <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                  <output bomType="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"
+                          collection="false"
+                          name="Early Claim Indicator"/>
+               </initialization>
+            </extensionElements>
+            <variable id="node_18_iiiiiiiiiiiiiiiiii"
+                      name="Early Claim Indicator"
+                      typeRef="user1.claims_context.Medical_Claims_Decisions.bom.ClaimInput"/>
+         </inputData>
+      </definitions>
+   </definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

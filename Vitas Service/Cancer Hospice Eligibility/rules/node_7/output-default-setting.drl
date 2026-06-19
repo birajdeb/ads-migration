@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>b67a8aa4-9c6e-4ebd-be69-cf965c6aa8b6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to Restricted ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

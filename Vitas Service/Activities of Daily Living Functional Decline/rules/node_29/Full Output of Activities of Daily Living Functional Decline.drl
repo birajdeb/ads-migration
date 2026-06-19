@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Full Output of Activities of Daily Living Functional Decline</name>
+  <uuid>4c6e6671-affd-4066-915d-88aa650f9b7a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Full Output  Activities Of Daily Functional Decline where 
+	the Toileting ADL Change is 'Toileting ADL Change' , 
+	the Mobility ADL Change is 'Mobility ADL Change' , 
+	the Feeding ADL Change is 'Feeding ADL Change' , 
+	the Transfers ADL Change is 'Transfers ADL Change' , 
+	the Bathing ADL Change is 'Bathing ADL Change' , 
+	the Dressing ADL Change is 'Dressing ADL Change' , 
+	the Declining Change ADL Lists are 'Declining Change ADL List' , 
+	the Activities of Daily Living Functional Decline is 'Activities of Daily Living Functional Decline' , 
+	the Increasing Time to Task ADL Lists are 'Increasing Time to Task ADL List'; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>2eaf850b-dd0c-45d0-bf2d-86df66302a14</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to Unavailable ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

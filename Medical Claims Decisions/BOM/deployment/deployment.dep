@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="birajdeb_bluepolaris.com.biraj_test.medical_claims_decisions:bom" ruleAppVersion="1.0.0-SNAPSHOT" packageName="user1.claims_context.Medical_Claims_Decisions.bom" managingXom="true">
+  <name>BOM</name>
+  <uuid>4a2ab390-709c-487f-94f7-e7bad1afe244</uuid>
+  <locales>en_US</locales>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>18618726-fdad-496f-bf7c-46a3b07ef9bc</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Pre Admission Evaluation Form">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Pre Admission Evaluation Form" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm"/>
+    </inputData>
+    <decision id="node_1" name="Mobility Current ADL Level">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Mobility Current ADL Level"/>
+                <rule defaultRule="false" href="node_1/Mobility%20Current%20ADL%20Level.dmt" kind="DecisionTable" name="Mobility Current ADL Level"/>
+                <rule defaultRule="false" href="node_1/Mobility%20Previous.dmt" kind="DecisionTable" name="Mobility Previous"/>
+                <rule defaultRule="false" href="node_1/difference.drl" kind="BusinessRule" name="difference"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Mobility Current ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Copy of Mobility Current ADL Level">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm" collection="false" name="Pre Admission Evaluation Form"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel" collection="false" name="Copy of Mobility Current ADL Level"/>
+                <rule defaultRule="false" href="node_2/Mobility%20Current%20And%20Previous.dmt" kind="DecisionTable" name="Mobility Current And Previous"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Copy of Mobility Current ADL Level" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

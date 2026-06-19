@@ -1,0 +1,11 @@
+{
+  "description" : "",
+  "groupId" : "birajdeb_bluepolaris.com.biraj_test.vitas_service",
+  "locale" : "en_US",
+  "properties" : {
+    "refactoringEnabled" : false,
+    "tags" : [ ],
+    "indexingEnabled" : false
+  },
+  "extraProperties" : { }
+}

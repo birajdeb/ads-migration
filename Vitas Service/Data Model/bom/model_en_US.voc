@@ -1,0 +1,448 @@
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange#concept.label = ADL Change 
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange.improvement#instance.label = Improvement
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange.noChange#instance.label = No Change
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange.severeDecline#instance.label = Severe Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange.significantDecline#instance.label = Significant Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange.someDecline#instance.label = Some Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange.unavailable#instance.label = Unavailable
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel#concept.label = ADL Level 
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.ADL#phrase.action = set the ADL of {this} to {ADL}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.ADL#phrase.clearer = clear the ADL of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.ADL#phrase.navigation = {ADL} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.ADLLevel(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList,double,double,double)#phrase.navigation = a new {ADL Level} where {0, ADL} {1, Current ADL Level} {2, Difference in ADL} {3, Previous ADL Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.currentADLLevel#phrase.action = set the Current ADL Level of {this} to {Current ADL Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.currentADLLevel#phrase.addition_setter = add {Current ADL Level} to the Current ADL Level of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.currentADLLevel#phrase.navigation = {Current ADL Level} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.currentADLLevel#phrase.subtraction_setter = subtract {Current ADL Level} from the Current ADL Level of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.differenceInADL#phrase.action = set the Difference in ADL of {this} to {Difference in ADL }
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.differenceInADL#phrase.addition_setter = add {Difference in ADL } to the Difference in ADL of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.differenceInADL#phrase.navigation = {Difference in ADL } of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.differenceInADL#phrase.subtraction_setter = subtract {Difference in ADL } from the Difference in ADL of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.previousADLLevel#phrase.action = set the Previous ADL Level of {this} to {Previous ADL Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.previousADLLevel#phrase.addition_setter = add {Previous ADL Level} to the Previous ADL Level of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.previousADLLevel#phrase.navigation = {Previous ADL Level} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLLevel.previousADLLevel#phrase.subtraction_setter = subtract {Previous ADL Level} from the Previous ADL Level of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList#concept.label = ADL List
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.$#instance.label = -
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.bathing#instance.label = Bathing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.dressing#instance.label = Dressing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.feeding#instance.label = Feeding
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.mobility#instance.label = Mobility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.toileting#instance.label = Toileting
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList.transfers#instance.label = Transfers
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline#concept.label = Activities of Daily Living Functional Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline.noFunctionalDecline#instance.label = No Functional Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline.severeFunctionalDecline#instance.label = Severe Functional Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline.significantFunctionalDecline#instance.label = Significant Functional Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline.someFunctionalDecline#instance.label = Some Functional Decline
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel#concept.label = Activity Level
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel.confinedToBedOrChairMoreThan50$WakingHours#instance.label = Confined to Bed or Chair More Than 50% Waking Hours
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel.totallyConfinedToBedOrChair#instance.label = Totally Confined to Bed or Chair
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel.upAndAboutMoreThan50$WakingHours#instance.label = Up and About More Than 50% Waking Hours
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel#concept.label = FullActive/Disabled/Restricted
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel.disabled#instance.label = Disabled
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel.fullActive#instance.label = Full Active
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel.restricted#instance.label = Restricted
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing#concept.label = Bathing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing.$Or2PersonAssist#instance.label = 1 or 2 Person assist
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing.bedBath#instance.label = Bed Bath
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing.noAssistanceNeeded#instance.label = No Assistance Needed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing.showerChair#instance.label = Shower Chair
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing.sinkBathing#instance.label = Sink Bathing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing.standByAssistance#instance.label = Stand by assistance
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility#concept.label = Cancer Hospice Eligibility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility.hospiceEligible#instance.label = Hospice Eligible
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility.reviewEligibility#instance.label = Review Eligibility
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibilityCopy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibilityCopy#concept.label = Cancer Hospice Eligibility copy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibilityCopy.hospiceEligible#instance.label = Hospice Eligible
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibilityCopy.reviewEligibility#instance.label = Review Eligibility
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages#concept.label = Cancer Stages
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages.stage1#instance.label = Stage 1
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages.stage2#instance.label = Stage 2
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages.stage3#instance.label = Stage 3
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages.stage4#instance.label = Stage 4
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType#concept.label = Cancer Treatment Type
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.chemotherapy#instance.label = Chemotherapy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.hormonalTherapy#instance.label = Hormonal  Therapy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.immunotherapy#instance.label = Immunotherapy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.noTherapy#instance.label = No Therapy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.otherTreatmentTherapies#instance.label = Other Treatment Therapies
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.radiationTherapy#instance.label = Radiation Therapy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType.surgery#instance.label = Surgery
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions#concept.label = Comorbid Conditions
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.acuteRespiratoryFailure#instance.label = Acute Respiratory Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.anoxicBrainInjury#instance.label = Anoxic Brain Injury
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.aspirationSyndrome#instance.label = Aspiration Syndrome
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.encephalopathyNotOtherwiseSpecified#instance.label = Encephalopathy Not Otherwise Specified
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.heartFailure#instance.label = Heart Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.metabolicEncephalopathy#instance.label = Metabolic Encephalopathy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.noCondition#instance.label = No Condition
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notAcuteRespiratoryFailure#instance.label = Not Acute Respiratory Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notAnoxicBrainInjury#instance.label = Not Anoxic Brain Injury
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notAspirationSyndrome#instance.label = Not Aspiration Syndrome
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notEncephalopathyNotOtherwiseSpecified#instance.label = Not Encephalopathy Not Otherwise Specified
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notHeartFailure#instance.label = Not Heart Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notMetabolicEncephalopathy#instance.label = Not Metabolic Encephalopathy
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notRapidlyProgressiveSkinWound#instance.label = Not Rapidly Progressive Skin Wound
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notRenalFailure#instance.label = Not Renal Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.notSepsis#instance.label = Not Sepsis
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.rapidlyProgressiveSkinWound#instance.label = Rapidly Progressive Skin Wound
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.renalFailure#instance.label = Renal Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions.sepsis#instance.label = Sepsis
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications#concept.label = Complications/Not Complications
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications.complications#instance.label = Complications
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications.notComplications#instance.label = Not Complications
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue#concept.label = Discontinue/NotDiscontinue
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue.discontinue#instance.label = Discontinue
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue.notDiscontinue#instance.label = Not Discontinue
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing#concept.label = Dressing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.$Or2PersonAssistance#instance.label = 1 or 2 person assistance
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.canNotAssistInDressing#instance.label = Can not assist in dressing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.limited1$personAssistance$e$g$Socks$#instance.label = Limited 1-person assistance (e.g. socks)
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.needsHelpSelectingClothing#instance.label = Needs help selecting clothing
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.noAssistanceNeeded#instance.label = No Assistance Needed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.velcroClosures#instance.label = Velcro closures
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure#concept.label = Failure/NotFailure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure.failure#instance.label = Failure
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure.notFailure#instance.label = Not Failure
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding#concept.label = Feeding
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding.$Or2PersonAssistance#instance.label = 1 or 2 Person Assistance
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding.adaptiveUtensils#instance.label = Adaptive utensils
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding.alteredTexture#instance.label = Altered texture
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding.canNotFeedSelf#instance.label = Can not feed self
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding.needsSetUpAssistance#instance.label = Needs set up assistance
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding.noAssistanceNeeded#instance.label = No Assistance Needed
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline#concept.label = Full Output  Activities Of Daily Functional Decline
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.FullOutputActivitiesOfDailyFunctionalDecline(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivitiesOfDailyLivingFunctionalDecline,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange,java.util.List,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange,java.util.List,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLChange)#phrase.navigation = a new {Full Output  Activities Of Daily Functional Decline} where {0, Activities of Daily Living Functional Decline} {1, Bathing ADL Change} {2, Declining Change ADL List} {3, Dressing ADL Change} {4, Feeding ADL Change} {5, Increasing Time to Task ADL List} {6, Mobility ADL Change} {7, Toileting ADL Change} {8, Transfers ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.activitiesOfDailyLivingFunctionalDecline#phrase.action = set the Activities of Daily Living Functional Decline of {this} to {Activities of Daily Living Functional Decline}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.activitiesOfDailyLivingFunctionalDecline#phrase.clearer = clear the Activities of Daily Living Functional Decline of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.activitiesOfDailyLivingFunctionalDecline#phrase.navigation = {Activities of Daily Living Functional Decline} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.addTo_decliningChangeADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList)#phrase.action = add {0} to the Declining Change ADL Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.addTo_increasingTimeToTaskADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList)#phrase.action = add {0} to the Increasing Time to Task ADL Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.bathingADLChange#phrase.action = set the Bathing ADL Change of {this} to {Bathing ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.bathingADLChange#phrase.clearer = clear the Bathing ADL Change of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.bathingADLChange#phrase.navigation = {Bathing ADL Change} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.clear_decliningChangeADLLists()#phrase.action = clear the Declining Change ADL Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.clear_increasingTimeToTaskADLLists()#phrase.action = clear the Increasing Time to Task ADL Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.decliningChangeADLLists#phrase.action = set the Declining Change ADL Lists of {this} to {Declining Change ADL List}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.decliningChangeADLLists#phrase.navigation = {Declining Change ADL List} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.dressingADLChange#phrase.action = set the Dressing ADL Change of {this} to {Dressing ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.dressingADLChange#phrase.clearer = clear the Dressing ADL Change of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.dressingADLChange#phrase.navigation = {Dressing ADL Change} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.feedingADLChange#phrase.action = set the Feeding ADL Change of {this} to {Feeding ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.feedingADLChange#phrase.clearer = clear the Feeding ADL Change of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.feedingADLChange#phrase.navigation = {Feeding ADL Change} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.increasingTimeToTaskADLLists#phrase.action = set the Increasing Time to Task ADL Lists of {this} to {Increasing Time to Task ADL List}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.increasingTimeToTaskADLLists#phrase.navigation = {Increasing Time to Task ADL List} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.mobilityADLChange#phrase.action = set the Mobility ADL Change of {this} to {Mobility ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.mobilityADLChange#phrase.clearer = clear the Mobility ADL Change of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.mobilityADLChange#phrase.navigation = {Mobility ADL Change} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.removeFrom_decliningChangeADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList)#phrase.action = remove {0} from the Declining Change ADL Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.removeFrom_increasingTimeToTaskADLLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ADLList)#phrase.action = remove {0} from the Increasing Time to Task ADL Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.toiletingADLChange#phrase.action = set the Toileting ADL Change of {this} to {Toileting ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.toiletingADLChange#phrase.clearer = clear the Toileting ADL Change of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.toiletingADLChange#phrase.navigation = {Toileting ADL Change} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.transfersADLChange#phrase.action = set the Transfers ADL Change of {this} to {Transfers ADL Change}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.transfersADLChange#phrase.clearer = clear the Transfers ADL Change of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline.transfersADLChange#phrase.navigation = {Transfers ADL Change} of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility#concept.label = Full Output  Cancer Hospice Eligibility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ECOGScale#phrase.action = set the ECOG Scale of {this} to {ECOG Scale}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ECOGScale#phrase.addition_setter = add {ECOG Scale} to the ECOG Scale of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ECOGScale#phrase.navigation = {ECOG Scale} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ECOGScale#phrase.subtraction_setter = subtract {ECOG Scale} from the ECOG Scale of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.FullOutputCancerHospiceEligibility(double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerHospiceEligibility,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive,java.util.List,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.AmbulatoryLevel)#phrase.navigation = a new {Full Output  Cancer Hospice Eligibility} where {0, ECOG Scale} {1, Ambulatory Level} {2, Cancer Hospice Eligibility} {3, Failure to Respond to Treatment} {4, Highly Aggressive Indicator} {5, Pathology Aggressive List} {6, Selfcare Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.addTo_pathologyAggressiveLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList)#phrase.action = add {0} to the Pathology Aggressive Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ambulatoryLevel#phrase.action = set the Ambulatory Level of {this} to {Ambulatory Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ambulatoryLevel#phrase.clearer = clear the Ambulatory Level of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.ambulatoryLevel#phrase.navigation = {Ambulatory Level} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.cancerHospiceEligibility#phrase.action = set the Cancer Hospice Eligibility of {this} to {Cancer Hospice Eligibility}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.cancerHospiceEligibility#phrase.clearer = clear the Cancer Hospice Eligibility of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.cancerHospiceEligibility#phrase.navigation = {Cancer Hospice Eligibility} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.clear_pathologyAggressiveLists()#phrase.action = clear the Pathology Aggressive Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.failureToRespondToTreatment#phrase.action = set the Failure to Respond to Treatment of {this} to {Failure to Respond to Treatment}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.failureToRespondToTreatment#phrase.clearer = clear the Failure to Respond to Treatment of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.failureToRespondToTreatment#phrase.navigation = {Failure to Respond to Treatment} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.highlyAggressiveIndicator#phrase.action = set the Highly Aggressive Indicator of {this} to {Highly Aggressive Indicator}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.highlyAggressiveIndicator#phrase.clearer = clear the Highly Aggressive Indicator of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.highlyAggressiveIndicator#phrase.navigation = {Highly Aggressive Indicator} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.pathologyAggressiveLists#phrase.action = set the Pathology Aggressive Lists of {this} to {Pathology Aggressive List}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.pathologyAggressiveLists#phrase.navigation = {Pathology Aggressive List} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.removeFrom_pathologyAggressiveLists(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList)#phrase.action = remove {0} from the Pathology Aggressive Lists of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.selfcareLevel#phrase.action = set the Selfcare Level of {this} to {Selfcare Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.selfcareLevel#phrase.clearer = clear the Selfcare Level of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility.selfcareLevel#phrase.navigation = {Selfcare Level} of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions#concept.label = Full Output  Comorbid Conditions
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.FullOutputComorbidConditions(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,java.util.List,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions)#phrase.navigation = a new {Full Output  Comorbid Conditions} where {0, Acute Respiratory Failure} {1, Anoxic Brain Injury} {2, Aspiration Syndrome} {3, Comorbid Conditions} {4, Encephalopathy Not Otherwise Specified} {5, Heart Failure Unspecified} {6, Metabolic Encephalopathy} {7, Rapidly Progressive Skin Wound} {8, Renal Failure Unspecified} {9, Sepsis_}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.acuteRespiratoryFailure#phrase.action = set the Acute Respiratory Failure of {this} to {Acute Respiratory Failure}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.acuteRespiratoryFailure#phrase.clearer = clear the Acute Respiratory Failure of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.acuteRespiratoryFailure#phrase.navigation = {Acute Respiratory Failure} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.addTo_comorbidConditionses(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions)#phrase.action = add {0} to the Comorbid Conditionses of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.anoxicBrainInjury#phrase.action = set the Anoxic Brain Injury of {this} to {Anoxic Brain Injury}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.anoxicBrainInjury#phrase.clearer = clear the Anoxic Brain Injury of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.anoxicBrainInjury#phrase.navigation = {Anoxic Brain Injury} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.aspirationSyndrome#phrase.action = set the Aspiration Syndrome of {this} to {Aspiration Syndrome}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.aspirationSyndrome#phrase.clearer = clear the Aspiration Syndrome of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.aspirationSyndrome#phrase.navigation = {Aspiration Syndrome} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.clear_comorbidConditionses()#phrase.action = clear the Comorbid Conditionses of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.comorbidConditionses#phrase.action = set the Comorbid Conditionses of {this} to {Comorbid Conditions}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.comorbidConditionses#phrase.navigation = {Comorbid Conditions} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.encephalopathyNotOtherwiseSpecified#phrase.action = set the Encephalopathy Not Otherwise Specified of {this} to {Encephalopathy Not Otherwise Specified}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.encephalopathyNotOtherwiseSpecified#phrase.clearer = clear the Encephalopathy Not Otherwise Specified of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.encephalopathyNotOtherwiseSpecified#phrase.navigation = {Encephalopathy Not Otherwise Specified} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.heartFailureUnspecified#phrase.action = set the Heart Failure Unspecified of {this} to {Heart Failure Unspecified}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.heartFailureUnspecified#phrase.clearer = clear the Heart Failure Unspecified of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.heartFailureUnspecified#phrase.navigation = {Heart Failure Unspecified} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.metabolicEncephalopathy#phrase.action = set the Metabolic Encephalopathy of {this} to {Metabolic Encephalopathy}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.metabolicEncephalopathy#phrase.clearer = clear the Metabolic Encephalopathy of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.metabolicEncephalopathy#phrase.navigation = {Metabolic Encephalopathy} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.rapidlyProgressiveSkinWound#phrase.action = set the Rapidly Progressive Skin Wound of {this} to {Rapidly Progressive Skin Wound}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.rapidlyProgressiveSkinWound#phrase.clearer = clear the Rapidly Progressive Skin Wound of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.rapidlyProgressiveSkinWound#phrase.navigation = {Rapidly Progressive Skin Wound} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.removeFrom_comorbidConditionses(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ComorbidConditions)#phrase.action = remove {0} from the Comorbid Conditionses of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.renalFailureUnspecified#phrase.action = set the Renal Failure Unspecified of {this} to {Renal Failure Unspecified}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.renalFailureUnspecified#phrase.clearer = clear the Renal Failure Unspecified of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.renalFailureUnspecified#phrase.navigation = {Renal Failure Unspecified} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.sepsis_#phrase.action = set the Sepsis_ of {this} to {Sepsis_}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.sepsis_#phrase.clearer = clear the Sepsis_ of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions.sepsis_#phrase.navigation = {Sepsis_} of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive#concept.label = Highly Aggressive/Not Highly Aggressive
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive.highlyAggressive#instance.label = Highly Aggressive
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HighlyAggressive$NotHighlyAggressive.notHighlyAggressive#instance.label = Not Highly Aggressive
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance#concept.label = Hospice Admittance
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance.admitToHospice#instance.label = Admit to Hospice
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance.furtherReview#instance.label = Further Review
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility#concept.label = Mobility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility.$Or2PersonAssist$$$Device#instance.label = 1 or 2 person assist +/- Device
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility.holdsOntoWalls$furniture#instance.label = Holds onto walls/furniture
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility.needsCane$walker#instance.label = Needs cane/walker
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility.noAssistanceNeeded#instance.label = No Assistance Needed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility.non$ambulatory$WCBound$CannotSelfPropel#instance.label = Non-ambulatory/WC Bound/Cannot self propel
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList#concept.label = Pathology Aggressive List
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.boneTumors#instance.label = Bone Tumors
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.brainAndSpinalCordCancers#instance.label = Brain and Spinal Cord Cancers
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.breastCancer#instance.label = Breast Cancer
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.colorectalCancer#instance.label = Colorectal cancer
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.endometrialCancer#instance.label = Endometrial Cancer
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.glioblastoma#instance.label = Glioblastoma
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.hemotologicMalignancies#instance.label = Hemotologic Malignancies
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.hepatocellularCarcinoma#instance.label = Hepatocellular carcinoma
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.neuroendocrineCarcinoma#instance.label = Neuroendocrine Carcinoma
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.non$smallCellLungCancer#instance.label = Non-small cell lung cancer
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.notPathologyAggressive#instance.label = Not Pathology Aggressive 
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PathologyAggressiveList.pancreaticDuctalAdenocarcinoma#instance.label = Pancreatic ductal adenocarcinoma
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm#concept.label = Pre Admission Evaluation Form
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.PreAdmissionEvaluationForm(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.ActivityLevel,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Bathing,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerStages,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.CancerTreatmentType,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Feeding,double,java.lang.String,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Mobility,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Discontinue$NotDiscontinue,boolean,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers,double,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Complications$NotComplications,java.lang.String,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility)#phrase.navigation = a new {Pre Admission Evaluation Form} where {0, Activity Level} {1, Bathing 3–6 Months Ago} {2, Bathing 3–6 Months Ago Time to Task} {3, Bathing Current} {4, Bathing Current Time to Task} {5, Cancer Malignancy Stage} {6, Cancer Treatment Type} {7, Disease Progressed Despite Treatment} {8, Dressing 3–6 Months Ago} {9, Dressing 3–6 Months Ago Time to Task} {10, Dressing Current} {11, Dressing Current Time to Task} {12, Feeding 3–6 Months Ago} {13, Feeding 3–6 Months Ago Time to Task} {14, Feeding Current} {15, Feeding Current Time to Task} {16, Functional Decline Other Deficits} {17, Mobility 3–6 Months Ago} {18, Mobility 3–6 Months Ago Time to Task} {19, Mobility Current} {20, Mobility Current Time to Task} {21, Oncologist Recommends Discontinuation of Therapy} {22, Oncologist Recommends Therapy Discontinuation} {23, Toileting 3–6 Months Ago} {24, Toileting 3–6 Months Ago Time to Task} {25, Toileting Current} {26, Toileting Current Time to Task} {27, Transfers 3–6 Months Ago} {28, Transfers 3–6 Months Ago Time to Task} {29, Transfers Current} {30, Transfers Current Time to Task} {31, Treatment Complications} {32, Why Hospice Now?} {33, Work Ability}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.activityLevel#phrase.action = set the Activity Level of {this} to {Activity Level}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.activityLevel#phrase.clearer = clear the Activity Level of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.activityLevel#phrase.navigation = {Activity Level} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgo#phrase.action = set the Bathing 3–6 Months Ago of {this} to {Bathing 3–6 Months Ago}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgo#phrase.clearer = clear the Bathing 3–6 Months Ago of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgo#phrase.navigation = {Bathing 3–6 Months Ago} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgoTimeToTask#phrase.action = set the Bathing 3–6 Months Ago Time to Task of {this} to {Bathing 3–6 Months Ago Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgoTimeToTask#phrase.addition_setter = add {Bathing 3–6 Months Ago Time to Task} to the Bathing 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgoTimeToTask#phrase.navigation = {Bathing 3–6 Months Ago Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathing3$6MonthsAgoTimeToTask#phrase.subtraction_setter = subtract {Bathing 3–6 Months Ago Time to Task} from the Bathing 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrent#phrase.action = set the Bathing Current of {this} to {Bathing Current}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrent#phrase.clearer = clear the Bathing Current of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrent#phrase.navigation = {Bathing Current} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrentTimeToTask#phrase.action = set the Bathing Current Time to Task of {this} to {Bathing Current Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrentTimeToTask#phrase.addition_setter = add {Bathing Current Time to Task} to the Bathing Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrentTimeToTask#phrase.navigation = {Bathing Current Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.bathingCurrentTimeToTask#phrase.subtraction_setter = subtract {Bathing Current Time to Task} from the Bathing Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.cancerMalignancyStage#phrase.action = set the Cancer Malignancy Stage of {this} to {Cancer Malignancy Stage}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.cancerMalignancyStage#phrase.clearer = clear the Cancer Malignancy Stage of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.cancerMalignancyStage#phrase.navigation = {Cancer Malignancy Stage} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.cancerTreatmentType#phrase.action = set the Cancer Treatment Type of {this} to {Cancer Treatment Type}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.cancerTreatmentType#phrase.clearer = clear the Cancer Treatment Type of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.cancerTreatmentType#phrase.navigation = {Cancer Treatment Type} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.diseaseProgressedDespiteTreatment#phrase.action = set the Disease Progressed Despite Treatment of {this} to {Disease Progressed Despite Treatment}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.diseaseProgressedDespiteTreatment#phrase.clearer = clear the Disease Progressed Despite Treatment of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.diseaseProgressedDespiteTreatment#phrase.navigation = {Disease Progressed Despite Treatment} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgo#phrase.action = set the Dressing 3–6 Months Ago of {this} to {Dressing 3–6 Months Ago}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgo#phrase.clearer = clear the Dressing 3–6 Months Ago of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgo#phrase.navigation = {Dressing 3–6 Months Ago} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgoTimeToTask#phrase.action = set the Dressing 3–6 Months Ago Time to Task of {this} to {Dressing 3–6 Months Ago Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgoTimeToTask#phrase.addition_setter = add {Dressing 3–6 Months Ago Time to Task} to the Dressing 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgoTimeToTask#phrase.navigation = {Dressing 3–6 Months Ago Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressing3$6MonthsAgoTimeToTask#phrase.subtraction_setter = subtract {Dressing 3–6 Months Ago Time to Task} from the Dressing 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrent#phrase.action = set the Dressing Current of {this} to {Dressing Current}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrent#phrase.clearer = clear the Dressing Current of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrent#phrase.navigation = {Dressing Current} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrentTimeToTask#phrase.action = set the Dressing Current Time to Task of {this} to {Dressing Current Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrentTimeToTask#phrase.addition_setter = add {Dressing Current Time to Task} to the Dressing Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrentTimeToTask#phrase.navigation = {Dressing Current Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.dressingCurrentTimeToTask#phrase.subtraction_setter = subtract {Dressing Current Time to Task} from the Dressing Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgo#phrase.action = set the Feeding 3–6 Months Ago of {this} to {Feeding 3–6 Months Ago}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgo#phrase.clearer = clear the Feeding 3–6 Months Ago of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgo#phrase.navigation = {Feeding 3–6 Months Ago} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgoTimeToTask#phrase.action = set the Feeding 3–6 Months Ago Time to Task of {this} to {Feeding 3–6 Months Ago Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgoTimeToTask#phrase.addition_setter = add {Feeding 3–6 Months Ago Time to Task} to the Feeding 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgoTimeToTask#phrase.navigation = {Feeding 3–6 Months Ago Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feeding3$6MonthsAgoTimeToTask#phrase.subtraction_setter = subtract {Feeding 3–6 Months Ago Time to Task} from the Feeding 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrent#phrase.action = set the Feeding Current of {this} to {Feeding Current}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrent#phrase.clearer = clear the Feeding Current of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrent#phrase.navigation = {Feeding Current} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrentTimeToTask#phrase.action = set the Feeding Current Time to Task of {this} to {Feeding Current Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrentTimeToTask#phrase.addition_setter = add {Feeding Current Time to Task} to the Feeding Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrentTimeToTask#phrase.navigation = {Feeding Current Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.feedingCurrentTimeToTask#phrase.subtraction_setter = subtract {Feeding Current Time to Task} from the Feeding Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.functionalDeclineOtherDeficits#phrase.action = set the Functional Decline Other Deficits of {this} to {Functional Decline Other Deficits}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.functionalDeclineOtherDeficits#phrase.navigation = {Functional Decline Other Deficits} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgo#phrase.action = set the Mobility 3–6 Months Ago of {this} to {Mobility 3–6 Months Ago}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgo#phrase.clearer = clear the Mobility 3–6 Months Ago of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgo#phrase.navigation = {Mobility 3–6 Months Ago} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgoTimeToTask#phrase.action = set the Mobility 3–6 Months Ago Time to Task of {this} to {Mobility 3–6 Months Ago Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgoTimeToTask#phrase.addition_setter = add {Mobility 3–6 Months Ago Time to Task} to the Mobility 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgoTimeToTask#phrase.navigation = {Mobility 3–6 Months Ago Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobility3$6MonthsAgoTimeToTask#phrase.subtraction_setter = subtract {Mobility 3–6 Months Ago Time to Task} from the Mobility 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrent#phrase.action = set the Mobility Current of {this} to {Mobility Current}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrent#phrase.clearer = clear the Mobility Current of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrent#phrase.navigation = {Mobility Current} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrentTimeToTask#phrase.action = set the Mobility Current Time to Task of {this} to {Mobility Current Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrentTimeToTask#phrase.addition_setter = add {Mobility Current Time to Task} to the Mobility Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrentTimeToTask#phrase.navigation = {Mobility Current Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.mobilityCurrentTimeToTask#phrase.subtraction_setter = subtract {Mobility Current Time to Task} from the Mobility Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsDiscontinuationOfTherapy#phrase.action = set the Oncologist Recommends Discontinuation of Therapy of {this} to {Oncologist Recommends Discontinuation of Therapy}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsDiscontinuationOfTherapy#phrase.clearer = clear the Oncologist Recommends Discontinuation of Therapy of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsDiscontinuationOfTherapy#phrase.navigation = {Oncologist Recommends Discontinuation of Therapy} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.action[0] = {this} gets Oncologist Recommends Therapy Discontinuation only if {Oncologist Recommends Therapy Discontinuation}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.action[1] = make it {Oncologist Recommends Therapy Discontinuation} that {this} is Oncologist Recommends Therapy Discontinuation
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.action[1].deprecated = true
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.navigation = {this} is Oncologist Recommends Therapy Discontinuation
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.negative_predicate = {this} is not Oncologist Recommends Therapy Discontinuation
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.negative_predicate_setter = {this} does not get Oncologist Recommends Therapy Discontinuation
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.oncologistRecommendsTherapyDiscontinuation#phrase.positive_predicate_setter = {this} gets Oncologist Recommends Therapy Discontinuation
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgo#phrase.action = set the Toileting 3–6 Months Ago of {this} to {Toileting 3–6 Months Ago}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgo#phrase.clearer = clear the Toileting 3–6 Months Ago of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgo#phrase.navigation = {Toileting 3–6 Months Ago} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgoTimeToTask#phrase.action = set the Toileting 3–6 Months Ago Time to Task of {this} to {Toileting 3–6 Months Ago Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgoTimeToTask#phrase.addition_setter = add {Toileting 3–6 Months Ago Time to Task} to the Toileting 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgoTimeToTask#phrase.navigation = {Toileting 3–6 Months Ago Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toileting3$6MonthsAgoTimeToTask#phrase.subtraction_setter = subtract {Toileting 3–6 Months Ago Time to Task} from the Toileting 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrent#phrase.action = set the Toileting Current of {this} to {Toileting Current}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrent#phrase.clearer = clear the Toileting Current of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrent#phrase.navigation = {Toileting Current} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrentTimeToTask#phrase.action = set the Toileting Current Time to Task of {this} to {Toileting Current Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrentTimeToTask#phrase.addition_setter = add {Toileting Current Time to Task} to the Toileting Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrentTimeToTask#phrase.navigation = {Toileting Current Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.toiletingCurrentTimeToTask#phrase.subtraction_setter = subtract {Toileting Current Time to Task} from the Toileting Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgo#phrase.action = set the Transfers 3–6 Months Ago of {this} to {Transfers 3–6 Months Ago}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgo#phrase.clearer = clear the Transfers 3–6 Months Ago of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgo#phrase.navigation = {Transfers 3–6 Months Ago} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgoTimeToTask#phrase.action = set the Transfers 3–6 Months Ago Time to Task of {this} to {Transfers 3–6 Months Ago Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgoTimeToTask#phrase.addition_setter = add {Transfers 3–6 Months Ago Time to Task} to the Transfers 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgoTimeToTask#phrase.navigation = {Transfers 3–6 Months Ago Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfers3$6MonthsAgoTimeToTask#phrase.subtraction_setter = subtract {Transfers 3–6 Months Ago Time to Task} from the Transfers 3–6 Months Ago Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrent#phrase.action = set the Transfers Current of {this} to {Transfers Current}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrent#phrase.clearer = clear the Transfers Current of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrent#phrase.navigation = {Transfers Current} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrentTimeToTask#phrase.action = set the Transfers Current Time to Task of {this} to {Transfers Current Time to Task}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrentTimeToTask#phrase.addition_setter = add {Transfers Current Time to Task} to the Transfers Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrentTimeToTask#phrase.navigation = {Transfers Current Time to Task} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.transfersCurrentTimeToTask#phrase.subtraction_setter = subtract {Transfers Current Time to Task} from the Transfers Current Time to Task of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.treatmentComplications#phrase.action = set the Treatment Complications of {this} to {Treatment Complications}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.treatmentComplications#phrase.clearer = clear the Treatment Complications of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.treatmentComplications#phrase.navigation = {Treatment Complications} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.whyHospiceNow$#phrase.action = set the Why Hospice Now? of {this} to {Why Hospice Now?}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.whyHospiceNow$#phrase.navigation = {Why Hospice Now?} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.workAbility#phrase.action = set the Work Ability of {this} to {Work Ability}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.workAbility#phrase.clearer = clear the Work Ability of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.PreAdmissionEvaluationForm.workAbility#phrase.navigation = {Work Ability} of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed#concept.label = Progressed/NotProgressed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed.notProgressed#instance.label = Not Progressed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Progressed$NotProgressed.progressed#instance.label = Progressed
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting#concept.label = Toileting
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.foley#instance.label = Foley
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.helpWithFlushing$wiping#instance.label = Help with flushing/wiping
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.incontinencePad#instance.label = Incontinence Pad
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.incontinentOfUrine#instance.label = Incontinent of urine
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.incontinentOfUrineAndFeces#instance.label = Incontinent of urine and feces
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.noAssistanceNeeded#instance.label = No Assistance Needed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Toileting.occasionalIncontinence#instance.label = Occasional incontinence
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers#concept.label = Transfers
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers.$Or2PersonAssist#instance.label = 1 or 2 person assist
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers.$PersonAssist$$$1MechanicalLift#instance.label = 2 person assist +/-1 mechanical lift
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers.doesNotTransfer#instance.label = Does not transfer
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers.noAssistanceNeeded#instance.label = No Assistance Needed
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers.pushesOffArmsOfChair$usesLiftChair#instance.label = Pushes off arms of chair/uses lift chair
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Transfers.standByAssistance#instance.label = Stand by Assistance
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput#concept.label = Vitas Service Full Output
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.VitasServiceFullOutput(java.lang.String,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputCancerHospiceEligibility,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputComorbidConditions,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.HospiceAdmittance)#phrase.navigation = a new {Vitas Service Full Output} where {0, Comorbid Condition} {1, Full Output of Activities of Daily Living Function} {2, Full Output of Cancer Hospice Eligibility} {3, Full Output of Comorbid Conditions} {4, Hospice Admittance}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.comorbidityList#phrase.action = set the  Comorbid Condition of {this} to { Comorbid Condition  }
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.comorbidityList#phrase.navigation = { Comorbid Condition  } of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfActivitiesOfDailyLivingFunction#phrase.action = set the Full Output of Activities of Daily Living Function of {this} to {Full Output of Activities of Daily Living Function}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfActivitiesOfDailyLivingFunction#phrase.clearer = clear the Full Output of Activities of Daily Living Function of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfActivitiesOfDailyLivingFunction#phrase.navigation = {Full Output of Activities of Daily Living Function} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfCancerHospiceEligibility#phrase.action = set the Full Output of Cancer Hospice Eligibility of {this} to {Full Output of Cancer Hospice Eligibility}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfCancerHospiceEligibility#phrase.clearer = clear the Full Output of Cancer Hospice Eligibility of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfCancerHospiceEligibility#phrase.navigation = {Full Output of Cancer Hospice Eligibility} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfComorbidConditions#phrase.action = set the Full Output of Comorbid Conditions of {this} to {Full Output of Comorbid Conditions}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfComorbidConditions#phrase.clearer = clear the Full Output of Comorbid Conditions of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.fullOutputOfComorbidConditions#phrase.navigation = {Full Output of Comorbid Conditions} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.hospiceAdmittance#phrase.action = set the Hospice Admittance of {this} to {Hospice Admittance}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.hospiceAdmittance#phrase.clearer = clear the Hospice Admittance of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.VitasServiceFullOutput.hospiceAdmittance#phrase.navigation = {Hospice Admittance} of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility#concept.label = Work Ability
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility.full#instance.label = Full
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility.lightOrSedentary#instance.label = Light or Sedentary
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.WorkAbility.none#instance.label = None

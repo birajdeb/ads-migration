@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>381d99b7-a741-4d8b-ae86-d547c95c666e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Vitas Service Full Output where
+		the Comorbid Condition is "-" , 
+		the Full Output of Activities of Daily Living Function is the activities of daily living functional decline computed from 
+	Pre Admission Evaluation Form being 'Pre Admission Evaluation Form' , 
+		the Full Output of Cancer Hospice Eligibility is the cancer hospice eligibility computed from 
+	Pre Admission Evaluation Form being 'Pre Admission Evaluation Form' , 
+		the Full Output of Comorbid Conditions is the comorbid conditions computed from 
+	Pre Admission Evaluation Form being 'Pre Admission Evaluation Form' , 
+		the Hospice Admittance is Further Review ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

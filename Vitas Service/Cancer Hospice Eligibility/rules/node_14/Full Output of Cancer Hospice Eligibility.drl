@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Full Output of Cancer Hospice Eligibility</name>
+  <uuid>62a36428-d01f-4dd5-ab67-f9efc4b0634b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Full Output  Cancer Hospice Eligibility where
+		the ECOG Scale is 'ECOG Scale' , 
+		the Ambulatory Level is 'Ambulatory Level' , 
+		the Cancer Hospice Eligibility is 'Cancer Hospice Eligibility' , 
+		the Failure to Respond to Treatment is 'Failure to Respond to Treatment' , 
+		the Highly Aggressive Indicator is 'Highly Aggressive Indicator' , 
+		the Pathology Aggressive Lists are 'Pathology Aggressive List' , 
+		the Selfcare Level is 'Selfcare Level' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

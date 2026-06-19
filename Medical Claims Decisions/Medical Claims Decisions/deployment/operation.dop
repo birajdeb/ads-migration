@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Medical Claims Decisions">
+  <name>Medical_Claims_Decisions</name>
+  <uuid>fb6d0acd-929b-426b-91f7-c1d60ed7c485</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#00fa9d0a-7f1c-4bd9-87bb-93ceb9bc61be"/>
+  <targetRuleProject href="../../Medical%20Claims%20Decisions#9efe9398-bd28-41d2-a83c-fd608f0f0ebe"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
