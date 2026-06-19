@@ -16,16 +16,16 @@
         </extensionElements>
         <variable id="node_0_ii" name="Messages1" typeRef="java.lang.String[]"/>
     </inputData>
-    <decision id="node_1" name="Decision">
+    <decision id="node_1" name="Decision Test">
         <description>Decide to proceed or not depending on the key words in the message.</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.String" collection="true" name="Messages1"/>
-                <output bomType="java.lang.String" collection="true" name="Decision"/>
+                <output bomType="java.lang.String" collection="true" name="Decision Test"/>
                 <rule defaultRule="false" href="node_1/Decision%20table%2001.dmt" kind="DecisionTable" name="Decision table"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String[]"/>
+        <variable id="node_1_ii" name="Decision Test" typeRef="java.lang.String[]"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
