@@ -102,7 +102,7 @@
                                     <ActionSet>
                                         <Action DefId="A0">
                                             <Expression>
-                                                <Param><![CDATA["GO"]]></Param>
+                                                <Param><![CDATA["GOa"]]></Param>
                                             </Expression>
                                         </Action>
                                     </ActionSet>

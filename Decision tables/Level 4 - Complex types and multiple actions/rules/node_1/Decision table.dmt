@@ -121,7 +121,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[0]]></Param>
+                                <Param><![CDATA[1]]></Param>
                                 <Param><![CDATA[1000]]></Param>
                             </Expression>
                             <Partition DefId="C3">

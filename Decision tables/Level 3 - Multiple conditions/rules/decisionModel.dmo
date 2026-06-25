@@ -14,7 +14,7 @@
                 <output bomType="java.lang.String" collection="false" name="Grade"/>
             </initialization>
         </extensionElements>
-        <variable id="grade_ii" name="Grade" typeRef="java.lang.String"/>
+        <variable id="node_0_ii" name="Grade" typeRef="java.lang.String"/>
     </inputData>
     <decision id="node_1" name="Validate loan">
         <description>Check if a loan can be validated.</description>
@@ -27,7 +27,7 @@
                 <rule defaultRule="false" href="node_1/prepare%20decision.dmt" kind="DecisionTable" name="prepare decision"/>
             </ruleset>
         </extensionElements>
-        <variable id="validateLoan_ii" name="Validate loan" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Validate loan" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
@@ -44,7 +44,7 @@
                 <output bomType="java.lang.Double" collection="false" name="Loan amount"/>
             </initialization>
         </extensionElements>
-        <variable id="loanAmount_ii" name="Loan amount" typeRef="java.lang.Double"/>
+        <variable id="node_2_ii" name="Loan amount" typeRef="java.lang.Double"/>
     </inputData>
     <inputData id="node_3" name="Already customer">
         <extensionElements>
@@ -52,7 +52,8 @@
                 <output bomType="java.lang.Boolean" collection="false" name="Already customer"/>
             </initialization>
         </extensionElements>
-        <variable id="alreadyCustomer_ii" name="Already customer" typeRef="java.lang.Boolean"/>
+        <variable id="node_3_ii" name="Already customer" typeRef="java.lang.Boolean"/>
     </inputData>
-</definitions></definition>
+</definitions>
+</definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
