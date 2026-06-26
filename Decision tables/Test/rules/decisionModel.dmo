@@ -8,6 +8,7 @@
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
     <inputData id="node_0" name="Input">
+        <description>test</description>
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                 <output bomType="com.ibm.ads.samples.training.decision_tables.data.Result" collection="false" name="Input"/>
