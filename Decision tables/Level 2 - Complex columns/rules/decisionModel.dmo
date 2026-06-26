@@ -17,7 +17,7 @@
         <variable id="node_0_ii" name="Messages1" typeRef="java.lang.String[]"/>
     </inputData>
     <decision id="node_1" name="Decision Test">
-        <description>Decide to proceed or not depending on the key words in the message.</description>
+        <description>Decide to proceed or not depending on the key words in the message. test</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.String" collection="true" name="Messages1"/>

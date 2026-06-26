@@ -17,17 +17,17 @@
         </extensionElements>
         <variable id="node_0_ii" name="Achievement" typeRef="java.lang.Long"/>
     </inputData>
-    <decision id="node_1" name="Grade">
+    <decision id="node_1" name="Grade Test">
         <description>Output a grade (a letter) based on ranges of values. </description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Long" collection="false" name="Achievement"/>
                 <input bomType="java.lang.String" collection="false" name="Input 2"/>
-                <output bomType="java.lang.String" collection="false" name="Grade"/>
+                <output bomType="java.lang.String" collection="false" name="Grade Test"/>
                 <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Grade" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Grade Test" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
