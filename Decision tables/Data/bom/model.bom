@@ -15,7 +15,11 @@ class Customer
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "status"
                 #update;
-    Customer(string name, com.ibm.ads.samples.training.decision_tables.data.Status status)
+    java.time.DayOfWeek test
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "test"
+                #update;
+    Customer(string name, com.ibm.ads.samples.training.decision_tables.data.Status status, java.time.DayOfWeek test)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
@@ -52,7 +56,7 @@ class Status
         property com.fasterxml.jackson.annotation.JsonTypeName "status"
         #de.generated
 {
-    domain {static Bronze, static Gold, static Silver}
+    domain {static Bronze, static Gold, static Silver, static test}
     static final readonly com.ibm.ads.samples.training.decision_tables.data.Status Bronze
                 property ads.attributeId "3"
                 property com.fasterxml.jackson.annotation.JsonProperty "Bronze";
@@ -62,5 +66,23 @@ class Status
     static final readonly com.ibm.ads.samples.training.decision_tables.data.Status Silver
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "Silver";
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Status test
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Test";
+}
+
+class TestEnum
+        extends java.lang.Enum
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "testEnum"
+        #de.generated
+{
+    domain {static newEnumValue, static newEnumValue1}
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.TestEnum newEnumValue
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue";
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.TestEnum newEnumValue1
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
 }
 

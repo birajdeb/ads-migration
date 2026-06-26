@@ -2,12 +2,14 @@
 # com.ibm.ads.samples.training.decision_tables.data.Customer
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.documentation = 
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.label = customer
-com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status)#phrase.navigation = a new {customer} where {0, name} {1, status}
+com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer} where {0, name} {1, status} {2, test}
 com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.action = set the name of {this} to {name}
 com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.navigation = {name} of {this}
 com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.action = set the status of {this} to {status}
 com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.clearer = clear the status of {this}
 com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.navigation = {status} of {this}
+com.ibm.ads.samples.training.decision_tables.data.Customer.test#phrase.action = set the test of {this} to {test}
+com.ibm.ads.samples.training.decision_tables.data.Customer.test#phrase.navigation = {test} of {this}
 
 # com.ibm.ads.samples.training.decision_tables.data.Result
 com.ibm.ads.samples.training.decision_tables.data.Result#concept.label = result
@@ -26,3 +28,9 @@ com.ibm.ads.samples.training.decision_tables.data.Status#concept.label = status
 com.ibm.ads.samples.training.decision_tables.data.Status.Bronze#instance.label = Bronze
 com.ibm.ads.samples.training.decision_tables.data.Status.Gold#instance.label = Gold
 com.ibm.ads.samples.training.decision_tables.data.Status.Silver#instance.label = Silver
+com.ibm.ads.samples.training.decision_tables.data.Status.test#instance.label = Test
+
+# com.ibm.ads.samples.training.decision_tables.data.TestEnum
+com.ibm.ads.samples.training.decision_tables.data.TestEnum#concept.label = testEnum
+com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue#instance.label = new enum value
+com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue1#instance.label = new enum value 1
