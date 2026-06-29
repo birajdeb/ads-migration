@@ -13,6 +13,7 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer" collection="false" name="Customer"/>
                 <output bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
                 <rule defaultRule="false" href="node_1/Price%20Before%20Discount.dmt" kind="DecisionTable" name="Price Before Discount"/>
             </ruleset>
@@ -23,6 +24,9 @@
         </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
         </informationRequirement>
         <knowledgeRequirement>
             <requiredKnowledge href="#node_2"/>
