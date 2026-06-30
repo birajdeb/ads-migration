@@ -28,6 +28,11 @@
                         <Text><![CDATA[set decision to <a number>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text/>
+                    </ExpressionDefinition>
+                </ActionDefinition>
             </ActionDefinitions>
         </Structure>
         <Contents>
