@@ -25,6 +25,11 @@
                         <Text><![CDATA[the Size of Shipment1 is <a Size Enums>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <ExpressionDefinition>
+                        <Text/>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
