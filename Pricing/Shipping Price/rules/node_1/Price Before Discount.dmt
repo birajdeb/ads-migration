@@ -29,7 +29,7 @@ set 'shipmentBasePrice' to the shipment base price computed from
                 </ConditionDefinition>
                 <ConditionDefinition Id="C3">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Customer Status of Customer is <an object> ]]></Text>
+                        <Text><![CDATA[the Customer Status of Customer is <a Customer Status Enums>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
