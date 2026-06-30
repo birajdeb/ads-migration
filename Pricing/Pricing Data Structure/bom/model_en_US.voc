@@ -6,8 +6,9 @@ aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructu
 
 # aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer
 aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer#concept.label = Customer
-aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.Customer(java.time.DayOfWeek)#phrase.navigation = a new {Customer} where {0, Customer Status}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.Customer(aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums)#phrase.navigation = a new {Customer} where {0, Customer Status}
 aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.customerStatus#phrase.action = set the Customer Status of {this} to {Customer Status}
+aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.customerStatus#phrase.clearer = clear the Customer Status of {this}
 aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer.customerStatus#phrase.navigation = {Customer Status} of {this}
 
 # aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums

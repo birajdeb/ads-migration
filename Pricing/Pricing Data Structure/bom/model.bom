@@ -8,7 +8,7 @@ class AA
         property com.fasterxml.jackson.annotation.JsonTypeName "AA"
         #de.generated
 {
-    domain {static asdasd, static $2213}
+    domain {static $2213, static asdasd}
     static final readonly aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.AA $2213
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "12213";
@@ -22,11 +22,11 @@ class Customer
         property com.fasterxml.jackson.annotation.JsonTypeName "Customer"
         #de.generated
 {
-    java.time.DayOfWeek customerStatus
+    aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums customerStatus
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "Customer Status"
                 #update;
-    Customer(java.time.DayOfWeek customerStatus)
+    Customer(aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.CustomerStatusEnums customerStatus)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
