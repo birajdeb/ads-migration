@@ -45,6 +45,7 @@
             <StopTask Identifier="task_17"/>
             <StopTask Identifier="task_18"/>
             <StopTask Identifier="task_19"/>
+            <StartTask Identifier="task_20"/>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
@@ -53,7 +54,6 @@
             <TaskNode Identifier="node_3" Task="task_3"/>
             <TaskNode Identifier="node_4" Task="task_4"/>
             <TaskNode Identifier="node_5" Task="task_5"/>
-            <ForkNode Identifier="node_8"/>
             <JoinNode Identifier="node_9"/>
             <TaskNode Identifier="node_10" Task="task_7"/>
             <TaskNode Identifier="node_11" Task="task_8"/>
@@ -69,13 +69,13 @@
             <TaskNode Identifier="node_21" Task="task_17"/>
             <TaskNode Identifier="node_22" Task="task_18"/>
             <TaskNode Identifier="node_23" Task="task_19"/>
+            <TaskNode Identifier="node_24" Task="task_20"/>
         </NodeList>
         <TransitionList>
             <Transition Identifier="transition_0" Source="node_0" Target="node_1"/>
             <Transition Identifier="transition_1" Source="node_1" Target="node_2"/>
             <Transition Identifier="transition_2" Source="node_10" Target="node_11"/>
             <Transition Identifier="transition_3" Source="node_11" Target="node_12"/>
-            <Transition Identifier="transition_4" Source="node_10" Target="node_13"/>
             <Transition Identifier="transition_5" Source="node_13" Target="node_14"/>
             <Transition Identifier="transition_6" Source="node_14" Target="node_15"/>
             <Transition Identifier="transition_7" Source="node_12" Target="node_16"/>
@@ -88,6 +88,8 @@
             <Transition Identifier="transition_14" Source="node_3" Target="node_4"/>
             <Transition Identifier="transition_15" Source="node_4" Target="node_23"/>
             <Transition Identifier="transition_16" Source="node_4" Target="node_14"/>
+            <Transition Identifier="transition_17" Source="node_24" Target="node_5"/>
+            <Transition Identifier="transition_18" Source="node_9" Target="node_1"/>
         </TransitionList>
     </Body>
     <Resources>
@@ -107,10 +109,8 @@
             <Data Name="node_3#label"><![CDATA[Action task 1]]></Data>
             <Data Name="node_18#name"><![CDATA[Join node 2]]></Data>
             <Data Name="node_15#label"><![CDATA[Subflow task 2]]></Data>
-            <Data Name="node_8#label"><![CDATA[Fork node 1]]></Data>
             <Data Name="node_22#name"><![CDATA[End node 4]]></Data>
             <Data Name="node_11#name"><![CDATA[Function task 2]]></Data>
-            <Data Name="node_8#name"><![CDATA[Fork node 1]]></Data>
             <Data Name="node_12#label"><![CDATA[Rule task 3]]></Data>
             <Data Name="node_22#label"><![CDATA[End node 4]]></Data>
             <Data Name="node_21#label"><![CDATA[End node 3]]></Data>
@@ -123,6 +123,7 @@
             <Data Name="node_10#name"><![CDATA[Start node 2]]></Data>
             <Data Name="node_4#name"><![CDATA[Rule task 2]]></Data>
             <Data Name="node_15#name"><![CDATA[Subflow task 2]]></Data>
+            <Data Name="node_24#label"><![CDATA[Start node 3]]></Data>
             <Data Name="node_9#name"><![CDATA[Join node 1]]></Data>
             <Data Name="node_12#name"><![CDATA[Rule task 3]]></Data>
             <Data Name="node_0#name"><![CDATA[Start node]]></Data>
@@ -133,6 +134,7 @@
             <Data Name="node_16#label"><![CDATA[Rule task 5]]></Data>
             <Data Name="node_16#name"><![CDATA[Rule task 5]]></Data>
             <Data Name="node_19#name"><![CDATA[Subflow task 3]]></Data>
+            <Data Name="node_24#name"><![CDATA[Start node 3]]></Data>
             <Data Name="node_3#name"><![CDATA[Action task 1]]></Data>
         </ResourceSet>
     </Resources>
