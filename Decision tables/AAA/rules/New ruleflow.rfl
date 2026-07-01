@@ -12,9 +12,6 @@
             <ActionTask Identifier="task_3"/>
             <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_4" Ordering="Default"/>
             <SubflowTask Identifier="task_5" Uuid=""/>
-            <FunctionTask Identifier="task_6">
-                <Invocation/>
-            </FunctionTask>
             <StartTask Identifier="task_7"/>
             <FunctionTask Identifier="task_8">
                 <Invocation FunctionIdentifier="com.ibm.ads.samples.training.decision_tables.level_1.Level1_simple_table">
@@ -47,6 +44,7 @@
             </FunctionTask>
             <StopTask Identifier="task_17"/>
             <StopTask Identifier="task_18"/>
+            <StopTask Identifier="task_19"/>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
@@ -55,8 +53,6 @@
             <TaskNode Identifier="node_3" Task="task_3"/>
             <TaskNode Identifier="node_4" Task="task_4"/>
             <TaskNode Identifier="node_5" Task="task_5"/>
-            <TaskNode Identifier="node_6" Task="task_6"/>
-            <BranchNode Identifier="node_7"/>
             <ForkNode Identifier="node_8"/>
             <JoinNode Identifier="node_9"/>
             <TaskNode Identifier="node_10" Task="task_7"/>
@@ -72,6 +68,7 @@
             <TaskNode Identifier="node_20" Task="task_16"/>
             <TaskNode Identifier="node_21" Task="task_17"/>
             <TaskNode Identifier="node_22" Task="task_18"/>
+            <TaskNode Identifier="node_23" Task="task_19"/>
         </NodeList>
         <TransitionList>
             <Transition Identifier="transition_0" Source="node_0" Target="node_1"/>
@@ -88,6 +85,9 @@
             <Transition Identifier="transition_11" Source="node_16" Target="node_20"/>
             <Transition Identifier="transition_12" Source="node_20" Target="node_21"/>
             <Transition Identifier="transition_13" Source="node_19" Target="node_22"/>
+            <Transition Identifier="transition_14" Source="node_3" Target="node_4"/>
+            <Transition Identifier="transition_15" Source="node_4" Target="node_23"/>
+            <Transition Identifier="transition_16" Source="node_4" Target="node_14"/>
         </TransitionList>
     </Body>
     <Resources>
@@ -102,7 +102,7 @@
             <Data Name="node_20#label"><![CDATA[Function task 4]]></Data>
             <Data Name="node_20#name"><![CDATA[Function task 4]]></Data>
             <Data Name="node_1#label"><![CDATA[Rule task 1]]></Data>
-            <Data Name="node_6#label"><![CDATA[Function task 1]]></Data>
+            <Data Name="node_23#name"><![CDATA[End node 5]]></Data>
             <Data Name="node_14#label"><![CDATA[Function task 3]]></Data>
             <Data Name="node_3#label"><![CDATA[Action task 1]]></Data>
             <Data Name="node_18#name"><![CDATA[Join node 2]]></Data>
@@ -117,19 +117,17 @@
             <Data Name="node_21#name"><![CDATA[End node 3]]></Data>
             <Data Name="node_11#label"><![CDATA[Function task 2]]></Data>
             <Data Name="node_18#label"><![CDATA[Join node 2]]></Data>
-            <Data Name="node_7#label"><![CDATA[Branch node 1]]></Data>
             <Data Name="node_1#name"><![CDATA[Rule task 1]]></Data>
             <Data Name="node_5#label"><![CDATA[Subflow task 1]]></Data>
             <Data Name="node_13#label"><![CDATA[Rule task 4]]></Data>
             <Data Name="node_10#name"><![CDATA[Start node 2]]></Data>
             <Data Name="node_4#name"><![CDATA[Rule task 2]]></Data>
             <Data Name="node_15#name"><![CDATA[Subflow task 2]]></Data>
-            <Data Name="node_7#name"><![CDATA[Branch node 1]]></Data>
-            <Data Name="node_6#name"><![CDATA[Function task 1]]></Data>
             <Data Name="node_9#name"><![CDATA[Join node 1]]></Data>
             <Data Name="node_12#name"><![CDATA[Rule task 3]]></Data>
             <Data Name="node_0#name"><![CDATA[Start node]]></Data>
             <Data Name="node_4#label"><![CDATA[Rule task 2]]></Data>
+            <Data Name="node_23#label"><![CDATA[End node 5]]></Data>
             <Data Name="node_9#label"><![CDATA[Join node 1]]></Data>
             <Data Name="node_13#name"><![CDATA[Rule task 4]]></Data>
             <Data Name="node_16#label"><![CDATA[Rule task 5]]></Data>
