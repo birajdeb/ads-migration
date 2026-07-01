@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Order Pricing Table Assignment">
+  <name>Order_Pricing_Table_Assignment</name>
+  <uuid>3924ba89-7b11-404a-b0db-cdc23d1c25b2</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#96383083-fa1f-47a6-925d-389dd0cb5f55"/>
+  <targetRuleProject href="../../Order%20Pricing%20Table%20Assignment#2c51acf9-3621-436c-b02f-5b7431be8b84"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Order_Pricing_Table_Assignment"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

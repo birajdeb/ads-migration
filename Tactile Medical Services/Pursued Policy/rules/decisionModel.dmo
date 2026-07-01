@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>0da496a8-4795-4162-9e4f-5bf2e285d20a</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Policy">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+    </inputData>
+    <decision id="node_1" name="Primary Policy Information">
+        <description>What is the renewal date, policy id, payer id, state, and payer name for the primary insurance policy for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <rule defaultRule="false" href="node_1/Primary%20Policy%20Information.dmt" kind="DecisionTable" name="Primary Policy Information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Primary Policy Information" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Secondary Policy Information">
+        <description>What is the renewal date, policy id, payer id, state, and payer name for the primary insurance policy for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <rule defaultRule="false" href="node_2/Secondary%20Policy%20Information.dmt" kind="DecisionTable" name="Secondary Policy Information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Secondary Policy Information" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_3" name="Order">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+    </inputData>
+    <decision id="node_4" name="Valid Secondary Policy">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot" collection="false" name="Valid Secondary Policy"/>
+                <rule defaultRule="false" href="node_4/Valid%20Secondary%20Policy.dmt" kind="DecisionTable" name="Valid Secondary Policy"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Valid Secondary Policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Order Medicare with Qualifying Secondary">
+        <description>Is there a qualifying secondary payer for this patient's Medicare order?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Order Medicare with Qualifying Secondary"/>
+                <rule defaultRule="false" href="node_5/Order%20Medicare%20with%20Qualifying%20Secondary.dmt" kind="DecisionTable" name="Order Medicare with Qualifying Secondary"/>
+                <rule defaultRule="true" href="node_5/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Order Medicare with Qualifying Secondary" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Secondary is Medicaid or Medicare">
+        <description>Should the secondary insurance be ignored due to it being Medicare or Medicaid?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Secondary is Medicaid or Medicare"/>
+                <rule defaultRule="false" href="node_6/Secondary%20is%20Medicaid%20or%20Medicare.dmt" kind="DecisionTable" name="Secondary is Medicaid or Medicare"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Secondary is Medicaid or Medicare" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_7" name="Pursued Policy">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot" collection="false" name="Valid Secondary Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Order Medicare with Qualifying Secondary"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Secondary is Medicaid or Medicare"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Pursued Policy"/>
+                <rule defaultRule="false" href="node_7/Pursued%20Policy.dmt" kind="DecisionTable" name="Pursued Policy"/>
+                <rule defaultRule="true" href="node_7/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Pursued Policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Year 2 Deductible</name>
+  <uuid>30a82e4e-7285-4f50-aaa8-46775bc04476</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'year 2 deductible remaining' to the year 2 deductible remaining computed from 
+	Payer being Payer , 
+	Order being Order , 
+	Network being Network , 
+	Policy being Policy , 
+	Terms being Terms , 
+	System being System , 
+	Patient being Patient , 
+	State being State , 
+	Policy Activity being 'Policy Activity' , 
+	HCPCS Biling being 'HCPCS Biling' ; ]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'year 2 deductible remaining' is <a number> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Year 2 Price' is <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to min ( 'year 2 deductible remaining' , 'Year 2 Price' ) ]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C2">
+                <Condition>
+                    <Expression/>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not null]]></Text>
+                            </Expression>
+                            <ActionSet/>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Year 2 Price]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[308]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Yearly 2 deductible remaining]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Year 2 Deductible]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[235]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

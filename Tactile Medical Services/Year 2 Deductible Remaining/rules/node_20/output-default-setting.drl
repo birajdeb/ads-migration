@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>efc00a85-d5c9-4533-b366-cee8d20bec73</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new Policy where
+		the DME Coverage is <DME Coverage> , 
+		the DME Maximum is <DME Maximum> , 
+		the Active Policy is <Active Policy> , 
+		the Bill to Payer ID is <Bill to Payer ID> , 
+		the Customer Purchase Order is <Customer Purchase Order> , 
+		the In Network DME Maximum is <In Network DME Maximum> , 
+		the In Network Deductible is <In Network Deductible> , 
+		In Network Deductible Applies to Out of Pocket Maximum is <In Network Deductible Applies to Out of Pocket Maximum> , 
+		the In Network Deductible Met is <In Network Deductible Met> , 
+		In Network Flag is <In Network Flag> , 
+		the In Network Out of Pocket is <In Network Out of Pocket> , 
+		the In Network Out of Pocket Met is <In Network Out of Pocket Met> , 
+		the In Network Percent Paid is <In Network Percent Paid> , 
+		the Network ID is <Network ID> , 
+		the Out of Network DME Maximum is <Out of Network DME Maximum> , 
+		the Out of Network Deductible is <Out of Network Deductible> , 
+		Out of Network Deductible Applies to Out of Pocket Maximum is <Out of Network Deductible Applies to Out of Pocket Maximum> , 
+		the Out of Network Deductible Met is <Out of Network Deductible Met> , 
+		the Out of Network Out of Pocket is <Out of Network Out of Pocket> , 
+		the Out of Network Out of Pocket Met is <Out of Network Out of Pocket Met> , 
+		the Out of Network Percent Paid is <Out of Network Percent Paid> , 
+		the Payer is <Payer> , 
+		the Payer Bucket is <Payer Bucket> , 
+		the Payer ID is <Payer ID> , 
+		the Payer Name is <Payer Name> , 
+		the Payer Type is <Payer Type> , 
+		the Plan Designation is <Plan Designation> , 
+		the Plan Type is <Plan Type> , 
+		the Policy Activity is <Policy Activity> , 
+		the Policy Activity Risk is <Policy Activity Risk> , 
+		the Policy ID is <Policy ID> , 
+		the Policy State is <Policy State> , 
+		the Renewal Date is <Renewal Date> , 
+		the Secondary No Pay is <Secondary No Pay> , 
+		the Service Level Copay In Network is <Service Level Copay In Network> , 
+		the Service Level Copay Out of Network is <Service Level Copay Out of Network> to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

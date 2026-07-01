@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Calculate Payment Terms">
+  <name>Calculate_Payment_Terms</name>
+  <uuid>53a36b7a-a2e6-4a6b-bbcc-4b229b2b86a9</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#b5ed46a3-ab4c-4ce5-a9fa-05aeb4bc6b3a"/>
+  <targetRuleProject href="../../Calculate%20Payment%20Terms#53bcbecb-723c-4804-95a8-8e827b41267d"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

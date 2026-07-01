@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>96383083-fa1f-47a6-925d-389dd0cb5f55</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Network">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Network" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network[]"/>
+    </inputData>
+    <decision id="node_1" name="Patient Prioritized State">
+        <description>What is the correct state based on prioritization for this patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient" collection="true" name="Patient"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <output bomType="java.lang.String" collection="true" name="Patient Prioritized State"/>
+                <rule defaultRule="false" href="node_1/Patient%20Prioritized%20State.dmt" kind="DecisionTable" name="Patient Prioritized State"/>
+                <rule defaultRule="false" href="node_1/Distinct%20Function.drl" kind="BusinessRule" name="Distinct Function"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Patient Prioritized State" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Patient">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient" collection="true" name="Patient"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Patient" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient[]"/>
+    </inputData>
+    <inputData id="node_3" name="Policy">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <rule defaultRule="true" href="node_3/default-value-setting.drl" kind="BusinessRule" name="default-value-setting"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+    </inputData>
+    <decision id="node_4" name="Policy Medicare">
+        <description>Is the policy for this order medicare?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Policy Medicare"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_4/Policy%20Medicare.dmt" kind="DecisionTable" name="Policy Medicare"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Policy Medicare" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_5" name="Order">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_5_ii" name="Order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+    </inputData>
+    <decision id="node_6" name="Order Medicare Head and Neck">
+        <description>Is this patient's order not a covered benefit due to being Medicare for Head and Neck?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Order Medicare Head and Neck"/>
+                <rule defaultRule="false" href="node_6/Order%20Medicare%20Head%20and%20Neck.dmt" kind="DecisionTable" name="Order Medicare Head and Neck"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Order Medicare Head and Neck" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_7" name="International Patient">
+        <description>Is this patient considered an international patient?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="International Patient"/>
+                <rule defaultRule="false" href="node_7/International%20Patient.dmt" kind="DecisionTable" name="International Patient"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="International Patient" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_9" name="Order Donated">
+        <description>Is this patient's order donated?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Order Donated"/>
+                <rule defaultRule="false" href="node_9/Order%20Donated.dmt" kind="DecisionTable" name="Order Donated"/>
+                <rule defaultRule="true" href="node_9/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Order Donated" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Order Discounted">
+        <description>Is this patient's order discounted?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Order Discounted"/>
+                <rule defaultRule="false" href="node_10/Order%20Discounted.dmt" kind="DecisionTable" name="Order Discounted"/>
+                <rule defaultRule="true" href="node_10/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Order Discounted" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_11" name="Policy Self Pay">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Policy Self Pay"/>
+                <rule defaultRule="false" href="node_11/Policy%20Self%20Pay.dmt" kind="DecisionTable" name="Policy Self Pay"/>
+                <rule defaultRule="true" href="node_11/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="Policy Self Pay" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Order Self Pay Type">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Order Medicare Head and Neck"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="International Patient"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Policy Self Pay"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Order Discounted"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Order Donated"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="true" name="Order Self Pay Type"/>
+                <rule defaultRule="false" href="node_12/Order%20Self%20Pay%20Type.dmt" kind="DecisionTable" name="Order Self Pay Type"/>
+                <rule defaultRule="true" href="node_12/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Order Self Pay Type" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_13" name="Order Pricing Table Assignment">
+        <description>What is the pricing table assignment for this order?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+                <input bomType="java.lang.String" collection="true" name="Patient Prioritized State"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="false" name="Policy Medicare"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues" collection="true" name="Order Self Pay Type"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment" collection="true" name="Order Pricing Table Assignment"/>
+                <rule defaultRule="false" href="node_13/Order%20Pricing%20Table%20Assignment.dmt" kind="DecisionTable" name="Order Pricing Table Assignment"/>
+                <rule defaultRule="false" href="node_13/Distinct%20Function.drl" kind="BusinessRule" name="Distinct Function"/>
+                <rule defaultRule="true" href="node_13/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_13_ii" name="Order Pricing Table Assignment" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_15"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_14"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_14" name="Policy Activity">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_14_ii" name="Policy Activity" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity[]"/>
+    </inputData>
+    <inputData id="node_15" name="Payer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_15_ii" name="Payer" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance[]"/>
+    </inputData>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

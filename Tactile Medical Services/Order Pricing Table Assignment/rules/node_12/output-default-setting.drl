@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>237bc510-0c68-4627-ac28-aaeabf31367a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add No Order Self Pay Type to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

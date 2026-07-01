@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Unit Allowable Price</name>
+  <uuid>bcff9951-919f-477a-9e11-422775662281</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'HCPCS biling' to a HCPCS Billing in 'HCPCS Biling' ;
+ set 'Pricing Type' to an Order Assignment Values in the Pricing Types of the order pricing table assignments computed from 
+	Payer being Payer , 
+	Order being Order , 
+	Network being Network , 
+	Policy being Policy , 
+	Patient being Patient , 
+	Policy Activity being 'Policy Activity' ; 
+set 'Pricing ID' to a string in the Pricing IDs of the order pricing table assignments computed from 
+	Payer being Payer , 
+	Order being Order , 
+	Network being Network , 
+	Policy being Policy , 
+	Patient being Patient , 
+	Policy Activity being 'Policy Activity' ;
+ set 'state' to a State in State ;
+ set 'network' to a Network in Network ;
+ set 'payer' to a Payer Insurance in Payer ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the HCPCS Code of 'HCPCS biling' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Modifier of 'Order' is <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'Pricing Type' is <an Order Assignment Values> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'Pricing ID' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Unit Allowable Price Value where 
+	the Unit Allowable Price is <a number>, 
+	the HCPCS Code is the HCPCS Code of 'HCPCS biling' to decision ]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0651"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicare NU]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the State of state]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0651 Medicare Allowable NU of state]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0651"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicaid]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the State of state]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0651 Medicaid Allowable NU of state]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0651"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Network]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the Network ID of network]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0651 Allowable of network]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0651"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                        <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the Payer ID of payer]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0651 Allowable of payer]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0651"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["UE"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicare UE]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the State of state]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0651 Medicare Allowable UE of state]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0652"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicare NU]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the State of state]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0652 Medicare Allowable NU of state]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0652"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicaid]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the State of state]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0652 Medicaid Allowable NU of state]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0652"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Network]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the Network ID of network]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0652 Allowable of network]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0652"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["NU"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                        <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the Payer ID of payer]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0652 Allowable of payer]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0652"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["UE"]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicare UE]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[the State of state]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[the E0652 Medicare Allowable UE of state]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0656"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicare NU]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0656 Medicare Allowable NU of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0656"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicaid]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0656 Medicaid Allowable NU of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0656"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Network]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Network ID of network]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0656 Allowable of network]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0656"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Payer ID of payer]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0656 Allowable of payer]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0657"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicare NU]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0657 Medicare Allowable NU of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0657"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicaid]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0657 Medicaid Allowable NU of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0657"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Network]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Network ID of network]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0657 Allowable of network]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0657"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Payer ID of payer]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0657 Allowable of payer]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0667"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicare NU]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0667 Medicare Allowable of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0667"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicaid]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0667 Medicaid Allowable of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0667"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Network]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Network ID of network]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0667 Allowable of network]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0667"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Payer ID of payer]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0667 Allowable of payer]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0668"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicare NU]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0668 Medicare Allowable of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0668"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicaid]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0668 Medicaid Allowable of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0668"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Network]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Network ID of network]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0668 Allowable of network]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0668"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Payer ID of payer]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0668 Allowable of payer]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0669"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicare NU]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0669 Medicare Allowable of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0669"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicaid]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0669 Medicaid Allowable of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0669"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Network]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Network ID of network]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0669 Allowable of network]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E0669"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Payer ID of payer]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E0669 Allowable of payer]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E1399"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicare NU]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E1399 Medicare Allowable NU of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E1399"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medicaid]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the State of state]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E1399 Medicaid Allowable NU of state]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E1399"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Network]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Network ID of network]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E1399 Allowable of network]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["E1399"]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ Bill to Payer, Payer }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[the Payer ID of payer]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the E1399 Allowable of payer]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[HCPCS Code]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Modifier]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Pricing ID]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[626]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[Pricing Type]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[Unit Allowable Price]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Unit Allowable Price]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

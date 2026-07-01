@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Full Results For Calculate Payment Terms</name>
+  <uuid>dabe4eb5-d15c-4268-8c95-b6af301d4237</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Payment Terms Output where
+		the Order Year 2 Months to Bill is 'Order Year 2 Months to Bill' , 
+		the Payment Terms is 'Payment Terms' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

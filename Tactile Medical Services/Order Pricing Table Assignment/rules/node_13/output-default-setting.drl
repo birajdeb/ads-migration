@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>91fe3eae-406d-4b67-8917-7d477ebbc800</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new Order Pricing Table Assignment where
+		the Pricing IDs are { "-" } , 
+		the Pricing Types are { - } to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

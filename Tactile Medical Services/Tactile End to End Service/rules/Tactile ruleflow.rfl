@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Tactile ruleflow</name>
+  <uuid>43924942-94e3-4e30-9e1b-03419ad7bc32</uuid>
+  <locale>en_US</locale>
+  <rfModel><Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+    <Body>
+        <TaskList>
+            <StartTask Identifier="task_0"/>
+            <StopTask Identifier="task_2"/>
+            <FunctionTask Identifier="task_3">
+                <FinalActions Language="bal"><![CDATA[set 'the FinalOutput' to a new Final Outputs where 
+	the Order Pricing Table Assignments are 'the OrderPricingTableAssignment' ;]]></FinalActions>
+                <Invocation FunctionIdentifier="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.orderpricingtableassignment.Order_Pricing_Table_Assignment">
+                    <InputBindings>
+                        <Binding Language="bal" Name="network"><![CDATA[ 'the Network' ]]></Binding>
+                        <Binding Language="bal" Name="patient"><![CDATA[ 'the Patient' ]]></Binding>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="OrderPricingTableAssignment"><![CDATA[ 'order pricing table assignment' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_4">
+                <FinalActions Language="bal"><![CDATA[set the Policy Months Remaining of 'the FinalOutput' to 'the PolicyMonthsRemaining' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.policymonthsremaining.Policy_Months_Remaining">
+                    <InputBindings>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="system"><![CDATA[ 'the System' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="PolicyMonthsRemaining"><![CDATA[ 'policy months remaining' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_5">
+                <FinalActions Language="bal"><![CDATA[set the Calculate Allowables of 'the FinalOutput' to 'the CalculateAllowables' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.calculateallowables.Calculate_Allowables">
+                    <InputBindings>
+                        <Binding Language="bal" Name="HCPCSBiling"><![CDATA[ 'the HCPCSBiling' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="network"><![CDATA[ 'the Network' ]]></Binding>
+                        <Binding Language="bal" Name="patient"><![CDATA[ 'the Patient' ]]></Binding>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="state"><![CDATA[ 'the State' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="CalculateAllowables"><![CDATA[ 'calculate allowables' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_6">
+                <FinalActions Language="bal"><![CDATA[set the Error Message Lists of 'the FinalOutput' to 'the ErrorMessageList' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.errormessagelist.Error_Message_List">
+                    <InputBindings>
+                        <Binding Language="bal" Name="HCPCSBiling"><![CDATA[ 'the HCPCSBiling' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="system"><![CDATA[ 'the System' ]]></Binding>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="ErrorMessageList"><![CDATA[ 'error message list' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_7">
+                <FinalActions Language="bal"><![CDATA[set the Policy Benefit Levels of 'the FinalOutput' to 'the Policy Benefit Level' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.policybenefitlevel.Policy_Benefit_Level">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="PolicyBenefitLevel"><![CDATA[ 'policy benefit level' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_8">
+                <FinalActions Language="bal"><![CDATA[set the Pursued Policy of 'the FinalOutput' to 'the Pursued Policy' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.pursuedpolicy.Pursued_Policy">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="PursuedPolicy"><![CDATA[ 'pursued policy' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_9">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Year 1 and 2 Out of Pocket Left of 'the FinalOutput' to 'the Full Results For Year 1 and 2 Out of Pocket Left' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.yearlyoutofpocketleft.Yearly_Out_of_Pocket_Left">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="YearlyOutofPocketLeft"><![CDATA[ 'yearly out of pocket left' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_10">
+                <FinalActions Language="bal"><![CDATA[set the Year 2 Deductible Remaining of 'the FinalOutput' to 'the Year 2 Deductible Remaining' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.year2deductibleremaining.Year_2_Deductible_Remaining">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="terms"><![CDATA[ 'the Terms' ]]></Binding>
+                        <Binding Language="bal" Name="network"><![CDATA[ 'the Network' ]]></Binding>
+                        <Binding Language="bal" Name="state"><![CDATA[ 'the State' ]]></Binding>
+                        <Binding Language="bal" Name="patient"><![CDATA[ 'the Patient' ]]></Binding>
+                        <Binding Language="bal" Name="HCPCSBiling"><![CDATA[ 'the HCPCSBiling' ]]></Binding>
+                        <Binding Language="bal" Name="system"><![CDATA[ 'the System' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="Year2DeductibleRemaining"><![CDATA[ 'year 2 deductible remaining' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_11">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Year 1 and 2 Price of 'the FinalOutput' to 'the Full Results For Year 1 and 2 Price' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.yearlytotalprice.Year_1_and_2_Price">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="terms"><![CDATA[ 'the Terms' ]]></Binding>
+                        <Binding Language="bal" Name="system"><![CDATA[ 'the System' ]]></Binding>
+                        <Binding Language="bal" Name="HCPCSBiling"><![CDATA[ 'the HCPCSBiling' ]]></Binding>
+                        <Binding Language="bal" Name="network"><![CDATA[ 'the Network' ]]></Binding>
+                        <Binding Language="bal" Name="patient"><![CDATA[ 'the Patient' ]]></Binding>
+                        <Binding Language="bal" Name="state"><![CDATA[ 'the State' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="Year1and2Price"><![CDATA[ 'year 1 and 2 price' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_12">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Yearly Deductible of 'the FinalOutput' to 'the Full Results For Yearly Deductible' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.yearlydeductible.Yearly_Deductible">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="state"><![CDATA[ 'the State' ]]></Binding>
+                        <Binding Language="bal" Name="patient"><![CDATA[ 'the Patient' ]]></Binding>
+                        <Binding Language="bal" Name="system"><![CDATA[ 'the System' ]]></Binding>
+                        <Binding Language="bal" Name="terms"><![CDATA[ 'the Terms' ]]></Binding>
+                        <Binding Language="bal" Name="network"><![CDATA[ 'the Network' ]]></Binding>
+                        <Binding Language="bal" Name="HCPCSBiling"><![CDATA[ 'the HCPCSBiling' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="YearlyDeductible"><![CDATA[ 'yearly deductible' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_13">
+                <FinalActions Language="bal"><![CDATA[set the Policy Copay of 'the FinalOutput' to 'the Policy Copay' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.policycopay.Policy_Copay">
+                    <InputBindings>
+                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
+                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
+                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="PolicyCopay"><![CDATA[ 'policy copay' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+        </TaskList>
+        <NodeList>
+            <TaskNode Identifier="node_0" Task="task_0"/>
+            <TaskNode Identifier="node_2" Task="task_2"/>
+            <TaskNode Identifier="node_3" Task="task_3"/>
+            <TaskNode Identifier="node_4" Task="task_4"/>
+            <TaskNode Identifier="node_5" Task="task_5"/>
+            <TaskNode Identifier="node_6" Task="task_6"/>
+            <TaskNode Identifier="node_7" Task="task_7"/>
+            <TaskNode Identifier="node_8" Task="task_8"/>
+            <TaskNode Identifier="node_9" Task="task_9"/>
+            <TaskNode Identifier="node_10" Task="task_10"/>
+            <TaskNode Identifier="node_11" Task="task_11"/>
+            <TaskNode Identifier="node_12" Task="task_12"/>
+            <TaskNode Identifier="node_13" Task="task_13"/>
+        </NodeList>
+        <TransitionList>
+            <Transition Identifier="transition_0" Source="node_0" Target="node_3"/>
+            <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+            <Transition Identifier="transition_4" Source="node_4" Target="node_5"/>
+            <Transition Identifier="transition_5" Source="node_5" Target="node_6"/>
+            <Transition Identifier="transition_7" Source="node_6" Target="node_7"/>
+            <Transition Identifier="transition_6" Source="node_7" Target="node_8"/>
+            <Transition Identifier="transition_8" Source="node_8" Target="node_9"/>
+            <Transition Identifier="transition_10" Source="node_9" Target="node_11"/>
+            <Transition Identifier="transition_12" Source="node_11" Target="node_10"/>
+            <Transition Identifier="transition_13" Source="node_10" Target="node_12"/>
+            <Transition Identifier="transition_11" Source="node_12" Target="node_13"/>
+            <Transition Identifier="transition_15" Source="node_13" Target="node_2"/>
+        </TransitionList>
+    </Body>
+    <Resources>
+        <ResourceSet Locale="en_US">
+            <Data Name="node_11#label"><![CDATA[Year 1 and 2 Price]]></Data>
+            <Data Name="node_7#label"><![CDATA[Policy Benefit Level]]></Data>
+            <Data Name="node_5#name"><![CDATA[Calculate Allowables]]></Data>
+            <Data Name="node_2#name"><![CDATA[End node]]></Data>
+            <Data Name="node_5#label"><![CDATA[Calculate Allowables]]></Data>
+            <Data Name="node_10#label"><![CDATA[Year 2 Deductible Remaining]]></Data>
+            <Data Name="node_13#label"><![CDATA[Policy Copay]]></Data>
+            <Data Name="node_10#name"><![CDATA[Year 2 Deductible Remaining]]></Data>
+            <Data Name="node_4#name"><![CDATA[Policy Months Remaining]]></Data>
+            <Data Name="node_6#label"><![CDATA[Error Message List]]></Data>
+            <Data Name="node_7#name"><![CDATA[Policy Benefit Level]]></Data>
+            <Data Name="node_6#name"><![CDATA[Error Message List]]></Data>
+            <Data Name="node_9#name"><![CDATA[Yearly Out of Pocket Left]]></Data>
+            <Data Name="node_3#label"><![CDATA[Order Pricing Table Assignment]]></Data>
+            <Data Name="node_12#name"><![CDATA[Yearly Deductible]]></Data>
+            <Data Name="node_0#name"><![CDATA[Start node]]></Data>
+            <Data Name="node_4#label"><![CDATA[Policy Months Remaining]]></Data>
+            <Data Name="node_9#label"><![CDATA[Yearly Out of Pocket Left]]></Data>
+            <Data Name="node_8#label"><![CDATA[Pursued Policy]]></Data>
+            <Data Name="node_13#name"><![CDATA[Policy Copay]]></Data>
+            <Data Name="node_11#name"><![CDATA[Year 1 and 2 Price]]></Data>
+            <Data Name="node_8#name"><![CDATA[Pursued Policy]]></Data>
+            <Data Name="node_12#label"><![CDATA[Yearly Deductible]]></Data>
+            <Data Name="node_3#name"><![CDATA[Order Pricing Table Assignment]]></Data>
+        </ResourceSet>
+    </Resources>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

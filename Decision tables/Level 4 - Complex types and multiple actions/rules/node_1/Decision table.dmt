@@ -40,6 +40,11 @@
 	the discount is <discount>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text/>
+                    </ExpressionDefinition>
+                </ActionDefinition>
             </ActionDefinitions>
         </Structure>
         <Contents>
@@ -66,6 +71,9 @@
                                                 <Param><![CDATA[0.05]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
@@ -87,6 +95,9 @@
                                                 <Param><![CDATA[0.1]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
@@ -107,6 +118,9 @@
                                                 <Param><![CDATA[30]]></Param>
                                                 <Param><![CDATA[0.15]]></Param>
                                             </Expression>
+                                        </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
                                         </Action>
                                     </ActionSet>
                                 </Condition>
@@ -136,6 +150,9 @@
                                                 <Param><![CDATA[0.08]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
@@ -157,6 +174,9 @@
                                                 <Param><![CDATA[0.13]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
@@ -172,6 +192,9 @@
                                         <Param><![CDATA[45]]></Param>
                                         <Param><![CDATA[0.18]]></Param>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>
@@ -190,9 +213,12 @@
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA[20]]></Param>
+                                        <Param/>
                                         <Param><![CDATA[0.1]]></Param>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>
@@ -208,6 +234,9 @@
                                         <Param><![CDATA[0.15]]></Param>
                                     </Expression>
                                 </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
+                                </Action>
                             </ActionSet>
                         </Condition>
                         <Condition>
@@ -219,8 +248,11 @@
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[60]]></Param>
-                                        <Param><![CDATA[0.2]]></Param>
+                                        <Param/>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>
@@ -235,6 +267,9 @@
                                         <Param><![CDATA[100]]></Param>
                                         <Param><![CDATA[0.25]]></Param>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>

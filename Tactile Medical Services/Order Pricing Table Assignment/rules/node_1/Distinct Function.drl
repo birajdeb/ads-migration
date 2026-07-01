@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Distinct Function</name>
+  <uuid>ae41e5e3-9576-42a1-ab3c-238e02c32e87</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+ set 'policy' to a Policy in Policy ;
+ set 'patient' to a Patient in Patient ;
+ set 'network' to a Network in Network ;
+if 
+	policy is not null or patient is not null or network is not null
+then
+	set decision to decision, made distinct ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

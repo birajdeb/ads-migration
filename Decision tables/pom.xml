@@ -185,6 +185,7 @@
     
     <modules>
         <module>.decisionservice</module>
+        <module>AAA</module>
         <module>Data</module>
         <module>Level 1 - Simple table</module>
         <module>Level 2 - Complex columns</module>

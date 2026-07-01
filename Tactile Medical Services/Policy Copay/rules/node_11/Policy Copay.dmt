@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Policy Copay</name>
+  <uuid>9af00e9f-c5ad-4f31-82be-38b2a5bfc5de</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'policy benefit level' to a string in 'Policy Benefit Level Output' ;
+ set 'primary policy information' to a Policy in 'Primary Policy Information' ;
+ set 'secondary policy information' to a Policy in 'Secondary Policy Information' ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'policy benefit level' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Pursued Policy Output' is <a Pursued Policy Values>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Service Level Copay In Network of 'secondary policy information' is <a number> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Service Level Copay Out of Network of 'secondary policy information' is <a number> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["In Network"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                <Param><![CDATA[Primary]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                        <Param><![CDATA[the Service Level Copay In Network of 'primary policy information']]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Service Level Copay In Network of 'primary policy information']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ "In Network" }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                <Param><![CDATA[Primary]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                        <Param><![CDATA[the Service Level Copay Out of Network of 'primary policy information']]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Service Level Copay Out of Network of 'primary policy information']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["In Network"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                <Param><![CDATA[Primary]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[the Service Level Copay In Network of 'primary policy information']]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Service Level Copay In Network of 'secondary policy information']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ "In Network" }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                <Param><![CDATA[Primary]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[the Service Level Copay Out of Network of 'primary policy information']]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[the Service Level Copay In Network of 'secondary policy information']]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["In Network"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Primary]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Service Level Copay In Network of 'primary policy information']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ "In Network" }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Primary]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the Service Level Copay Out of Network of 'primary policy information']]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Policy Benefit Level Output]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Pursued Policy Output]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Service Level Copay Out of Network]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[549]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Service Level Copay In Network]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Policy Copay]]></Data>
+            <Data Name="Definitions(C1)#Width"><![CDATA[225]]></Data>
+            <Data Name="Definitions(C4)#Width"><![CDATA[215]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[218]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[238]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

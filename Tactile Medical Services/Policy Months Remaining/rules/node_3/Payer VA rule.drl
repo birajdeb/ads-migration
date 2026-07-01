@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Payer VA rule</name>
+  <uuid>7eb54b03-a341-47ab-ae40-f42f55e35a7b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+ set 'payer' to a Payer Insurance in Payer ;
+if
+	the Payer Classification of payer is "Primary" and 
+    the Payer ID of payer is "INS00060" 
+then 
+	set decision to VA ;
+else
+	set decision to Not VA ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Full Results For Yearly Deductible</name>
+  <uuid>b81e0e2d-2391-4fd4-b7bc-f562de128000</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Yearly Deductible service where
+		the Year 1 Deductible is 'Year 1 Deductible' , 
+		the Year 2 Deductible is 'Year 2 Deductible' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

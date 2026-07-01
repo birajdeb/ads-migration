@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="Tactile_End_to_End_Service" usingRuleflow="true" ruleflowName="Tactile ruleflow" targetRuleProjectName="Tactile End to End Service">
+  <name>Tactile_End_to_End_Service</name>
+  <uuid>ae0fc53c-23c5-4f2a-beed-9a1dc9b52ac9</uuid>
+  <referencedVariables variableName="Order" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="Policy" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="PolicyActivity" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="Payer" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="Patient" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="Network" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="System" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="HCPCSBiling" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="State" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="FinalOutput" variableSetName="tactile variable set" direction="OUT">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <referencedVariables variableName="Terms" variableSetName="tactile variable set">
+    <variableSet href="../rules/tactile%20variable%20set.var#d14ee15b-67d0-479e-9b8e-6a23a89930dd"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Tactile%20ruleflow.rfl#43924942-94e3-4e30-9e1b-03419ad7bc32"/>
+  <targetRuleProject href="../../Tactile%20End%20to%20End%20Service#befef23b-e996-4b50-bfcf-19297de2b0a6"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

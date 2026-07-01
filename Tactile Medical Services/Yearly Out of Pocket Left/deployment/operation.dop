@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Yearly Out of Pocket Left">
+  <name>Yearly_Out_of_Pocket_Left</name>
+  <uuid>1fbdcdc5-0f51-4d69-a81f-024da5e0a4a9</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e87beca9-213c-4ec7-af7e-4b8dfbd44c7b"/>
+  <targetRuleProject href="../../Yearly%20Out%20of%20Pocket%20Left#fecf0d6b-37da-4b5a-9fee-c203d3e5674d"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

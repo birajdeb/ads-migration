@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Year 1 and 2 Price">
+  <name>Year_1_and_2_Price</name>
+  <uuid>5156b3e7-2a72-4dc0-925f-064ec4a417e9</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#de64ca3d-b0b3-4703-be37-ce87a69e3663"/>
+  <targetRuleProject href="../../Year%201%20and%202%20Price#9c2ec337-9661-4444-a4da-46fef3207016"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>7418a5bf-f8cd-4db6-9590-fe22c4a30015</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Policy">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+    </inputData>
+    <decision id="node_1" name="Primary Policy Information">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <rule defaultRule="false" href="node_1/Primary%20Policy%20Information.dmt" kind="DecisionTable" name="Primary Policy Information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Primary Policy Information" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Pursued Policy Output">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Pursued Policy Output"/>
+                <rule defaultRule="false" href="node_3/Pursued%20Policy%20Output.drl" kind="BusinessRule" name="Pursued Policy Output"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Pursued Policy Output" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_5"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_4" name="Order">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+    </inputData>
+    <decision id="node_6" name="Policy Benefit Level Output">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <output bomType="java.lang.String" collection="true" name="Policy Benefit Level Output"/>
+                <rule defaultRule="false" href="node_6/Policy%20Benefit%20Level%20Output.drl" kind="BusinessRule" name="Policy Benefit Level Output"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Policy Benefit Level Output" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_9"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_7" name="Policy Activity">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Policy Activity" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity[]"/>
+    </inputData>
+    <inputData id="node_8" name="Payer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_8_ii" name="Payer" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance[]"/>
+    </inputData>
+    <decision id="node_2" name="Secondary Policy Information">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <rule defaultRule="false" href="node_2/Secondary%20Policy%20Information.dmt" kind="DecisionTable" name="Secondary Policy Information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Secondary Policy Information" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Policy Deductible Applies to Out of Pocket Max">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Pursued Policy Output"/>
+                <input bomType="java.lang.String" collection="true" name="Policy Benefit Level Output"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Policy Deductible Applies to Out of Pocket Max"/>
+                <rule defaultRule="false" href="node_10/Policy%20Deductible%20Applies%20to%20Out%20of%20Pocket%20Max.dmt" kind="DecisionTable" name="Policy Deductible Applies to Out of Pocket Max"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Policy Deductible Applies to Out of Pocket Max" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_11" name="Policy Deductible">
+        <description>What is the full deductible for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Pursued Policy Output"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="java.lang.String" collection="true" name="Policy Benefit Level Output"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <output bomType="java.lang.Double" collection="false" name="Policy Deductible"/>
+                <rule defaultRule="false" href="node_11/Policy%20Deductible.dmt" kind="DecisionTable" name="Policy Deductible"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="Policy Deductible" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_5"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_9"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_12" name="Policy Deductible Met">
+        <description>What is the deductible met for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Primary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Secondary Policy Information"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Pursued Policy Output"/>
+                <input bomType="java.lang.String" collection="true" name="Policy Benefit Level Output"/>
+                <output bomType="java.lang.Double" collection="false" name="Policy Deductible Met"/>
+                <rule defaultRule="false" href="node_12/Policy%20Deductible%20Met.dmt" kind="DecisionTable" name="Policy Deductible Met"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Policy Deductible Met" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_13" name="Deductible Applied to Out of Pocket Maximum">
+        <description>What is the deductible applied to out of pocket maximum for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Policy Deductible Applies to Out of Pocket Max"/>
+                <output bomType="java.lang.Double" collection="false" name="Deductible Applied to Out of Pocket Maximum"/>
+                <rule defaultRule="false" href="node_13/Deductible%20Applied%20to%20Out%20of%20Pocket%20Maximum.dmt" kind="DecisionTable" name="Deductible Applied to Out of Pocket Maximum"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_13_ii" name="Deductible Applied to Out of Pocket Maximum" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_14"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_15" name="Policy Deductible Remaining">
+        <description>What is the deductible remaining for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Policy Deductible Met"/>
+                <input bomType="java.lang.Double" collection="false" name="Policy Deductible"/>
+                <output bomType="java.lang.Double" collection="false" name="Policy Deductible Remaining"/>
+                <rule defaultRule="false" href="node_15/Policy%20Deductible%20Remaining.dmt" kind="DecisionTable" name="Policy Deductible Remaining"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_15_ii" name="Policy Deductible Remaining" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_16" name="Year 1 Deductible Remaining">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" collection="false" name="Pursued Policy Output"/>
+                <input bomType="java.lang.Double" collection="false" name="Policy Deductible Remaining"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="java.lang.Double" collection="false" name="Policy Deductible"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Policy Deductible Applies to Out of Pocket Max"/>
+                <output bomType="java.lang.Double" collection="false" name="Year 1 Deductible Remaining"/>
+                <rule defaultRule="false" href="node_16/Year%201%20Deductible%20Remaining.dmt" kind="DecisionTable" name="Year 1 Deductible Remaining"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_16_ii" name="Year 1 Deductible Remaining" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_15"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_14"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_17" name="Year 1 Price">
+        <description>What is the calculated price for year 1 for this patient's order?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling" collection="true" name="HCPCS Biling"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms" collection="false" name="Terms"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System" collection="false" name="System"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient" collection="true" name="Patient"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State" collection="true" name="State"/>
+                <output bomType="java.lang.Double" collection="false" name="Year 1 Price"/>
+                <rule defaultRule="false" href="node_17/Year%201%20Price.drl" kind="BusinessRule" name="Year 1 Price"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_17_ii" name="Year 1 Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_25"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_22"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_21"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_18"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_19" name="Year 2 Price">
+        <description>What is the calculated price for year 2 for this patient's order?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling" collection="true" name="HCPCS Biling"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms" collection="false" name="Terms"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System" collection="false" name="System"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient" collection="true" name="Patient"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State" collection="true" name="State"/>
+                <output bomType="java.lang.Double" collection="false" name="Year 2 Price"/>
+                <rule defaultRule="false" href="node_19/Year%202%20Price.drl" kind="BusinessRule" name="Year 2 Price"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_19_ii" name="Year 2 Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_25"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_22"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_21"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_18"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_20" name="State">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State" collection="true" name="State"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_20_ii" name="State" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State[]"/>
+    </inputData>
+    <inputData id="node_21" name="Patient">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient" collection="true" name="Patient"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_21_ii" name="Patient" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient[]"/>
+    </inputData>
+    <inputData id="node_22" name="System">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System" collection="false" name="System"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_22_ii" name="System" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System"/>
+    </inputData>
+    <inputData id="node_23" name="Terms">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms" collection="false" name="Terms"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_23_ii" name="Terms" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms"/>
+    </inputData>
+    <inputData id="node_24" name="Network">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_24_ii" name="Network" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network[]"/>
+    </inputData>
+    <inputData id="node_25" name="HCPCS Biling">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling" collection="true" name="HCPCS Biling"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_25_ii" name="HCPCS Biling" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling[]"/>
+    </inputData>
+    <decision id="node_26" name="Policy Total Price">
+        <description>What is the total price for this patient's order?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Year 2 Price"/>
+                <input bomType="java.lang.Double" collection="false" name="Year 1 Price"/>
+                <output bomType="java.lang.Double" collection="false" name="Policy Total Price"/>
+                <rule defaultRule="false" href="node_26/Policy%20Total%20Price.dmt" kind="DecisionTable" name="Policy Total Price"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_26_ii" name="Policy Total Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_17"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_27" name="Rental Crossing Years">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Year 2 Price"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot" collection="false" name="Rental Crossing Years"/>
+                <rule defaultRule="false" href="node_27/Rental%20Crossing%20Years.dmt" kind="DecisionTable" name="Rental Crossing Years"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_27_ii" name="Rental Crossing Years" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_28" name="Deductible Rental Crossing Years">
+        <description>What is the deductible for rental crossing years for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Year 1 Price"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot" collection="false" name="Rental Crossing Years"/>
+                <input bomType="java.lang.Double" collection="false" name="Year 1 Deductible Remaining"/>
+                <input bomType="java.lang.Double" collection="false" name="Policy Total Price"/>
+                <input bomType="java.lang.Double" collection="false" name="Deductible Applied to Out of Pocket Maximum"/>
+                <output bomType="java.lang.Double" collection="false" name="Deductible Rental Crossing Years"/>
+                <rule defaultRule="false" href="node_28/Deductible%20Rental%20Crossing%20Years.dmt" kind="DecisionTable" name="Deductible Rental Crossing Years"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_28_ii" name="Deductible Rental Crossing Years" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_17"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_27"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_16"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_26"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_13"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_29" name="Year 1 Deductible">
+        <description>What is the deductible in year 1 for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Deductible Rental Crossing Years"/>
+                <input bomType="java.lang.Double" collection="false" name="Year 1 Deductible Remaining"/>
+                <input bomType="java.lang.Double" collection="false" name="Deductible Applied to Out of Pocket Maximum"/>
+                <output bomType="java.lang.Double" collection="false" name="Year 1 Deductible"/>
+                <rule defaultRule="false" href="node_29/Year%201%20Deductible.dmt" kind="DecisionTable" name="Year 1 Deductible"/>
+                <rule defaultRule="true" href="node_29/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_29_ii" name="Year 1 Deductible" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_28"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_16"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_13"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_30" name="Year 2 Deductible">
+        <description>What is the deductible in year 1 for this patient's policy?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Year 2 Price"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy" collection="true" name="Policy"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" collection="false" name="Order"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling" collection="true" name="HCPCS Biling"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network" collection="true" name="Network"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms" collection="false" name="Terms"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity" collection="true" name="Policy Activity"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System" collection="false" name="System"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance" collection="true" name="Payer"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient" collection="true" name="Patient"/>
+                <input bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State" collection="true" name="State"/>
+                <output bomType="java.lang.Double" collection="false" name="Year 2 Deductible"/>
+                <rule defaultRule="false" href="node_30/Year%202%20Deductible.dmt" kind="DecisionTable" name="Year 2 Deductible"/>
+                <rule defaultRule="true" href="node_30/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_30_ii" name="Year 2 Deductible" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_25"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_22"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_21"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_31"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_32" name="Full Results For Yearly Deductible">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Year 1 Deductible"/>
+                <input bomType="java.lang.Double" collection="false" name="Year 2 Deductible"/>
+                <output bomType="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService" collection="false" name="Full Results For Yearly Deductible"/>
+                <rule defaultRule="false" href="node_32/Full%20Results%20For%20Yearly%20Deductible.drl" kind="BusinessRule" name="Full Results For Yearly Deductible"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_32_ii" name="Full Results For Yearly Deductible" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService"/>
+        <informationRequirement>
+            <requiredInput href="#node_29"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_30"/>
+        </informationRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_5" name="Pursued Policy">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Pursued Policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues"/>
+        <encapsulatedLogic typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues">
+            <formalParameter name="policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+            <formalParameter name="order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.medical.tactile_medical_services.pursuedpolicy.Pursued_Policy"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_9" name="Policy Benefit Level">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Policy Benefit Level" typeRef="java.lang.String[]"/>
+        <encapsulatedLogic typeRef="java.lang.String[]">
+            <formalParameter name="policyActivity" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity[]"/>
+            <formalParameter name="policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+            <formalParameter name="payer" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance[]"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.medical.tactile_medical_services.policybenefitlevel.Policy_Benefit_Level"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List,java.util.List,java.util.List)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_14" name="Yearly Out of Pocket Left">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Yearly Out of Pocket Left" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService"/>
+        <encapsulatedLogic typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService">
+            <formalParameter name="policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+            <formalParameter name="order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+            <formalParameter name="policyActivity" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity[]"/>
+            <formalParameter name="payer" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance[]"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.medical.tactile_medical_services.yearlyoutofpocketleft.Yearly_Out_of_Pocket_Left"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order,java.util.List,java.util.List)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_18" name="Year 1 and 2 Price">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Year 1 and 2 Price" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService"/>
+        <encapsulatedLogic typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService">
+            <formalParameter name="policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+            <formalParameter name="order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+            <formalParameter name="payer" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance[]"/>
+            <formalParameter name="policyActivity" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity[]"/>
+            <formalParameter name="terms" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms"/>
+            <formalParameter name="system" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System"/>
+            <formalParameter name="HCPCSBiling" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling[]"/>
+            <formalParameter name="network" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network[]"/>
+            <formalParameter name="patient" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient[]"/>
+            <formalParameter name="state" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State[]"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.medical.tactile_medical_services.yearlytotalprice.Year_1_and_2_Price"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order,java.util.List,java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System,java.util.List,java.util.List,java.util.List,java.util.List)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_31" name="Year 2 Deductible Remaining">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Year 2 Deductible Remaining" typeRef="java.lang.Double"/>
+        <encapsulatedLogic typeRef="java.lang.Double">
+            <formalParameter name="policy" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy[]"/>
+            <formalParameter name="order" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order"/>
+            <formalParameter name="payer" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance[]"/>
+            <formalParameter name="policyActivity" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity[]"/>
+            <formalParameter name="terms" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms"/>
+            <formalParameter name="network" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network[]"/>
+            <formalParameter name="state" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State[]"/>
+            <formalParameter name="patient" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient[]"/>
+            <formalParameter name="HCPCSBiling" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling[]"/>
+            <formalParameter name="system" typeRef="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"ankurmore_bluepolaris.com.medical.tactile_medical_services.year2deductibleremaining.Year_2_Deductible_Remaining"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order,java.util.List,java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms,java.util.List,java.util.List,java.util.List,java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

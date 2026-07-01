@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>a2ab2e27-1de5-489d-b879-c09bc26c100e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add 1,000,000 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

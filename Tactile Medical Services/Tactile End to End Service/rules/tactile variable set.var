@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" language="ARL">
+  <name>tactile variable set</name>
+  <uuid>d14ee15b-67d0-479e-9b8e-6a23a89930dd</uuid>
+  <variables name="Order" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order" initialValue="" verbalization="the Order" jsonName=""/>
+  <variables name="Policy" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy>" initialValue="" verbalization="the Policy" jsonName=""/>
+  <variables name="PolicyActivity" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity>" initialValue="" verbalization="the PolicyActivity" jsonName=""/>
+  <variables name="Payer" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance>" initialValue="" verbalization="the PayerInsurance" jsonName=""/>
+  <variables name="Patient" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient>" initialValue="" verbalization="the Patient" jsonName=""/>
+  <variables name="Network" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network>" initialValue="" verbalization="the Network" jsonName=""/>
+  <variables name="OrderPricingTableAssignment" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment>" initialValue="" verbalization="the OrderPricingTableAssignment" jsonName=""/>
+  <variables name="FinalOutput" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs" initialValue="" verbalization="the FinalOutput" jsonName=""/>
+  <variables name="System" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System" initialValue="" verbalization="the System" jsonName=""/>
+  <variables name="PolicyMonthsRemaining" type="double" initialValue="" verbalization="the PolicyMonthsRemaining" jsonName=""/>
+  <variables name="CalculateAllowables" type="double" initialValue="" verbalization="the CalculateAllowables" jsonName=""/>
+  <variables name="HCPCSBiling" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling>" initialValue="" verbalization="the HCPCSBiling" jsonName=""/>
+  <variables name="State" type="java.util.List&lt;vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State>" initialValue="" verbalization="the State" jsonName=""/>
+  <variables name="ErrorMessageList" type="java.util.List&lt;java.lang.String>" initialValue="" verbalization="the ErrorMessageList" jsonName=""/>
+  <variables name="CalculatePaymentTerms" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput" initialValue="" verbalization="the Full Results For Calculate Payment Terms" jsonName=""/>
+  <variables name="Terms" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms" initialValue="" verbalization="the Terms" jsonName=""/>
+  <variables name="PolicyBenefitLevel" type="java.util.List&lt;java.lang.String>" initialValue="" verbalization="the Policy Benefit Level" jsonName=""/>
+  <variables name="PursuedPolicy" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues" initialValue="" verbalization="the Pursued Policy" jsonName=""/>
+  <variables name="YearlyOutofPocketLeft" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService" initialValue="" verbalization="the Full Results For Year 1 and 2 Out of Pocket Left" jsonName=""/>
+  <variables name="Year2DeductibleRemaining" type="double" initialValue="" verbalization="the Year 2 Deductible Remaining" jsonName=""/>
+  <variables name="Year1and2Price" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService" initialValue="" verbalization="the Full Results For Year 1 and 2 Price" jsonName=""/>
+  <variables name="YearlyDeductible" type="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService" initialValue="" verbalization="the Full Results For Yearly Deductible" jsonName=""/>
+  <variables name="PolicyCopay" type="double" initialValue="" verbalization="the Policy Copay" jsonName=""/>
+</ilog.rules.studio.model.base:VariableSet>

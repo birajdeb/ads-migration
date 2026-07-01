@@ -29,6 +29,11 @@
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text/>
+                    </ExpressionDefinition>
+                </ActionDefinition>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
                         <Text><![CDATA[set 'decision' to <a string>]]></Text>
@@ -54,6 +59,9 @@
                                         <Param><![CDATA[100000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["GO"]]></Param>
@@ -67,6 +75,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["GO"]]></Param>
@@ -80,6 +91,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -100,6 +114,9 @@
                                         <Param><![CDATA[100000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["GOa"]]></Param>
@@ -113,6 +130,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -126,6 +146,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -153,6 +176,9 @@
                                         <Param><![CDATA[100000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["GO"]]></Param>
@@ -166,6 +192,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -179,6 +208,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -199,6 +231,9 @@
                                         <Param><![CDATA[100000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -212,6 +247,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -225,6 +263,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["NO-GO"]]></Param>
@@ -252,6 +293,9 @@
                                         <Param><![CDATA[100000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -265,6 +309,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -278,6 +325,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["NO-GO"]]></Param>
@@ -298,6 +348,9 @@
                                         <Param><![CDATA[100000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["INQUIRY"]]></Param>
@@ -311,6 +364,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["NO-GO"]]></Param>
@@ -324,6 +380,9 @@
                                         <Param><![CDATA[250000]]></Param>
                                     </Expression>
                                     <ActionSet>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA["NO-GO"]]></Param>

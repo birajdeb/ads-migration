@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Order Pricing Table Assignment</name>
+  <uuid>a9ba4940-3282-4516-af34-ba2c5361ddb9</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'order Self Pay Type' to an Order Assignment Values in 'Order Self Pay Type' ;
+ set 'policy' to a Policy in Policy ;
+ set 'payer' to a Payer Insurance in Payer ;
+ set 'network' to a Network in Network ;
+ set 'policy activity' to a Policy Activity in 'Policy Activity' ;
+ set 'patient prioritized state' to a string in 'Patient Prioritized State' ;
+ 
+ ]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'order Self Pay Type' is <an Order Assignment Values> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Product Name of Order is <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Bill to Payer ID of policy is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the E0652 Allowable of payer is <a number> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C10">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the E0651 Allowable of payer is <a number> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C11">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Plan Type of policy is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C12">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Payer Type of policy is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Override Medicare Allowable of network is <an Override Medicare or Not> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C5">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Network ID of 'policy activity' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C6">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Policy Medicare' is <an Order Assignment Values> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C7">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Modifier of Order is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C8">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'patient prioritized state' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Order Pricing Table Assignment where 
+	the Pricing IDs are <Pricing ID> ,
+	the Pricing Types are <Pricing Type> to decision ]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay , Donated Self Pay , International Self Pay , Self Pay }]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[{ "-" }]]></Param>
+                                <Param><![CDATA['Order Self Pay Type']]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C11">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ "Medicare", "Medicaid" }]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Override Medicare]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C5">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a string> is not empty]]></Text>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[{ the Network ID of 'policy activity' }]]></Param>
+                                                        <Param><![CDATA[{ Network }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C11">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Medicare"]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Not Override Medicare]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA["UE"]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA['Patient Prioritized State']]></Param>
+                                                        <Param><![CDATA[{ Medicare UE }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C4">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Not Override Medicare]]></Param>
+                            </Expression>
+                            <Partition DefId="C6">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicare]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA["UE"]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA['Patient Prioritized State']]></Param>
+                                                        <Param><![CDATA[{ Medicare UE }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C11">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Medicare"]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Not Override Medicare]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                                <Param><![CDATA["UE"]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA['Patient Prioritized State']]></Param>
+                                                        <Param><![CDATA[{ Medicare NU }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C4">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Not Override Medicare]]></Param>
+                            </Expression>
+                            <Partition DefId="C6">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Medicare]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                                <Param><![CDATA["UE"]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA['Patient Prioritized State']]></Param>
+                                                        <Param><![CDATA[{ Medicare NU }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C11">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Medicaid"]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Not Override Medicare]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA['Patient Prioritized State']]></Param>
+                                                <Param><![CDATA[{ Medicaid }]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C12">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Medicaid"]]></Param>
+                            </Expression>
+                            <Partition DefId="C4">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Not Override Medicare]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA['Patient Prioritized State']]></Param>
+                                                <Param><![CDATA[{ Medicaid }]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C11">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                                <Param><![CDATA[{ "Medicare", "Medicaid" }]]></Param>
+                            </Expression>
+                            <Partition DefId="C5">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a string> is not empty]]></Text>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[{ the Network ID of 'policy activity' }]]></Param>
+                                                <Param><![CDATA[{ Network }]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Flexitouch"]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a string> is not empty]]></Text>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[0]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[{ the Bill to Payer ID of policy }]]></Param>
+                                                        <Param><![CDATA[{ Bill to Payer }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Entre"]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a string> is not empty]]></Text>
+                                    </Expression>
+                                    <Partition DefId="C10">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[0]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[{ the Bill to Payer ID of policy }]]></Param>
+                                                        <Param><![CDATA[{ Bill to Payer }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Flexitouch"]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a string> is empty]]></Text>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[0]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[{ the Payer ID of policy }]]></Param>
+                                                        <Param><![CDATA[{ Payer }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ Discounted Self Pay, Donated Self Pay, International Self Pay, Self Pay }]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Entre"]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a string> is empty]]></Text>
+                                    </Expression>
+                                    <Partition DefId="C10">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[0]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[{ the Payer ID of policy }]]></Param>
+                                                        <Param><![CDATA[{ Payer }]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C8)#Width"><![CDATA[111]]></Data>
+            <Data Name="Definitions(C6)#Width"><![CDATA[149]]></Data>
+            <Data Name="Definitions(C7)#Width"><![CDATA[106]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Order Self Pay Type]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Product Name]]></Data>
+            <Data Name="Definitions(C6)#HeaderText"><![CDATA[Policy Medicare]]></Data>
+            <Data Name="Definitions(C7)#HeaderText"><![CDATA[Modifier]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Override Network Allowable]]></Data>
+            <Data Name="Definitions(C5)#HeaderText"><![CDATA[Network ID]]></Data>
+            <Data Name="Definitions(C8)#HeaderText"><![CDATA[Patient Prioritized State]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[321]]></Data>
+            <Data Name="Definitions(C11)#HeaderText"><![CDATA[Plan Type]]></Data>
+            <Data Name="Definitions(C3)#Width"><![CDATA[99]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Bill to Payer ID]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[E0652 Allowable]]></Data>
+            <Data Name="Definitions(C10)#HeaderText"><![CDATA[E0651 Allowable]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Order Pricing Table Assignment]]></Data>
+            <Data Name="Definitions(C1)#Width"><![CDATA[135]]></Data>
+            <Data Name="Definitions(C4)#Width"><![CDATA[159]]></Data>
+            <Data Name="Definitions(C5)#Width"><![CDATA[131]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[143]]></Data>
+            <Data Name="Definitions(C12)#HeaderText"><![CDATA[Payer Type]]></Data>
+            <Data Name="Definitions(C10)#Width"><![CDATA[89]]></Data>
+            <Data Name="Definitions(C11)#Width"><![CDATA[170]]></Data>
+            <Data Name="Definitions(C12)#Width"><![CDATA[121]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Policy Months Remaining">
+  <name>Policy_Months_Remaining</name>
+  <uuid>def972bd-8c98-4130-b826-8bb4b920248b</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#2c628f8e-54f5-4d96-b40f-1e0e122625d5"/>
+  <targetRuleProject href="../../Policy%20Months%20Remaining#2097ff7f-d40c-4dde-9a7f-2ea03ae9be86"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

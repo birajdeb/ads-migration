@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Secondary Policy Information</name>
+  <uuid>be92673d-ab4f-484e-8173-09de333cb8dc</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'policy' to a Policy in Policy ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Plan Designation of policy is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Active Policy of policy is <an Active or Not> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Secondary Policy Information where
+	the DME Maximum is <DME Maximum> , 
+	the Payer Bucket is <Payer Bucket> , 
+	the Payer ID is <Payer ID> , 
+	the Payer Name is <Payer Name> , 
+	the Plan Type is <Plan Type> , 
+	the Policy ID is <Policy ID> , 
+	the Renewal Date is <Renewal Date> , 
+	the Secondary Policy Information date is <Secondary Policy Information date> , 
+	the Secondary Policy Information State is <Secondary Policy Information State> to decision]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["Secondary"]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Active]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[the DME Maximum of policy]]></Param>
+                                        <Param><![CDATA[the Payer Bucket of policy]]></Param>
+                                        <Param><![CDATA[the Payer ID of policy]]></Param>
+                                        <Param><![CDATA[the Payer Name of policy]]></Param>
+                                        <Param><![CDATA[the Plan Type of policy]]></Param>
+                                        <Param><![CDATA[the Payer ID of policy]]></Param>
+                                        <Param><![CDATA[the Renewal Date of policy]]></Param>
+                                        <Param><![CDATA[the Renewal Date of policy]]></Param>
+                                        <Param><![CDATA[the Policy State of policy]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Plan Designation]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[1010]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Active Policy]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Secondary Policy Information]]></Data>
+            <Data Name="Definitions(A0)[7]#HeaderText"><![CDATA[Secondary Policy Information Date]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[105]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[120]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

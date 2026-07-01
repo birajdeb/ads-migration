@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Primary Policy Information</name>
+  <uuid>7a63a14d-5fc0-4602-b557-6b3bf90e57ec</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'policy' to a Policy in Policy ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Plan Designation of policy is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Active Policy of policy is <an Active or Not> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Policy where
+	the DME Coverage is the DME Coverage of policy , 
+	the DME Maximum is the DME Maximum of policy , 
+	the Active Policy is the Active Policy of policy , 
+	the Bill to Payer ID is the Bill to Payer ID of policy , 
+	the Customer Purchase Order is the Customer Purchase Order of policy , 
+	the In Network DME Maximum is the In Network DME Maximum of policy , 
+	the In Network Deductible is the In Network Deductible of policy , 
+	In Network Deductible Applies to Out of Pocket Maximum is policy is In Network Deductible Applies to Out of Pocket Maximum , 
+	the In Network Deductible Met is the In Network Deductible Met of policy , 
+	In Network Flag is policy is In Network Flag , 
+	the In Network Out of Pocket is the In Network Out of Pocket of policy , 
+	the In Network Out of Pocket Met is the In Network Out of Pocket Met of policy , 
+	the In Network Percent Paid is the In Network Percent Paid of policy , 
+	the Network ID is the Network ID of policy , 
+	the Out of Network DME Maximum is the Out of Network DME Maximum of policy , 
+	the Out of Network Deductible is the Out of Network Deductible of policy , 
+	Out of Network Deductible Applies to Out of Pocket Maximum is policy is Out of Network Deductible Applies to Out of Pocket Maximum , 
+	the Out of Network Deductible Met is the Out of Network Deductible Met of policy , 
+	the Out of Network Out of Pocket is the Out of Network Out of Pocket of policy , 
+	the Out of Network Out of Pocket Met is the Out of Network Out of Pocket Met of policy , 
+	the Out of Network Percent Paid is the Out of Network Percent Paid of policy , 
+	the Payer is the Payer of policy , 
+	the Payer Bucket is the Payer Bucket of policy , 
+	the Payer ID is the Payer ID of policy , 
+	the Payer Name is the Payer Name of policy , 
+	the Payer Type is the Payer Type of policy , 
+	the Plan Designation is the Plan Designation of policy , 
+	the Plan Type is the Plan Type of policy , 
+	the Policy Activity is the Policy Activity of policy , 
+	the Policy Activity Risk is the Policy Activity Risk of policy , 
+	the Policy ID is the Policy ID of policy , 
+	the Policy State is the Policy State of policy , 
+	the Renewal Date is the Renewal Date of policy , 
+	the Secondary No Pay is the Secondary No Pay of policy , 
+	the Service Level Copay In Network is the Service Level Copay In Network of policy , 
+	the Service Level Copay Out of Network is the Service Level Copay Out of Network of policy to decision]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["Primary"]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Active]]></Param>
+                            </Expression>
+                            <ActionSet/>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Plan Designation]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[1030]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Active Policy]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Primary Policy Information]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

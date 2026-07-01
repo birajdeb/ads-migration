@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Policy Percent Left</name>
+  <uuid>d5a3f37e-4e88-45fb-b8f9-f3574b717c39</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'Policy benefit level' to a string in the policy benefit levels computed from 
+	Payer being Payer , 
+	Policy being Policy , 
+	Policy Activity being 'Policy Activity' ; 
+    
+ set 'Pursued policy' to a Pursued Policy Values from the pursued policy computed from 
+	Order being Order , 
+	Policy being Policy ; 
+    
+ set 'primary policy information' to a Policy in 'Primary Policy Information' ;
+ set 'secondary policy information' to a Policy in 'Secondary Policy Information' ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'Pursued policy' is <a Pursued Policy Values> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ 'Policy benefit level' is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C2">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Primary]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ "In Network" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[((100 - the In Network Percent Paid of 'primary policy information' ) / 100 )]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Primary]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                                <Param><![CDATA[{ "In Network" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[((100 - the Out of Network Percent Paid of 'primary policy information' ) / 100 )]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not <an object>]]></Text>
+                        <Param><![CDATA[Primary]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ "In Network" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[((100 - the In Network Percent Paid of 'secondary policy information' ) / 100 )]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not <an object>]]></Text>
+                        <Param><![CDATA[Primary]]></Param>
+                    </Expression>
+                    <Partition DefId="C3">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                                <Param><![CDATA[{ "In Network" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[((100 - the Out of Network Percent Paid of 'secondary policy information' ) / 100 )]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#Width"><![CDATA[551]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Pursued Policy]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[Policy Benefit Level]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Policy Percent Left]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

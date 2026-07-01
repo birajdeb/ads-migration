@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Policy Copay">
+  <name>Policy_Copay</name>
+  <uuid>3ac43357-7fbc-43a2-b4d2-da8aa936742d</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#b45bb5c4-4b87-4fb4-8104-55af0c6bb1ea"/>
+  <targetRuleProject href="../../Policy%20Copay#d8ec947f-5913-499a-924d-d04ca3dcece4"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

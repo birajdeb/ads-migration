@@ -1,0 +1,2005 @@
+
+package vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata;
+
+
+class ActiveOrNot
+        extends java.lang.Enum
+        property ads.typeId "22"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Active Or Not"
+        #de.generated
+{
+    domain {static active, static notActive}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot active
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Active";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot notActive
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Active";
+}
+
+class AppliesOrNot
+        extends java.lang.Enum
+        property ads.typeId "47"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Applies Or Not"
+        #de.generated
+{
+    domain {static applies, static notApplies}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.AppliesOrNot applies
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Applies";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.AppliesOrNot notApplies
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Applies";
+}
+
+class CrossingYearsOrNot
+        extends java.lang.Enum
+        property ads.typeId "48"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Crossing Years Or Not"
+        #de.generated
+{
+    domain {static crossingYears, static notCrossingYears}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot crossingYears
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Crossing Years";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot notCrossingYears
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Crossing Years";
+}
+
+class CustomerPurchaseOrder
+        property ads.typeId "8"
+        property com.fasterxml.jackson.annotation.JsonTypeName "CustomerPurchaseOrder"
+        #de.generated
+{
+    string loAType
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "LoAType"
+                #update;
+    string policyID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    string purchaseOrderID
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "PurchaseOrderID"
+                #update;
+    CustomerPurchaseOrder(string loAType, string policyID, string purchaseOrderID)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    CustomerPurchaseOrder()
+                #dataio.default;
+}
+
+class DiscountedOrNotValue
+        extends java.lang.Enum
+        property ads.typeId "15"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Discounted Or Not Value"
+        #de.generated
+{
+    domain {static discounted, static notDiscounted}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DiscountedOrNotValue discounted
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Discounted";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DiscountedOrNotValue notDiscounted
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Discounted";
+}
+
+class DonatedOrNotValue
+        extends java.lang.Enum
+        property ads.typeId "14"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Donated or Not Value"
+        #de.generated
+{
+    domain {static donated, static notDonated}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DonatedOrNotValue donated
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Donated";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DonatedOrNotValue notDonated
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Donated";
+}
+
+class ExpiredOrNot
+        extends java.lang.Enum
+        property ads.typeId "39"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Expired Or Not"
+        #de.generated
+{
+    domain {static expired, static notExpired}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot expired
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Expired";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot notExpired
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Expired";
+}
+
+class FinalOutputs
+        property ads.typeId "49"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Final Outputs"
+        #de.generated
+{
+    double calculateAllowables
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "CalculateAllowables"
+                #update;
+    java.util.List errorMessageLists domain 0,* class string
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Error Message Lists"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput fullResultsForCalculatePaymentTerms
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "FullResultsForCalculatePaymentTerms"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService fullResultsForYear1And2OutOfPocketLeft
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "FullResultsForYear1And2OutOfPocketLeft"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService fullResultsForYear1And2Price
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "FullResultsForYear1And2Price"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService fullResultsForYearlyDeductible
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "FullResultsForYearlyDeductible"
+                #update;
+    java.util.List orderPricingTableAssignments domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "OrderPricingTableAssignments"
+                #update;
+    java.util.List policyBenefitLevels domain 0,* class string
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyBenefitLevels"
+                #update;
+    double policyCopay
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyCopay"
+                #update;
+    double policyMonthsRemaining
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyMonthsRemaining"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues pursuedPolicy
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "PursuedPolicy"
+                #update;
+    double year2DeductibleRemaining
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year2DeductibleRemaining"
+                #update;
+    FinalOutputs(double calculateAllowables, 
+        java.util.List errorMessageLists domain 0,* class string, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput fullResultsForCalculatePaymentTerms, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService fullResultsForYear1And2OutOfPocketLeft, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService fullResultsForYear1And2Price, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService fullResultsForYearlyDeductible, 
+        java.util.List orderPricingTableAssignments domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment, 
+        java.util.List policyBenefitLevels domain 0,* class string, 
+        double policyCopay, 
+        double policyMonthsRemaining, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues pursuedPolicy, 
+        double year2DeductibleRemaining)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    FinalOutputs()
+                #dataio.default;
+    void addTo_errorMessageLists(string errorMessageLists)
+                property collectionAttribute "errorMessageLists"
+                #update;
+    void addTo_orderPricingTableAssignments(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment orderPricingTableAssignments)
+                property collectionAttribute "orderPricingTableAssignments"
+                #update;
+    void addTo_policyBenefitLevels(string policyBenefitLevels)
+                property collectionAttribute "policyBenefitLevels"
+                #update;
+    void clear_errorMessageLists()
+                property collectionAttribute "errorMessageLists"
+                #update;
+    void clear_orderPricingTableAssignments()
+                property collectionAttribute "orderPricingTableAssignments"
+                #update;
+    void clear_policyBenefitLevels()
+                property collectionAttribute "policyBenefitLevels"
+                #update;
+    void removeFrom_errorMessageLists(string errorMessageLists)
+                property collectionAttribute "errorMessageLists"
+                #update;
+    void removeFrom_orderPricingTableAssignments(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment orderPricingTableAssignments)
+                property collectionAttribute "orderPricingTableAssignments"
+                #update;
+    void removeFrom_policyBenefitLevels(string policyBenefitLevels)
+                property collectionAttribute "policyBenefitLevels"
+                #update;
+    void set_errorMessageLists(java.util.Collection errorMessageLists domain 0,* class string)
+                property collectionAttribute "errorMessageLists"
+                #update;
+    void set_orderPricingTableAssignments(java.util.Collection orderPricingTableAssignments domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment)
+                property collectionAttribute "orderPricingTableAssignments"
+                #update;
+    void set_policyBenefitLevels(java.util.Collection policyBenefitLevels domain 0,* class string)
+                property collectionAttribute "policyBenefitLevels"
+                #update;
+}
+
+class HCPCSBilling
+        property ads.typeId "32"
+        property com.fasterxml.jackson.annotation.JsonTypeName "HCPCS Billing"
+        #de.generated
+{
+    string HCPCSBillingPricingState
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "HCPCS Billing Pricing State"
+                #update;
+    string HCPCSCode
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "HCPCS Code"
+                #update;
+    double listPricePercentage
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "List Price Percentage"
+                #update;
+    double medicaidPercentage
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicaid Percentage"
+                #update;
+    double medicarePercentage
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare Percentage"
+                #update;
+    string networkID
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Network ID"
+                #update;
+    string payerID
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Payer ID"
+                #update;
+    HCPCSBilling(string HCPCSBillingPricingState, string HCPCSCode, double listPricePercentage, double medicaidPercentage, double medicarePercentage, string networkID, string payerID)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    HCPCSBilling()
+                #dataio.default;
+}
+
+class HCPCSQuantity
+        property ads.typeId "36"
+        property com.fasterxml.jackson.annotation.JsonTypeName "HCPCS Quantity"
+        #de.generated
+{
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations location
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Location"
+                #update;
+    double quantity
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Quantity"
+                #update;
+    HCPCSQuantity(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations location, double quantity)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    HCPCSQuantity()
+                #dataio.default;
+}
+
+class IPATrumpOrNot
+        extends java.lang.Enum
+        property ads.typeId "45"
+        property com.fasterxml.jackson.annotation.JsonTypeName "IPA Trump Or Not"
+        #de.generated
+{
+    domain {static IPATrump, static notIPATrump}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot IPATrump
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "IPA Trump";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot notIPATrump
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not IPA Trump";
+}
+
+class InternationalOrNotValue
+        extends java.lang.Enum
+        property ads.typeId "12"
+        property com.fasterxml.jackson.annotation.JsonTypeName "International Or Not Value"
+        #de.generated
+{
+    domain {static international, static notInternational}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.InternationalOrNotValue international
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "International";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.InternationalOrNotValue notInternational
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "NotInternational";
+}
+
+class ListItemAllowables
+        property ads.typeId "37"
+        property com.fasterxml.jackson.annotation.JsonTypeName "List Item Allowables"
+        #de.generated
+{
+    string HCPCSCode
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "HCPCSCode"
+                #update;
+    double lineItemUnitAllowables
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "LineItemUnitAllowables"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations locations
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Locations"
+                #update;
+    string productType
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "ProductType"
+                #update;
+    double quantities
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Quantities"
+                #update;
+    double unitAllowables
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "UnitAllowables"
+                #update;
+    ListItemAllowables(string HCPCSCode, double lineItemUnitAllowables, vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations locations, string productType, double quantities, double unitAllowables)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ListItemAllowables()
+                #dataio.default;
+}
+
+class Locations
+        extends java.lang.Enum
+        property ads.typeId "33"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Locations"
+        #de.generated
+{
+    domain 
+    {
+        static $,
+        static BLE$BilateralLowerExtremity,
+        static BUE$BilateralUpperExtremity,
+        static CH$Chest,
+        static HN$HeadAndNeck,
+        static LLE$LeftLowerExtremity,
+        static LUE$LeftUpperExtremity,
+        static RLE$RightLowerExtremity,
+        static RUE$RightUpperExtremity,
+        static TR$Trunk,
+        static bilateralLower,
+        static bilateralUpper,
+        static chest,
+        static headNeck,
+        static leftLower,
+        static leftUpper,
+        static lowerExtremity,
+        static rightLower,
+        static rightUpper,
+        static trunk,
+        static unilateralLower,
+        static unilateralUpper,
+        static upperExtremity
+    }
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations $
+                property ads.attributeId "23"
+                property com.fasterxml.jackson.annotation.JsonProperty "-";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations BLE$BilateralLowerExtremity
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "BLE-BilateralLowerExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations BUE$BilateralUpperExtremity
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "BUE-BilateralUpperExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations CH$Chest
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "CH-Chest";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations HN$HeadAndNeck
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "HN-HeadAndNeck";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations LLE$LeftLowerExtremity
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "LLE-LeftLowerExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations LUE$LeftUpperExtremity
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "LUE-LeftUpperExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations RLE$RightLowerExtremity
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "RLE-RightLowerExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations RUE$RightUpperExtremity
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "RUE-RightUpperExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations TR$Trunk
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "TR-Trunk";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations bilateralLower
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "BilateralLower";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations bilateralUpper
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "BilateralUpper";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations chest
+                property ads.attributeId "20"
+                property com.fasterxml.jackson.annotation.JsonProperty "Chest";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations headNeck
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "HeadNeck";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations leftLower
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "LeftLower";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations leftUpper
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "LeftUpper";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations lowerExtremity
+                property ads.attributeId "21"
+                property com.fasterxml.jackson.annotation.JsonProperty "LowerExtremity";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations rightLower
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "RightLower";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations rightUpper
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "RightUpper";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations trunk
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "Trunk";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations unilateralLower
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "UnilateralLower";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations unilateralUpper
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "UnilateralUpper";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations upperExtremity
+                property ads.attributeId "22"
+                property com.fasterxml.jackson.annotation.JsonProperty "UpperExtremity";
+}
+
+class MedicareHeadAndNeckValues
+        extends java.lang.Enum
+        property ads.typeId "11"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Medicare Head And Neck Values"
+        #de.generated
+{
+    domain {static medicareHN, static notMedicareHN}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareHeadAndNeckValues medicareHN
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare HN";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareHeadAndNeckValues notMedicareHN
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare HN";
+}
+
+class MedicareOrNotValue
+        extends java.lang.Enum
+        property ads.typeId "10"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Medicare or Not Value"
+        #de.generated
+{
+    domain {static medicare, static notMedicare}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareOrNotValue medicare
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareOrNotValue notMedicare
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare";
+}
+
+class MedicareWithQualifyingSecondaryOrNot
+        extends java.lang.Enum
+        property ads.typeId "25"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Medicare With Qualifying Secondary Or Not"
+        #de.generated
+{
+    domain {static medicareWithQualifyingSecondary, static notMedicareWithQualifyingSecondary}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareWithQualifyingSecondaryOrNot medicareWithQualifyingSecondary
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare With Qualifying Secondary";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareWithQualifyingSecondaryOrNot notMedicareWithQualifyingSecondary
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare With Qualifying Secondary";
+}
+
+class Network
+        property ads.typeId "7"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Network"
+        #de.generated
+{
+    boolean MCAllowable
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "MCAllowable"
+                #update;
+    double e0651Allowable
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0651Allowable"
+                #update;
+    double e0652Allowable
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0652Allowable"
+                #update;
+    double e0656Allowable
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0656Allowable"
+                #update;
+    double e0657Allowable
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0657Allowable"
+                #update;
+    double e0667Allowable
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0667Allowable"
+                #update;
+    double e0668Allowable
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0668Allowable"
+                #update;
+    double e0669Allowable
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0669Allowable"
+                #update;
+    double e1399Allowable
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "E1399Allowable"
+                #update;
+    string networkID
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "NetworkID"
+                #update;
+    string networkPricingState
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Network Pricing State"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot overrideMedicareAllowable
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "OverrideMedicareAllowable"
+                #update;
+    java.util.List percentListS domain 0,* class double
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "PercentListS"
+                #update;
+    double percentMedicaid
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "PercentMedicaid"
+                #update;
+    double percentMedicare
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "PercentMedicare"
+                #update;
+    string pricingType
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "PricingType"
+                #update;
+    Network(boolean MCAllowable, 
+        double e0651Allowable, 
+        double e0652Allowable, 
+        double e0656Allowable, 
+        double e0657Allowable, 
+        double e0667Allowable, 
+        double e0668Allowable, 
+        double e0669Allowable, 
+        double e1399Allowable, 
+        string networkID, 
+        string networkPricingState, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot overrideMedicareAllowable, 
+        java.util.List percentListS domain 0,* class double, 
+        double percentMedicaid, 
+        double percentMedicare, 
+        string pricingType)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Network()
+                #dataio.default;
+    void addTo_percentListS(double percentListS)
+                property collectionAttribute "percentListS"
+                #update;
+    void clear_percentListS()
+                property collectionAttribute "percentListS"
+                #update;
+    void removeFrom_percentListS(double percentListS)
+                property collectionAttribute "percentListS"
+                #update;
+    void set_percentListS(java.util.Collection percentListS domain 0,* class double)
+                property collectionAttribute "percentListS"
+                #update;
+}
+
+class Order
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Order"
+        #de.generated
+{
+    java.util.List HCPCSCode domain 0,* class string
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "HCPCS Code"
+                #update;
+    java.util.List LELocation domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "LE Location"
+                #update;
+    boolean OKToShip
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "OK To Ship"
+                #update;
+    java.time.LocalDate PACWaiverDate
+                property ads.attributeId "24"
+                property com.fasterxml.jackson.annotation.JsonProperty "PAC Waiver Date"
+                #update;
+    double PACWaiverPercent
+                property ads.attributeId "23"
+                property com.fasterxml.jackson.annotation.JsonProperty "PAC Waiver Percent"
+                #update;
+    double PACWaiverType
+                property ads.attributeId "25"
+                property com.fasterxml.jackson.annotation.JsonProperty "PAC Waiver Type"
+                #update;
+    double approximateCopay
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "Approximate Copay"
+                #update;
+    string controllerPartNumber
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "Controller Part Number"
+                #update;
+    double deductibleEstimate
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "Deductible Estimate"
+                #update;
+    boolean donated
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Donated"
+                #update;
+    string medicarePathway
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare Pathway"
+                #update;
+    string modifiedBy
+                property ads.attributeId "20"
+                property com.fasterxml.jackson.annotation.JsonProperty "Modified By"
+                #update;
+    java.time.ZonedDateTime modifiedDate
+                property ads.attributeId "21"
+                property com.fasterxml.jackson.annotation.JsonProperty "Modified Date"
+                #update;
+    string modifier
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "Modifier"
+                #update;
+    string orderID
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Order ID"
+                #update;
+    string orderSupplementalData
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Order Supplemental Data"
+                #update;
+    string orderType
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "OrderType"
+                #update;
+    string patientID
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Patient ID"
+                #update;
+    string patientPolicyID
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Patient Policy ID"
+                #update;
+    string policyActivity
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Policy Activity"
+                #update;
+    string pricingTable
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pricing Table"
+                #update;
+    string product
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Product"
+                #update;
+    string productName
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Product Name"
+                #update;
+    java.time.LocalDate selfPayDate
+                property ads.attributeId "22"
+                property com.fasterxml.jackson.annotation.JsonProperty "Self Pay Date"
+                #update;
+    string selfPayReason
+                property ads.attributeId "26"
+                property com.fasterxml.jackson.annotation.JsonProperty "Self Pay Reason"
+                #update;
+    java.time.ZonedDateTime shipDate
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "Ship Date"
+                #update;
+    Order(java.util.List HCPCSCode domain 0,* class string, 
+        java.util.List LELocation domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations, 
+        boolean OKToShip, 
+        java.time.LocalDate PACWaiverDate, 
+        double PACWaiverPercent, 
+        double PACWaiverType, 
+        double approximateCopay, 
+        string controllerPartNumber, 
+        double deductibleEstimate, 
+        boolean donated, 
+        string medicarePathway, 
+        string modifiedBy, 
+        java.time.ZonedDateTime modifiedDate, 
+        string modifier, 
+        string orderID, 
+        string orderSupplementalData, 
+        string orderType, 
+        string patientID, 
+        string patientPolicyID, 
+        string policyActivity, 
+        string pricingTable, 
+        string product, 
+        string productName, 
+        java.time.LocalDate selfPayDate, 
+        string selfPayReason, 
+        java.time.ZonedDateTime shipDate)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Order()
+                #dataio.default;
+    void addTo_HCPCSCode(string HCPCSCode)
+                property collectionAttribute "HCPCSCode"
+                #update;
+    void addTo_LELocation(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations LELocation)
+                property collectionAttribute "LELocation"
+                #update;
+    void clear_HCPCSCode()
+                property collectionAttribute "HCPCSCode"
+                #update;
+    void clear_LELocation()
+                property collectionAttribute "LELocation"
+                #update;
+    void removeFrom_HCPCSCode(string HCPCSCode)
+                property collectionAttribute "HCPCSCode"
+                #update;
+    void removeFrom_LELocation(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations LELocation)
+                property collectionAttribute "LELocation"
+                #update;
+    void set_HCPCSCode(java.util.Collection HCPCSCode domain 0,* class string)
+                property collectionAttribute "HCPCSCode"
+                #update;
+    void set_LELocation(java.util.Collection LELocation domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations)
+                property collectionAttribute "LELocation"
+                #update;
+}
+
+class OrderAssignmentValues
+        extends java.lang.Enum
+        property ads.typeId "31"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Order Assignment Values"
+        #de.generated
+{
+    domain 
+    {
+        static $,
+        static billToPayer,
+        static discounted,
+        static discountedSelfPay,
+        static donated,
+        static donatedSelfPay,
+        static international,
+        static internationalSelfPay,
+        static medicaid,
+        static medicare,
+        static medicareHN,
+        static medicareNU,
+        static medicareUE,
+        static network,
+        static noOrderSelfPayType,
+        static notDiscounted,
+        static notDonated,
+        static notInternational,
+        static notMedicare,
+        static notMedicareHN,
+        static notSelfPay,
+        static payer,
+        static selfPay
+    }
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues $
+                property ads.attributeId "23"
+                property com.fasterxml.jackson.annotation.JsonProperty "-";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues billToPayer
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bill To Payer";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues discounted
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Discounted";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues discountedSelfPay
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "Discounted Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues donated
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Donated";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues donatedSelfPay
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "Donated Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues international
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "International";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues internationalSelfPay
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "International Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues medicaid
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicaid";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues medicare
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues medicareHN
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare HN";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues medicareNU
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare NU";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues medicareUE
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare UE";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues network
+                property ads.attributeId "21"
+                property com.fasterxml.jackson.annotation.JsonProperty "Network";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues noOrderSelfPayType
+                property ads.attributeId "22"
+                property com.fasterxml.jackson.annotation.JsonProperty "No Order Self Pay Type";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues notDiscounted
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Discounted";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues notDonated
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Donated";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues notInternational
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not International";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues notMedicare
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues notMedicareHN
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare HN";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues notSelfPay
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues payer
+                property ads.attributeId "20"
+                property com.fasterxml.jackson.annotation.JsonProperty "Payer";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues selfPay
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Self Pay";
+}
+
+class OrderPricingTableAssignment
+        property ads.typeId "28"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Order Pricing Table Assignment"
+        #de.generated
+{
+    java.util.List pricingID domain 0,* class string
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pricing ID"
+                #update;
+    java.util.List pricingType domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Pricing Type"
+                #update;
+    OrderPricingTableAssignment(java.util.List pricingID domain 0,* class string, 
+        java.util.List pricingType domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    OrderPricingTableAssignment()
+                #dataio.default;
+    void addTo_pricingID(string pricingID)
+                property collectionAttribute "pricingID"
+                #update;
+    void addTo_pricingType(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues pricingType)
+                property collectionAttribute "pricingType"
+                #update;
+    void clear_pricingID()
+                property collectionAttribute "pricingID"
+                #update;
+    void clear_pricingType()
+                property collectionAttribute "pricingType"
+                #update;
+    void removeFrom_pricingID(string pricingID)
+                property collectionAttribute "pricingID"
+                #update;
+    void removeFrom_pricingType(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues pricingType)
+                property collectionAttribute "pricingType"
+                #update;
+    void set_pricingID(java.util.Collection pricingID domain 0,* class string)
+                property collectionAttribute "pricingID"
+                #update;
+    void set_pricingType(java.util.Collection pricingType domain 0,* class vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues)
+                property collectionAttribute "pricingType"
+                #update;
+}
+
+class OrderSelfPayType
+        extends java.lang.Enum
+        property ads.typeId "26"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Order Self Pay Type"
+        #de.generated
+{
+    domain {static discountedSelfPay, static donatedSelfPay, static internationalSelfPay, static selfPay}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType discountedSelfPay
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Discounted Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType donatedSelfPay
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Donated Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType internationalSelfPay
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "International Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType selfPay
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Self Pay";
+}
+
+class OrderSupplementalData
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Order Supplemental Data"
+        #de.generated
+{
+    java.time.LocalDate PACWaiverDate
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "PACWaiverDate"
+                #update;
+    double PACWaiverPercent
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "PACWaiverPercent"
+                #update;
+    string modifier
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Modifier"
+                #update;
+    string orderID
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "OrderID"
+                #update;
+    java.time.LocalDate selfPayDate
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "SelfPayDate"
+                #update;
+    string selfPayReason
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "SelfPayReason"
+                #update;
+    OrderSupplementalData(java.time.LocalDate PACWaiverDate, double PACWaiverPercent, string modifier, string orderID, java.time.LocalDate selfPayDate, string selfPayReason)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    OrderSupplementalData()
+                #dataio.default;
+}
+
+class OverrideMedicareOrNot
+        extends java.lang.Enum
+        property ads.typeId "29"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Override Medicare Or Not"
+        #de.generated
+{
+    domain {static notOverrideMedicare, static overrideMedicare}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot notOverrideMedicare
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Override Medicare";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot overrideMedicare
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Override Medicare";
+}
+
+class Patient
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Patient"
+        #de.generated
+{
+    string order
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Order"
+                #update;
+    string patientState
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Patient State"
+                #update;
+    string policy
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Policy"
+                #update;
+    string policyID
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Policy ID"
+                #update;
+    Patient(string order, string patientState, string policy, string policyID)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Patient()
+                #dataio.default;
+}
+
+class PayerInsurance
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PayerInsurance"
+        #de.generated
+{
+    double e0651Allowable
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0651Allowable"
+                #update;
+    double e0652Allowable
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0652Allowable"
+                #update;
+    double e0656Allowable
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0656Allowable"
+                #update;
+    double e0657Allowable
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0657Allowable"
+                #update;
+    double e0667Allowable
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0667Allowable"
+                #update;
+    double e0668Allowable
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0668Allowable"
+                #update;
+    double e0669Allowable
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0669Allowable"
+                #update;
+    double e1399Allowable
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "E1399Allowable"
+                #update;
+    string payerClassification
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerClassification"
+                #update;
+    string payerID
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerID"
+                #update;
+    string payerName
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerName"
+                #update;
+    PayerInsurance(double e0651Allowable, 
+        double e0652Allowable, 
+        double e0656Allowable, 
+        double e0657Allowable, 
+        double e0667Allowable, 
+        double e0668Allowable, 
+        double e0669Allowable, 
+        double e1399Allowable, 
+        string payerClassification, 
+        string payerID, 
+        string payerName)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PayerInsurance()
+                #dataio.default;
+}
+
+class PaymentTermsOutput
+        property ads.typeId "50"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Payment Terms Output"
+        #de.generated
+{
+    double orderYear2MonthsToBill
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "OrderYear2MonthsToBill"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue paymentTerms
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "PaymentTerms"
+                #update;
+    PaymentTermsOutput(double orderYear2MonthsToBill, vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue paymentTerms)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PaymentTermsOutput()
+                #dataio.default;
+}
+
+class PaymentTermsValue
+        property ads.typeId "42"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Payment Terms Value"
+        #de.generated
+{
+    double count
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Count"
+                #update;
+    double year1Allowable
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year 1 Allowable"
+                #update;
+    double year2Allowable
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year 2 Allowable"
+                #update;
+    PaymentTermsValue(double count, double year1Allowable, double year2Allowable)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PaymentTermsValue()
+                #dataio.default;
+}
+
+class Policy
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Policy"
+        #de.generated
+{
+    string DMECoverage
+                property ads.attributeId "33"
+                property com.fasterxml.jackson.annotation.JsonProperty "DMECoverage"
+                #update;
+    double DMEMaximum
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "DMEMaximum"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot activePolicy
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "ActivePolicy"
+                #update;
+    string billToPayerID
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "BillToPayerID"
+                #update;
+    string customerPurchaseOrder
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "CustomerPurchaseOrder"
+                #update;
+    double inNetworkDMEMaximum
+                property ads.attributeId "32"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkDMEMaximum"
+                #update;
+    double inNetworkDeductible
+                property ads.attributeId "36"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkDeductible"
+                #update;
+    boolean inNetworkDeductibleAppliesToOutOfPocketMaximum
+                property ads.attributeId "20"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkDeductibleAppliesToOutOfPocketMaximum"
+                #update;
+    double inNetworkDeductibleMet
+                property ads.attributeId "22"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkDeductibleMet"
+                #update;
+    boolean inNetworkFlag
+                property ads.attributeId "34"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkFlag"
+                #update;
+    double inNetworkOutOfPocket
+                property ads.attributeId "27"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkOutOfPocket"
+                #update;
+    double inNetworkOutOfPocketMet
+                property ads.attributeId "26"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkOutOfPocketMet"
+                #update;
+    double inNetworkPercentPaid
+                property ads.attributeId "30"
+                property com.fasterxml.jackson.annotation.JsonProperty "InNetworkPercentPaid"
+                #update;
+    string networkID
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "NetworkID"
+                #update;
+    double outOfNetworkDMEMaximum
+                property ads.attributeId "31"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkDMEMaximum"
+                #update;
+    double outOfNetworkDeductible
+                property ads.attributeId "35"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkDeductible"
+                #update;
+    boolean outOfNetworkDeductibleAppliesToOutOfPocketMaximum
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkDeductibleAppliesToOutOfPocketMaximum"
+                #update;
+    double outOfNetworkDeductibleMet
+                property ads.attributeId "21"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkDeductibleMet"
+                #update;
+    double outOfNetworkOutOfPocket
+                property ads.attributeId "28"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkOutOfPocket"
+                #update;
+    double outOfNetworkOutOfPocketMet
+                property ads.attributeId "25"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkOutOfPocketMet"
+                #update;
+    double outOfNetworkPercentPaid
+                property ads.attributeId "29"
+                property com.fasterxml.jackson.annotation.JsonProperty "OutOfNetworkPercentPaid"
+                #update;
+    string payer
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Payer"
+                #update;
+    string payerBucket
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerBucket"
+                #update;
+    string payerID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerID"
+                #update;
+    string payerName
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerName"
+                #update;
+    string payerType
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerType"
+                #update;
+    string planDesignation
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Plan Designation"
+                #update;
+    string planType
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "PlanType"
+                #update;
+    string policyActivity
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyActivity"
+                #update;
+    string policyActivityRisk
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyActivityRisk"
+                #update;
+    string policyID
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    string policyState
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Policy State"
+                #update;
+    java.time.LocalDate renewalDate
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "RenewalDate"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay secondaryNoPay
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "SecondaryNoPay"
+                #update;
+    double serviceLevelCopayInNetwork
+                property ads.attributeId "24"
+                property com.fasterxml.jackson.annotation.JsonProperty "ServiceLevelCopayInNetwork"
+                #update;
+    double serviceLevelCopayOutOfNetwork
+                property ads.attributeId "23"
+                property com.fasterxml.jackson.annotation.JsonProperty "ServiceLevelCopayOutOfNetwork"
+                #update;
+    Policy(string DMECoverage, 
+        double DMEMaximum, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot activePolicy, 
+        string billToPayerID, 
+        string customerPurchaseOrder, 
+        double inNetworkDMEMaximum, 
+        double inNetworkDeductible, 
+        boolean inNetworkDeductibleAppliesToOutOfPocketMaximum, 
+        double inNetworkDeductibleMet, 
+        boolean inNetworkFlag, 
+        double inNetworkOutOfPocket, 
+        double inNetworkOutOfPocketMet, 
+        double inNetworkPercentPaid, 
+        string networkID, 
+        double outOfNetworkDMEMaximum, 
+        double outOfNetworkDeductible, 
+        boolean outOfNetworkDeductibleAppliesToOutOfPocketMaximum, 
+        double outOfNetworkDeductibleMet, 
+        double outOfNetworkOutOfPocket, 
+        double outOfNetworkOutOfPocketMet, 
+        double outOfNetworkPercentPaid, 
+        string payer, 
+        string payerBucket, 
+        string payerID, 
+        string payerName, 
+        string payerType, 
+        string planDesignation, 
+        string planType, 
+        string policyActivity, 
+        string policyActivityRisk, 
+        string policyID, 
+        string policyState, 
+        java.time.LocalDate renewalDate, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay secondaryNoPay, 
+        double serviceLevelCopayInNetwork, 
+        double serviceLevelCopayOutOfNetwork)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Policy()
+                #dataio.default;
+}
+
+class PolicyActivity
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PolicyActivity"
+        #de.generated
+{
+    string IPAPayerClassification
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "IPAPayerClassification"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot IPATrumpFlag
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "IPATrumpFlag"
+                #update;
+    string benefitLevel
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "BenefitLevel"
+                #update;
+    boolean expireFlag
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "ExpireFlag"
+                #update;
+    boolean loACustomAllowable
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "LoACustomAllowable"
+                #update;
+    string networkID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "NetworkID"
+                #update;
+    string orderID
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "OrderID"
+                #update;
+    string policyActivityID
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyActivityID"
+                #update;
+    string policyID
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    PolicyActivity(string IPAPayerClassification, 
+        vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot IPATrumpFlag, 
+        string benefitLevel, 
+        boolean expireFlag, 
+        boolean loACustomAllowable, 
+        string networkID, 
+        string orderID, 
+        string policyActivityID, 
+        string policyID)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PolicyActivity()
+                #dataio.default;
+}
+
+class PolicyExpired
+        property ads.typeId "40"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Policy Expired"
+        #de.generated
+{
+    string message
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Message"
+                #update;
+    vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot policyExpiredValue
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Policy Expired Value"
+                #update;
+    PolicyExpired(string message, vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot policyExpiredValue)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PolicyExpired()
+                #dataio.default;
+}
+
+class PrimaryPolicyInformation
+        property ads.typeId "21"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PrimaryPolicyInformation"
+        #de.generated
+{
+    double DMEMaximum
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "DMEMaximum"
+                #update;
+    string payerBucket
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerBucket"
+                #update;
+    string payerID
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerID"
+                #update;
+    string payerName
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerName"
+                #update;
+    string planType
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "PlanType"
+                #update;
+    string policyID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    string primaryPolicyInformationState
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Primary Policy Information State"
+                #update;
+    java.time.LocalDate renewalDate
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "RenewalDate"
+                #update;
+    PrimaryPolicyInformation(double DMEMaximum, string payerBucket, string payerID, string payerName, string planType, string policyID, string primaryPolicyInformationState, java.time.LocalDate renewalDate)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PrimaryPolicyInformation()
+                #dataio.default;
+}
+
+class ProductGroup
+        extends java.lang.Enum
+        property ads.typeId "34"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Product Group"
+        #de.generated
+{
+    domain {static _, static entre, static flexitouch, static nimbl}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup _
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "_";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup entre
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Entre";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup flexitouch
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Flexitouch";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup nimbl
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Nimbl";
+}
+
+class PursuedPolicyValues
+        extends java.lang.Enum
+        property ads.typeId "46"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Pursued Policy Values"
+        #de.generated
+{
+    domain 
+    {
+        static $,
+        static BCBS,
+        static VA,
+        static charityFunded,
+        static commercial,
+        static medicaid,
+        static medicare,
+        static medicareOrMedicaid,
+        static medicareWithQualifyingSecondary,
+        static notMedicareOrMedicaid,
+        static notMedicareWithQualifyingSecondary,
+        static primary,
+        static secondary,
+        static secondaryNoPayDeductible,
+        static selfPay
+    }
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues $
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "-";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues BCBS
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "BCBS";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues VA
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "VA";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues charityFunded
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Charity Funded";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues commercial
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Commercial";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues medicaid
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicaid";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues medicare
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues medicareOrMedicaid
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare Or Medicaid";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues medicareWithQualifyingSecondary
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "Medicare With Qualifying Secondary";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues notMedicareOrMedicaid
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare Or Medicaid";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues notMedicareWithQualifyingSecondary
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Medicare With Qualifying Secondary";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues primary
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "Primary";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues secondary
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "Secondary";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues secondaryNoPayDeductible
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "Secondary No Pay Deductible";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues selfPay
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Self Pay";
+}
+
+class SecondaryNoPayOrPay
+        extends java.lang.Enum
+        property ads.typeId "23"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Secondary No Pay Or Pay"
+        #de.generated
+{
+    domain {static secondaryNoPay, static secondaryPay}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay secondaryNoPay
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "SecondaryNoPay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay secondaryPay
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "SecondaryPay";
+}
+
+class SecondaryPolicyInformation
+        property ads.readonly "false"
+        property ads.typeId "24"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Secondary Policy Information"
+        #de.generated
+        property imported "false"
+{
+    double DMEMaximum
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "DMEMaximum"
+                #update;
+    string payerBucket
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerBucket"
+                #update;
+    string payerID
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerID"
+                #update;
+    string payerName
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "PayerName"
+                #update;
+    string planType
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "PlanType"
+                #update;
+    string policyID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    java.time.LocalDate renewalDate
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "RenewalDate"
+                #update;
+    java.time.LocalDate secondaryPolicyInformationDate
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "Secondary Policy Information Date"
+                #update;
+    string secondaryPolicyInformationState
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Secondary Policy Information State"
+                #update;
+    SecondaryPolicyInformation(double DMEMaximum, 
+        string payerBucket, 
+        string payerID, 
+        string payerName, 
+        string planType, 
+        string policyID, 
+        java.time.LocalDate renewalDate, 
+        java.time.LocalDate secondaryPolicyInformationDate, 
+        string secondaryPolicyInformationState)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    SecondaryPolicyInformation()
+                #dataio.default;
+}
+
+class SelfPayOrNotValue
+        extends java.lang.Enum
+        property ads.typeId "16"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Self Pay Or Not value"
+        #de.generated
+{
+    domain {static notSelfPay, static selfPay}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SelfPayOrNotValue notSelfPay
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Self Pay";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SelfPayOrNotValue selfPay
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Self Pay";
+}
+
+class State
+        property ads.typeId "9"
+        property com.fasterxml.jackson.annotation.JsonTypeName "State"
+        #de.generated
+{
+    double e0651MedicaidAllowableNU
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0651MedicaidAllowableNU"
+                #update;
+    double e0651MedicareAllowableNU
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0651MedicareAllowableNU"
+                #update;
+    double e0651MedicareAllowableUE
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0651MedicareAllowableUE"
+                #update;
+    double e0652MedicaidAllowableNU
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0652MedicaidAllowableNU"
+                #update;
+    double e0652MedicareAllowableNU
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0652MedicareAllowableNU"
+                #update;
+    double e0652MedicareAllowableUE
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0652MedicareAllowableUE"
+                #update;
+    double e0656MedicaidAllowableNU
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0656MedicaidAllowableNU"
+                #update;
+    double e0656MedicareAllowableNU
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0656MedicareAllowableNU"
+                #update;
+    double e0657MedicaidAllowableNU
+                property ads.attributeId "15"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0657MedicaidAllowableNU"
+                #update;
+    double e0657MedicareAllowableNU
+                property ads.attributeId "14"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0657MedicareAllowableNU"
+                #update;
+    double e0667MedicaidAllowable
+                property ads.attributeId "17"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0667MedicaidAllowable"
+                #update;
+    double e0667MedicareAllowable
+                property ads.attributeId "16"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0667MedicareAllowable"
+                #update;
+    double e0668MedicaidAllowable
+                property ads.attributeId "19"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0668MedicaidAllowable"
+                #update;
+    double e0668MedicareAllowable
+                property ads.attributeId "18"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0668MedicareAllowable"
+                #update;
+    double e0669MedicaidAllowable
+                property ads.attributeId "21"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0669MedicaidAllowable"
+                #update;
+    double e0669MedicareAllowable
+                property ads.attributeId "20"
+                property com.fasterxml.jackson.annotation.JsonProperty "E0669MedicareAllowable"
+                #update;
+    double e1399MedicaidAllowableNU
+                property ads.attributeId "23"
+                property com.fasterxml.jackson.annotation.JsonProperty "E1399MedicaidAllowableNU"
+                #update;
+    double e1399MedicareAllowableNU
+                property ads.attributeId "22"
+                property com.fasterxml.jackson.annotation.JsonProperty "E1399MedicareAllowableNU"
+                #update;
+    string loAType
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "LoAType"
+                #update;
+    string newAttribute
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute"
+                #update;
+    string policyID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    string purchaseOrderID
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "PurchaseOrderID"
+                #update;
+    string state
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "State"
+                #update;
+    State(double e0651MedicaidAllowableNU, 
+        double e0651MedicareAllowableNU, 
+        double e0651MedicareAllowableUE, 
+        double e0652MedicaidAllowableNU, 
+        double e0652MedicareAllowableNU, 
+        double e0652MedicareAllowableUE, 
+        double e0656MedicaidAllowableNU, 
+        double e0656MedicareAllowableNU, 
+        double e0657MedicaidAllowableNU, 
+        double e0657MedicareAllowableNU, 
+        double e0667MedicaidAllowable, 
+        double e0667MedicareAllowable, 
+        double e0668MedicaidAllowable, 
+        double e0668MedicareAllowable, 
+        double e0669MedicaidAllowable, 
+        double e0669MedicareAllowable, 
+        double e1399MedicaidAllowableNU, 
+        double e1399MedicareAllowableNU, 
+        string loAType, 
+        string newAttribute, 
+        string policyID, 
+        string purchaseOrderID, 
+        string state)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    State()
+                #dataio.default;
+}
+
+class System
+        property ads.typeId "17"
+        property com.fasterxml.jackson.annotation.JsonTypeName "System"
+        #de.generated
+{
+    java.time.LocalDate currentDate
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Current Date"
+                #update;
+    java.time.ZonedDateTime runDate
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Run Date"
+                #update;
+    System(java.time.LocalDate currentDate, java.time.ZonedDateTime runDate)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    System()
+                #dataio.default;
+}
+
+class Terms
+        property ads.typeId "41"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Terms"
+        #de.generated
+{
+    double monthsApproved
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Months Approved"
+                #update;
+    double paymentMonths
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Payment Months"
+                #update;
+    string paymentType
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Payment Type"
+                #update;
+    double purchaseConversionMonths
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Purchase Conversion Months"
+                #update;
+    Terms(double monthsApproved, double paymentMonths, string paymentType, double purchaseConversionMonths)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Terms()
+                #dataio.default;
+}
+
+class UnitAllowablePriceValue
+        property ads.typeId "38"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Unit Allowable Price Value"
+        #de.generated
+{
+    string HCPCSCode
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "HCPCS Code"
+                #update;
+    double unitAllowablePrice
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Unit Allowable Price"
+                #update;
+    UnitAllowablePriceValue(string HCPCSCode, double unitAllowablePrice)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    UnitAllowablePriceValue()
+                #dataio.default;
+}
+
+class UseIPAOrNot
+        extends java.lang.Enum
+        property ads.typeId "44"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Use IPA Or Not"
+        #de.generated
+{
+    domain {static notUseIPA, static useIPA}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UseIPAOrNot notUseIPA
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Use IPA";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UseIPAOrNot useIPA
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Use IPA";
+}
+
+class VAOrNot
+        extends java.lang.Enum
+        property ads.typeId "20"
+        property com.fasterxml.jackson.annotation.JsonTypeName "VA Or Not"
+        #de.generated
+{
+    domain {static VA, static notVA}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.VAOrNot VA
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "VA";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.VAOrNot notVA
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not VA";
+}
+
+class ValidOrNot
+        extends java.lang.Enum
+        property ads.typeId "35"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Valid Or Not"
+        #de.generated
+{
+    domain {static notValid, static valid}
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot notValid
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Not Valid";
+    static final readonly vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot valid
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Valid";
+}
+
+class Year1And2PriceService
+        property ads.typeId "52"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Year 1 And 2 Price Service"
+        #de.generated
+{
+    double year1Price
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year1Price"
+                #update;
+    double year2Price
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year2Price"
+                #update;
+    Year1And2PriceService(double year1Price, double year2Price)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Year1And2PriceService()
+                #dataio.default;
+}
+
+class YearlyCoinsuranceService
+        property ads.typeId "54"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Yearly Coinsurance Service"
+        #de.generated
+{
+    double year1Coinsurance
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year1Coinsurance"
+                #update;
+    double year2Coinsurance
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year2Coinsurance"
+                #update;
+    YearlyCoinsuranceService(double year1Coinsurance, double year2Coinsurance)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    YearlyCoinsuranceService()
+                #dataio.default;
+}
+
+class YearlyDeductibleService
+        property ads.typeId "53"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Yearly Deductible Service"
+        #de.generated
+{
+    double year1Deductible
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year1Deductible"
+                #update;
+    double year2Deductible
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year2Deductible"
+                #update;
+    YearlyDeductibleService(double year1Deductible, double year2Deductible)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    YearlyDeductibleService()
+                #dataio.default;
+}
+
+class YearlyOutOfPocketLeftService
+        property ads.typeId "51"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Yearly Out Of Pocket Left Service"
+        #de.generated
+{
+    java.util.List durableMedicalEquipmentMaximums domain 0,* class double
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "DurableMedicalEquipmentMaximums"
+                #update;
+    double year1OutOfPocketLeft
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year1OutOfPocketLeft"
+                #update;
+    double year2OutOfPocketLeft
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Year2OutOfPocketLeft"
+                #update;
+    YearlyOutOfPocketLeftService(java.util.List durableMedicalEquipmentMaximums domain 0,* class double, 
+        double year1OutOfPocketLeft, 
+        double year2OutOfPocketLeft)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    YearlyOutOfPocketLeftService()
+                #dataio.default;
+    void addTo_durableMedicalEquipmentMaximums(double durableMedicalEquipmentMaximums)
+                property collectionAttribute "durableMedicalEquipmentMaximums"
+                #update;
+    void clear_durableMedicalEquipmentMaximums()
+                property collectionAttribute "durableMedicalEquipmentMaximums"
+                #update;
+    void removeFrom_durableMedicalEquipmentMaximums(double durableMedicalEquipmentMaximums)
+                property collectionAttribute "durableMedicalEquipmentMaximums"
+                #update;
+    void set_durableMedicalEquipmentMaximums(java.util.Collection durableMedicalEquipmentMaximums domain 0,* class double)
+                property collectionAttribute "durableMedicalEquipmentMaximums"
+                #update;
+}
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>49e2196b-d0c7-4162-bf2c-774d5676148d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to Not Donated ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

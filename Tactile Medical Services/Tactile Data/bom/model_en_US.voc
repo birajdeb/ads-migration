@@ -1,0 +1,931 @@
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot#concept.label = Active or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot.active#instance.label = Active
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot.notActive#instance.label = Not Active
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.AppliesOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.AppliesOrNot#concept.label = Applies or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.AppliesOrNot.applies#instance.label = Applies
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.AppliesOrNot.notApplies#instance.label = Not Applies
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot#concept.label = Crossing Years or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot.crossingYears#instance.label = Crossing Years
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CrossingYearsOrNot.notCrossingYears#instance.label = Not Crossing Years
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder#concept.label = Customer Purchase Order
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.CustomerPurchaseOrder(java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Customer Purchase Order} where {0, LoA Type} {1, Policy ID} {2, Purchase Order ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.loAType#phrase.action = set the LoA Type of {this} to {LoA Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.loAType#phrase.navigation = {LoA Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.policyID#phrase.navigation = {Policy ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.purchaseOrderID#phrase.action = set the Purchase Order ID of {this} to {Purchase Order ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.CustomerPurchaseOrder.purchaseOrderID#phrase.navigation = {Purchase Order ID} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DiscountedOrNotValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DiscountedOrNotValue#concept.label = Discounted or Not value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DiscountedOrNotValue.discounted#instance.label = Discounted
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DiscountedOrNotValue.notDiscounted#instance.label = Not Discounted
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DonatedOrNotValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DonatedOrNotValue#concept.label = Donated or Not value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DonatedOrNotValue.donated#instance.label = Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.DonatedOrNotValue.notDonated#instance.label = Not Donated
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot#concept.label = Expired or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot.expired#instance.label = Expired
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot.notExpired#instance.label = Not Expired
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs#concept.label = Final Outputs
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.FinalOutputs(double,java.util.List,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService,java.util.List,java.util.List,double,double,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues,double)#phrase.navigation = a new {Final Outputs} where {0, Calculate Allowables} {1, Error Message List} {2, Full Results For Calculate Payment Terms} {3, Full Results For Year 1 and 2 Out of Pocket Left} {4, Full Results For Year 1 and 2 Price} {5, Full Results For Yearly Deductible} {6, Order Pricing Table Assignment} {7, Policy Benefit Level} {8, Policy Copay} {9, Policy Months Remaining} {10, Pursued Policy} {11, Year 2 Deductible Remaining}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.addTo_errorMessageLists(java.lang.String)#phrase.action = add {0} to the Error Message Lists of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.addTo_orderPricingTableAssignments(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment)#phrase.action = add {0} to the Order Pricing Table Assignments of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.addTo_policyBenefitLevels(java.lang.String)#phrase.action = add {0} to the Policy Benefit Levels of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.calculateAllowables#phrase.action = set the Calculate Allowables of {this} to {Calculate Allowables}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.calculateAllowables#phrase.addition_setter = add {Calculate Allowables} to the Calculate Allowables of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.calculateAllowables#phrase.navigation = {Calculate Allowables} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.calculateAllowables#phrase.subtraction_setter = subtract {Calculate Allowables} from the Calculate Allowables of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.clear_errorMessageLists()#phrase.action = clear the Error Message Lists of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.clear_orderPricingTableAssignments()#phrase.action = clear the Order Pricing Table Assignments of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.clear_policyBenefitLevels()#phrase.action = clear the Policy Benefit Levels of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.errorMessageLists#phrase.action = set the Error Message Lists of {this} to {Error Message List}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.errorMessageLists#phrase.navigation = {Error Message List} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForCalculatePaymentTerms#phrase.action = set the Full Results For Calculate Payment Terms of {this} to {Full Results For Calculate Payment Terms}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForCalculatePaymentTerms#phrase.clearer = clear the Full Results For Calculate Payment Terms of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForCalculatePaymentTerms#phrase.navigation = {Full Results For Calculate Payment Terms} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYear1And2OutOfPocketLeft#phrase.action = set the Full Results For Year 1 and 2 Out of Pocket Left of {this} to {Full Results For Year 1 and 2 Out of Pocket Left}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYear1And2OutOfPocketLeft#phrase.clearer = clear the Full Results For Year 1 and 2 Out of Pocket Left of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYear1And2OutOfPocketLeft#phrase.navigation = {Full Results For Year 1 and 2 Out of Pocket Left} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYear1And2Price#phrase.action = set the Full Results For Year 1 and 2 Price of {this} to {Full Results For Year 1 and 2 Price}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYear1And2Price#phrase.clearer = clear the Full Results For Year 1 and 2 Price of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYear1And2Price#phrase.navigation = {Full Results For Year 1 and 2 Price} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYearlyDeductible#phrase.action = set the Full Results For Yearly Deductible of {this} to {Full Results For Yearly Deductible}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYearlyDeductible#phrase.clearer = clear the Full Results For Yearly Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.fullResultsForYearlyDeductible#phrase.navigation = {Full Results For Yearly Deductible} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.orderPricingTableAssignments#phrase.action = set the Order Pricing Table Assignments of {this} to {Order Pricing Table Assignment}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.orderPricingTableAssignments#phrase.navigation = {Order Pricing Table Assignment} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyBenefitLevels#phrase.action = set the Policy Benefit Levels of {this} to {Policy Benefit Level}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyBenefitLevels#phrase.navigation = {Policy Benefit Level} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyCopay#phrase.action = set the Policy Copay of {this} to {Policy Copay}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyCopay#phrase.addition_setter = add {Policy Copay} to the Policy Copay of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyCopay#phrase.navigation = {Policy Copay} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyCopay#phrase.subtraction_setter = subtract {Policy Copay} from the Policy Copay of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyMonthsRemaining#phrase.action = set the Policy Months Remaining of {this} to {Policy Months Remaining}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyMonthsRemaining#phrase.addition_setter = add {Policy Months Remaining} to the Policy Months Remaining of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyMonthsRemaining#phrase.navigation = {Policy Months Remaining} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.policyMonthsRemaining#phrase.subtraction_setter = subtract {Policy Months Remaining} from the Policy Months Remaining of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.pursuedPolicy#phrase.action = set the Pursued Policy of {this} to {Pursued Policy}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.pursuedPolicy#phrase.clearer = clear the Pursued Policy of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.pursuedPolicy#phrase.navigation = {Pursued Policy} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.removeFrom_errorMessageLists(java.lang.String)#phrase.action = remove {0} from the Error Message Lists of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.removeFrom_orderPricingTableAssignments(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment)#phrase.action = remove {0} from the Order Pricing Table Assignments of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.removeFrom_policyBenefitLevels(java.lang.String)#phrase.action = remove {0} from the Policy Benefit Levels of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.year2DeductibleRemaining#phrase.action = set the Year 2 Deductible Remaining of {this} to {Year 2 Deductible Remaining}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.year2DeductibleRemaining#phrase.addition_setter = add {Year 2 Deductible Remaining} to the Year 2 Deductible Remaining of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.year2DeductibleRemaining#phrase.navigation = {Year 2 Deductible Remaining} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.FinalOutputs.year2DeductibleRemaining#phrase.subtraction_setter = subtract {Year 2 Deductible Remaining} from the Year 2 Deductible Remaining of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling#concept.label = HCPCS Billing
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.HCPCSBilling(java.lang.String,java.lang.String,double,double,double,java.lang.String,java.lang.String)#phrase.navigation = a new {HCPCS Billing} where {0, HCPCS Billing Pricing State} {1, HCPCS Code} {2, List Price Percentage} {3, Medicaid Percentage} {4, Medicare Percentage} {5, Network ID} {6, Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.HCPCSBillingPricingState#phrase.action = set the HCPCS Billing Pricing State of {this} to {HCPCS Billing Pricing State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.HCPCSBillingPricingState#phrase.navigation = {HCPCS Billing Pricing State} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.HCPCSCode#phrase.action = set the HCPCS Code of {this} to {HCPCS Code}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.HCPCSCode#phrase.navigation = {HCPCS Code} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.listPricePercentage#phrase.action = set the List Price Percentage of {this} to {List Price Percentage}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.listPricePercentage#phrase.addition_setter = add {List Price Percentage} to the List Price Percentage of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.listPricePercentage#phrase.navigation = {List Price Percentage} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.listPricePercentage#phrase.subtraction_setter = subtract {List Price Percentage} from the List Price Percentage of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicaidPercentage#phrase.action = set the Medicaid Percentage of {this} to {Medicaid Percentage}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicaidPercentage#phrase.addition_setter = add {Medicaid Percentage} to the Medicaid Percentage of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicaidPercentage#phrase.navigation = {Medicaid Percentage} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicaidPercentage#phrase.subtraction_setter = subtract {Medicaid Percentage} from the Medicaid Percentage of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicarePercentage#phrase.action = set the Medicare Percentage of {this} to {Medicare Percentage}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicarePercentage#phrase.addition_setter = add {Medicare Percentage} to the Medicare Percentage of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicarePercentage#phrase.navigation = {Medicare Percentage} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.medicarePercentage#phrase.subtraction_setter = subtract {Medicare Percentage} from the Medicare Percentage of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.networkID#phrase.action = set the Network ID of {this} to {Network ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.networkID#phrase.navigation = {Network ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.payerID#phrase.action = set the Payer ID of {this} to {Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSBilling.payerID#phrase.navigation = {Payer ID} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity#concept.label = HCPCS Quantity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.HCPCSQuantity(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations,double)#phrase.navigation = a new {HCPCS Quantity} where {0, Location} {1, Quantity}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.location#phrase.action = set the Location of {this} to {Location }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.location#phrase.clearer = clear the Location of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.location#phrase.navigation = {Location } of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.quantity#phrase.action = set the Quantity of {this} to {Quantity}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.quantity#phrase.addition_setter = add {Quantity} to the Quantity of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.quantity#phrase.navigation = {Quantity} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.HCPCSQuantity.quantity#phrase.subtraction_setter = subtract {Quantity} from the Quantity of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot#concept.label = IPA Trump or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot.IPATrump#instance.label = IPA Trump
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot.notIPATrump#instance.label = Not IPA Trump
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.InternationalOrNotValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.InternationalOrNotValue#concept.label = International or Not value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.InternationalOrNotValue.international#instance.label = International
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.InternationalOrNotValue.notInternational#instance.label = Not International
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables#concept.label = List Item Allowables
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.HCPCSCode#phrase.action = set the HCPCS Code of {this} to {HCPCS Code}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.HCPCSCode#phrase.navigation = {HCPCS Code} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.ListItemAllowables(java.lang.String,double,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations,java.lang.String,double,double)#phrase.navigation = a new {List Item Allowables} where {0, HCPCS Code} {1, Line Item Unit Allowable} {2, Location} {3, Product Type} {4, Quantity} {5, Unit Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.lineItemUnitAllowables#phrase.action = set the Line Item Unit Allowable of {this} to {Line Item Unit Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.lineItemUnitAllowables#phrase.addition_setter = add {Line Item Unit Allowable} to the Line Item Unit Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.lineItemUnitAllowables#phrase.navigation = {Line Item Unit Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.lineItemUnitAllowables#phrase.subtraction_setter = subtract {Line Item Unit Allowable} from the Line Item Unit Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.locations#phrase.action = set the Location of {this} to {Location}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.locations#phrase.clearer = clear the Location of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.locations#phrase.navigation = {Location} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.productType#phrase.action = set the Product Type of {this} to {Product Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.productType#phrase.navigation = {Product Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.quantities#phrase.action = set the Quantity of {this} to {Quantity}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.quantities#phrase.addition_setter = add {Quantity} to the Quantity of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.quantities#phrase.navigation = {Quantity} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.quantities#phrase.subtraction_setter = subtract {Quantity} from the Quantity of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.unitAllowables#phrase.action = set the Unit Allowable of {this} to {Unit Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.unitAllowables#phrase.addition_setter = add {Unit Allowable} to the Unit Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.unitAllowables#phrase.navigation = {Unit Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ListItemAllowables.unitAllowables#phrase.subtraction_setter = subtract {Unit Allowable} from the Unit Allowable of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations#concept.label = Locations
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.$#instance.label = -
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.BLE$BilateralLowerExtremity#instance.label = BLE - Bilateral Lower Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.BUE$BilateralUpperExtremity#instance.label = BUE - Bilateral Upper Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.CH$Chest#instance.label = CH - Chest
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.HN$HeadAndNeck#instance.label = HN - Head and Neck
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.LLE$LeftLowerExtremity#instance.label = LLE - Left Lower Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.LUE$LeftUpperExtremity#instance.label = LUE - Left Upper Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.RLE$RightLowerExtremity#instance.label = RLE - Right Lower Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.RUE$RightUpperExtremity#instance.label = RUE - Right Upper Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.TR$Trunk#instance.label = TR - Trunk
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.bilateralLower#instance.label = Bilateral Lower
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.bilateralUpper#instance.label = Bilateral Upper
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.chest#instance.label = Chest
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.headNeck#instance.label = Head Neck
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.leftLower#instance.label = Left Lower
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.leftUpper#instance.label = Left Upper
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.lowerExtremity#instance.label = Lower Extremity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.rightLower#instance.label = Right Lower
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.rightUpper#instance.label = Right Upper
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.trunk#instance.label = Trunk
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.unilateralLower#instance.label = Unilateral Lower
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.unilateralUpper#instance.label = Unilateral Upper
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations.upperExtremity#instance.label = Upper Extremity
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareHeadAndNeckValues
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareHeadAndNeckValues#concept.label = Medicare Head and Neck values
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareHeadAndNeckValues.medicareHN#instance.label = Medicare HN
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareHeadAndNeckValues.notMedicareHN#instance.label = Not Medicare HN
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareOrNotValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareOrNotValue#concept.label = Medicare or Not value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareOrNotValue.medicare#instance.label = Medicare
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareOrNotValue.notMedicare#instance.label = Not Medicare
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareWithQualifyingSecondaryOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareWithQualifyingSecondaryOrNot#concept.label = Medicare with Qualifying Secondary or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareWithQualifyingSecondaryOrNot.medicareWithQualifyingSecondary#instance.label = Medicare with Qualifying Secondary
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.MedicareWithQualifyingSecondaryOrNot.notMedicareWithQualifyingSecondary#instance.label = Not Medicare with Qualifying Secondary
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network#concept.label = Network
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.action[0] = {this} gets MC Allowable only if {MC Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.action[1] = make it {MC Allowable} that {this} is MC Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.navigation = {this} is MC Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.negative_predicate = {this} is not MC Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.negative_predicate_setter = {this} does not get MC Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.MCAllowable#phrase.positive_predicate_setter = {this} gets MC Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.Network(boolean,double,double,double,double,double,double,double,double,java.lang.String,java.lang.String,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot,java.util.List,double,double,java.lang.String)#phrase.navigation = a new {Network} where {0, MC Allowable} {1, E0651 Allowable} {2, E0652 Allowable} {3, E0656 Allowable} {4, E0657 Allowable} {5, E0667 Allowable} {6, E0668 Allowable} {7, E0669 Allowable} {8, E1399 Allowable} {9, Network ID} {10, Network Pricing State} {11, Override Medicare Allowable} {12, Percent List} {13, Percent Medicaid} {14, Percent Medicare} {15, Pricing Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.addTo_percentListS(double)#phrase.action = add {0} to the Percent List s of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.clear_percentListS()#phrase.action = clear the Percent List s of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0651Allowable#phrase.action = set the E0651 Allowable of {this} to {E0651 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0651Allowable#phrase.addition_setter = add {E0651 Allowable} to the E0651 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0651Allowable#phrase.navigation = {E0651 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0651Allowable#phrase.subtraction_setter = subtract {E0651 Allowable} from the E0651 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0652Allowable#phrase.action = set the E0652 Allowable of {this} to {E0652 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0652Allowable#phrase.addition_setter = add {E0652 Allowable} to the E0652 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0652Allowable#phrase.navigation = {E0652 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0652Allowable#phrase.subtraction_setter = subtract {E0652 Allowable} from the E0652 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0656Allowable#phrase.action = set the E0656 Allowable of {this} to {E0656 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0656Allowable#phrase.addition_setter = add {E0656 Allowable} to the E0656 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0656Allowable#phrase.navigation = {E0656 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0656Allowable#phrase.subtraction_setter = subtract {E0656 Allowable} from the E0656 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0657Allowable#phrase.action = set the E0657 Allowable of {this} to {E0657 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0657Allowable#phrase.addition_setter = add {E0657 Allowable} to the E0657 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0657Allowable#phrase.navigation = {E0657 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0657Allowable#phrase.subtraction_setter = subtract {E0657 Allowable} from the E0657 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0667Allowable#phrase.action = set the E0667 Allowable of {this} to {E0667 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0667Allowable#phrase.addition_setter = add {E0667 Allowable} to the E0667 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0667Allowable#phrase.navigation = {E0667 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0667Allowable#phrase.subtraction_setter = subtract {E0667 Allowable} from the E0667 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0668Allowable#phrase.action = set the E0668 Allowable of {this} to {E0668 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0668Allowable#phrase.addition_setter = add {E0668 Allowable} to the E0668 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0668Allowable#phrase.navigation = {E0668 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0668Allowable#phrase.subtraction_setter = subtract {E0668 Allowable} from the E0668 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0669Allowable#phrase.action = set the E0669 Allowable of {this} to {E0669 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0669Allowable#phrase.addition_setter = add {E0669 Allowable} to the E0669 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0669Allowable#phrase.navigation = {E0669 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e0669Allowable#phrase.subtraction_setter = subtract {E0669 Allowable} from the E0669 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e1399Allowable#phrase.action = set the E1399 Allowable of {this} to {E1399 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e1399Allowable#phrase.addition_setter = add {E1399 Allowable} to the E1399 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e1399Allowable#phrase.navigation = {E1399 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.e1399Allowable#phrase.subtraction_setter = subtract {E1399 Allowable} from the E1399 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.networkID#phrase.action = set the Network ID of {this} to {Network ID }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.networkID#phrase.navigation = {Network ID } of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.networkPricingState#phrase.action = set the Network Pricing State of {this} to {Network Pricing State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.networkPricingState#phrase.navigation = {Network Pricing State} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.overrideMedicareAllowable#phrase.action = set the Override Medicare Allowable of {this} to {Override Medicare Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.overrideMedicareAllowable#phrase.clearer = clear the Override Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.overrideMedicareAllowable#phrase.navigation = {Override Medicare Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentListS#phrase.action = set the Percent List s of {this} to {Percent List }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentListS#phrase.navigation = {Percent List } of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicaid#phrase.action = set the Percent Medicaid of {this} to {Percent Medicaid}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicaid#phrase.addition_setter = add {Percent Medicaid} to the Percent Medicaid of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicaid#phrase.navigation = {Percent Medicaid} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicaid#phrase.subtraction_setter = subtract {Percent Medicaid} from the Percent Medicaid of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicare#phrase.action = set the Percent Medicare of {this} to {Percent Medicare}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicare#phrase.addition_setter = add {Percent Medicare} to the Percent Medicare of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicare#phrase.navigation = {Percent Medicare} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.percentMedicare#phrase.subtraction_setter = subtract {Percent Medicare} from the Percent Medicare of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.pricingType#phrase.action = set the Pricing Type of {this} to {Pricing Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.pricingType#phrase.navigation = {Pricing Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Network.removeFrom_percentListS(double)#phrase.action = remove {0} from the Percent List s of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order#concept.label = Order
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.HCPCSCode#phrase.action = set the HCPCS Codes of {this} to {HCPCS Code}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.HCPCSCode#phrase.navigation = {HCPCS Code} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.LELocation#phrase.action = set the LE Locations of {this} to {LE Location}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.LELocation#phrase.navigation = {LE Location} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.action[0] = {this} gets OK to Ship only if {OK to Ship}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.action[1] = make it {OK to Ship} that {this} is OK to Ship
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.navigation = {this} is OK to Ship
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.negative_predicate = {this} is not OK to Ship
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.negative_predicate_setter = {this} does not get OK to Ship
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.OKToShip#phrase.positive_predicate_setter = {this} gets OK to Ship
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.Order(java.util.List,java.util.List,boolean,java.time.LocalDate,double,double,double,java.lang.String,double,boolean,java.lang.String,java.lang.String,java.time.ZonedDateTime,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.time.LocalDate,java.lang.String,java.time.ZonedDateTime)#phrase.navigation = a new {Order} where {0, HCPCS Code} {1, LE Location} {2, OK to Ship} {3, PAC Waiver Date} {4, PAC Waiver Percent} {5, PAC Waiver Type} {6, Approximate Copay} {7, Controller Part Number} {8, Deductible Estimate} {9, Donated} {10, Medicare Pathway} {11, Modified By} {12, Modified Date} {13, Modifier} {14, Order ID} {15, Order Supplemental Data} {16, Order Type} {17, Patient ID} {18, Patient Policy ID} {19, Policy Activity} {20, Pricing Table} {21, Product} {22, Product Name} {23, Self Pay Date} {24, Self Pay Reason} {25, Ship Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverDate#phrase.action = set the PAC Waiver Date of {this} to {PAC Waiver Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverDate#phrase.navigation = {PAC Waiver Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverPercent#phrase.action = set the PAC Waiver Percent of {this} to {PAC Waiver Percent}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverPercent#phrase.addition_setter = add {PAC Waiver Percent} to the PAC Waiver Percent of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverPercent#phrase.navigation = {PAC Waiver Percent} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverPercent#phrase.subtraction_setter = subtract {PAC Waiver Percent} from the PAC Waiver Percent of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverType#phrase.action = set the PAC Waiver Type of {this} to {PAC Waiver Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverType#phrase.addition_setter = add {PAC Waiver Type} to the PAC Waiver Type of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverType#phrase.navigation = {PAC Waiver Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.PACWaiverType#phrase.subtraction_setter = subtract {PAC Waiver Type} from the PAC Waiver Type of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.addTo_HCPCSCode(java.lang.String)#phrase.action = add {0} to the HCPCS Codes of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.addTo_LELocation(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations)#phrase.action = add {0} to the LE Locations of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.approximateCopay#phrase.action = set the Approximate Copay of {this} to {Approximate Copay}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.approximateCopay#phrase.addition_setter = add {Approximate Copay} to the Approximate Copay of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.approximateCopay#phrase.navigation = {Approximate Copay} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.approximateCopay#phrase.subtraction_setter = subtract {Approximate Copay} from the Approximate Copay of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.clear_HCPCSCode()#phrase.action = clear the HCPCS Codes of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.clear_LELocation()#phrase.action = clear the LE Locations of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.controllerPartNumber#phrase.action = set the Controller Part Number of {this} to {Controller Part Number}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.controllerPartNumber#phrase.navigation = {Controller Part Number} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.deductibleEstimate#phrase.action = set the Deductible Estimate of {this} to {Deductible Estimate}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.deductibleEstimate#phrase.addition_setter = add {Deductible Estimate} to the Deductible Estimate of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.deductibleEstimate#phrase.navigation = {Deductible Estimate} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.deductibleEstimate#phrase.subtraction_setter = subtract {Deductible Estimate} from the Deductible Estimate of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.action[0] = {this} gets Donated only if {Donated}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.action[1] = make it {Donated} that {this} is Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.navigation = {this} is Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.negative_predicate = {this} is not Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.negative_predicate_setter = {this} does not get Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.donated#phrase.positive_predicate_setter = {this} gets Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.medicarePathway#phrase.action = set the Medicare Pathway of {this} to {Medicare Pathway}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.medicarePathway#phrase.navigation = {Medicare Pathway} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.modifiedBy#phrase.action = set the Modified By of {this} to {Modified By}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.modifiedBy#phrase.navigation = {Modified By} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.modifiedDate#phrase.action = set the Modified Date of {this} to {Modified Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.modifiedDate#phrase.navigation = {Modified Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.modifier#phrase.action = set the Modifier of {this} to {Modifier}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.modifier#phrase.navigation = {Modifier} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.orderID#phrase.action = set the Order ID of {this} to {Order ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.orderID#phrase.navigation = {Order ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.orderSupplementalData#phrase.action = set the Order Supplemental Data of {this} to {Order Supplemental Data}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.orderSupplementalData#phrase.navigation = {Order Supplemental Data} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.orderType#phrase.action = set the Order Type of {this} to {Order Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.orderType#phrase.navigation = {Order Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.patientID#phrase.action = set the Patient ID of {this} to {Patient ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.patientID#phrase.navigation = {Patient ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.patientPolicyID#phrase.action = set the Patient Policy ID of {this} to {Patient Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.patientPolicyID#phrase.navigation = {Patient Policy ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.policyActivity#phrase.action = set the Policy Activity of {this} to {Policy Activity}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.policyActivity#phrase.navigation = {Policy Activity} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.pricingTable#phrase.action = set the Pricing Table of {this} to {Pricing Table}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.pricingTable#phrase.navigation = {Pricing Table} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.product#phrase.action = set the Product of {this} to {Product }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.product#phrase.navigation = {Product } of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.productName#phrase.action = set the Product Name of {this} to {Product Name}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.productName#phrase.navigation = {Product Name} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.removeFrom_HCPCSCode(java.lang.String)#phrase.action = remove {0} from the HCPCS Codes of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.removeFrom_LELocation(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Locations)#phrase.action = remove {0} from the LE Locations of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.selfPayDate#phrase.action = set the Self Pay Date of {this} to {Self Pay Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.selfPayDate#phrase.navigation = {Self Pay Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.selfPayReason#phrase.action = set the Self Pay Reason of {this} to {Self Pay Reason}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.selfPayReason#phrase.navigation = {Self Pay Reason} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.shipDate#phrase.action = set the Ship Date of {this} to {Ship Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Order.shipDate#phrase.navigation = {Ship Date} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues#concept.label = Order Assignment Values
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.$#instance.label = -
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.billToPayer#instance.label = Bill to Payer
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.discounted#instance.label = Discounted
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.discountedSelfPay#instance.label = Discounted Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.donated#instance.label = Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.donatedSelfPay#instance.label = Donated Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.international#instance.label = International
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.internationalSelfPay#instance.label = International Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.medicaid#instance.label = Medicaid
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.medicare#instance.label = Medicare
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.medicareHN#instance.label = Medicare HN
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.medicareNU#instance.label = Medicare NU
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.medicareUE#instance.label = Medicare UE
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.network#instance.label = Network
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.noOrderSelfPayType#instance.label = No Order Self Pay Type
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.notDiscounted#instance.label = Not Discounted
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.notDonated#instance.label = Not Donated
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.notInternational#instance.label = Not International
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.notMedicare#instance.label = Not Medicare
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.notMedicareHN#instance.label = Not Medicare HN
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.notSelfPay#instance.label = Not Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.payer#instance.label = Payer
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues.selfPay#instance.label = Self Pay
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment#concept.label = Order Pricing Table Assignment
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.OrderPricingTableAssignment(java.util.List,java.util.List)#phrase.navigation = a new {Order Pricing Table Assignment} where {0, Pricing ID} {1, Pricing Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.addTo_pricingID(java.lang.String)#phrase.action = add {0} to the Pricing IDs of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.addTo_pricingType(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues)#phrase.action = add {0} to the Pricing Types of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.clear_pricingID()#phrase.action = clear the Pricing IDs of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.clear_pricingType()#phrase.action = clear the Pricing Types of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.pricingID#phrase.action = set the Pricing IDs of {this} to {Pricing ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.pricingID#phrase.navigation = {Pricing ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.pricingType#phrase.action = set the Pricing Types of {this} to {Pricing Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.pricingType#phrase.navigation = {Pricing Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.removeFrom_pricingID(java.lang.String)#phrase.action = remove {0} from the Pricing IDs of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderPricingTableAssignment.removeFrom_pricingType(vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderAssignmentValues)#phrase.action = remove {0} from the Pricing Types of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType#concept.label = Order Self Pay Type
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType.discountedSelfPay#instance.label = Discounted Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType.donatedSelfPay#instance.label = Donated Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType.internationalSelfPay#instance.label = International Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSelfPayType.selfPay#instance.label = Self Pay
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData#concept.label = Order Supplemental Data
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.OrderSupplementalData(java.time.LocalDate,double,java.lang.String,java.lang.String,java.time.LocalDate,java.lang.String)#phrase.navigation = a new {Order Supplemental Data} where {0, PAC Waiver Date} {1, PAC Waiver Percent} {2, Modifier} {3, Order ID} {4, Self Pay Date} {5, Self Pay Reason}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.PACWaiverDate#phrase.action = set the PAC Waiver Date of {this} to {PAC Waiver Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.PACWaiverDate#phrase.navigation = {PAC Waiver Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.PACWaiverPercent#phrase.action = set the PAC Waiver Percent of {this} to {PAC Waiver Percent}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.PACWaiverPercent#phrase.addition_setter = add {PAC Waiver Percent} to the PAC Waiver Percent of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.PACWaiverPercent#phrase.navigation = {PAC Waiver Percent} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.PACWaiverPercent#phrase.subtraction_setter = subtract {PAC Waiver Percent} from the PAC Waiver Percent of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.modifier#phrase.action = set the Modifier of {this} to {Modifier}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.modifier#phrase.navigation = {Modifier} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.orderID#phrase.action = set the Order ID of {this} to {Order ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.orderID#phrase.navigation = {Order ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.selfPayDate#phrase.action = set the Self Pay Date of {this} to {Self Pay Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.selfPayDate#phrase.navigation = {Self Pay Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.selfPayReason#phrase.action = set the Self Pay Reason of {this} to {Self Pay Reason}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OrderSupplementalData.selfPayReason#phrase.navigation = {Self Pay Reason} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot#concept.label = Override Medicare or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot.notOverrideMedicare#instance.label = Not Override Medicare
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.OverrideMedicareOrNot.overrideMedicare#instance.label = Override Medicare
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient#concept.label = Patient
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.Patient(java.lang.String,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Patient} where {0, Order} {1, Patient State} {2, Policy} {3, Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.order#phrase.action = set the Order of {this} to {Order}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.order#phrase.navigation = {Order} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.patientState#phrase.action = set the Patient State of {this} to {Patient State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.patientState#phrase.navigation = {Patient State} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.policy#phrase.action = set the Policy of {this} to {Policy}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.policy#phrase.navigation = {Policy} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Patient.policyID#phrase.navigation = {Policy ID} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance#concept.label = Payer Insurance
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.PayerInsurance(double,double,double,double,double,double,double,double,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Payer Insurance} where {0, E0651 Allowable} {1, E0652 Allowable} {2, E0656 Allowable} {3, E0657 Allowable} {4, E0667 Allowable} {5, E0668 Allowable} {6, E0669 Allowable} {7, E1399 Allowable} {8, Payer Classification} {9, Payer ID} {10, Payer Name}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0651Allowable#phrase.action = set the E0651 Allowable of {this} to {E0651 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0651Allowable#phrase.addition_setter = add {E0651 Allowable} to the E0651 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0651Allowable#phrase.navigation = {E0651 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0651Allowable#phrase.subtraction_setter = subtract {E0651 Allowable} from the E0651 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0652Allowable#phrase.action = set the E0652 Allowable of {this} to {E0652 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0652Allowable#phrase.addition_setter = add {E0652 Allowable} to the E0652 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0652Allowable#phrase.navigation = {E0652 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0652Allowable#phrase.subtraction_setter = subtract {E0652 Allowable} from the E0652 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0656Allowable#phrase.action = set the E0656 Allowable of {this} to {E0656 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0656Allowable#phrase.addition_setter = add {E0656 Allowable} to the E0656 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0656Allowable#phrase.navigation = {E0656 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0656Allowable#phrase.subtraction_setter = subtract {E0656 Allowable} from the E0656 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0657Allowable#phrase.action = set the E0657 Allowable of {this} to {E0657 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0657Allowable#phrase.addition_setter = add {E0657 Allowable} to the E0657 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0657Allowable#phrase.navigation = {E0657 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0657Allowable#phrase.subtraction_setter = subtract {E0657 Allowable} from the E0657 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0667Allowable#phrase.action = set the E0667 Allowable of {this} to {E0667 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0667Allowable#phrase.addition_setter = add {E0667 Allowable} to the E0667 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0667Allowable#phrase.navigation = {E0667 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0667Allowable#phrase.subtraction_setter = subtract {E0667 Allowable} from the E0667 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0668Allowable#phrase.action = set the E0668 Allowable of {this} to {E0668 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0668Allowable#phrase.addition_setter = add {E0668 Allowable} to the E0668 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0668Allowable#phrase.navigation = {E0668 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0668Allowable#phrase.subtraction_setter = subtract {E0668 Allowable} from the E0668 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0669Allowable#phrase.action = set the E0669 Allowable of {this} to {E0669 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0669Allowable#phrase.addition_setter = add {E0669 Allowable} to the E0669 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0669Allowable#phrase.navigation = {E0669 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e0669Allowable#phrase.subtraction_setter = subtract {E0669 Allowable} from the E0669 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e1399Allowable#phrase.action = set the E1399 Allowable of {this} to {E1399 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e1399Allowable#phrase.addition_setter = add {E1399 Allowable} to the E1399 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e1399Allowable#phrase.navigation = {E1399 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.e1399Allowable#phrase.subtraction_setter = subtract {E1399 Allowable} from the E1399 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.payerClassification#phrase.action = set the Payer Classification of {this} to {Payer Classification}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.payerClassification#phrase.navigation = {Payer Classification} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.payerID#phrase.action = set the Payer ID of {this} to {Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.payerID#phrase.navigation = {Payer ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.payerName#phrase.action = set the Payer Name of {this} to {Payer Name}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PayerInsurance.payerName#phrase.navigation = {Payer Name} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput#concept.label = Payment Terms Output
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.PaymentTermsOutput(double,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue)#phrase.navigation = a new {Payment Terms Output} where {0, Order Year 2 Months to Bill} {1, Payment Terms}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.orderYear2MonthsToBill#phrase.action = set the Order Year 2 Months to Bill of {this} to {Order Year 2 Months to Bill}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.orderYear2MonthsToBill#phrase.addition_setter = add {Order Year 2 Months to Bill} to the Order Year 2 Months to Bill of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.orderYear2MonthsToBill#phrase.navigation = {Order Year 2 Months to Bill} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.orderYear2MonthsToBill#phrase.subtraction_setter = subtract {Order Year 2 Months to Bill} from the Order Year 2 Months to Bill of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.paymentTerms#phrase.action = set the Payment Terms of {this} to {Payment Terms}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.paymentTerms#phrase.clearer = clear the Payment Terms of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsOutput.paymentTerms#phrase.navigation = {Payment Terms} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue#concept.label = Payment Terms value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.PaymentTermsValue(double,double,double)#phrase.navigation = a new {Payment Terms value} where {0, Count} {1, Year 1 Allowable} {2, Year 2 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.count#phrase.action = set the Count of {this} to {Count}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.count#phrase.addition_setter = add {Count} to the Count of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.count#phrase.navigation = {Count} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.count#phrase.subtraction_setter = subtract {Count} from the Count of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year1Allowable#phrase.action = set the Year 1 Allowable of {this} to {Year 1 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year1Allowable#phrase.addition_setter = add {Year 1 Allowable} to the Year 1 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year1Allowable#phrase.navigation = {Year 1 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year1Allowable#phrase.subtraction_setter = subtract {Year 1 Allowable} from the Year 1 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year2Allowable#phrase.action = set the Year 2 Allowable of {this} to {Year 2 Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year2Allowable#phrase.addition_setter = add {Year 2 Allowable} to the Year 2 Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year2Allowable#phrase.navigation = {Year 2 Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PaymentTermsValue.year2Allowable#phrase.subtraction_setter = subtract {Year 2 Allowable} from the Year 2 Allowable of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy#concept.label = Policy
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.DMECoverage#phrase.action = set the DME Coverage of {this} to {DME Coverage}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.DMECoverage#phrase.navigation = {DME Coverage} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.DMEMaximum#phrase.action = set the DME Maximum of {this} to {DME Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.DMEMaximum#phrase.addition_setter = add {DME Maximum} to the DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.DMEMaximum#phrase.navigation = {DME Maximum} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.DMEMaximum#phrase.subtraction_setter = subtract {DME Maximum} from the DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.Policy(java.lang.String,double,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ActiveOrNot,java.lang.String,java.lang.String,double,double,boolean,double,boolean,double,double,double,java.lang.String,double,double,boolean,double,double,double,double,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.time.LocalDate,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay,double,double)#phrase.navigation = a new {Policy} where {0, DME Coverage} {1, DME Maximum} {2, Active Policy} {3, Bill to Payer ID} {4, Customer Purchase Order} {5, In Network DME Maximum} {6, In Network Deductible} {7, In Network Deductible Applies to Out of Pocket Maximum} {8, In Network Deductible Met} {9, In Network Flag} {10, In Network Out of Pocket} {11, In Network Out of Pocket Met} {12, In Network Percent Paid} {13, Network ID} {14, Out of Network DME Maximum} {15, Out of Network Deductible} {16, Out of Network Deductible Applies to Out of Pocket Maximum} {17, Out of Network Deductible Met} {18, Out of Network Out of Pocket} {19, Out of Network Out of Pocket Met} {20, Out of Network Percent Paid} {21, Payer} {22, Payer Bucket} {23, Payer ID} {24, Payer Name} {25, Payer Type} {26, Plan Designation} {27, Plan Type} {28, Policy Activity} {29, Policy Activity Risk} {30, Policy ID} {31, Policy State} {32, Renewal Date} {33, Secondary No Pay} {34, Service Level Copay In Network} {35, Service Level Copay Out of Network}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.activePolicy#phrase.action = set the Active Policy of {this} to {Active Policy}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.activePolicy#phrase.clearer = clear the Active Policy of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.activePolicy#phrase.navigation = {Active Policy} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.billToPayerID#phrase.action = set the Bill to Payer ID of {this} to {Bill to Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.billToPayerID#phrase.navigation = {Bill to Payer ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.customerPurchaseOrder#phrase.action = set the Customer Purchase Order of {this} to {Customer Purchase Order}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.customerPurchaseOrder#phrase.navigation = {Customer Purchase Order} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDMEMaximum#phrase.action = set the In Network DME Maximum of {this} to {In Network DME Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDMEMaximum#phrase.addition_setter = add {In Network DME Maximum} to the In Network DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDMEMaximum#phrase.navigation = {In Network DME Maximum} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDMEMaximum#phrase.subtraction_setter = subtract {In Network DME Maximum} from the In Network DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductible#phrase.action = set the In Network Deductible of {this} to {In Network Deductible}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductible#phrase.addition_setter = add {In Network Deductible} to the In Network Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductible#phrase.navigation = {In Network Deductible} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductible#phrase.subtraction_setter = subtract {In Network Deductible} from the In Network Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.action[0] = {this} gets In Network Deductible Applies to Out of Pocket Maximum only if {In Network Deductible Applies to Out of Pocket Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.action[1] = make it {In Network Deductible Applies to Out of Pocket Maximum} that {this} is In Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.navigation = {this} is In Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.negative_predicate = {this} is not In Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.negative_predicate_setter = {this} does not get In Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.positive_predicate_setter = {this} gets In Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleMet#phrase.action = set the In Network Deductible Met of {this} to {In Network Deductible Met}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleMet#phrase.addition_setter = add {In Network Deductible Met} to the In Network Deductible Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleMet#phrase.navigation = {In Network Deductible Met} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkDeductibleMet#phrase.subtraction_setter = subtract {In Network Deductible Met} from the In Network Deductible Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.action[0] = {this} gets In Network Flag only if {In Network Flag}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.action[1] = make it {In Network Flag} that {this} is In Network Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.navigation = {this} is In Network Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.negative_predicate = {this} is not In Network Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.negative_predicate_setter = {this} does not get In Network Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkFlag#phrase.positive_predicate_setter = {this} gets In Network Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocket#phrase.action = set the In Network Out of Pocket of {this} to {In Network Out of Pocket}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocket#phrase.addition_setter = add {In Network Out of Pocket} to the In Network Out of Pocket of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocket#phrase.navigation = {In Network Out of Pocket} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocket#phrase.subtraction_setter = subtract {In Network Out of Pocket} from the In Network Out of Pocket of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocketMet#phrase.action = set the In Network Out of Pocket Met of {this} to {In Network Out of Pocket Met}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocketMet#phrase.addition_setter = add {In Network Out of Pocket Met} to the In Network Out of Pocket Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocketMet#phrase.navigation = {In Network Out of Pocket Met} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkOutOfPocketMet#phrase.subtraction_setter = subtract {In Network Out of Pocket Met} from the In Network Out of Pocket Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkPercentPaid#phrase.action = set the In Network Percent Paid of {this} to {In Network Percent Paid}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkPercentPaid#phrase.addition_setter = add {In Network Percent Paid} to the In Network Percent Paid of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkPercentPaid#phrase.navigation = {In Network Percent Paid} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.inNetworkPercentPaid#phrase.subtraction_setter = subtract {In Network Percent Paid} from the In Network Percent Paid of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.networkID#phrase.action = set the Network ID of {this} to {Network ID }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.networkID#phrase.navigation = {Network ID } of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDMEMaximum#phrase.action = set the Out of Network DME Maximum of {this} to {Out of Network DME Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDMEMaximum#phrase.addition_setter = add {Out of Network DME Maximum} to the Out of Network DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDMEMaximum#phrase.navigation = {Out of Network DME Maximum} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDMEMaximum#phrase.subtraction_setter = subtract {Out of Network DME Maximum} from the Out of Network DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductible#phrase.action = set the Out of Network Deductible of {this} to {Out of Network Deductible}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductible#phrase.addition_setter = add {Out of Network Deductible} to the Out of Network Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductible#phrase.navigation = {Out of Network Deductible} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductible#phrase.subtraction_setter = subtract {Out of Network Deductible} from the Out of Network Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.action[0] = {this} gets Out of Network Deductible Applies to Out of Pocket Maximum only if {Out of Network Deductible Applies to Out of Pocket Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.action[1] = make it {Out of Network Deductible Applies to Out of Pocket Maximum} that {this} is Out of Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.navigation = {this} is Out of Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.negative_predicate = {this} is not Out of Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.negative_predicate_setter = {this} does not get Out of Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleAppliesToOutOfPocketMaximum#phrase.positive_predicate_setter = {this} gets Out of Network Deductible Applies to Out of Pocket Maximum
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleMet#phrase.action = set the Out of Network Deductible Met of {this} to {Out of Network Deductible Met}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleMet#phrase.addition_setter = add {Out of Network Deductible Met} to the Out of Network Deductible Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleMet#phrase.navigation = {Out of Network Deductible Met} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkDeductibleMet#phrase.subtraction_setter = subtract {Out of Network Deductible Met} from the Out of Network Deductible Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocket#phrase.action = set the Out of Network Out of Pocket of {this} to {Out of Network Out of Pocket}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocket#phrase.addition_setter = add {Out of Network Out of Pocket} to the Out of Network Out of Pocket of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocket#phrase.navigation = {Out of Network Out of Pocket} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocket#phrase.subtraction_setter = subtract {Out of Network Out of Pocket} from the Out of Network Out of Pocket of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocketMet#phrase.action = set the Out of Network Out of Pocket Met of {this} to {Out of Network Out of Pocket Met}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocketMet#phrase.addition_setter = add {Out of Network Out of Pocket Met} to the Out of Network Out of Pocket Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocketMet#phrase.navigation = {Out of Network Out of Pocket Met} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkOutOfPocketMet#phrase.subtraction_setter = subtract {Out of Network Out of Pocket Met} from the Out of Network Out of Pocket Met of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkPercentPaid#phrase.action = set the Out of Network Percent Paid of {this} to {Out of Network Percent Paid}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkPercentPaid#phrase.addition_setter = add {Out of Network Percent Paid} to the Out of Network Percent Paid of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkPercentPaid#phrase.navigation = {Out of Network Percent Paid} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.outOfNetworkPercentPaid#phrase.subtraction_setter = subtract {Out of Network Percent Paid} from the Out of Network Percent Paid of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payer#phrase.action = set the Payer of {this} to {Payer}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payer#phrase.navigation = {Payer} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerBucket#phrase.action = set the Payer Bucket of {this} to {Payer Bucket}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerBucket#phrase.navigation = {Payer Bucket} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerID#phrase.action = set the Payer ID of {this} to {Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerID#phrase.navigation = {Payer ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerName#phrase.action = set the Payer Name of {this} to {Payer Name}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerName#phrase.navigation = {Payer Name} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerType#phrase.action = set the Payer Type of {this} to {Payer Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.payerType#phrase.navigation = {Payer Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.planDesignation#phrase.action = set the Plan Designation of {this} to {Plan Designation}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.planDesignation#phrase.navigation = {Plan Designation} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.planType#phrase.action = set the Plan Type of {this} to {Plan Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.planType#phrase.navigation = {Plan Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyActivity#phrase.action = set the Policy Activity of {this} to {Policy Activity}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyActivity#phrase.navigation = {Policy Activity} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyActivityRisk#phrase.action = set the Policy Activity Risk of {this} to {Policy Activity Risk}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyActivityRisk#phrase.navigation = {Policy Activity Risk} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyID#phrase.navigation = {Policy ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyState#phrase.action = set the Policy State of {this} to {Policy State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.policyState#phrase.navigation = {Policy State} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.renewalDate#phrase.action = set the Renewal Date of {this} to {Renewal Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.renewalDate#phrase.navigation = {Renewal Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.secondaryNoPay#phrase.action = set the Secondary No Pay of {this} to {Secondary No Pay}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.secondaryNoPay#phrase.clearer = clear the Secondary No Pay of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.secondaryNoPay#phrase.navigation = {Secondary No Pay} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayInNetwork#phrase.action = set the Service Level Copay In Network of {this} to {Service Level Copay In Network}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayInNetwork#phrase.addition_setter = add {Service Level Copay In Network} to the Service Level Copay In Network of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayInNetwork#phrase.navigation = {Service Level Copay In Network} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayInNetwork#phrase.subtraction_setter = subtract {Service Level Copay In Network} from the Service Level Copay In Network of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayOutOfNetwork#phrase.action = set the Service Level Copay Out of Network of {this} to {Service Level Copay Out of Network}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayOutOfNetwork#phrase.addition_setter = add {Service Level Copay Out of Network} to the Service Level Copay Out of Network of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayOutOfNetwork#phrase.navigation = {Service Level Copay Out of Network} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Policy.serviceLevelCopayOutOfNetwork#phrase.subtraction_setter = subtract {Service Level Copay Out of Network} from the Service Level Copay Out of Network of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity#concept.label = Policy Activity
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.IPAPayerClassification#phrase.action = set the IPA Payer Classification of {this} to {IPA Payer Classification}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.IPAPayerClassification#phrase.navigation = {IPA Payer Classification} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.IPATrumpFlag#phrase.action = set the IPA Trump Flag of {this} to {IPA Trump Flag}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.IPATrumpFlag#phrase.clearer = clear the IPA Trump Flag of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.IPATrumpFlag#phrase.navigation = {IPA Trump Flag} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.PolicyActivity(java.lang.String,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.IPATrumpOrNot,java.lang.String,boolean,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Policy Activity} where {0, IPA Payer Classification} {1, IPA Trump Flag} {2, Benefit Level} {3, Expire Flag} {4, LoA Custom Allowable} {5, Network ID} {6, Order ID} {7, Policy Activity ID} {8, Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.benefitLevel#phrase.action = set the Benefit Level of {this} to {Benefit Level}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.benefitLevel#phrase.navigation = {Benefit Level} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.action[0] = {this} gets Expire Flag only if {Expire Flag}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.action[1] = make it {Expire Flag} that {this} is Expire Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.navigation = {this} is Expire Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.negative_predicate = {this} is not Expire Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.negative_predicate_setter = {this} does not get Expire Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.expireFlag#phrase.positive_predicate_setter = {this} gets Expire Flag
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.action[0] = {this} gets LoA Custom Allowable only if {LoA Custom Allowable }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.action[1] = make it {LoA Custom Allowable } that {this} is LoA Custom Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.action[1].deprecated = true
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.navigation = {this} is LoA Custom Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.negative_predicate = {this} is not LoA Custom Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.negative_predicate_setter = {this} does not get LoA Custom Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.loACustomAllowable#phrase.positive_predicate_setter = {this} gets LoA Custom Allowable
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.networkID#phrase.action = set the Network ID of {this} to {Network ID }
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.networkID#phrase.navigation = {Network ID } of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.orderID#phrase.action = set the Order ID of {this} to {Order ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.orderID#phrase.navigation = {Order ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.policyActivityID#phrase.action = set the Policy Activity ID of {this} to {Policy Activity ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.policyActivityID#phrase.navigation = {Policy Activity ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyActivity.policyID#phrase.navigation = {Policy ID} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired#concept.label = Policy Expired
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired.PolicyExpired(java.lang.String,vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ExpiredOrNot)#phrase.navigation = a new {Policy Expired} where {0, Message} {1, Policy Expired Value}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired.message#phrase.action = set the Message of {this} to {Message}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired.message#phrase.navigation = {Message} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired.policyExpiredValue#phrase.action = set the Policy Expired Value of {this} to {Policy Expired Value}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired.policyExpiredValue#phrase.clearer = clear the Policy Expired Value of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PolicyExpired.policyExpiredValue#phrase.navigation = {Policy Expired Value} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation#concept.label = Primary Policy Information
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.DMEMaximum#phrase.action = set the DME Maximum of {this} to {DME Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.DMEMaximum#phrase.addition_setter = add {DME Maximum} to the DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.DMEMaximum#phrase.navigation = {DME Maximum} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.DMEMaximum#phrase.subtraction_setter = subtract {DME Maximum} from the DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.PrimaryPolicyInformation(double,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.time.LocalDate)#phrase.navigation = a new {Primary Policy Information} where {0, DME Maximum} {1, Payer Bucket} {2, Payer ID} {3, Payer Name} {4, Plan Type} {5, Policy ID} {6, Primary Policy Information State} {7, Renewal Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.payerBucket#phrase.action = set the Payer Bucket of {this} to {Payer Bucket}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.payerBucket#phrase.navigation = {Payer Bucket} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.payerID#phrase.action = set the Payer ID of {this} to {Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.payerID#phrase.navigation = {Payer ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.payerName#phrase.action = set the Payer Name of {this} to {Payer Name}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.payerName#phrase.navigation = {Payer Name} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.planType#phrase.action = set the Plan Type of {this} to {Plan Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.planType#phrase.navigation = {Plan Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.policyID#phrase.navigation = {Policy ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.primaryPolicyInformationState#phrase.action = set the Primary Policy Information State of {this} to {Primary Policy Information State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.primaryPolicyInformationState#phrase.navigation = {Primary Policy Information State} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.renewalDate#phrase.action = set the Renewal Date of {this} to {Renewal Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PrimaryPolicyInformation.renewalDate#phrase.navigation = {Renewal Date} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup#concept.label = Product Group
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup._#instance.label = _
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup.entre#instance.label = Entre
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup.flexitouch#instance.label = Flexitouch
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ProductGroup.nimbl#instance.label = Nimbl
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues#concept.label = Pursued Policy Values
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.$#instance.label = -
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.BCBS#instance.label = BCBS
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.VA#instance.label = VA
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.charityFunded#instance.label = Charity Funded
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.commercial#instance.label = Commercial
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.medicaid#instance.label = Medicaid
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.medicare#instance.label = Medicare
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.medicareOrMedicaid#instance.label = Medicare or Medicaid
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.medicareWithQualifyingSecondary#instance.label = Medicare with Qualifying Secondary
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.notMedicareOrMedicaid#instance.label = Not Medicare or Medicaid
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.notMedicareWithQualifyingSecondary#instance.label = Not Medicare with Qualifying Secondary
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.primary#instance.label = Primary
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.secondary#instance.label = Secondary
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.secondaryNoPayDeductible#instance.label = Secondary No Pay Deductible
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.PursuedPolicyValues.selfPay#instance.label = Self Pay
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay#concept.label = Secondary No Pay or Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay.secondaryNoPay#instance.label = Secondary No Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryNoPayOrPay.secondaryPay#instance.label = Secondary Pay
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation#concept.label = Secondary Policy Information
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.DMEMaximum#phrase.action = set the DME Maximum of {this} to {DME Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.DMEMaximum#phrase.addition_setter = add {DME Maximum} to the DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.DMEMaximum#phrase.navigation = {DME Maximum} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.DMEMaximum#phrase.subtraction_setter = subtract {DME Maximum} from the DME Maximum of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.SecondaryPolicyInformation(double,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.time.LocalDate,java.time.LocalDate,java.lang.String)#phrase.navigation = a new {Secondary Policy Information} where {0, DME Maximum} {1, Payer Bucket} {2, Payer ID} {3, Payer Name} {4, Plan Type} {5, Policy ID} {6, Renewal Date} {7, Secondary Policy Information date} {8, Secondary Policy Information State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.payerBucket#phrase.action = set the Payer Bucket of {this} to {Payer Bucket}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.payerBucket#phrase.navigation = {Payer Bucket} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.payerID#phrase.action = set the Payer ID of {this} to {Payer ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.payerID#phrase.navigation = {Payer ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.payerName#phrase.action = set the Payer Name of {this} to {Payer Name}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.payerName#phrase.navigation = {Payer Name} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.planType#phrase.action = set the Plan Type of {this} to {Plan Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.planType#phrase.navigation = {Plan Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.policyID#phrase.navigation = {Policy ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.renewalDate#phrase.action = set the Renewal Date of {this} to {Renewal Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.renewalDate#phrase.navigation = {Renewal Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.secondaryPolicyInformationDate#phrase.action = set the Secondary Policy Information date of {this} to {Secondary Policy Information date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.secondaryPolicyInformationDate#phrase.navigation = {Secondary Policy Information date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.secondaryPolicyInformationState#phrase.action = set the Secondary Policy Information State of {this} to {Secondary Policy Information State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SecondaryPolicyInformation.secondaryPolicyInformationState#phrase.navigation = {Secondary Policy Information State} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SelfPayOrNotValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SelfPayOrNotValue#concept.label = Self Pay or Not value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SelfPayOrNotValue.notSelfPay#instance.label = Not Self Pay
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.SelfPayOrNotValue.selfPay#instance.label = Self Pay
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State#concept.label = State
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.State(double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,double,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {State} where {0, E0651 Medicaid Allowable NU} {1, E0651 Medicare Allowable NU} {2, E0651 Medicare Allowable UE} {3, E0652 Medicaid Allowable NU} {4, E0652 Medicare Allowable NU} {5, E0652 Medicare Allowable UE} {6, E0656 Medicaid Allowable NU} {7, E0656 Medicare Allowable NU} {8, E0657 Medicaid Allowable NU} {9, E0657 Medicare Allowable NU} {10, E0667 Medicaid Allowable} {11, E0667 Medicare Allowable} {12, E0668 Medicaid Allowable} {13, E0668 Medicare Allowable} {14, E0669 Medicaid Allowable} {15, E0669 Medicare Allowable} {16, E1399 Medicaid Allowable NU} {17, E1399 Medicare Allowable NU} {18, LoA Type} {19, new attribute} {20, Policy ID} {21, Purchase Order ID} {22, State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicaidAllowableNU#phrase.action = set the E0651 Medicaid Allowable NU of {this} to {E0651 Medicaid Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicaidAllowableNU#phrase.addition_setter = add {E0651 Medicaid Allowable NU} to the E0651 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicaidAllowableNU#phrase.navigation = {E0651 Medicaid Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicaidAllowableNU#phrase.subtraction_setter = subtract {E0651 Medicaid Allowable NU} from the E0651 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableNU#phrase.action = set the E0651 Medicare Allowable NU of {this} to {E0651 Medicare Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableNU#phrase.addition_setter = add {E0651 Medicare Allowable NU} to the E0651 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableNU#phrase.navigation = {E0651 Medicare Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableNU#phrase.subtraction_setter = subtract {E0651 Medicare Allowable NU} from the E0651 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableUE#phrase.action = set the E0651 Medicare Allowable UE of {this} to {E0651 Medicare Allowable UE}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableUE#phrase.addition_setter = add {E0651 Medicare Allowable UE} to the E0651 Medicare Allowable UE of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableUE#phrase.navigation = {E0651 Medicare Allowable UE} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0651MedicareAllowableUE#phrase.subtraction_setter = subtract {E0651 Medicare Allowable UE} from the E0651 Medicare Allowable UE of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicaidAllowableNU#phrase.action = set the E0652 Medicaid Allowable NU of {this} to {E0652 Medicaid Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicaidAllowableNU#phrase.addition_setter = add {E0652 Medicaid Allowable NU} to the E0652 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicaidAllowableNU#phrase.navigation = {E0652 Medicaid Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicaidAllowableNU#phrase.subtraction_setter = subtract {E0652 Medicaid Allowable NU} from the E0652 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableNU#phrase.action = set the E0652 Medicare Allowable NU of {this} to {E0652 Medicare Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableNU#phrase.addition_setter = add {E0652 Medicare Allowable NU} to the E0652 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableNU#phrase.navigation = {E0652 Medicare Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableNU#phrase.subtraction_setter = subtract {E0652 Medicare Allowable NU} from the E0652 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableUE#phrase.action = set the E0652 Medicare Allowable UE of {this} to {E0652 Medicare Allowable UE}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableUE#phrase.addition_setter = add {E0652 Medicare Allowable UE} to the E0652 Medicare Allowable UE of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableUE#phrase.navigation = {E0652 Medicare Allowable UE} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0652MedicareAllowableUE#phrase.subtraction_setter = subtract {E0652 Medicare Allowable UE} from the E0652 Medicare Allowable UE of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicaidAllowableNU#phrase.action = set the E0656 Medicaid Allowable NU of {this} to {E0656 Medicaid Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicaidAllowableNU#phrase.addition_setter = add {E0656 Medicaid Allowable NU} to the E0656 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicaidAllowableNU#phrase.navigation = {E0656 Medicaid Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicaidAllowableNU#phrase.subtraction_setter = subtract {E0656 Medicaid Allowable NU} from the E0656 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicareAllowableNU#phrase.action = set the E0656 Medicare Allowable NU of {this} to {E0656 Medicare Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicareAllowableNU#phrase.addition_setter = add {E0656 Medicare Allowable NU} to the E0656 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicareAllowableNU#phrase.navigation = {E0656 Medicare Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0656MedicareAllowableNU#phrase.subtraction_setter = subtract {E0656 Medicare Allowable NU} from the E0656 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicaidAllowableNU#phrase.action = set the E0657 Medicaid Allowable NU of {this} to {E0657 Medicaid Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicaidAllowableNU#phrase.addition_setter = add {E0657 Medicaid Allowable NU} to the E0657 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicaidAllowableNU#phrase.navigation = {E0657 Medicaid Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicaidAllowableNU#phrase.subtraction_setter = subtract {E0657 Medicaid Allowable NU} from the E0657 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicareAllowableNU#phrase.action = set the E0657 Medicare Allowable NU of {this} to {E0657 Medicare Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicareAllowableNU#phrase.addition_setter = add {E0657 Medicare Allowable NU} to the E0657 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicareAllowableNU#phrase.navigation = {E0657 Medicare Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0657MedicareAllowableNU#phrase.subtraction_setter = subtract {E0657 Medicare Allowable NU} from the E0657 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicaidAllowable#phrase.action = set the E0667 Medicaid Allowable of {this} to {E0667 Medicaid Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicaidAllowable#phrase.addition_setter = add {E0667 Medicaid Allowable} to the E0667 Medicaid Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicaidAllowable#phrase.navigation = {E0667 Medicaid Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicaidAllowable#phrase.subtraction_setter = subtract {E0667 Medicaid Allowable} from the E0667 Medicaid Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicareAllowable#phrase.action = set the E0667 Medicare Allowable of {this} to {E0667 Medicare Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicareAllowable#phrase.addition_setter = add {E0667 Medicare Allowable} to the E0667 Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicareAllowable#phrase.navigation = {E0667 Medicare Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0667MedicareAllowable#phrase.subtraction_setter = subtract {E0667 Medicare Allowable} from the E0667 Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicaidAllowable#phrase.action = set the E0668 Medicaid Allowable of {this} to {E0668 Medicaid Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicaidAllowable#phrase.addition_setter = add {E0668 Medicaid Allowable} to the E0668 Medicaid Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicaidAllowable#phrase.navigation = {E0668 Medicaid Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicaidAllowable#phrase.subtraction_setter = subtract {E0668 Medicaid Allowable} from the E0668 Medicaid Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicareAllowable#phrase.action = set the E0668 Medicare Allowable of {this} to {E0668 Medicare Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicareAllowable#phrase.addition_setter = add {E0668 Medicare Allowable} to the E0668 Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicareAllowable#phrase.navigation = {E0668 Medicare Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0668MedicareAllowable#phrase.subtraction_setter = subtract {E0668 Medicare Allowable} from the E0668 Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicaidAllowable#phrase.action = set the E0669 Medicaid Allowable of {this} to {E0669 Medicaid Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicaidAllowable#phrase.addition_setter = add {E0669 Medicaid Allowable} to the E0669 Medicaid Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicaidAllowable#phrase.navigation = {E0669 Medicaid Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicaidAllowable#phrase.subtraction_setter = subtract {E0669 Medicaid Allowable} from the E0669 Medicaid Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicareAllowable#phrase.action = set the E0669 Medicare Allowable of {this} to {E0669 Medicare Allowable}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicareAllowable#phrase.addition_setter = add {E0669 Medicare Allowable} to the E0669 Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicareAllowable#phrase.navigation = {E0669 Medicare Allowable} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e0669MedicareAllowable#phrase.subtraction_setter = subtract {E0669 Medicare Allowable} from the E0669 Medicare Allowable of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicaidAllowableNU#phrase.action = set the E1399 Medicaid Allowable NU of {this} to {E1399 Medicaid Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicaidAllowableNU#phrase.addition_setter = add {E1399 Medicaid Allowable NU} to the E1399 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicaidAllowableNU#phrase.navigation = {E1399 Medicaid Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicaidAllowableNU#phrase.subtraction_setter = subtract {E1399 Medicaid Allowable NU} from the E1399 Medicaid Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicareAllowableNU#phrase.action = set the E1399 Medicare Allowable NU of {this} to {E1399 Medicare Allowable NU}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicareAllowableNU#phrase.addition_setter = add {E1399 Medicare Allowable NU} to the E1399 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicareAllowableNU#phrase.navigation = {E1399 Medicare Allowable NU} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.e1399MedicareAllowableNU#phrase.subtraction_setter = subtract {E1399 Medicare Allowable NU} from the E1399 Medicare Allowable NU of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.loAType#phrase.action = set the LoA Type of {this} to {LoA Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.loAType#phrase.navigation = {LoA Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.newAttribute#phrase.action = set the new attribute of {this} to {new attribute}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.newAttribute#phrase.navigation = {new attribute} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.policyID#phrase.navigation = {Policy ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.purchaseOrderID#phrase.action = set the Purchase Order ID of {this} to {Purchase Order ID}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.purchaseOrderID#phrase.navigation = {Purchase Order ID} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.state#phrase.action = set the State of {this} to {State}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.State.state#phrase.navigation = {State} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System#concept.label = System
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System.System(java.time.LocalDate,java.time.ZonedDateTime)#phrase.navigation = a new {System} where {0, Current Date} {1, Run Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System.currentDate#phrase.action = set the Current Date of {this} to {Current Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System.currentDate#phrase.navigation = {Current Date} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System.runDate#phrase.action = set the Run Date of {this} to {Run Date}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.System.runDate#phrase.navigation = {Run Date} of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms#concept.label = Terms
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.Terms(double,double,java.lang.String,double)#phrase.navigation = a new {Terms} where {0, Months Approved} {1, Payment Months} {2, Payment Type} {3, Purchase Conversion Months}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.monthsApproved#phrase.action = set the Months Approved of {this} to {Months Approved}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.monthsApproved#phrase.addition_setter = add {Months Approved} to the Months Approved of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.monthsApproved#phrase.navigation = {Months Approved} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.monthsApproved#phrase.subtraction_setter = subtract {Months Approved} from the Months Approved of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.paymentMonths#phrase.action = set the Payment Months of {this} to {Payment Months}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.paymentMonths#phrase.addition_setter = add {Payment Months} to the Payment Months of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.paymentMonths#phrase.navigation = {Payment Months} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.paymentMonths#phrase.subtraction_setter = subtract {Payment Months} from the Payment Months of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.paymentType#phrase.action = set the Payment Type of {this} to {Payment Type}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.paymentType#phrase.navigation = {Payment Type} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.purchaseConversionMonths#phrase.action = set the Purchase Conversion Months of {this} to {Purchase Conversion Months}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.purchaseConversionMonths#phrase.addition_setter = add {Purchase Conversion Months} to the Purchase Conversion Months of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.purchaseConversionMonths#phrase.navigation = {Purchase Conversion Months} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Terms.purchaseConversionMonths#phrase.subtraction_setter = subtract {Purchase Conversion Months} from the Purchase Conversion Months of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue#concept.label = Unit Allowable Price Value
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.HCPCSCode#phrase.action = set the HCPCS Code of {this} to {HCPCS Code}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.HCPCSCode#phrase.navigation = {HCPCS Code} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.UnitAllowablePriceValue(java.lang.String,double)#phrase.navigation = a new {Unit Allowable Price Value} where {0, HCPCS Code} {1, Unit Allowable Price}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.unitAllowablePrice#phrase.action = set the Unit Allowable Price of {this} to {Unit Allowable Price}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.unitAllowablePrice#phrase.addition_setter = add {Unit Allowable Price} to the Unit Allowable Price of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.unitAllowablePrice#phrase.navigation = {Unit Allowable Price} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UnitAllowablePriceValue.unitAllowablePrice#phrase.subtraction_setter = subtract {Unit Allowable Price} from the Unit Allowable Price of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UseIPAOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UseIPAOrNot#concept.label = Use IPA or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UseIPAOrNot.notUseIPA#instance.label = Not Use IPA
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.UseIPAOrNot.useIPA#instance.label = Use IPA
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.VAOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.VAOrNot#concept.label = VA or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.VAOrNot.VA#instance.label = VA
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.VAOrNot.notVA#instance.label = Not VA
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot#concept.label = Valid or Not
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot.notValid#instance.label = Not Valid
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.ValidOrNot.valid#instance.label = Valid
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService#concept.label = Year 1 and 2 Price service
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.Year1And2PriceService(double,double)#phrase.navigation = a new {Year 1 and 2 Price service} where {0, Year 1 Price} {1, Year 2 Price}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year1Price#phrase.action = set the Year 1 Price of {this} to {Year 1 Price}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year1Price#phrase.addition_setter = add {Year 1 Price} to the Year 1 Price of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year1Price#phrase.navigation = {Year 1 Price} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year1Price#phrase.subtraction_setter = subtract {Year 1 Price} from the Year 1 Price of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year2Price#phrase.action = set the Year 2 Price of {this} to {Year 2 Price}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year2Price#phrase.addition_setter = add {Year 2 Price} to the Year 2 Price of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year2Price#phrase.navigation = {Year 2 Price} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.Year1And2PriceService.year2Price#phrase.subtraction_setter = subtract {Year 2 Price} from the Year 2 Price of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService#concept.label = Yearly Coinsurance service
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.YearlyCoinsuranceService(double,double)#phrase.navigation = a new {Yearly Coinsurance service} where {0, Year 1 Coinsurance} {1, Year 2 Coinsurance}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year1Coinsurance#phrase.action = set the Year 1 Coinsurance of {this} to {Year 1 Coinsurance}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year1Coinsurance#phrase.addition_setter = add {Year 1 Coinsurance} to the Year 1 Coinsurance of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year1Coinsurance#phrase.navigation = {Year 1 Coinsurance} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year1Coinsurance#phrase.subtraction_setter = subtract {Year 1 Coinsurance} from the Year 1 Coinsurance of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year2Coinsurance#phrase.action = set the Year 2 Coinsurance of {this} to {Year 2 Coinsurance}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year2Coinsurance#phrase.addition_setter = add {Year 2 Coinsurance} to the Year 2 Coinsurance of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year2Coinsurance#phrase.navigation = {Year 2 Coinsurance} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyCoinsuranceService.year2Coinsurance#phrase.subtraction_setter = subtract {Year 2 Coinsurance} from the Year 2 Coinsurance of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService#concept.label = Yearly Deductible service
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.YearlyDeductibleService(double,double)#phrase.navigation = a new {Yearly Deductible service} where {0, Year 1 Deductible} {1, Year 2 Deductible}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year1Deductible#phrase.action = set the Year 1 Deductible of {this} to {Year 1 Deductible}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year1Deductible#phrase.addition_setter = add {Year 1 Deductible} to the Year 1 Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year1Deductible#phrase.navigation = {Year 1 Deductible} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year1Deductible#phrase.subtraction_setter = subtract {Year 1 Deductible} from the Year 1 Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year2Deductible#phrase.action = set the Year 2 Deductible of {this} to {Year 2 Deductible}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year2Deductible#phrase.addition_setter = add {Year 2 Deductible} to the Year 2 Deductible of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year2Deductible#phrase.navigation = {Year 2 Deductible} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyDeductibleService.year2Deductible#phrase.subtraction_setter = subtract {Year 2 Deductible} from the Year 2 Deductible of {this}
+
+# vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService#concept.label = Yearly Out of Pocket Left service
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.YearlyOutOfPocketLeftService(java.util.List,double,double)#phrase.navigation = a new {Yearly Out of Pocket Left service} where {0, Durable Medical Equipment Maximum} {1, Year 1 Out of Pocket Left} {2, Year 2 Out of Pocket Left}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.addTo_durableMedicalEquipmentMaximums(double)#phrase.action = add {0} to the Durable Medical Equipment Maximums of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.clear_durableMedicalEquipmentMaximums()#phrase.action = clear the Durable Medical Equipment Maximums of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.durableMedicalEquipmentMaximums#phrase.action = set the Durable Medical Equipment Maximums of {this} to {Durable Medical Equipment Maximum}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.durableMedicalEquipmentMaximums#phrase.navigation = {Durable Medical Equipment Maximum} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.removeFrom_durableMedicalEquipmentMaximums(double)#phrase.action = remove {0} from the Durable Medical Equipment Maximums of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year1OutOfPocketLeft#phrase.action = set the Year 1 Out of Pocket Left of {this} to {Year 1 Out of Pocket Left}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year1OutOfPocketLeft#phrase.addition_setter = add {Year 1 Out of Pocket Left} to the Year 1 Out of Pocket Left of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year1OutOfPocketLeft#phrase.navigation = {Year 1 Out of Pocket Left} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year1OutOfPocketLeft#phrase.subtraction_setter = subtract {Year 1 Out of Pocket Left} from the Year 1 Out of Pocket Left of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year2OutOfPocketLeft#phrase.action = set the Year 2 Out of Pocket Left of {this} to {Year 2 Out of Pocket Left}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year2OutOfPocketLeft#phrase.addition_setter = add {Year 2 Out of Pocket Left} to the Year 2 Out of Pocket Left of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year2OutOfPocketLeft#phrase.navigation = {Year 2 Out of Pocket Left} of {this}
+vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.tactiledata.YearlyOutOfPocketLeftService.year2OutOfPocketLeft#phrase.subtraction_setter = subtract {Year 2 Out of Pocket Left} from the Year 2 Out of Pocket Left of {this}

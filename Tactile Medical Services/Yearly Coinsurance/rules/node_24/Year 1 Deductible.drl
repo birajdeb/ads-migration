@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Year 1 Deductible</name>
+  <uuid>c86fdac3-b52b-4b33-b024-05e6432a6ec1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the Year 1 Deductible of the yearly deductible computed from 
+	Payer being Payer , 
+	Order being Order , 
+	Network being Network , 
+	Policy being Policy , 
+	Terms being Terms , 
+	System being System , 
+	Patient being Patient , 
+	State being State , 
+	Policy Activity being 'Policy Activity' , 
+	HCPCS Biling being 'HCPCS Biling' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

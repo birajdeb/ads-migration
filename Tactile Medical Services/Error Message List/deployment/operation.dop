@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Error Message List">
+  <name>Error_Message_List</name>
+  <uuid>758c4824-0be6-4e16-a481-bc468696780a</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#1dccd1cd-a835-4ed0-9644-0a02a8c86150"/>
+  <targetRuleProject href="../../Error%20Message%20List#26d9426c-f42a-4916-9141-7ccfdd41c836"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

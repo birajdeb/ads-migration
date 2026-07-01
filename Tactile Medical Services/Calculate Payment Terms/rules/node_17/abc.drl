@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>abc</name>
+  <uuid>2baff538-01ec-4869-bfd6-2b269fef1c07</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the calculate allowables computed from 
+	Payer being Payer , 
+	Order being Order , 
+	Network being Network , 
+	Policy being Policy , 
+	Patient being Patient , 
+	State being State , 
+	Policy Activity being 'Policy Activity' , 
+	HCPCS Biling being 'HCPCS Biling' ;  ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

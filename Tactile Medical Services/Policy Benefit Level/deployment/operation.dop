@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Policy Benefit Level">
+  <name>Policy_Benefit_Level</name>
+  <uuid>be04b4ba-4377-4553-b8d0-421a0562f86f</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#d1c49175-3f9e-4079-ab4f-08ef2aad9802"/>
+  <targetRuleProject href="../../Policy%20Benefit%20Level#1e193dd5-1a5d-4cd8-8fbd-1ec7b2f21f07"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

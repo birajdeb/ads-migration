@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Yearly Coinsurance">
+  <name>Yearly_Coinsurance</name>
+  <uuid>049cc891-cb80-4577-98e4-30694166fd5c</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#d24b9eb7-fb00-43ae-96fa-2ad5a3f5efc0"/>
+  <targetRuleProject href="../../Yearly%20Coinsurance#2c408ef2-22de-466c-9ea4-04113b31dbf1"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

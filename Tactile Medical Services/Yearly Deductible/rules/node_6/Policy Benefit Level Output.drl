@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Policy Benefit Level Output</name>
+  <uuid>ac3116a4-b0a8-4e96-9f2c-001dd35ba60d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the policy benefit levels computed from
+		Policy Activity being 'Policy Activity' , 
+		Policy being Policy , 
+		Payer being Payer ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

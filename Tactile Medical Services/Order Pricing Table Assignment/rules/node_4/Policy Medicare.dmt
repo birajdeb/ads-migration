@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Policy Medicare</name>
+  <uuid>b4b2e65f-586b-47f4-afb4-8590da8dd7cb</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType">Web</Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean">true</Property>
+        </Properties>
+        <Preconditions>
+            <Text>definitions
+ set 'policy' to a Policy in Policy ;
+</Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean">false</Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean">false</Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text> the Policy ID of policy is &lt;a string&gt; </Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text>set decision to &lt;an Order Assignment Values&gt;</Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param>"INS00081"</Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param>Medicare</Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText">Policy ID</Data>
+            <Data Name="Definitions(A0)#HeaderText">Policy Medicare</Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

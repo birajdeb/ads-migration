@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Yearly Deductible">
+  <name>Yearly_Deductible</name>
+  <uuid>63626519-187c-4f3e-97f2-f0708ee135ef</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#7418a5bf-f8cd-4db6-9590-fe22c4a30015"/>
+  <targetRuleProject href="../../Yearly%20Deductible#55401f43-8734-44d5-a760-febeb363ee7a"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
