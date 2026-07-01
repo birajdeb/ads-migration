@@ -11,7 +11,6 @@
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="Data" packageId="birajdeb_bluepolaris.com.biraj_test.decision_tables:data" version="LATEST-SNAPSHOT"/>
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.decision_tables:level1-SimpleTable#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.decision_tables:level1-SimpleTable" version="LATEST-SNAPSHOT"/>
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.decision_tables:level2-ComplexColumns#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.decision_tables:level2-ComplexColumns" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.decision_tables:test#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.decision_tables:test" version="LATEST-SNAPSHOT"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:BMDFolder">
     <name>bmd</name>
