@@ -17,12 +17,12 @@
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Size of Shipment1 is <a Size Enums>]]></Text>
+                        <Text><![CDATA[the Size of Shipment is <a Size Enums>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
                 <ConditionDefinition Id="C1">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Weight of Shipment1 is <a number>]]></Text>
+                        <Text><![CDATA[the Weight of Shipment is <a number>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -43,7 +43,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[0]]></Param>
                                 <Param><![CDATA[1]]></Param>
                             </Expression>
@@ -64,7 +64,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[1]]></Param>
                                 <Param><![CDATA[2]]></Param>
                             </Expression>
@@ -85,7 +85,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[2]]></Param>
                                 <Param><![CDATA[3]]></Param>
                             </Expression>
@@ -106,7 +106,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[0]]></Param>
                                 <Param><![CDATA[2]]></Param>
                             </Expression>
@@ -127,7 +127,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[2]]></Param>
                                 <Param><![CDATA[4]]></Param>
                             </Expression>
@@ -148,7 +148,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[4]]></Param>
                                 <Param><![CDATA[6]]></Param>
                             </Expression>
@@ -169,7 +169,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[0]]></Param>
                                 <Param><![CDATA[4]]></Param>
                             </Expression>
@@ -190,7 +190,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[4]]></Param>
                                 <Param><![CDATA[8]]></Param>
                             </Expression>
@@ -211,7 +211,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[8]]></Param>
                                 <Param><![CDATA[12]]></Param>
                             </Expression>
@@ -232,7 +232,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[0]]></Param>
                                 <Param><![CDATA[8]]></Param>
                             </Expression>
@@ -253,7 +253,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[8]]></Param>
                                 <Param><![CDATA[16]]></Param>
                             </Expression>
@@ -274,7 +274,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
+                                <Text><![CDATA[the Weight of Shipment is at least <min> and less than <max>]]></Text>
                                 <Param><![CDATA[16]]></Param>
                                 <Param><![CDATA[24]]></Param>
                             </Expression>

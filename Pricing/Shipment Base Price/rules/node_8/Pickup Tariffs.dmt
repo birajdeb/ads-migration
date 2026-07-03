@@ -26,7 +26,7 @@
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
                     </Properties>
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Size of Shipment1 is <a Size Enums>]]></Text>
+                        <Text><![CDATA[the Size of Shipment is <a Size Enums>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>

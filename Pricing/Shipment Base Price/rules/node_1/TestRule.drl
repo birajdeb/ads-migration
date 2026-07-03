@@ -4,8 +4,8 @@
   <uuid>2bd3ae5d-177b-4588-8747-dd1867b40646</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-	the Distance In Miles of Shipment1 is at least <min> and less than <max>
-	and the Size of Shipment1 is <a Size Enums>
+	the Distance In Miles of Shipment is at least <min> and less than <max>
+	and the Size of Shipment is <a Size Enums>
 then
 	set decision to <a number> ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

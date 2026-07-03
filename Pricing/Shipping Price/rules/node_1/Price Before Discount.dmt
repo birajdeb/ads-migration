@@ -12,31 +12,31 @@
         <Preconditions>
             <Text><![CDATA[definitions 
 set 'shipmentBasePrice' to the shipment base price computed from
-		Shipment1 being Shipment , 
-		Method being Method ;]]></Text>
+		Shipment1 being 'Shipment' , 
+		Method being Method1 ;]]></Text>
         </Preconditions>
         <Structure>
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[shipmentBasePrice is <an object> ]]></Text>
+                        <Text><![CDATA['shipmentBasePrice' is <an object>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
                 <ConditionDefinition Id="C2">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Customer Status of Customer is <an object> ]]></Text>
+                        <Text><![CDATA[the Customer Status of 'Customer' is <an object>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
                 <ConditionDefinition Id="C3">
                     <ExpressionDefinition>
-                        <Text><![CDATA[the Customer Status of Customer is <a Customer Status Enums>]]></Text>
+                        <Text><![CDATA[the Customer Status of 'Customer' is <a Customer Status Enums>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a number>]]></Text>
+                        <Text><![CDATA[set 'decision' to <a number>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -157,9 +157,9 @@ set 'shipmentBasePrice' to the shipment base price computed from
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Price Before Discount]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Sipment Base Price]]></Data>
             <Data Name="Definitions(C2)#HeaderText"><![CDATA[Status]]></Data>
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Price Before Discount]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

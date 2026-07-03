@@ -11,7 +11,7 @@
         <description>What is the aggregate costs with applied price multipliers for this shipment?</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method1"/>
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer" collection="false" name="Customer"/>
                 <output bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
@@ -32,13 +32,13 @@
             <requiredKnowledge href="#node_2"/>
         </knowledgeRequirement>
     </decision>
-    <inputData id="node_3" name="Method">
+    <inputData id="node_3" name="Method1">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <output bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method1"/>
             </initialization>
         </extensionElements>
-        <variable id="node_3_ii" name="Method" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method"/>
+        <variable id="node_3_ii" name="Method1" typeRef="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method"/>
     </inputData>
     <inputData id="node_4" name="Shipment">
         <extensionElements>
