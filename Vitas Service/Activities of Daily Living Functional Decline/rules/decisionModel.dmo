@@ -315,6 +315,14 @@
             <requiredInput href="#node_9"/>
         </informationRequirement>
     </decision>
+    <decision id="node_32" name="Decision 32">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <output bomType="java.lang.String" collection="false" name="Decision 32"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_32_ii" name="Decision 32" typeRef="java.lang.String"/>
+    </decision>
     <businessKnowledgeModel id="node_30" name="Prediction 30">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
