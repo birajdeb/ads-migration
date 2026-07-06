@@ -159,13 +159,7 @@
             <requiredInput href="#node_20"/>
         </informationRequirement>
         <knowledgeRequirement>
-            <requiredKnowledge href="#node_33"/>
-        </knowledgeRequirement>
-        <knowledgeRequirement>
             <requiredKnowledge href="#node_31"/>
-        </knowledgeRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#node_30"/>
         </knowledgeRequirement>
     </decision>
     <decision id="node_22" name="Mobility ADL Level">
@@ -300,56 +294,24 @@
             <requiredInput href="#node_15"/>
         </informationRequirement>
         <informationRequirement>
-            <requiredInput href="#node_23"/>
+            <requiredInput href="#node_6"/>
         </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_12"/>
         </informationRequirement>
         <informationRequirement>
-            <requiredInput href="#node_6"/>
+            <requiredInput href="#node_23"/>
         </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_21"/>
         </informationRequirement>
         <informationRequirement>
-            <requiredInput href="#node_20"/>
-        </informationRequirement>
-        <informationRequirement>
             <requiredInput href="#node_9"/>
         </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_20"/>
+        </informationRequirement>
     </decision>
-    <decision id="node_32" name="Decision 32">
-        <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <output bomType="java.lang.String" collection="false" name="Decision 32"/>
-            </ruleset>
-        </extensionElements>
-        <variable id="node_32_ii" name="Decision 32" typeRef="java.lang.String"/>
-    </decision>
-    <businessKnowledgeModel id="node_30" name="Prediction 30">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Prediction 30" typeRef="java.lang.String"/>
-        <encapsulatedLogic typeRef="java.lang.String">
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
     <businessKnowledgeModel id="node_31" name="Generative AI 31">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
@@ -357,30 +319,6 @@
             </properties>
         </extensionElements>
         <variable name="Generative AI 31" typeRef="java.lang.String"/>
-        <encapsulatedLogic typeRef="java.lang.String">
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
-    <businessKnowledgeModel id="node_33" name="Function 33">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Function 33" typeRef="java.lang.String"/>
         <encapsulatedLogic typeRef="java.lang.String">
             <context>
                 <contextEntry>
