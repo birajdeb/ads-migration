@@ -30,6 +30,9 @@
         <knowledgeRequirement>
             <requiredKnowledge href="#node_2"/>
         </knowledgeRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_3"/>
+        </knowledgeRequirement>
     </decision>
     <businessKnowledgeModel id="node_2" name="Shipping Price">
         <extensionElements>
@@ -53,6 +56,30 @@
                     <variable name="method signature"/>
                     <literalExpression>
                         <text>"run(aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method,aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment,aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_3" name="Function 3">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Function 3" typeRef="java.lang.String"/>
+        <encapsulatedLogic typeRef="java.lang.String">
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>""</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>""</text>
                     </literalExpression>
                 </contextEntry>
             </context>
