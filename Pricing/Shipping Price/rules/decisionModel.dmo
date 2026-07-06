@@ -14,11 +14,11 @@
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method1"/>
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Shipment" collection="false" name="Shipment"/>
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Customer" collection="false" name="Customer"/>
-                <output bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
+                <output bomType="java.lang.String" collection="false" name="Price Before Discount"/>
                 <rule defaultRule="false" href="node_1/Price%20Before%20Discount.dmt" kind="DecisionTable" name="Price Before Discount"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Price Before Discount" typeRef="java.lang.Double"/>
+        <variable id="node_1_ii" name="Price Before Discount" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_3"/>
         </informationRequirement>
@@ -74,7 +74,7 @@
         <description>What is the total shipping price for this shipment?</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.Double" collection="false" name="Price Before Discount"/>
+                <input bomType="java.lang.String" collection="false" name="Price Before Discount"/>
                 <input bomType="java.lang.Double" collection="false" name="Customer Discount"/>
                 <output bomType="java.lang.Double" collection="false" name="Shipping Price"/>
                 <rule defaultRule="false" href="node_7/Shipping%20Price.drl" kind="BusinessRule" name="Shipping Price"/>

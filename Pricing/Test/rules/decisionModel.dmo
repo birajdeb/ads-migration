@@ -19,17 +19,30 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="aubaidgull_bluepolaris.com.blue_polaris_ibm_ads_demos.pricing.pricingdatastructure.Method" collection="false" name="Method"/>
+                <input bomType="java.lang.String" collection="false" name="Input 3"/>
                 <output bomType="java.lang.String" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/aaa.dmt" kind="DecisionTable" name="aaa"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Decision" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
         <knowledgeRequirement>
             <requiredKnowledge href="#node_2"/>
         </knowledgeRequirement>
     </decision>
+    <inputData id="node_3" name="Input 3">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input 3"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Input 3" typeRef="java.lang.String"/>
+    </inputData>
     <businessKnowledgeModel id="node_2" name="Shipping Price">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">

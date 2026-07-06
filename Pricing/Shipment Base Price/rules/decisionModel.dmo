@@ -53,7 +53,7 @@
                 <input bomType="java.lang.Double" collection="false" name="Ground Base Price"/>
                 <output bomType="java.lang.Double" collection="false" name="Ground Costs"/>
                 <rule defaultRule="false" href="node_3/Ground%20Costs.drl" kind="BusinessRule" name="Ground Costs"/>
-                <rule defaultRule="false" href="node_3/aaa.dmt" kind="DecisionTable" name="aaa"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
         <variable id="node_3_ii" name="Ground Costs" typeRef="java.lang.Double"/>
