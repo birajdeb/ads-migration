@@ -13,8 +13,8 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C1">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA['Mobility ADL Change' is <an ADL Change>]]></Text>
@@ -22,8 +22,8 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C3">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA['Transfers ADL Change' is <an ADL Change>]]></Text>
@@ -31,8 +31,8 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C5">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA['Bathing ADL Change' is <an ADL Change>]]></Text>
@@ -40,8 +40,8 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C4">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA['Dressing ADL Change' is <an ADL Change> ]]></Text>
@@ -49,8 +49,8 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C6">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA['Toileting ADL Change' is <an ADL Change> ]]></Text>
@@ -58,8 +58,8 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C7">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA['Feeding ADL Change' is <an ADL Change> ]]></Text>
@@ -144,7 +144,9 @@
                     </Partition>
                 </Condition>
                 <Condition>
-                    <Expression/>
+                    <Expression>
+                        <Param><![CDATA[Improvement]]></Param>
+                    </Expression>
                     <Partition DefId="C6">
                         <Condition>
                             <Expression>
