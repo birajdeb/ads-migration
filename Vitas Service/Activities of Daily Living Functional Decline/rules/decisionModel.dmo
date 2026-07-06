@@ -159,6 +159,9 @@
             <requiredInput href="#node_20"/>
         </informationRequirement>
         <knowledgeRequirement>
+            <requiredKnowledge href="#node_33"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement>
             <requiredKnowledge href="#node_31"/>
         </knowledgeRequirement>
         <knowledgeRequirement>
@@ -354,6 +357,30 @@
             </properties>
         </extensionElements>
         <variable name="Generative AI 31" typeRef="java.lang.String"/>
+        <encapsulatedLogic typeRef="java.lang.String">
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>""</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>""</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_33" name="Function 33">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Function 33" typeRef="java.lang.String"/>
         <encapsulatedLogic typeRef="java.lang.String">
             <context>
                 <contextEntry>
