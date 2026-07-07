@@ -37,7 +37,7 @@ if 'collected list' are defined
             <Partition DefId="C1">
                 <Condition>
                     <Expression>
-                        <Param><![CDATA[6]]></Param>
+                        <Param><![CDATA[8]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">

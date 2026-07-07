@@ -158,15 +158,6 @@
         <informationRequirement>
             <requiredInput href="#node_20"/>
         </informationRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#node_33"/>
-        </knowledgeRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#node_32"/>
-        </knowledgeRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#node_31"/>
-        </knowledgeRequirement>
     </decision>
     <decision id="node_22" name="Mobility ADL Level">
         <description>What is the activities of daily living level for relevant current and previous mobility data for this patient?</description>
@@ -326,78 +317,6 @@
         </extensionElements>
         <variable id="node_34_ii" name="Decision 34" typeRef="java.lang.String"/>
     </decision>
-    <businessKnowledgeModel id="node_31" name="Generative AI 31">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.bkKind"><![CDATA[generativeAI]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Generative AI 31" typeRef="java.lang.String"/>
-        <encapsulatedLogic typeRef="java.lang.String">
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
-    <businessKnowledgeModel id="node_32" name="Prediction 32">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Prediction 32" typeRef="java.lang.String"/>
-        <encapsulatedLogic typeRef="java.lang.String">
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
-    <businessKnowledgeModel id="node_33" name="Function 33">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Function 33" typeRef="java.lang.String"/>
-        <encapsulatedLogic typeRef="java.lang.String">
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>""</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
 </definitions>
 </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
