@@ -65,7 +65,7 @@ if 'collected list' are defined
                     <Expression>
                         <Text><![CDATA[<a number> is between <min> and <max>]]></Text>
                         <Param><![CDATA[1]]></Param>
-                        <Param><![CDATA[4]]></Param>
+                        <Param><![CDATA[5]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
