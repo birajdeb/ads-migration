@@ -3,5 +3,5 @@
   <name>output-default-setting</name>
   <uuid>341b2830-9128-4ee7-b478-13be90387f32</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to Not Heart Failure ;]]></definition>
+  <definition><![CDATA[set decision to Not Heart Failure;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
