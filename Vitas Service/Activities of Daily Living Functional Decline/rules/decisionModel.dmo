@@ -318,6 +318,14 @@
             <requiredInput href="#node_20"/>
         </informationRequirement>
     </decision>
+    <decision id="node_34" name="Decision 34">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <output bomType="java.lang.String" collection="false" name="Decision 34"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_34_ii" name="Decision 34" typeRef="java.lang.String"/>
+    </decision>
     <businessKnowledgeModel id="node_31" name="Generative AI 31">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
