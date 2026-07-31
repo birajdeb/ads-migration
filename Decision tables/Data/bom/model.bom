@@ -8,7 +8,9 @@ class Customer
         #de.generated
 {
     boolean attribute
-                property ads.attributeId "4";
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "attribute"
+                #update;
     string name
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "name"
@@ -21,13 +23,43 @@ class Customer
                 property ads.attributeId "3"
                 property com.fasterxml.jackson.annotation.JsonProperty "test"
                 #update;
-    Customer(string name, com.ibm.ads.samples.training.decision_tables.data.Status status, java.time.DayOfWeek test)
+    Customer(boolean attribute, string name, com.ibm.ads.samples.training.decision_tables.data.Status status, java.time.DayOfWeek test)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
                 #prototype;
     Customer()
                 #dataio.default;
+}
+
+class Entity
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
+        #de.generated
+{
+    java.util.List attributes domain 0,* class java.time.LocalDate
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "attributes"
+                #update;
+    Entity(java.util.List attributes domain 0,* class java.time.LocalDate)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Entity()
+                #dataio.default;
+    void addTo_attributes(java.time.LocalDate attributes)
+                property collectionAttribute "attributes"
+                #update;
+    void clear_attributes()
+                property collectionAttribute "attributes"
+                #update;
+    void removeFrom_attributes(java.time.LocalDate attributes)
+                property collectionAttribute "attributes"
+                #update;
+    void set_attributes(java.util.Collection attributes domain 0,* class java.time.LocalDate)
+                property collectionAttribute "attributes"
+                #update;
 }
 
 class Result
@@ -86,13 +118,5 @@ class TestEnum
     static final readonly com.ibm.ads.samples.training.decision_tables.data.TestEnum newEnumValue1
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
-}
-
-class Entity
-        property ads.typeId "5"
-        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
-{
-    boolean attribute
-                property ads.attributeId "1";
 }
 

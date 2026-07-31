@@ -33,11 +33,6 @@
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
-                <ActionDefinition Id="A3">
-                    <ExpressionDefinition>
-                        <Text/>
-                    </ExpressionDefinition>
-                </ActionDefinition>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
                         <Text><![CDATA[set 'decision' to a new result where
@@ -70,9 +65,6 @@
                                         <Param><![CDATA["rejected"]]></Param>
                                     </Expression>
                                     <ActionSet>
-                                        <Action DefId="A3">
-                                            <Expression/>
-                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[10]]></Param>
@@ -97,9 +89,6 @@
                                         <Param><![CDATA["not approved"]]></Param>
                                     </Expression>
                                     <ActionSet>
-                                        <Action DefId="A3">
-                                            <Expression/>
-                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[20]]></Param>
@@ -124,9 +113,6 @@
                                         <Param><![CDATA["not been approved"]]></Param>
                                     </Expression>
                                     <ActionSet>
-                                        <Action DefId="A3">
-                                            <Expression/>
-                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[30]]></Param>
@@ -158,9 +144,6 @@
                                         <Param><![CDATA["has been approved"]]></Param>
                                     </Expression>
                                     <ActionSet>
-                                        <Action DefId="A3">
-                                            <Expression/>
-                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[15]]></Param>
@@ -185,9 +168,6 @@
                                         <Param><![CDATA["is approved"]]></Param>
                                     </Expression>
                                     <ActionSet>
-                                        <Action DefId="A3">
-                                            <Expression/>
-                                        </Action>
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[30]]></Param>
@@ -207,9 +187,6 @@
                                 <Param><![CDATA[5000]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A3">
-                                    <Expression/>
-                                </Action>
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[45]]></Param>
@@ -234,9 +211,6 @@
                                 <Param><![CDATA[1000]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A3">
-                                    <Expression/>
-                                </Action>
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param/>
@@ -254,9 +228,6 @@
                                 <Param><![CDATA[5000]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A3">
-                                    <Expression/>
-                                </Action>
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[40]]></Param>
@@ -274,9 +245,6 @@
                                 <Param><![CDATA[10000]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A3">
-                                    <Expression/>
-                                </Action>
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[60]]></Param>
@@ -294,9 +262,6 @@
                                 <Param><![CDATA[10000]]></Param>
                             </Expression>
                             <ActionSet>
-                                <Action DefId="A3">
-                                    <Expression/>
-                                </Action>
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[100]]></Param>

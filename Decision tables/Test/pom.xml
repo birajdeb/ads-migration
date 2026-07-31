@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-    <artifactId>AAA</artifactId>
+    <artifactId>test</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
     <build>
@@ -26,10 +26,10 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>AAA</name>
+                            <name>Test</name>
                         </deployment>
                     </deployments>
-                <packageName>birajdeb_bluepolaris.com.biraj_test.decision_tables.aaa</packageName>
+                <packageName>birajdeb_bluepolaris.com.biraj_test.decision_tables.test</packageName>
                 </configuration>
             </plugin>
         </plugins>
@@ -39,21 +39,6 @@
         <dependency>
             <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
             <artifactId>data</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-            <artifactId>level1-SimpleTable</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-            <artifactId>level2-ComplexColumns</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-            <artifactId>test</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>

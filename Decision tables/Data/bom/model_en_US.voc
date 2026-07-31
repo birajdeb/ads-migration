@@ -2,7 +2,14 @@
 # com.ibm.ads.samples.training.decision_tables.data.Customer
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.documentation = 
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.label = customer
-com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer} where {0, name} {1, status} {2, test}
+com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(boolean,java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer} where {0, attribute} {1, name} {2, status} {3, test}
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.action[0] = {this} gets attribute only if {attribute}
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.action[1] = make it {attribute} that {this} is attribute
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.action[1].deprecated = true
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.navigation = {this} is attribute
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.negative_predicate = {this} is not attribute
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.negative_predicate_setter = {this} does not get attribute
+com.ibm.ads.samples.training.decision_tables.data.Customer.attribute#phrase.positive_predicate_setter = {this} gets attribute
 com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.action = set the name of {this} to {name}
 com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.navigation = {name} of {this}
 com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.action = set the status of {this} to {status}
@@ -10,6 +17,15 @@ com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.clearer
 com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.navigation = {status} of {this}
 com.ibm.ads.samples.training.decision_tables.data.Customer.test#phrase.action = set the test of {this} to {test}
 com.ibm.ads.samples.training.decision_tables.data.Customer.test#phrase.navigation = {test} of {this}
+
+# com.ibm.ads.samples.training.decision_tables.data.Entity
+com.ibm.ads.samples.training.decision_tables.data.Entity#concept.label = Entity
+com.ibm.ads.samples.training.decision_tables.data.Entity.Entity(java.util.List)#phrase.navigation = a new {Entity} where {0, attribute}
+com.ibm.ads.samples.training.decision_tables.data.Entity.addTo_attributes(java.time.LocalDate)#phrase.action = add {0} to the attributes of {this}
+com.ibm.ads.samples.training.decision_tables.data.Entity.attributes#phrase.action = set the attributes of {this} to {attribute}
+com.ibm.ads.samples.training.decision_tables.data.Entity.attributes#phrase.navigation = {attribute} of {this}
+com.ibm.ads.samples.training.decision_tables.data.Entity.clear_attributes()#phrase.action = clear the attributes of {this}
+com.ibm.ads.samples.training.decision_tables.data.Entity.removeFrom_attributes(java.time.LocalDate)#phrase.action = remove {0} from the attributes of {this}
 
 # com.ibm.ads.samples.training.decision_tables.data.Result
 com.ibm.ads.samples.training.decision_tables.data.Result#concept.label = result
@@ -34,10 +50,3 @@ com.ibm.ads.samples.training.decision_tables.data.Status.test#instance.label = T
 com.ibm.ads.samples.training.decision_tables.data.TestEnum#concept.label = testEnum
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue#instance.label = new enum value
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue1#instance.label = new enum value 1
-
-# birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity
-birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity#concept.label = Entity
-birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.Entity(List<date>)#phrase.navigation = a new {Entity} where {0, Attribute}
-birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.attribute#phrase.action = set the Attribute of {this} to {Attribute}
-birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.attribute#phrase.clearer = clear the Attribute of {this}
-birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.attribute#phrase.navigation = {Attribute} of {this}

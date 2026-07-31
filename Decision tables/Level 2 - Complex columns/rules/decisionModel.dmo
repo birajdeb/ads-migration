@@ -30,6 +30,14 @@
             <requiredInput href="#node_0"/>
         </informationRequirement>
     </decision>
+    <inputData id="node_2" name="Input 2">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input 2"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Input 2" typeRef="java.lang.String"/>
+    </inputData>
 </definitions>
 </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
