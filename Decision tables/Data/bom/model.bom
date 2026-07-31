@@ -2,34 +2,22 @@
 package com.ibm.ads.samples.training.decision_tables.data;
 
 
-class ABCD
+class ABCDTestAa
         property ads.typeId "5"
-        property com.fasterxml.jackson.annotation.JsonTypeName "ABCD"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ABCDTestAa"
         #de.generated
 {
-    java.util.List attributes domain 0,* class java.time.LocalDate
+    java.time.LocalDate attributes
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "attributes"
                 #update;
-    ABCD(java.util.List attributes domain 0,* class java.time.LocalDate)
+    ABCDTestAa(java.time.LocalDate attributes)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
                 #prototype;
-    ABCD()
+    ABCDTestAa()
                 #dataio.default;
-    void addTo_attributes(java.time.LocalDate attributes)
-                property collectionAttribute "attributes"
-                #update;
-    void clear_attributes()
-                property collectionAttribute "attributes"
-                #update;
-    void removeFrom_attributes(java.time.LocalDate attributes)
-                property collectionAttribute "attributes"
-                #update;
-    void set_attributes(java.util.Collection attributes domain 0,* class java.time.LocalDate)
-                property collectionAttribute "attributes"
-                #update;
 }
 
 class Customer

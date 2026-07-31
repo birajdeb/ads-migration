@@ -1,24 +1,21 @@
 
-# com.ibm.ads.samples.training.decision_tables.data.ABCD
-com.ibm.ads.samples.training.decision_tables.data.ABCD#concept.label = ABCD
-com.ibm.ads.samples.training.decision_tables.data.ABCD.ABCD(java.util.List)#phrase.navigation = a new {ABCD} where {0, attribute}
-com.ibm.ads.samples.training.decision_tables.data.ABCD.addTo_attributes(java.time.LocalDate)#phrase.action = add {0} to the attributes of {this}
-com.ibm.ads.samples.training.decision_tables.data.ABCD.attributes#phrase.action = set the attributes of {this} to {attribute}
-com.ibm.ads.samples.training.decision_tables.data.ABCD.attributes#phrase.navigation = {attribute} of {this}
-com.ibm.ads.samples.training.decision_tables.data.ABCD.clear_attributes()#phrase.action = clear the attributes of {this}
-com.ibm.ads.samples.training.decision_tables.data.ABCD.removeFrom_attributes(java.time.LocalDate)#phrase.action = remove {0} from the attributes of {this}
+# com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa#concept.label = ABCD Test aa
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.ABCDTestAa(java.time.LocalDate)#phrase.navigation = a new {ABCD Test aa} where {0, attribute}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.attributes#phrase.action = set the attribute of {this} to {attribute}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.attributes#phrase.navigation = {attribute} of {this}
 
 # com.ibm.ads.samples.training.decision_tables.data.Customer
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.documentation = 
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.label = customer
-com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(boolean,java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer} where {0, attributeTest} {1, name} {2, status} {3, test}
-com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.action[0] = {this} gets attributeTest only if {attributeTest}
-com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.action[1] = make it {attributeTest} that {this} is attributeTest
+com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(boolean,java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer} where {0, attribute Test} {1, name} {2, status} {3, test}
+com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.action[0] = {this} gets attribute Test only if {attribute Test}
+com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.action[1] = make it {attribute Test} that {this} is attribute Test
 com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.action[1].deprecated = true
-com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.navigation = {this} is attributeTest
-com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.negative_predicate = {this} is not attributeTest
-com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.negative_predicate_setter = {this} does not get attributeTest
-com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.positive_predicate_setter = {this} gets attributeTest
+com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.navigation = {this} is attribute Test
+com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.negative_predicate = {this} is not attribute Test
+com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.negative_predicate_setter = {this} does not get attribute Test
+com.ibm.ads.samples.training.decision_tables.data.Customer.attributeTest#phrase.positive_predicate_setter = {this} gets attribute Test
 com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.action = set the name of {this} to {name}
 com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.navigation = {name} of {this}
 com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.action = set the status of {this} to {status}
