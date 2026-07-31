@@ -2,51 +2,21 @@
 package com.ibm.ads.samples.training.decision_tables.data;
 
 
-class Customer
-        property ads.typeId "1"
-        property com.fasterxml.jackson.annotation.JsonTypeName "customer"
-        #de.generated
-{
-    boolean attribute
-                property ads.attributeId "4"
-                property com.fasterxml.jackson.annotation.JsonProperty "attribute"
-                #update;
-    string name
-                property ads.attributeId "1"
-                property com.fasterxml.jackson.annotation.JsonProperty "name"
-                #update;
-    com.ibm.ads.samples.training.decision_tables.data.Status status
-                property ads.attributeId "2"
-                property com.fasterxml.jackson.annotation.JsonProperty "status"
-                #update;
-    java.time.DayOfWeek test
-                property ads.attributeId "3"
-                property com.fasterxml.jackson.annotation.JsonProperty "test"
-                #update;
-    Customer(boolean attribute, string name, com.ibm.ads.samples.training.decision_tables.data.Status status, java.time.DayOfWeek test)
-                #autoExpand
-                #beanConstructor
-                property groups "BALA"
-                #prototype;
-    Customer()
-                #dataio.default;
-}
-
-class Entity
+class ABCD
         property ads.typeId "5"
-        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ABCD"
         #de.generated
 {
     java.util.List attributes domain 0,* class java.time.LocalDate
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "attributes"
                 #update;
-    Entity(java.util.List attributes domain 0,* class java.time.LocalDate)
+    ABCD(java.util.List attributes domain 0,* class java.time.LocalDate)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
                 #prototype;
-    Entity()
+    ABCD()
                 #dataio.default;
     void addTo_attributes(java.time.LocalDate attributes)
                 property collectionAttribute "attributes"
@@ -60,6 +30,36 @@ class Entity
     void set_attributes(java.util.Collection attributes domain 0,* class java.time.LocalDate)
                 property collectionAttribute "attributes"
                 #update;
+}
+
+class Customer
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "customer"
+        #de.generated
+{
+    boolean attributeTest
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "attributeTest"
+                #update;
+    string name
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "name"
+                #update;
+    com.ibm.ads.samples.training.decision_tables.data.Status status
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "status"
+                #update;
+    java.time.DayOfWeek test
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "test"
+                #update;
+    Customer(boolean attributeTest, string name, com.ibm.ads.samples.training.decision_tables.data.Status status, java.time.DayOfWeek test)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Customer()
+                #dataio.default;
 }
 
 class Result
