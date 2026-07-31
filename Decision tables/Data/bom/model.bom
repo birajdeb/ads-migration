@@ -19,6 +19,10 @@ class ABCDTestAa
                 property ads.attributeId "3"
                 property com.fasterxml.jackson.annotation.JsonProperty "newAttribute1"
                 #update;
+    java.util.List newAttribute10s domain 0,* class com.ibm.ads.samples.training.decision_tables.data.Status
+                property ads.attributeId "12"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute10s"
+                #update;
     com.ibm.ads.samples.training.decision_tables.data.Status newAttribute2
                 property ads.attributeId "4"
                 property com.fasterxml.jackson.annotation.JsonProperty "newAttribute2"
@@ -47,13 +51,14 @@ class ABCDTestAa
                 property ads.attributeId "10"
                 property com.fasterxml.jackson.annotation.JsonProperty "newAttribute8"
                 #update;
-    short newAttribute9
+    java.util.List newAttribute9s domain 0,* class short
                 property ads.attributeId "11"
-                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute9"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute9s"
                 #update;
     ABCDTestAa(java.time.LocalDate attributes, 
         java.time.Year newAttribute, 
         com.ibm.ads.samples.training.decision_tables.data.Customer newAttribute1, 
+        java.util.List newAttribute10s domain 0,* class com.ibm.ads.samples.training.decision_tables.data.Status, 
         com.ibm.ads.samples.training.decision_tables.data.Status newAttribute2, 
         double newAttribute3, 
         java.time.Month newAttribute4, 
@@ -61,13 +66,37 @@ class ABCDTestAa
         java.time.DayOfWeek newAttribute6, 
         java.time.ZonedDateTime newAttribute7, 
         com.ibm.ia.time.CalendarDuration newAttribute8, 
-        short newAttribute9)
+        java.util.List newAttribute9s domain 0,* class short)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
                 #prototype;
     ABCDTestAa()
                 #dataio.default;
+    void addTo_newAttribute10s(com.ibm.ads.samples.training.decision_tables.data.Status newAttribute10s)
+                property collectionAttribute "newAttribute10s"
+                #update;
+    void addTo_newAttribute9s(short newAttribute9s)
+                property collectionAttribute "newAttribute9s"
+                #update;
+    void clear_newAttribute10s()
+                property collectionAttribute "newAttribute10s"
+                #update;
+    void clear_newAttribute9s()
+                property collectionAttribute "newAttribute9s"
+                #update;
+    void removeFrom_newAttribute10s(com.ibm.ads.samples.training.decision_tables.data.Status newAttribute10s)
+                property collectionAttribute "newAttribute10s"
+                #update;
+    void removeFrom_newAttribute9s(short newAttribute9s)
+                property collectionAttribute "newAttribute9s"
+                #update;
+    void set_newAttribute10s(java.util.Collection newAttribute10s domain 0,* class com.ibm.ads.samples.training.decision_tables.data.Status)
+                property collectionAttribute "newAttribute10s"
+                #update;
+    void set_newAttribute9s(java.util.Collection newAttribute9s domain 0,* class short)
+                property collectionAttribute "newAttribute9s"
+                #update;
 }
 
 class Customer
