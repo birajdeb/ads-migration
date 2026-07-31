@@ -1,9 +1,37 @@
 
 # com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa
 com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa#concept.label = ABCD Test aa
-com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.ABCDTestAa(java.time.LocalDate)#phrase.navigation = a new {ABCD Test aa} where {0, attribute}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.ABCDTestAa(java.time.LocalDate,java.time.Year,com.ibm.ads.samples.training.decision_tables.data.Customer,com.ibm.ads.samples.training.decision_tables.data.Status,double,java.time.Month,long,java.time.DayOfWeek,java.time.ZonedDateTime,com.ibm.ia.time.CalendarDuration,short)#phrase.navigation = a new {ABCD Test aa} where {0, attribute} {1, new attribute} {2, new attribute 1} {3, new attribute 2} {4, new attribute 3} {5, new attribute 4} {6, new attribute 5} {7, new attribute 6} {8, new attribute 7} {9, new attribute 8} {10, new attribute 9}
 com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.attributes#phrase.action = set the attribute of {this} to {attribute}
 com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.attributes#phrase.navigation = {attribute} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute#phrase.action = set the new attribute of {this} to {new attribute}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute#phrase.navigation = {new attribute} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute1#phrase.action = set the new attribute 1 of {this} to {new attribute 1}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute1#phrase.clearer = clear the new attribute 1 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute1#phrase.navigation = {new attribute 1} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute2#phrase.action = set the new attribute 2 of {this} to {new attribute 2}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute2#phrase.clearer = clear the new attribute 2 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute2#phrase.navigation = {new attribute 2} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute3#phrase.action = set the new attribute 3 of {this} to {new attribute 3}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute3#phrase.addition_setter = add {new attribute 3} to the new attribute 3 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute3#phrase.navigation = {new attribute 3} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute3#phrase.subtraction_setter = subtract {new attribute 3} from the new attribute 3 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute4#phrase.action = set the new attribute 4 of {this} to {new attribute 4}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute4#phrase.navigation = {new attribute 4} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute5#phrase.action = set the new attribute 5 of {this} to {new attribute 5}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute5#phrase.addition_setter = add {new attribute 5} to the new attribute 5 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute5#phrase.navigation = {new attribute 5} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute5#phrase.subtraction_setter = subtract {new attribute 5} from the new attribute 5 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute6#phrase.action = set the new attribute 6 of {this} to {new attribute 6}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute6#phrase.navigation = {new attribute 6} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute7#phrase.action = set the new attribute 7 of {this} to {new attribute 7}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute7#phrase.navigation = {new attribute 7} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute8#phrase.action = set the new attribute 8 of {this} to {new attribute 8}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute8#phrase.navigation = {new attribute 8} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute9#phrase.action = set the new attribute 9 of {this} to {new attribute 9}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute9#phrase.addition_setter = add {new attribute 9} to the new attribute 9 of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute9#phrase.navigation = {new attribute 9} of {this}
+com.ibm.ads.samples.training.decision_tables.data.ABCDTestAa.newAttribute9#phrase.subtraction_setter = subtract {new attribute 9} from the new attribute 9 of {this}
 
 # com.ibm.ads.samples.training.decision_tables.data.Customer
 com.ibm.ads.samples.training.decision_tables.data.Customer#concept.documentation = 

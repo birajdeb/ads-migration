@@ -11,7 +11,57 @@ class ABCDTestAa
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "attributes"
                 #update;
-    ABCDTestAa(java.time.LocalDate attributes)
+    java.time.Year newAttribute
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute"
+                #update;
+    com.ibm.ads.samples.training.decision_tables.data.Customer newAttribute1
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute1"
+                #update;
+    com.ibm.ads.samples.training.decision_tables.data.Status newAttribute2
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute2"
+                #update;
+    double newAttribute3
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute3"
+                #update;
+    java.time.Month newAttribute4
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute4"
+                #update;
+    long newAttribute5
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute5"
+                #update;
+    java.time.DayOfWeek newAttribute6
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute6"
+                #update;
+    java.time.ZonedDateTime newAttribute7
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute7"
+                #update;
+    com.ibm.ia.time.CalendarDuration newAttribute8
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute8"
+                #update;
+    short newAttribute9
+                property ads.attributeId "11"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute9"
+                #update;
+    ABCDTestAa(java.time.LocalDate attributes, 
+        java.time.Year newAttribute, 
+        com.ibm.ads.samples.training.decision_tables.data.Customer newAttribute1, 
+        com.ibm.ads.samples.training.decision_tables.data.Status newAttribute2, 
+        double newAttribute3, 
+        java.time.Month newAttribute4, 
+        long newAttribute5, 
+        java.time.DayOfWeek newAttribute6, 
+        java.time.ZonedDateTime newAttribute7, 
+        com.ibm.ia.time.CalendarDuration newAttribute8, 
+        short newAttribute9)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
