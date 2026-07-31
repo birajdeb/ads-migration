@@ -7,6 +7,8 @@ class Customer
         property com.fasterxml.jackson.annotation.JsonTypeName "customer"
         #de.generated
 {
+    boolean attribute
+                property ads.attributeId "4";
     string name
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "name"
@@ -84,5 +86,13 @@ class TestEnum
     static final readonly com.ibm.ads.samples.training.decision_tables.data.TestEnum newEnumValue1
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
+}
+
+class Entity
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
+{
+    java.util.List<java.util.Date> attribute
+                property ads.attributeId "1";
 }
 
