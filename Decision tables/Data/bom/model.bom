@@ -92,7 +92,7 @@ class Entity
         property ads.typeId "5"
         property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
 {
-    java.util.List<java.util.Date> attribute
+    boolean attribute
                 property ads.attributeId "1";
 }
 
