@@ -69,6 +69,19 @@
                 </Condition>
                 <Condition>
                     <Expression>
+                        <Param><![CDATA[1]]></Param>
+                        <Param><![CDATA[2]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["B"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
                         <Param><![CDATA[75]]></Param>
                         <Param><![CDATA[100]]></Param>
                     </Expression>
@@ -85,9 +98,9 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Achievement]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
             <Data Name="Definitions(C0)#Width"><![CDATA[196]]></Data>
         </ResourceSet>
     </Resources>
