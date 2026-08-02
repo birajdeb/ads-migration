@@ -164,15 +164,19 @@ class Result
         property com.fasterxml.jackson.annotation.JsonTypeName "result"
         #de.generated
 {
+    java.time.LocalDate attribute
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "attribute"
+                #update;
     double discount
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "discount"
                 #update;
-    double loyaltyPoints
+    double loyaltyPoint
                 property ads.attributeId "1"
-                property com.fasterxml.jackson.annotation.JsonProperty "loyaltyPoints"
+                property com.fasterxml.jackson.annotation.JsonProperty "loyaltyPoint"
                 #update;
-    Result(double discount, double loyaltyPoints)
+    Result(java.time.LocalDate attribute, double discount, double loyaltyPoint)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
@@ -215,5 +219,35 @@ class TestEnum
     static final readonly com.ibm.ads.samples.training.decision_tables.data.TestEnum newEnumValue1
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
+}
+
+class Entity
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
+        #de.generated
+{
+    java.util.List attribute domain 0,* class double
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "attribute"
+                #update;
+    Entity(java.util.List attribute domain 0,* class double)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Entity()
+                #dataio.default;
+    void addTo_attribute(double attribute)
+                property collectionAttribute "attribute"
+                #update;
+    void clear_attribute()
+                property collectionAttribute "attribute"
+                #update;
+    void removeFrom_attribute(double attribute)
+                property collectionAttribute "attribute"
+                #update;
+    void set_attribute(java.util.Collection attribute domain 0,* class double)
+                property collectionAttribute "attribute"
+                #update;
 }
 

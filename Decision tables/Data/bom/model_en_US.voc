@@ -104,3 +104,12 @@ com.ibm.ads.samples.training.decision_tables.data.Status.test#instance.label = T
 com.ibm.ads.samples.training.decision_tables.data.TestEnum#concept.label = testEnum
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue#instance.label = new enum value
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue1#instance.label = new enum value 1
+
+# birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity#concept.label = Entity
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.Entity(java.util.List)#phrase.navigation = a new {Entity} where {0, Attribute}
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.attribute#phrase.action = set the Attribute of {this} to {Attribute}
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.attribute#phrase.navigation = {Attribute} of {this}
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.addTo_attribute(double)#phrase.action = add {0} to the Attribute of {this}
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.clear_attribute()#phrase.action = clear the Attribute of {this}
+birajdeb_bluepolaris.com.biraj_test.decision_tables.bom.Entity.removeFrom_attribute(double)#phrase.action = remove {0} from the Attribute of {this}
