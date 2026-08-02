@@ -1,27 +1,31 @@
 
-# com.ibm.ads.samples.training.decision_tables.data.Customer
-com.ibm.ads.samples.training.decision_tables.data.Customer#concept.documentation = 
-com.ibm.ads.samples.training.decision_tables.data.Customer#concept.label = customer
-com.ibm.ads.samples.training.decision_tables.data.Customer.Customer(java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer} where {0, name} {1, status} {2, test}
-com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.action = set the name of {this} to {name}
-com.ibm.ads.samples.training.decision_tables.data.Customer.name#phrase.navigation = {name} of {this}
-com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.action = set the status of {this} to {status}
-com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.clearer = clear the status of {this}
-com.ibm.ads.samples.training.decision_tables.data.Customer.status#phrase.navigation = {status} of {this}
-com.ibm.ads.samples.training.decision_tables.data.Customer.test#phrase.action = set the test of {this} to {test}
-com.ibm.ads.samples.training.decision_tables.data.Customer.test#phrase.navigation = {test} of {this}
+# com.ibm.ads.samples.training.decision_tables.data.CustomerEdited
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited#concept.label = customer edited
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.CustomerEdited(java.lang.String,com.ibm.ads.samples.training.decision_tables.data.Status,java.time.DayOfWeek)#phrase.navigation = a new {customer edited} where {0, name} {1, status} {2, test}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.name#phrase.action = set the name of {this} to {name}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.name#phrase.clearer = clear the name of {this}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.name#phrase.navigation = {name} of {this}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.status#phrase.action = set the status of {this} to {status}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.status#phrase.clearer = clear the status of {this}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.status#phrase.navigation = {status} of {this}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.test#phrase.action = set the test of {this} to {test}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.test#phrase.clearer = clear the test of {this}
+com.ibm.ads.samples.training.decision_tables.data.CustomerEdited.test#phrase.navigation = {test} of {this}
 
 # com.ibm.ads.samples.training.decision_tables.data.Result
 com.ibm.ads.samples.training.decision_tables.data.Result#concept.label = result
-com.ibm.ads.samples.training.decision_tables.data.Result.Result(double,double)#phrase.navigation = a new {result} where {0, discount} {1, loyalty point}
+com.ibm.ads.samples.training.decision_tables.data.Result.Result(com.ibm.ads.samples.training.decision_tables.data.EntityTest,double,double)#phrase.navigation = a new {result} where {0, Attribute} {1, discount} {2, loyaltyPoints}
+com.ibm.ads.samples.training.decision_tables.data.Result.attribute#phrase.action = set the Attribute of {this} to {Attribute}
+com.ibm.ads.samples.training.decision_tables.data.Result.attribute#phrase.clearer = clear the Attribute of {this}
+com.ibm.ads.samples.training.decision_tables.data.Result.attribute#phrase.navigation = {Attribute} of {this}
 com.ibm.ads.samples.training.decision_tables.data.Result.discount#phrase.action = set the discount of {this} to {discount}
 com.ibm.ads.samples.training.decision_tables.data.Result.discount#phrase.addition_setter = add {discount} to the discount of {this}
 com.ibm.ads.samples.training.decision_tables.data.Result.discount#phrase.navigation = {discount} of {this}
 com.ibm.ads.samples.training.decision_tables.data.Result.discount#phrase.subtraction_setter = subtract {discount} from the discount of {this}
-com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.action = set the loyalty point of {this} to {loyalty point}
-com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.addition_setter = add {loyalty point} to the loyalty point of {this}
-com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.navigation = {loyalty point} of {this}
-com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.subtraction_setter = subtract {loyalty point} from the loyalty point of {this}
+com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.action = set the loyaltyPoints of {this} to {loyaltyPoints}
+com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.addition_setter = add {loyaltyPoints} to the loyaltyPoints of {this}
+com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.navigation = {loyaltyPoints} of {this}
+com.ibm.ads.samples.training.decision_tables.data.Result.loyaltyPoints#phrase.subtraction_setter = subtract {loyaltyPoints} from the loyaltyPoints of {this}
 
 # com.ibm.ads.samples.training.decision_tables.data.Status
 com.ibm.ads.samples.training.decision_tables.data.Status#concept.label = status
@@ -34,3 +38,17 @@ com.ibm.ads.samples.training.decision_tables.data.Status.test#instance.label = T
 com.ibm.ads.samples.training.decision_tables.data.TestEnum#concept.label = testEnum
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue#instance.label = new enum value
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue1#instance.label = new enum value 1
+
+# com.ibm.ads.samples.training.decision_tables.data.EntityTest
+com.ibm.ads.samples.training.decision_tables.data.EntityTest#concept.label = Entity Test
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.EntityTest(java.lang.String,boolean)#phrase.navigation = a new {Entity Test} where {0, Attribute} {1, Attribute (1)}
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute#phrase.action = set the Attribute of {this} to {Attribute}
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute#phrase.clearer = clear the Attribute of {this}
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute#phrase.navigation = {Attribute} of {this}
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.action[0] = {this} gets Attribute (1) only if {Attribute (1)}
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.action[1] = make it {Attribute (1)} that {this} is Attribute (1)
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.action[1].deprecated = true
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.navigation = {this} is Attribute (1)
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.negative_predicate = {this} is not Attribute (1)
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.negative_predicate_setter = {this} does not get Attribute (1)
+com.ibm.ads.samples.training.decision_tables.data.EntityTest.attribute(1)#phrase.positive_predicate_setter = {this} gets Attribute (1)
