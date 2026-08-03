@@ -31,5 +31,5 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
-  <documentation><![CDATA[A very simple table with one condition column and one action column using both simple type.]]></documentation>
+  <documentation><![CDATA[A very simple table with one condition column and one action column using both simple type. test]]></documentation>
 </ilog.rules.studio.model.base:RuleProject>
