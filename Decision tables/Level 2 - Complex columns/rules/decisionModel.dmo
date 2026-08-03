@@ -1,44 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
-    <name>decisionModel</name>
-    <uuid>63b15c94-ce64-4adc-a5b4-422442cca665</uuid>
-    <locale>en_US</locale>
-    <definition>
-        <definitions id="decisions" name="3 Complex columns" namespace="" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/">
-            <extensionElements>
-                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Condition and action columns can be more complex. There can be pre-conditions as well.</description>
-                <locale id="en_US" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd"/>
-            </extensionElements>
-            <inputData id="node_0" name="Messages1">
-                <extensionElements>
-                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                        <output bomType="java.lang.String" collection="true" name="Messages1"/>
-                    </initialization>
-                </extensionElements>
-                <variable id="node_0_ii" name="Messages1" typeRef="java.lang.String[]"/>
-            </inputData>
-            <decision id="node_1" name="Decision Test">
-                <description>Decide to proceed or not depending on the key words in the message. test</description>
-                <extensionElements>
-                    <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                        <input bomType="java.lang.String" collection="true" name="Messages1"/>
-                        <output bomType="java.lang.Double" collection="true" name="Decision Test"/>
-                        <rule defaultRule="false" href="node_1/Decision%20table%2001.dmt" kind="DecisionTable" name="Decision table"/>
-                    </ruleset>
-                </extensionElements>
-                <variable id="node_1_ii" name="Decision Test" typeRef="java.lang.Double[]"/>
-                <informationRequirement>
-                    <requiredInput href="#node_0"/>
-                </informationRequirement>
-            </decision>
-            <inputData id="node_2" name="Input 2">
-                <extensionElements>
-                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                        <output bomType="com.ibm.ads.samples.training.decision_tables.data.Input2Enums" collection="false" name="Input 2"/>
-                    </initialization>
-                </extensionElements>
-                <variable id="node_2_ii" name="Input 2" typeRef="com.ibm.ads.samples.training.decision_tables.data.Input2Enums"/>
-            </inputData>
-        </definitions>
-    </definition>
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>63b15c94-ce64-4adc-a5b4-422442cca665</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="3 Complex columns" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Condition and action columns can be more complex. There can be pre-conditions as well.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Messages1">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="true" name="Messages1"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Messages1" typeRef="java.lang.String[]"/>
+    </inputData>
+    <decision id="node_1" name="Decision Test">
+        <description>Decide to proceed or not depending on the key words in the message. test</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="true" name="Messages1"/>
+                <output bomType="java.lang.Double" collection="true" name="Decision Test"/>
+                <rule defaultRule="false" href="node_1/Decision%20table%2001.dmt" kind="DecisionTable" name="Decision table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision Test" typeRef="java.lang.Double[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Input 2">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input 2"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Input 2" typeRef="java.lang.String"/>
+    </inputData>
+</definitions>
+</definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
