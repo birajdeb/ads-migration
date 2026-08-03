@@ -23,7 +23,6 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Long" collection="false" name="Achievement"/>
                 <input bomType="java.lang.String" collection="false" name="Input 2"/>
-                <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
                 <output bomType="java.lang.String" collection="false" name="Grade Test"/>
                 <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
             </ruleset>
@@ -35,9 +34,6 @@
         <informationRequirement>
             <requiredInput href="#node_2"/>
         </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#node_3"/>
-        </informationRequirement>
     </decision>
     <inputData id="node_2" name="Input 2">
         <extensionElements>
@@ -46,14 +42,6 @@
             </initialization>
         </extensionElements>
         <variable id="node_2_ii" name="Input 2" typeRef="java.lang.String"/>
-    </inputData>
-    <inputData id="node_3" name="Input DataDMSAdmin">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_3_ii" name="Input DataDMSAdmin" typeRef="java.lang.String"/>
     </inputData>
 </definitions>
 </definition>
