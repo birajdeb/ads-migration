@@ -1,48 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
-  <name>decisionModel</name>
-  <uuid>cf62d7cf-e794-4a91-ae14-fe6b59319c21</uuid>
-  <locale>en_US</locale>
-  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 1 - Simple table" namespace="">
-    <extensionElements>
-        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">A very simple table</description>
-        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
-    </extensionElements>
-    <inputData id="node_0" name="Achievement">
-        <description>A number between 0 and 100. and test</description>
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.Long" collection="false" name="Achievement"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_0_ii" name="Achievement" typeRef="java.lang.Long"/>
-    </inputData>
-    <decision id="node_1" name="Grade Test">
-        <description>Output a grade (a letter) based on ranges of values. </description>
-        <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.Long" collection="false" name="Achievement"/>
-                <input bomType="java.lang.String" collection="false" name="Input 2"/>
-                <output bomType="java.lang.String" collection="false" name="Grade Test"/>
-                <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
-            </ruleset>
-        </extensionElements>
-        <variable id="node_1_ii" name="Grade Test" typeRef="java.lang.String"/>
-        <informationRequirement>
-            <requiredInput href="#node_0"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#node_2"/>
-        </informationRequirement>
-    </decision>
-    <inputData id="node_2" name="Input 2">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Input 2"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_2_ii" name="Input 2" typeRef="java.lang.String"/>
-    </inputData>
-</definitions>
-</definition>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+    <name>decisionModel</name>
+    <uuid>cf62d7cf-e794-4a91-ae14-fe6b59319c21</uuid>
+    <locale>en_US</locale>
+    <definition>
+        <definitions id="decisions" name="Level 1 - Simple table" namespace="" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/">
+            <extensionElements>
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">A very simple table</description>
+                <locale id="en_US" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd"/>
+            </extensionElements>
+            <inputData id="node_0" name="Achievement">
+                <description>A number between 0 and 100. and test</description>
+                <extensionElements>
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                        <output bomType="java.lang.Long" collection="false" name="Achievement"/>
+                    </initialization>
+                </extensionElements>
+                <variable id="node_0_ii" name="Achievement" typeRef="java.lang.Long"/>
+            </inputData>
+            <decision id="node_1" name="Grade Test">
+                <description>Output a grade (a letter) based on ranges of values. </description>
+                <extensionElements>
+                    <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                        <input bomType="java.lang.Long" collection="false" name="Achievement"/>
+                        <input bomType="java.lang.String" collection="false" name="Input 2"/>
+                        <output bomType="java.lang.String" collection="false" name="Grade Test"/>
+                        <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
+                    </ruleset>
+                </extensionElements>
+                <variable id="node_1_ii" name="Grade Test" typeRef="java.lang.String"/>
+                <informationRequirement>
+                    <requiredInput href="#node_0"/>
+                </informationRequirement>
+                <informationRequirement>
+                    <requiredInput href="#node_2"/>
+                </informationRequirement>
+            </decision>
+            <inputData id="node_2" name="Input 2">
+                <extensionElements>
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                        <output bomType="com.ibm.ads.samples.training.decision_tables.data.Input2Enums" collection="false" name="Input 2"/>
+                    </initialization>
+                </extensionElements>
+                <variable id="node_2_ii" name="Input 2" typeRef="com.ibm.ads.samples.training.decision_tables.data.Input2Enums"/>
+            </inputData>
+        </definitions>
+    </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
