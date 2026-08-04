@@ -23,7 +23,7 @@
                 <extensionElements>
                     <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                         <input bomType="java.lang.Long" collection="false" name="Achievement"/>
-                        <input bomType="com.ibm.ads.samples.training.decision_tables.data.Input2Enums" collection="false" name="Input 2"/>
+                        <input bomType="java.lang.String" collection="false" name="Input 2"/>
                         <output bomType="java.lang.String" collection="false" name="Grade Test"/>
                         <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
                     </ruleset>
@@ -39,10 +39,10 @@
             <inputData id="node_2" name="Input 2">
                 <extensionElements>
                     <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                        <output bomType="com.ibm.ads.samples.training.decision_tables.data.Input2Enums" collection="false" name="Input 2"/>
+                        <output bomType="java.lang.String" collection="false" name="Input 2"/>
                     </initialization>
                 </extensionElements>
-                <variable id="node_2_ii" name="Input 2" typeRef="com.ibm.ads.samples.training.decision_tables.data.Input2Enums"/>
+                <variable id="node_2_ii" name="Input 2" typeRef="java.lang.String"/>
             </inputData>
         </definitions>
     </definition>
