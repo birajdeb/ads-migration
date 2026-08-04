@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="birajdeb_bluepolaris.com.biraj_test.decision_tables:birajTest" ruleAppVersion="LATEST-SNAPSHOT" packageName="birajdeb_bluepolaris.com.biraj_test.decision_tables.birajtest" managingXom="true">
   <name>Biraj_Test</name>
-  <uuid>d1002f2c-f01c-4d55-8d98-990c1fa33796</uuid>
+  <uuid>ba23087b-7324-47b8-84ff-e8bb49c8079c</uuid>
   <locales>en_US</locales>
   <operations operationName="operation">
-    <operation href="operation.dop#a39c393c-2064-40c0-ba73-a2e348e80270"/>
+    <operation href="operation.dop#3fa8aa78-0900-444d-9e4d-61d2578475e8"/>
     <properties key="ruleset.version">
       <value><![CDATA[1.0]]></value>
     </properties>

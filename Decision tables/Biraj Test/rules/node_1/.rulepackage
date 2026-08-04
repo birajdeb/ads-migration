@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>node_1</name>
-  <uuid>7d562424-4f36-4d77-8f1c-0f4f77004cd5</uuid>
+  <uuid>f2a7d3b0-8ddd-4cf6-91b2-2ba88f930fc3</uuid>
 </ilog.rules.studio.model.base:RulePackage>

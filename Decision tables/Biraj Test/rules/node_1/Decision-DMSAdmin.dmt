@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ilog.rules.studio.model.dt:DecisionTable xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
     <name>Decision-DMSAdmin</name>
-    <uuid>bea15591-806a-4415-891a-07301d45b746</uuid>
+    <uuid>54c13428-db22-48d1-b560-fc75e2ee6f52</uuid>
     <locale>en_US</locale>
     <definition>
         <DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
