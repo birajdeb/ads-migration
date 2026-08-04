@@ -34,3 +34,9 @@ com.ibm.ads.samples.training.decision_tables.data.Status.test#instance.label = T
 com.ibm.ads.samples.training.decision_tables.data.TestEnum#concept.label = testEnum
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue#instance.label = new enum value
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue1#instance.label = new enum value 1
+
+# com.ibm.ads.samples.training.decision_tables.data.Input2Enums
+com.ibm.ads.samples.training.decision_tables.data.Input2Enums#concept.label = Input2Enums
+com.ibm.ads.samples.training.decision_tables.data.Input2Enums.a#instance.label = A
+com.ibm.ads.samples.training.decision_tables.data.Input2Enums.abc#instance.label = ABC
+com.ibm.ads.samples.training.decision_tables.data.Input2Enums.asd#instance.label = ASD

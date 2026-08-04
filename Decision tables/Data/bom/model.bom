@@ -86,3 +86,21 @@ class TestEnum
                 property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
 }
 
+class Input2Enums
+        extends java.lang.Enum
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Input2Enums"
+        #de.generated
+{
+    domain {static abc, static a, static asd}
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Input2Enums a
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "A";
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Input2Enums abc
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "ABC";
+    static final readonly com.ibm.ads.samples.training.decision_tables.data.Input2Enums asd
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "ASD";
+}
+
