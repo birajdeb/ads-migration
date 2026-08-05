@@ -23,7 +23,7 @@
                 </informationRequirement>
             </decision>
             <inputData id="node_2" name="Input Data-DMSAdmin">
-                <description/>
+                <description>Test</description>
                 <extensionElements>
                     <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                         <output bomType="java.lang.String" collection="false" name="Input Data-DMSAdmin"/>
