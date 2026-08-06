@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+    <name>decisionModel</name>
+    <uuid>937d388f-762d-e6fb-8ff1-1af52ced607e</uuid>
+    <locale>en_US</locale>
+    <definition>
+        <definitions id="decisions" name="Biraj Test Diagram" namespace="" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/">
+            <extensionElements>
+                <locale id="en_US" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd"/>
+            </extensionElements>
+            <decision id="node_1" name="DecisionDMSAdmin">
+                <description/>
+                <extensionElements>
+                    <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                        <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
+                        <output bomType="java.lang.String" collection="false" name="DecisionDMSAdmin"/>
+                        <rule defaultRule="false" href="node_1/Decision-DMSAdmin.dmt" kind="DecisionTable" name="Decision-DMSAdmin"/>
+                    </ruleset>
+                </extensionElements>
+                <variable id="node_1_ii" name="DecisionDMSAdmin" typeRef="java.lang.String"/>
+                <informationRequirement>
+                    <requiredInput href="#node_2"/>
+                </informationRequirement>
+            </decision>
+            <inputData id="node_2" name="Input DataDMSAdmin">
+                <description/>
+                <extensionElements>
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                        <output bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
+                    </initialization>
+                </extensionElements>
+                <variable id="node_2_var" name="Input DataDMSAdmin" typeRef="java.lang.String"/>
+            </inputData>
+        </definitions>
+    </definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>
