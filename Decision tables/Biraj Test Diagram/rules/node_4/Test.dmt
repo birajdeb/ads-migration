@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ilog.rules.studio.model.dt:DecisionTable xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
-    <name>Decision-DMSAdmin</name>
-    <uuid>91a9c642-6162-4405-8300-9925e2e4c58a</uuid>
+    <name>Test</name>
+    <uuid>0acc5f80-5f07-4ec6-871a-7db90e141d46</uuid>
     <locale>en_US</locale>
     <definition>
         <DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
@@ -29,11 +29,6 @@
                     </ConditionDefinitions>
                     <ActionDefinitions>
                         <ActionDefinition Id="A0">
-                            <ExpressionDefinition>
-                                <Text><![CDATA[set decision to a string]]></Text>
-                            </ExpressionDefinition>
-                        </ActionDefinition>
-                        <ActionDefinition Id="A1">
                             <ExpressionDefinition>
                                 <Text><![CDATA[set decision to a string]]></Text>
                             </ExpressionDefinition>
@@ -74,7 +69,6 @@
                     <Data Name="Definitions(C0)#HeaderText"><![CDATA[Condition 1]]></Data>
                     <Data Name="Definitions(C1)#HeaderText"><![CDATA[Condition 2]]></Data>
                     <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision Answer]]></Data>
-                    <Data Name="Definitions(A1)#HeaderText"><![CDATA[Messages]]></Data>
                 </ResourceSet>
             </Resources>
         </DT>
