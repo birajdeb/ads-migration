@@ -33,6 +33,11 @@
                                 <Text><![CDATA[set decision to a string]]></Text>
                             </ExpressionDefinition>
                         </ActionDefinition>
+                        <ActionDefinition Id="A1">
+                            <ExpressionDefinition>
+                                <Text><![CDATA[set decision to a string]]></Text>
+                            </ExpressionDefinition>
+                        </ActionDefinition>
                     </ActionDefinitions>
                 </Structure>
                 <Contents>
@@ -69,6 +74,7 @@
                     <Data Name="Definitions(C0)#HeaderText"><![CDATA[Condition 1]]></Data>
                     <Data Name="Definitions(C1)#HeaderText"><![CDATA[Condition 2]]></Data>
                     <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision Answer]]></Data>
+                    <Data Name="Definitions(A1)#HeaderText"><![CDATA[Messages]]></Data>
                 </ResourceSet>
             </Resources>
         </DT>
