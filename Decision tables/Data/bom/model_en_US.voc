@@ -34,3 +34,10 @@ com.ibm.ads.samples.training.decision_tables.data.Status.test#instance.label = T
 com.ibm.ads.samples.training.decision_tables.data.TestEnum#concept.label = testEnum
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue#instance.label = new enum value
 com.ibm.ads.samples.training.decision_tables.data.TestEnum.newEnumValue1#instance.label = new enum value 1
+
+# com.ibm.ads.samples.training.decision_tables.data.Entity
+com.ibm.ads.samples.training.decision_tables.data.Entity#concept.label = Entity
+com.ibm.ads.samples.training.decision_tables.data.Entity.Entity(java.lang.String)#phrase.navigation = a new {Entity} where {0, Attribute}
+com.ibm.ads.samples.training.decision_tables.data.Entity.attribute#phrase.action = set the Attribute of {this} to {Attribute}
+com.ibm.ads.samples.training.decision_tables.data.Entity.attribute#phrase.clearer = clear the Attribute of {this}
+com.ibm.ads.samples.training.decision_tables.data.Entity.attribute#phrase.navigation = {Attribute} of {this}
