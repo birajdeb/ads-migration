@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ilog.rules.studio.model.dt:DecisionTable xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
-    <name>ABC</name>
-    <uuid>8e7eb15e-b843-4020-a046-3da5bd637eb8</uuid>
+    <name>Decision-DMSAdmin</name>
+    <uuid>d21d6441-6d8e-4248-9902-924075552fe7</uuid>
     <locale>en_US</locale>
     <definition>
         <DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
@@ -14,7 +14,7 @@
                                 <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                             </Properties>
                             <ExpressionDefinition>
-                                <Text><![CDATA[the 'Input DataDMSAdmin' is a string]]></Text>
+                                <Text><![CDATA[the 'Condition 1' is a string]]></Text>
                             </ExpressionDefinition>
                         </ConditionDefinition>
                         <ConditionDefinition Id="C1">
@@ -23,7 +23,7 @@
                                 <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                             </Properties>
                             <ExpressionDefinition>
-                                <Text><![CDATA[the 'Condition 2' is a string]]></Text>
+                                <Text><![CDATA[the 'Input DataDMSAdmin' is a string]]></Text>
                             </ExpressionDefinition>
                         </ConditionDefinition>
                     </ConditionDefinitions>
@@ -44,7 +44,7 @@
                     <Partition DefId="C0">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[abc]]></Param>
+                                <Param/>
                             </Expression>
                             <ActionSet/>
                         </Condition>
@@ -52,10 +52,23 @@
                             <Expression>
                                 <Param/>
                             </Expression>
+                            <Partition DefId="C1">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[asd]]></Param>
+                                    </Expression>
+                                    <ActionSet/>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[aas]]></Param>
+                            </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA[abc]]></Param>
+                                        <Param><![CDATA[sad]]></Param>
                                     </Expression>
                                 </Action>
                                 <Action DefId="A1">
@@ -73,31 +86,18 @@
                                 </Action>
                                 <Action DefId="A1">
                                     <Expression>
-                                        <Param><![CDATA[abc]]></Param>
+                                        <Param><![CDATA[asd]]></Param>
                                     </Expression>
                                 </Action>
                             </ActionSet>
-                        </Condition>
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[abc]]></Param>
-                            </Expression>
-                            <Partition DefId="C1">
-                                <Condition>
-                                    <Expression>
-                                        <Param><![CDATA[abc]]></Param>
-                                    </Expression>
-                                    <ActionSet/>
-                                </Condition>
-                            </Partition>
                         </Condition>
                     </Partition>
                 </Contents>
             </Body>
             <Resources DefaultLocale="en_US">
                 <ResourceSet Locale="en_US">
-                    <Data Name="Definitions(C0)#HeaderText"><![CDATA[Input DataDMSAdmin]]></Data>
-                    <Data Name="Definitions(C1)#HeaderText"><![CDATA[Condition 2]]></Data>
+                    <Data Name="Definitions(C0)#HeaderText"><![CDATA[Condition 1]]></Data>
+                    <Data Name="Definitions(C1)#HeaderText"><![CDATA[Input DataDMSAdmin]]></Data>
                     <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision Answer]]></Data>
                     <Data Name="Definitions(A1)#HeaderText"><![CDATA[Answer 2]]></Data>
                 </ResourceSet>

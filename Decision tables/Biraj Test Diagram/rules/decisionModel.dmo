@@ -26,16 +26,16 @@
                 </extensionElements>
                 <variable id="node_3_var" name="Input DataDMSAdmin 1" typeRef="java.lang.String"/>
             </inputData>
-            <decision id="node_4" name="ABC">
+            <decision id="node_4" name="DecisionDMSAdmin">
                 <description/>
                 <extensionElements>
                     <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                         <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
-                        <output bomType="java.lang.String" collection="false" name="ABC"/>
-                        <rule defaultRule="false" href="node_4/ABC.dmt" kind="DecisionTable" name="ABC"/>
+                        <output bomType="java.lang.String" collection="false" name="DecisionDMSAdmin"/>
+                        <rule defaultRule="false" href="node_4/Decision-DMSAdmin.dmt" kind="DecisionTable" name="Decision-DMSAdmin"/>
                     </ruleset>
                 </extensionElements>
-                <variable id="node_4_ii" name="ABC" typeRef="java.lang.String"/>
+                <variable id="node_4_ii" name="DecisionDMSAdmin" typeRef="java.lang.String"/>
                 <informationRequirement>
                     <requiredInput href="#node_2"/>
                 </informationRequirement>
