@@ -17,6 +17,11 @@
                         <Text><![CDATA['Achievement' is at least <min> and less than <max>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[InputABC is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
@@ -59,13 +64,21 @@
                         <Param><![CDATA[50]]></Param>
                         <Param><![CDATA[75]]></Param>
                     </Expression>
-                    <ActionSet>
-                        <Action DefId="A0">
+                    <Partition DefId="C2">
+                        <Condition>
                             <Expression>
-                                <Param><![CDATA["B"]]></Param>
+                                <Param><![CDATA[3]]></Param>
+                                <Param/>
                             </Expression>
-                        </Action>
-                    </ActionSet>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["B"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -98,9 +111,9 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Achievement]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
             <Data Name="Definitions(C0)#Width"><![CDATA[196]]></Data>
         </ResourceSet>
     </Resources>
