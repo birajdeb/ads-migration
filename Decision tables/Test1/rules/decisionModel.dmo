@@ -12,7 +12,7 @@
                 <description/>
                 <extensionElements>
                     <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                        <input bomType="com.ibm.ads.samples.training.decision_tables.data.Entity" collection="false" name="Input DataDMSAdmin"/>
+                        <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
                         <output bomType="java.lang.String" collection="false" name="DecisionDMSAdmin"/>
                         <rule defaultRule="false" href="node_1/Decision-DMSAdmin.dmt" kind="DecisionTable" name="Decision-DMSAdmin"/>
                     </ruleset>
