@@ -60,11 +60,6 @@
         </dependency>
         <dependency>
             <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-            <artifactId>birajTestDiagram</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
             <artifactId>data</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
@@ -91,6 +86,11 @@
         <dependency>
             <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
             <artifactId>test</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
+            <artifactId>test1</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -405,6 +405,7 @@
 
 
 
+
 <build>
         <resources>
             <resource>
@@ -432,15 +433,6 @@
                                 <artifactItem>
                                     <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
                                     <artifactId>AAA</artifactId>
-                                    <version>LATEST-SNAPSHOT</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <includes>**/*.class</includes>
-                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-                                    <artifactId>birajTestDiagram</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
@@ -495,6 +487,15 @@
                                 <artifactItem>
                                     <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
                                     <artifactId>test</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
+                                    <artifactId>test1</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

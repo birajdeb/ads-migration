@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
     <artifactId>decisionTables</artifactId>
@@ -64,7 +63,6 @@
     <modules>
         <module>.decisionservice</module>
         <module>AAA</module>
-        <module>Biraj Test Diagram</module>
         <module>Data</module>
         <module>Level 1 - Simple table</module>
         <module>Level 2 - Complex columns</module>
