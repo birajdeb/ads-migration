@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
     <artifactId>decisionTables</artifactId>
@@ -70,8 +69,8 @@
         <module>Level 3 - Multiple conditions</module>
         <module>Level 4 - Complex types and multiple actions</module>
         <module>Test</module>
-        <module>Test1</module>
         <module>Test DRD</module>
+        <module>Test1</module>
     </modules>
     <build>
         <pluginManagement>
