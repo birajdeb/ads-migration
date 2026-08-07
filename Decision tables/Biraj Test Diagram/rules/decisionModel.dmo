@@ -26,8 +26,9 @@
     <decision id="node_4" name="ABC">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin"/>
                 <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin 1"/>
-                <input bomType="java.lang.String" collection="false" name="Input DataDMSAdmin 1"/>
+                <input bomType="java.lang.String" collection="false" name="Input 5"/>
                 <output bomType="java.lang.Double" collection="false" name="ABC"/>
                 <rule defaultRule="false" href="node_4/Decision-DMSAdmin.dmt" kind="DecisionTable" name="Decision-DMSAdmin"/>
             </ruleset>
@@ -38,6 +39,9 @@
         </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
         </informationRequirement>
     </decision>
     <inputData id="node_5" name="Input 5">
