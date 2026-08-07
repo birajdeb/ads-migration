@@ -98,9 +98,9 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Achievement]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Achievement]]></Data>
             <Data Name="Definitions(C0)#Width"><![CDATA[196]]></Data>
         </ResourceSet>
     </Resources>
