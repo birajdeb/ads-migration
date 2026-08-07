@@ -86,21 +86,3 @@ class TestEnum
                 property com.fasterxml.jackson.annotation.JsonProperty "newEnumValue1";
 }
 
-class Entity
-        property ads.typeId "5"
-        property com.fasterxml.jackson.annotation.JsonTypeName "Entity"
-        #de.generated
-{
-    string attribute
-                property ads.attributeId "1"
-                property com.fasterxml.jackson.annotation.JsonProperty "attribute"
-                #update;
-    Entity(string attribute)
-                #autoExpand
-                #beanConstructor
-                property groups "BALA"
-                #prototype;
-    Entity()
-                #dataio.default;
-}
-

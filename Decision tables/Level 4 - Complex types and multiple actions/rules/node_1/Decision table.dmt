@@ -12,8 +12,7 @@
         </Properties>
         <Preconditions>
             <Text><![CDATA[definitions 
-    set 'a message' to a string in 'Messages' ;
-    set 'a test' to a string in 'Messages';]]></Text>
+    set 'a message' to a string in 'Messages'  ;]]></Text>
         </Preconditions>
         <Structure>
             <ConditionDefinitions>
