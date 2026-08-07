@@ -23,6 +23,7 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Long" collection="false" name="Achievement"/>
                 <input bomType="java.lang.Float" collection="false" name="InputABC"/>
+                <input bomType="java.lang.String" collection="false" name="Decision 3"/>
                 <output bomType="java.lang.String" collection="false" name="Grade Test"/>
                 <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
                 <rule defaultRule="false" href="node_1/test.dmt" kind="DecisionTable" name="test"/>
@@ -35,6 +36,9 @@
         <informationRequirement>
             <requiredInput href="#node_2"/>
         </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
     </decision>
     <inputData id="node_2" name="InputABC">
         <extensionElements>
@@ -44,6 +48,14 @@
         </extensionElements>
         <variable id="node_2_ii" name="InputABC" typeRef="java.lang.Float"/>
     </inputData>
+    <decision id="node_3" name="Decision 3">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <output bomType="java.lang.String" collection="false" name="Decision 3"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Decision 3" typeRef="java.lang.String"/>
+    </decision>
 </definitions>
 </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
