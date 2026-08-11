@@ -44,6 +44,20 @@
                 </extensionElements>
                 <variable id="node_2_ii" name="Input 2" typeRef="java.lang.String"/>
             </inputData>
+            <decision id="node_3" name="DecisionDMSAdmin">
+                <description/>
+                <extensionElements>
+                    <ruleset conflictResolution="sequence" xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                        <input bomType="java.lang.String" collection="false" name="Input 2"/>
+                        <output bomType="java.lang.String" collection="false" name="DecisionDMSAdmin"/>
+                        <rule defaultRule="false" href="node_3/Decision-DMSAdmin.dmt" kind="DecisionTable" name="Decision-DMSAdmin"/>
+                    </ruleset>
+                </extensionElements>
+                <variable id="node_3_ii" name="DecisionDMSAdmin" typeRef="java.lang.String"/>
+                <informationRequirement>
+                    <requiredInput href="#node_2"/>
+                </informationRequirement>
+            </decision>
         </definitions>
     </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
