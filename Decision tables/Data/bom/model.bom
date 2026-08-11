@@ -33,10 +33,6 @@ class Result
         property com.fasterxml.jackson.annotation.JsonTypeName "result"
         #de.generated
 {
-    boolean attribute
-                property ads.attributeId "3"
-                property com.fasterxml.jackson.annotation.JsonProperty "attribute"
-                #update;
     double discount
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "discount"
@@ -45,7 +41,7 @@ class Result
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "loyaltyPoints"
                 #update;
-    Result(boolean attribute, double discount, double loyaltyPoints)
+    Result(double discount, double loyaltyPoints)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
