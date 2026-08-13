@@ -37,6 +37,7 @@
                         <ActionDefinition Id="A0">
                             <ExpressionDefinition>
                                 <Text><![CDATA[set 'decision' to a new result where
+	the loyalty point is <loyalty point> , 
 	the loyalty point is <loyalty point>]]></Text>
                             </ExpressionDefinition>
                         </ActionDefinition>
@@ -64,6 +65,7 @@
                                                 <Action DefId="A0">
                                                     <Expression>
                                                         <Param><![CDATA[10]]></Param>
+                                                        <Param/>
                                                     </Expression>
                                                 </Action>
                                             </ActionSet>
@@ -92,6 +94,7 @@
                                                 <Action DefId="A0">
                                                     <Expression>
                                                         <Param><![CDATA[20]]></Param>
+                                                        <Param/>
                                                     </Expression>
                                                 </Action>
                                             </ActionSet>
@@ -141,6 +144,7 @@
                                                 <Action DefId="A0">
                                                     <Expression>
                                                         <Param><![CDATA[15]]></Param>
+                                                        <Param/>
                                                     </Expression>
                                                 </Action>
                                             </ActionSet>
@@ -169,6 +173,7 @@
                                                 <Action DefId="A0">
                                                     <Expression>
                                                         <Param><![CDATA[30]]></Param>
+                                                        <Param><![CDATA[10]]></Param>
                                                     </Expression>
                                                 </Action>
                                             </ActionSet>
@@ -191,6 +196,7 @@
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[45]]></Param>
+                                                <Param/>
                                             </Expression>
                                         </Action>
                                     </ActionSet>
@@ -227,6 +233,7 @@
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[40]]></Param>
+                                                <Param/>
                                             </Expression>
                                         </Action>
                                     </ActionSet>
@@ -248,6 +255,7 @@
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[60]]></Param>
+                                                <Param/>
                                             </Expression>
                                         </Action>
                                     </ActionSet>
@@ -268,6 +276,7 @@
                                         <Action DefId="A0">
                                             <Expression>
                                                 <Param><![CDATA[100]]></Param>
+                                                <Param/>
                                             </Expression>
                                         </Action>
                                     </ActionSet>
@@ -279,7 +288,6 @@
             </Body>
             <Resources DefaultLocale="en_US">
                 <ResourceSet Locale="en_US">
-                    <Data Name="Definitions(A0)[1]#Format"><![CDATA[{0,number,#0.##%}]]></Data>
                     <Data Name="Definitions(C0)#HeaderText"><![CDATA[Customer status]]></Data>
                     <Data Name="Definitions(C1)#HeaderText"><![CDATA[Order amount]]></Data>
                     <Data Name="Definitions(A0)#Width"><![CDATA[400]]></Data>
@@ -288,6 +296,7 @@
                     <Data Name="Definitions(A0)#HeaderText"><![CDATA[result]]></Data>
                     <Data Name="Definitions(C1)#Width"><![CDATA[208]]></Data>
                     <Data Name="Definitions(C0)#Width"><![CDATA[212]]></Data>
+                    <Data Name="Definitions(A0)[1]#HeaderText"><![CDATA[loyaltyPoints (1)]]></Data>
                 </ResourceSet>
             </Resources>
         </DT>
