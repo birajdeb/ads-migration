@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
@@ -39,6 +38,11 @@
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
+            <artifactId>level4-ComplexTypesAndMultipleActions</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>
         </dependency>
@@ -57,11 +61,6 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-            <artifactId>level4-ComplexTypesAndMultipleActions</artifactId>
-            <version>LATEST-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
