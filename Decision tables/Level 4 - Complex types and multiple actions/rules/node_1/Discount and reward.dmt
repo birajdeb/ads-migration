@@ -37,7 +37,8 @@
                         <ActionDefinition Id="A0">
                             <ExpressionDefinition>
                                 <Text><![CDATA[set 'decision' to a new result where
-	the discount is <discount>]]></Text>
+	the discount is <discount> , 
+	the loyalty point is <loyalty point>]]></Text>
                             </ExpressionDefinition>
                         </ActionDefinition>
                     </ActionDefinitions>
@@ -294,6 +295,7 @@
                     <Data Name="Definitions(A0)#HeaderText"><![CDATA[result]]></Data>
                     <Data Name="Definitions(C1)#Width"><![CDATA[208]]></Data>
                     <Data Name="Definitions(C0)#Width"><![CDATA[212]]></Data>
+                    <Data Name="Definitions(A0)[1]#HeaderText"><![CDATA[loyaltyPoints]]></Data>
                 </ResourceSet>
             </Resources>
         </DT>
