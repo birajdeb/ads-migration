@@ -75,7 +75,7 @@
                         </Condition>
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Bronze]]></Param>
+                                <Param><![CDATA[Test]]></Param>
                             </Expression>
                             <Partition DefId="C1">
                                 <Condition>
@@ -93,6 +93,7 @@
                                                 <Action DefId="A0">
                                                     <Expression>
                                                         <Param><![CDATA[0.1]]></Param>
+                                                        <Param><![CDATA[1000]]></Param>
                                                     </Expression>
                                                 </Action>
                                             </ActionSet>
@@ -148,6 +149,7 @@
                                                 <Action DefId="A0">
                                                     <Expression>
                                                         <Param><![CDATA[0.08]]></Param>
+                                                        <Param><![CDATA[450000]]></Param>
                                                     </Expression>
                                                 </Action>
                                             </ActionSet>
