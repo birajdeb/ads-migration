@@ -25,7 +25,7 @@
                 <input bomType="java.lang.Double" collection="false" name="Order amount"/>
                 <input bomType="java.lang.String" collection="true" name="Messages"/>
                 <output bomType="com.ibm.ads.samples.training.decision_tables.data.Result" collection="false" name="Discount and reward"/>
-                <rule defaultRule="false" href="node_1/Discount%20and%20reward.dmt" kind="DecisionTable" name="Decision table"/>
+                <rule defaultRule="false" href="node_1/Decision%20table.dmt" kind="DecisionTable" name="Decision table"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Discount and reward" typeRef="com.ibm.ads.samples.training.decision_tables.data.Result"/>

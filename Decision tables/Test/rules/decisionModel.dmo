@@ -29,33 +29,6 @@
             <requiredInput href="#node_0"/>
         </informationRequirement>
     </decision>
-    <businessKnowledgeModel id="node_2" name="Level 4 - Complex types and multiple actions">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Level 4 - Complex types and multiple actions" typeRef="com.ibm.ads.samples.training.decision_tables.data.Result"/>
-        <encapsulatedLogic typeRef="com.ibm.ads.samples.training.decision_tables.data.Result">
-            <formalParameter name="customer" typeRef="com.ibm.ads.samples.training.decision_tables.data.Customer"/>
-            <formalParameter name="orderAmount" typeRef="java.lang.Double"/>
-            <formalParameter name="messages" typeRef="java.lang.String[]"/>
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>"com.ibm.ads.samples.training.decision_tables.level_4.Level4_complex_types_and_multiple_actions"</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>"run(com.ibm.ads.samples.training.decision_tables.data.Customer,java.lang.Double,java.util.List)"</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
 </definitions>
 </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
-  <name>Discount and reward</name>
+  <name>Decision table</name>
   <uuid>f45bd3c7-e91f-449c-a3c4-640deb5690c5</uuid>
   <documentation><![CDATA[The columns deal with compound types, and the 'action' part sets multiple fields of the decision. Also note that the formatting is configured to display the discount rate nicely.]]></documentation>
   <locale>en_US</locale>
@@ -21,15 +21,6 @@
                         <Text><![CDATA[the status of 'Customer' is <a status>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
-                <ConditionDefinition Id="C4">
-                    <Properties>
-                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
-                    </Properties>
-                    <ExpressionDefinition>
-                        <Text><![CDATA[the name of 'Customer' is <a string>]]></Text>
-                    </ExpressionDefinition>
-                </ConditionDefinition>
                 <ConditionDefinition Id="C1">
                     <ExpressionDefinition>
                         <Text><![CDATA['Order amount' is at least <min> and less than <max>]]></Text>
@@ -37,7 +28,7 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C3">
                     <ExpressionDefinition>
-                        <Text><![CDATA['a message' contains <a string>]]></Text>
+                        <Text><![CDATA['a message' contains <a string> ]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -47,6 +38,11 @@
                         <Text><![CDATA[set 'decision' to a new result where
 	the loyalty point is <loyalty point> , 
 	the discount is <discount>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text/>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -60,7 +56,6 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[1]]></Param>
                                 <Param><![CDATA[1000]]></Param>
                             </Expression>
@@ -76,20 +71,15 @@
                                                 <Param><![CDATA[0.05]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Bronze]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[1000]]></Param>
                                 <Param><![CDATA[5000]]></Param>
                             </Expression>
@@ -105,17 +95,13 @@
                                                 <Param><![CDATA[0.1]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Bronze]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
                                 <Text><![CDATA[<a number> is at least <a number>]]></Text>
@@ -133,6 +119,9 @@
                                                 <Param><![CDATA[0.15]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
@@ -146,7 +135,6 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[1]]></Param>
                                 <Param><![CDATA[1000]]></Param>
                             </Expression>
@@ -162,20 +150,15 @@
                                                 <Param><![CDATA[0.08]]></Param>
                                             </Expression>
                                         </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
+                                        </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Silver]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[1000]]></Param>
                                 <Param><![CDATA[5000]]></Param>
                             </Expression>
@@ -187,21 +170,17 @@
                                     <ActionSet>
                                         <Action DefId="A0">
                                             <Expression>
-                                                <Param><![CDATA[1]]></Param>
+                                                <Param><![CDATA[30]]></Param>
                                                 <Param><![CDATA[0.13]]></Param>
                                             </Expression>
+                                        </Action>
+                                        <Action DefId="A2">
+                                            <Expression/>
                                         </Action>
                                     </ActionSet>
                                 </Condition>
                             </Partition>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Silver]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
                                 <Text><![CDATA[<a number> is at least <a number>]]></Text>
@@ -210,9 +189,12 @@
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA[0]]></Param>
-                                        <Param><![CDATA[1]]></Param>
+                                        <Param><![CDATA[45]]></Param>
+                                        <Param><![CDATA[0.18]]></Param>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>
@@ -225,29 +207,23 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[0]]></Param>
                                 <Param><![CDATA[1000]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA[11]]></Param>
+                                        <Param/>
                                         <Param><![CDATA[0.1]]></Param>
                                     </Expression>
                                 </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
+                                </Action>
                             </ActionSet>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Gold]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[1000]]></Param>
                                 <Param><![CDATA[5000]]></Param>
                             </Expression>
@@ -255,21 +231,16 @@
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[40]]></Param>
-                                        <Param><![CDATA[1]]></Param>
+                                        <Param><![CDATA[0.15]]></Param>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Gold]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Text><![CDATA[<a number> is strictly between <min> and <max>]]></Text>
                                 <Param><![CDATA[5000]]></Param>
                                 <Param><![CDATA[10000]]></Param>
                             </Expression>
@@ -277,18 +248,14 @@
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[60]]></Param>
-                                        <Param><![CDATA[5]]></Param>
+                                        <Param/>
                                     </Expression>
+                                </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
                                 </Action>
                             </ActionSet>
                         </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Gold]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
                         <Condition>
                             <Expression>
                                 <Text><![CDATA[<a number> is at least <a number>]]></Text>
@@ -301,6 +268,9 @@
                                         <Param><![CDATA[0.25]]></Param>
                                     </Expression>
                                 </Action>
+                                <Action DefId="A2">
+                                    <Expression/>
+                                </Action>
                             </ActionSet>
                         </Condition>
                     </Partition>
@@ -312,13 +282,12 @@
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(A0)[1]#Format"><![CDATA[{0,number,#0.##%}]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Customer status]]></Data>
-            <Data Name="Definitions(C4)#HeaderText"><![CDATA[name]]></Data>
             <Data Name="Definitions(C1)#HeaderText"><![CDATA[Order amount]]></Data>
             <Data Name="Definitions(A0)#Width"><![CDATA[400]]></Data>
             <Data Name="Definitions(C3)#HeaderText"><![CDATA[Message]]></Data>
             <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[loyalty points]]></Data>
             <Data Name="Definitions(A0)[1]#HeaderText"><![CDATA[discount]]></Data>
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[result]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Discount and reward]]></Data>
             <Data Name="Definitions(C1)#Width"><![CDATA[208]]></Data>
             <Data Name="Definitions(C0)#Width"><![CDATA[212]]></Data>
         </ResourceSet>

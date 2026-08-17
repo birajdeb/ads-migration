@@ -9,7 +9,6 @@
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.decision_tables:data#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.decision_tables:data" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.decision_tables:level4-ComplexTypesAndMultipleActions#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.decision_tables:level4-ComplexTypesAndMultipleActions" version="LATEST-SNAPSHOT"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:BMDFolder">
     <name>bmd</name>
