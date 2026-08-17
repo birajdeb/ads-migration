@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
         <artifactId>decisionTables</artifactId>
         <version>LATEST-SNAPSHOT</version>
     </parent>
+
     <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
     <artifactId>test</artifactId>
     <version>LATEST-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
@@ -26,20 +29,16 @@
                             <name>Test</name>
                         </deployment>
                     </deployments>
-                    <packageName>birajdeb_bluepolaris.com.biraj_test.decision_tables.test</packageName>
+                <packageName>birajdeb_bluepolaris.com.biraj_test.decision_tables.test</packageName>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <dependencies>
+
+<dependencies>
         <dependency>
             <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
             <artifactId>data</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>birajdeb_bluepolaris.com.biraj_test.decision_tables</groupId>
-            <artifactId>level4-ComplexTypesAndMultipleActions</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
