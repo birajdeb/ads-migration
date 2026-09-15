@@ -54,7 +54,7 @@
                 <Condition>
                     <Expression>
                         <Text><![CDATA[<a number> is at least <min> and less than <max>]]></Text>
-                        <Param><![CDATA[720]]></Param>
+                        <Param><![CDATA[730]]></Param>
                         <Param><![CDATA[780]]></Param>
                     </Expression>
                     <ActionSet>
