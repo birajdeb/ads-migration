@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Application Loan Structure Recommended Outcome</name>
+  <uuid>a012d705-7f24-4a54-99bf-eb8f6c252b55</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Output of 'Amount to Finance Recommended Outcome' is <an Auto Approve/Manual Review/Auto Decline> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Amortization Acceptability' is <an Acceptable/Not Acceptable>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to <an Auto Approve/Manual Review/Auto Decline>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C2">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Auto Approve]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Auto Approve]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Manual Review]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Manual Review]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Auto Decline]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[Auto Decline]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Not Acceptable]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Auto Decline]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Amortization Acceptability]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Amount To Finance  Recommended Outcome]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Application Loan Structure Recommended Outcome]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

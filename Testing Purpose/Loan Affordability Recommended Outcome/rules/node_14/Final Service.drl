@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>66b862a9-aa7c-4fac-90e3-f90d4320f033</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Loan Affordability Recommended Outcome Service where
+		the Loan Affordability Recommended Outcome is 'Loan Affordability Recommended Outcome' , 
+		the Loan to Value Payment to Income Recommended Outcome is 'Loan to Value Payment to Income Recommended Outcome' , 
+		the Tier A PTI LTV Recommended Outcome is 'Tier A PTI LTV Recommended Outcome' , 
+		the Tier B PTI LTV Recommended Outcome is 'Tier B PTI LTV Recommended Outcome' , 
+		the Tier C PTI LTV Recommended Outcome is 'Tier C PTI LTV Recommended Outcome' , 
+		the Tier D PTI LTV Recommended Outcome is 'Tier D PTI LTV Recommended Outcome' , 
+		the Tier E PTI LTV Recommended Outcome is 'Tier E PTI LTV Recommended Outcome' , 
+		the Total Debt Service Ratio Auto Approve Acceptability is 'Total Debt Service Ratio Auto Approve Acceptability' , 
+		the Total Debt Service Ratio Threshold is 'Total Debt Service Ratio Threshold' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

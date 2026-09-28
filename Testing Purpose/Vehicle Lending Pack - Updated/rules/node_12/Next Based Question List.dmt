@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Next Based Question List</name>
+  <uuid>dd867919-d7e7-429e-982a-b603679b4402</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Applicant Age Acceptability' is <an Age Acceptability>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Applicant Employment Acceptability' is <an Acceptable/Not Acceptable>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Applicant Submitted Income Acceptability' is <an Acceptable/Not Acceptable>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Output of 'Expenses Tier' is <an Expenses Tier List>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Output of 'Down Payment Tier' is <a Payment Tier>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to <a Decision Answer>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Not Acceptable]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[STOP APPLICATION: UNDERAGE]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[Could you please confirm your employment status and how long you have been employed?]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Not Acceptable]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[STOP APPLICATION: INSUFFICIENT EMPLOYMENT]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[How much is your gross monthly income?]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Not Acceptable]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[STOP APPLICATION: LOW INCOME]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Acceptable]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[What is the total value of your monthly expenses including mortgage and/or rent?]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Acceptable]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Expenses Rejection]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[STOP APPLICATION: HIGH LEVELS OF DEBT]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Acceptable]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                                <Param><![CDATA[Expenses Rejection]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A0">
+                                                    <Expression>
+                                                        <Param><![CDATA[Please upload a picture of the window sticker of the car you're interested in and confirm your down payment]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Acceptable]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                                <Param><![CDATA[Expenses Rejection]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C4">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[Down Payment Rejection]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A0">
+                                                            <Expression>
+                                                                <Param><![CDATA[STOP APPLICATION: LOW DOWN PAYMENT]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Age Acceptable]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Acceptable]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[Acceptable]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                                <Param><![CDATA[Expenses Rejection]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C4">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Text><![CDATA[<an object> is not <an object>]]></Text>
+                                                        <Param><![CDATA[Down Payment Rejection]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A0">
+                                                            <Expression>
+                                                                <Param><![CDATA[Please wait as we validate your information]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Applicant Age Acceptability]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Applicant Employment Acceptability]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Down Payment Tier]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[267]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Applicant Submitted Income Acceptability]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[Expense Tier]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Next Based Question List]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

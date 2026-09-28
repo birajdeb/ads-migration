@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Smart Agent Downsell</name>
+  <uuid>9c5019ac-3947-4b09-be9a-6f8054e72b79</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'a Car Approval List Downsell' to all Car Approval Lists in 'Car Approval List' 
+	where the Upsell Downsell of each Car Approval List is Downsell ;
+set 'a Maximum Price' to the maximum of the Car Prices of 'a Car Approval List Downsell';
+set 'a Maximum Price Car Downsell' to a Car Approval List in 'a Car Approval List Downsell' where the Car Price of this Car Approval List is 'a Maximum Price'; 
+
+if 'Approval Type' is Downsell and 'Customer Eligibility' is Eligible 
+then
+set decision to a new Smart Agent Output where
+		Applied Indicator is false , 
+		the Approval is Approve , 
+		the Car ID is the Car ID of 'a Maximum Price Car Downsell' , 
+		the Car Price is the Car Price of 'a Maximum Price Car Downsell' , 
+		the Upsell Downsell is the Upsell Downsell of 'a Maximum Price Car Downsell' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

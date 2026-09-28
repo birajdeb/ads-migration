@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Next Best Questions</name>
+  <uuid>7ad2daeb-c156-4a3d-8e97-e9ff48e42aab</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+ set 'variable1' to a Ranking Output in 'Question Ranking List' ; 
+if variable1 is defined and the A Ranking of variable1 = the minimum of the A Rankings of 'Question Ranking List' then 
+	set decision to a new Ranking Output where 
+	the A Ranking is the A Ranking of variable1 , 
+	the Question is the Question of variable1 ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

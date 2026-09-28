@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Distinct Function</name>
+  <uuid>360b1694-0742-4b76-9bd8-6fb0359eac23</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to decision , made distinct; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

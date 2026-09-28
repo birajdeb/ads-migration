@@ -1,0 +1,1 @@
+{"operationId":"82cabe65-0ba0-4b4b-a3a9-9d4c16996852","body":{"vehicleInventory":[{"Vehicle ID":"1001","Price":1000,"Vehicle Year":"2023-12-29"}],"application":{"requestDate":"2025-09-21","downpayment":500},"assest":{"id":"1001"},"customer":[{"CreditBureauReport":{"creditScore":620}}]}}

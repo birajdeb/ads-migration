@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Applicant Age</name>
+  <uuid>b27b2ab8-0b07-4e8b-b9e5-a36d88a5d3f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the number of years between the requestDate of Application and  the dateOfBirth of  Customer ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

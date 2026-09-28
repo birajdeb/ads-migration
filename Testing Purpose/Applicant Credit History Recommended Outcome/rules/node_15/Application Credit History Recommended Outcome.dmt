@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Application Credit History Recommended Outcome</name>
+  <uuid>9847af97-a194-4981-aa27-ef6b6bf5b14b</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType">Web</Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean">true</Property>
+        </Properties>
+        <Preconditions>
+            <Text>definitions 
+set 'an Applicant Credit History Recommended Outcome' to an Auto Approve/Manual Review/Auto Decline in 'Applicant Credit History Recommended Outcome' ;</Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean">false</Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean">false</Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text>'an Applicant Credit History Recommended Outcome' is &lt;an Auto Approve/Manual Review/Auto Decline&gt; </Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text>set decision to &lt;an Auto Approve/Manual Review/Auto Decline&gt;</Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param>Auto Approve</Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param>Auto Approve</Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is one of &lt;objects&gt;</Text>
+                        <Param>{ Auto Decline }</Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param>Auto Decline</Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text>&lt;an object&gt; is one of &lt;objects&gt;</Text>
+                        <Param>{ Manual Review }</Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param>Manual Review</Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText">Applicant Credit History Recommended Outcome</Data>
+            <Data Name="Definitions(C0)[0]#HeaderText">a number</Data>
+            <Data Name="Definitions(A0)#HeaderText">Application Credit History Recommended Outcome</Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

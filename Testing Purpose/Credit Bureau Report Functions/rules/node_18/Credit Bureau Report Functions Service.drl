@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Credit Bureau Report Functions Service</name>
+  <uuid>61b1869c-e227-417c-a853-ebdee895b34d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Credit Bureau Report Functions Service where
+		the Applicant Bankruptcy Date Lists are 'Applicant Bankruptcy Date List' , 
+		the Applicant Bankruptcy Indicator is 'Applicant Bankruptcy Indicator' , 
+		the Applicant Collection Date Lists are 'Applicant Collection Date List' , 
+		the Applicant Collections Indicator is 'Applicant Collections Indicator' , 
+		the Applicant Consumer Proposal Date Lists are 'Applicant Consumer Proposal Date List' , 
+		the Applicant Consumer Proposal Indicator is 'Applicant Consumer Proposal Indicator' , 
+		the Applicant Repossession Date Lists are 'Applicant Repossession Date List' , 
+		the Applicant Repossessions Indicator is 'Applicant Repossessions Indicator' , 
+		Bankruptcy Indicator is 'Bankruptcy Indicator' , 
+		Collection Indicator is 'Collection Indicator' , 
+		Consumer Proposal Indicator is 'Consumer Proposal Indicator' , 
+		the Months Since Most Recent Bankruptcy is 'Months Since Most Recent Bankruptcy' , 
+		the Months Since Most Recent Collection is 'Months Since Most Recent Collection' , 
+		the Months Since Most Recent Consumer Proposal is 'Months Since Most Recent Consumer Proposal' , 
+		the Months Since Most Recent Repossession is 'Months Since Most Recent Repossession' , 
+		Repossession Indicator is 'Repossession Indicator' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

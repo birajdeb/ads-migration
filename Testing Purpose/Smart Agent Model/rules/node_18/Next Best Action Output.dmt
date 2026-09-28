@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Next Best Action Output</name>
+  <uuid>702d3270-9c0e-4359-a91d-1389e64ed00b</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Preconditions>
+            <Text><![CDATA[definitions
+ set 'variable1' to a Next Best Action in 'Next Best Actions' ;]]></Text>
+        </Preconditions>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Actions of variable1 is <an Action> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[ the Message of variable1 is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new Next Best Action where
+	the Actions is <Actions> , 
+	the Message is <Message> to decision]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Continue]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Applicant age satisify criteria"]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Continue]]></Param>
+                                        <Param><![CDATA["Applicant age satisify criteria"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Stop Application]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Unfortunately you don’t meet the minimum age requirements to continue with this application."]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Stop Application]]></Param>
+                                        <Param><![CDATA["Unfortunately you don’t meet the minimum age requirements to continue with this application."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Continue]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Applicant satisfy employement criteria"]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Continue]]></Param>
+                                        <Param><![CDATA["Applicant satisfy employement criteria"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Stop Application]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Unfortunately we cannot continue with this application due to your current employment status."]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Stop Application]]></Param>
+                                        <Param><![CDATA["Unfortunately we cannot continue with this application due to your current employment status."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Continue]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Applicant satisfy monthly income criteria"]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Continue]]></Param>
+                                        <Param><![CDATA["Applicant satisfy monthly income criteria"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Stop Application]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Unfortunately you don’t meet the minimum income requirements to continue with this application."]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Stop Application]]></Param>
+                                        <Param><![CDATA["Unfortunately you don’t meet the minimum income requirements to continue with this application."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Continue]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Applicant satisfy expense criteria"]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Continue]]></Param>
+                                        <Param><![CDATA["Applicant satisfy expense criteria"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Stop Application]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Unfortunately we cannot continue with this application because your expenses are too high in relation to your income."]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Stop Application]]></Param>
+                                        <Param><![CDATA["Unfortunately we cannot continue with this application because your expenses are too high in relation to your income."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Continue]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Applicant entered correct car price"]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Continue]]></Param>
+                                        <Param><![CDATA["Applicant entered correct car price"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Stop Application]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Unfortunately the price of the car you are interested in is not within a valid range."]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Stop Application]]></Param>
+                                        <Param><![CDATA["Unfortunately the price of the car you are interested in is not within a valid range."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Continue]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Applicant satisfy down payment criteria"]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Continue]]></Param>
+                                        <Param><![CDATA["Applicant satisfy down payment criteria"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Stop Application]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA["Unfortunately the amount of the down payment is not adequate for the car you are interested in."]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[Stop Application]]></Param>
+                                        <Param><![CDATA["Unfortunately the amount of the down payment is not adequate for the car you are interested in."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Actions]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[481]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Message]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Next Best Action Output]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[213]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[220]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

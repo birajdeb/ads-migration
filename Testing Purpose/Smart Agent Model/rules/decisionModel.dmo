@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>1aeead59-5359-448e-8f01-eb85c5b902f1</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Previous Questions">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions" collection="true" name="Previous Questions"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Previous Questions" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions[]"/>
+    </inputData>
+    <decision id="node_1" name="Agent Decline Ranking">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions" collection="true" name="Previous Questions"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Agent Decline Ranking"/>
+                <rule defaultRule="false" href="node_1/Agent%20Decline%20Ranking.dmt" kind="DecisionTable" name="Agent Decline Ranking"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Agent Decline Ranking" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Factor Decline Ranking">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Agent Decline Ranking"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Factor Decline Ranking"/>
+                <rule defaultRule="false" href="node_2/Factor%20Decline%20Ranking.drl" kind="BusinessRule" name="Factor Decline Ranking"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Factor Decline Ranking" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Agent Abandonment Ranking">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions" collection="true" name="Previous Questions"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Agent Abandonment Ranking"/>
+                <rule defaultRule="false" href="node_3/Agent%20Abandonment%20Ranking.dmt" kind="DecisionTable" name="Agent Abandonment Ranking"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Agent Abandonment Ranking" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Next Best Actions">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions" collection="true" name="Previous Questions"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AnswerList" collection="true" name="Answer List"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.NextBestAction" collection="true" name="Next Best Actions"/>
+                <rule defaultRule="false" href="node_5/Next%20Best%20Actions.dmt" kind="DecisionTable" name="Next Best Actions"/>
+                <rule defaultRule="false" href="node_5/Distinct%20Function.drl" kind="BusinessRule" name="Distinct Function"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Next Best Actions" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.NextBestAction[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_6" name="Answer List">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AnswerList" collection="true" name="Answer List"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_6_ii" name="Answer List" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.AnswerList[]"/>
+    </inputData>
+    <decision id="node_7" name="Question Ranking List">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions" collection="true" name="Previous Questions"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Agent Decline Ranking"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Factor Decline Ranking"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Agent Abandonment Ranking"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Question Ranking List"/>
+                <rule defaultRule="false" href="node_7/Edge%20case.drl" kind="BusinessRule" name="Edge case"/>
+                <rule defaultRule="false" href="node_7/Ranking%20Table.dmt" kind="DecisionTable" name="Ranking Table"/>
+                <rule defaultRule="false" href="node_7/Skip.drl" kind="BusinessRule" name="Skip"/>
+                <rule defaultRule="false" href="node_7/Distinct%20Function.drl" kind="BusinessRule" name="Distinct Function"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Question Ranking List" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_8" name="Next Best Questions">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="true" name="Question Ranking List"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="false" name="Next Best Questions"/>
+                <rule defaultRule="false" href="node_8/Next%20Best%20Questions.drl" kind="BusinessRule" name="Next Best Questions"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Next Best Questions" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput"/>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_9" name="Intermediate Next Question">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.PreviousQuestions" collection="true" name="Previous Questions"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="false" name="Intermediate Next Question"/>
+                <rule defaultRule="false" href="node_9/User%20input%20and%20ranking.dmt" kind="DecisionTable" name="User input and ranking"/>
+                <rule defaultRule="false" href="node_9/XYZ.dmt" kind="DecisionTable" name="XYZ"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Intermediate Next Question" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Next Question Asked">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="false" name="Intermediate Next Question"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.NextQuestion" collection="false" name="Next Question Asked"/>
+                <rule defaultRule="false" href="node_10/Next%20Question.dmt" kind="DecisionTable" name="Next Question"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Next Question Asked" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.NextQuestion"/>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_11" name="All answered">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.RankingOutput" collection="false" name="Intermediate Next Question"/>
+                <output bomType="java.lang.String" collection="false" name="All answered"/>
+                <rule defaultRule="false" href="node_11/All%20answered.drl" kind="BusinessRule" name="All answered"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="All answered" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Down Payment Ratio Agent">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AnswerList" collection="true" name="Answer List"/>
+                <output bomType="java.lang.Double" collection="false" name="Down Payment Ratio Agent"/>
+                <rule defaultRule="false" href="node_12/Down%20Payment%20Ratio%20Agent.drl" kind="BusinessRule" name="Down Payment Ratio Agent"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Down Payment Ratio Agent" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_13" name="Down Payment Tier Agent">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Down Payment Ratio Agent"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.TierAgentOutput" collection="false" name="Down Payment Tier Agent"/>
+                <rule defaultRule="false" href="node_13/Down%20Payment%20Tier%20Agent.dmt" kind="DecisionTable" name="Down Payment Tier Agent"/>
+                <rule defaultRule="true" href="node_13/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_13_ii" name="Down Payment Tier Agent" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.TierAgentOutput"/>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_14" name="Expenses Ratio Agent">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.AnswerList" collection="true" name="Answer List"/>
+                <output bomType="java.lang.Double" collection="false" name="Expenses Ratio Agent"/>
+                <rule defaultRule="false" href="node_14/Expenses%20Ratio%20%20Agent.drl" kind="BusinessRule" name="Expenses Ratio  Agent"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_14_ii" name="Expenses Ratio Agent" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_15" name="Expense Tier Agent">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Expenses Ratio Agent"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.TierAgentOutput" collection="false" name="Expense Tier Agent"/>
+                <rule defaultRule="false" href="node_15/Expense%20Tier%20Agent.dmt" kind="DecisionTable" name="Expense Tier Agent"/>
+                <rule defaultRule="true" href="node_15/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_15_ii" name="Expense Tier Agent" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.TierAgentOutput"/>
+        <informationRequirement>
+            <requiredInput href="#node_14"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_16" name="Stop Application Check">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.NextBestAction" collection="true" name="Next Best Actions"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.StopApplicationCheck" collection="false" name="Stop Application Check"/>
+                <rule defaultRule="false" href="node_16/Stop%20Application%20Check.drl" kind="BusinessRule" name="Stop Application Check"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_16_ii" name="Stop Application Check" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.StopApplicationCheck"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_17" name="Final Approval Segmentation">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.StopApplicationCheck" collection="false" name="Stop Application Check"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.TierAgentOutput" collection="false" name="Expense Tier Agent"/>
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.TierAgentOutput" collection="false" name="Down Payment Tier Agent"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.FinalApproval" collection="false" name="Final Approval Segmentation"/>
+                <rule defaultRule="false" href="node_17/Final%20Approval%20Segmentation.dmt" kind="DecisionTable" name="Final Approval Segmentation"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_17_ii" name="Final Approval Segmentation" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.FinalApproval"/>
+        <informationRequirement>
+            <requiredInput href="#node_16"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_15"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_13"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_18" name="Next Best Action Output">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="agull.auto_loan_demo.auto_loan_service.datastructure.NextBestAction" collection="true" name="Next Best Actions"/>
+                <output bomType="agull.auto_loan_demo.auto_loan_service.datastructure.NextBestAction" collection="true" name="Next Best Action Output"/>
+                <rule defaultRule="false" href="node_18/Next%20Best%20Action%20Output.dmt" kind="DecisionTable" name="Next Best Action Output"/>
+                <rule defaultRule="false" href="node_18/Distinct%20Function.drl" kind="BusinessRule" name="Distinct Function"/>
+                <rule defaultRule="true" href="node_18/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_18_ii" name="Next Best Action Output" typeRef="agull.auto_loan_demo.auto_loan_service.datastructure.NextBestAction[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

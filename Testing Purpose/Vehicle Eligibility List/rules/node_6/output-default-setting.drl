@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>93821f60-2797-498a-b85e-d8446a93e8f3</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new Vehicle Eligibility List where
+		the Applied Vehicle is Alternate Vehicle , 
+		the Vehicle ID is "-" , 
+		the Vehicle Price is 0 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" buildMode="DecisionEngine" isADecisionService="true" projectKind="Ruleflow" projectVersion="2.0.0">
+  <name>Auto Loan End To End Service</name>
+  <uuid>890910f4-3e49-43bb-9c49-f3879792e435</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:dataStructure#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:dataStructure" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:applicationPreBureauEligibility#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:applicationPreBureauEligibility" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:totalMonthlyDebtPaymentObligationService#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:totalMonthlyDebtPaymentObligationService" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:applicationCreditRiskTierService#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:applicationCreditRiskTierService" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:creditBureauReportFunctions#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:creditBureauReportFunctions" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:stipulations#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:stipulations" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:TDSR-TotalCreditBureauMonthlyDebtObligation#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:TDSR-TotalCreditBureauMonthlyDebtObligation" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:maximumPayment#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:maximumPayment" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:TDSR-TotalDebtServiceRatio#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:TDSR-TotalDebtServiceRatio" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:loanAffordabilityRecommendedOutcome#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:loanAffordabilityRecommendedOutcome" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:applicantCreditHistoryRecommendedOutcome#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:applicantCreditHistoryRecommendedOutcome" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:conditionalApprovalRecommendedOutcome#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:conditionalApprovalRecommendedOutcome" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="birajdeb_bluepolaris.com.biraj_test.testing_purpose:autoLoanApplicationRecommendedOutcome#LATEST-SNAPSHOT" packageId="birajdeb_bluepolaris.com.biraj_test.testing_purpose:autoLoanApplicationRecommendedOutcome" version="LATEST-SNAPSHOT"/>
+  </paths>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:BMDFolder">
+    <name>bmd</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:FunctionFolder">
+    <name>functions</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:ResourceFolder">
+    <name>resources</name>
+  </modelFolders>
+  <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
+    <name>deployment</name>
+  </modelFolders>
+  <documentation><![CDATA[Auto Loan End To End Service]]></documentation>
+</ilog.rules.studio.model.base:RuleProject>

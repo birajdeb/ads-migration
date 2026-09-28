@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>547a172f-2a4f-40a2-97aa-6723af542155</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Stipulations Service where
+		the MSRP Stipulation Required is 'MSRP Stipulation Required' , 
+		the Applicant Level Stipulations is 'Applicant Level Stipulations' , 
+		the Applicant Submitted Income Acceptability is 'Applicant Submitted Income Acceptability' , 
+		the Application Level Stipulaton is 'Applicant Level Stipulations' , 
+		the Asset Level Stipulations are 'Asset Level Stipulation' , 
+		the Bankruptcy Insolvency Indicators are 'Bankruptcy Insolvency Indicator' , 
+		the Debt Level Stipulationses are 'Debt Level Stipulations', 
+		the Debt Manual Edits Qualifieds are 'Debt Manual Edits Qualified' , 
+		the Existing Loan To Be Paid In Full Stipulation Requireds are 'Existing Loan To Be Paid In Full Stipulation Required' , 
+		the Income Verification is 'Income Verification' , 
+		the Subject To Trade In Stipulation Requireds are 'Subject To Trade In Stipulation Required' , 
+		the Tier Level Stipulation Required is 'Tier Level Stipulation Required' , 
+		the Vehicle Valuation Stipulation Required is 'Vehicle Valuation Stipulation Required' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

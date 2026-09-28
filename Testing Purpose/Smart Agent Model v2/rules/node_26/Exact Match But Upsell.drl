@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Exact Match But Upsell</name>
+  <uuid>2943a070-b53b-4665-b804-eb1b8f63eec4</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'a Car Approval List Upsell' to all Car Approval Lists in 'Car Approval List' where the Upsell Downsell of each Car Approval List is Upsell ;
+set 'a Minimum Car Price' to the minimum of the Car Prices of 'a Car Approval List Upsell';
+set 'a Minimum Car' to a Car Approval List in 'a Car Approval List Upsell' where the Car Price of this Car Approval List is 'a Minimum Car Price';
+if 'a Minimum Car' is defined and decision is undefined and 'Customer Eligibility' is Eligible and  'Approval Type' is Match 
+then
+set decision to a new Smart Agent Output where
+		Applied Indicator is true , 
+		the Approval is Approve , 
+		the Car ID is the Car ID of 'a Minimum Car' , 
+		the Car Price is the Car Price of 'a Minimum Car' , 
+		the Upsell Downsell is the Upsell Downsell of 'a Minimum Car' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

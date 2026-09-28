@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Auto Loan Ruleflow</name>
+  <uuid>afefbfa9-b323-456f-950f-17abe48708bb</uuid>
+  <locale>en_US</locale>
+  <rfModel><Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+    <Body>
+        <TaskList>
+            <StartTask Identifier="task_0"/>
+            <StopTask Identifier="task_2"/>
+            <FunctionTask Identifier="task_3">
+                <FinalActions Language="bal"><![CDATA[set 'the DecisionOutputs' to a new Decision Outputs where 
+	
+	the Full Results For Application PreBureau Eligibility is 'the FullResultsForApplicationPreBureauEligibility'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.applicationprebureaueligibility.Application_Pre_Bureau_Eligibility">
+                    <InputBindings>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="ApplicationPreBureauEligibility"><![CDATA['application pre bureau eligibility' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_4">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Total Monthly Debt Payment Obligation of 'the DecisionOutputs' to 'the FullResultsForTotalMonthlyDebtPaymentObligation'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.maximumpayment.Total_Monthly_Debt_Payment_Obligation_Service">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA[ 'the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="TotalMonthlyDebtPaymentObligation"><![CDATA[ 'total monthly debt payment obligation service' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_5">
+                <FinalActions Language="bal"><![CDATA[set the Application Credit Risk Tiers of 'the DecisionOutputs' to 'the ApplicationCreditRiskTier'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.applicationcreditrisktierservice.Application_Credit_Risk_Tier_Service">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="ApplicationCreditRiskTier"><![CDATA['application credit risk tier service' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_6">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Credit Bureau Report Functions of 'the DecisionOutputs' to 'the FullResultsForCreditBureauReportFunctions'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.creditbureaureportfunctions.Credit_Bureau_Report_Functions">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="CreditBureauReportFunctions"><![CDATA['credit bureau report functions' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_8">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Stipulations of 'the DecisionOutputs' to 'the FullResultsForStipulations'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.stipulations.Stipulations">
+                    <InputBindings>
+                        <Binding Language="bal" Name="asset"><![CDATA[ 'the Asset' ]]></Binding>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA[ 'the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="Stipulations"><![CDATA[stipulations ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_7">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Total Credit Bureau Monthly Debt Obligation of 'the DecisionOutputs' to 'the FullResultsForTotalCreditBureauMonthlyDebtObligation'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.tdsr_totalcreditbureaumonthlydebtobligation.TDSR_Total_Credit_Bureau_Monthly_Debt_Obligation">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="TotalCreditBureauMonthlyDebtObligation"><![CDATA[ 'TDSR total credit bureau monthly debt obligation' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_9">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Maximum Payment of 'the DecisionOutputs' to 'the FullResultsForMaximumPayment'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.maximumpayment.Maximum_Payment">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="MaximumPayment"><![CDATA[ 'maximum payment' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_10">
+                <FinalActions Language="bal"><![CDATA[set the Total Debt Service Ratio of 'the DecisionOutputs' to 'the TotalDebtServiceRatio'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.tdsr_totaldebtserviceratio.TDSR_Total_Debt_Service_Ratio">
+                    <InputBindings>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="TotalDebtServiceRatio"><![CDATA['TDSR total debt service ratio' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_11">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Loan Affordability Recommended Outcome of 'the DecisionOutputs' to 'the FullResultsForLoanAffordabilityRecommendedOutcome'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.loanaffordabilityrecommendedoutcome.Loan_Affordability_Recommended_Outcome">
+                    <InputBindings>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="LoanAffordabilityRecommendedOutcome"><![CDATA['loan affordability recommended outcome' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_12">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Application Credit History Recommended Outcome of 'the DecisionOutputs' to 'the FullResultsForApplicationCreditHistoryRecommendedOutcome' ; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.applicantcredithistoryrecommendedoutcome.Applicant_Credit_History_Recommended_Outcome">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA[ 'the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="ApplicationCreditHistoryRecommendedOutcome"><![CDATA[  'applicant credit history recommended outcome' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_13">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Conditional Approval Recommended Outcome of 'the DecisionOutputs' to 'the FullResultsForConditionalApprovalRecommendedOutcome'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.conditionalapprovalrecommendedoutcome.Conditional_Approval_Recommended_Outcome">
+                    <InputBindings>
+                        <Binding Language="bal" Name="customer"><![CDATA[ 'the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="ConditionalApprovalRecommendedOutcome"><![CDATA['conditional approval recommended outcome' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+            <FunctionTask Identifier="task_14">
+                <FinalActions Language="bal"><![CDATA[set the Full Results For Auto Loan Application Recommended Outcome of 'the DecisionOutputs' to 'the FullResultsForAutoLoanApplicationRecommendedOutcome'; ]]></FinalActions>
+                <Invocation FunctionIdentifier="agull.auto_loan_demo.auto_loan_service.autoloanapplicationrecommendedoutcome.Auto_Loan_Application_Recommended_Outcome">
+                    <InputBindings>
+                        <Binding Language="bal" Name="application"><![CDATA['the Application' ]]></Binding>
+                        <Binding Language="bal" Name="customer"><![CDATA['the Customer' ]]></Binding>
+                        <Binding Language="bal" Name="asset"><![CDATA['the Asset' ]]></Binding>
+                    </InputBindings>
+                    <OutputBindings>
+                        <Binding Language="bal" Name="AutoLoanApplicationRecommendedOutcome"><![CDATA['auto loan application recommended outcome' ]]></Binding>
+                    </OutputBindings>
+                </Invocation>
+            </FunctionTask>
+        </TaskList>
+        <NodeList>
+            <TaskNode Identifier="node_0" Task="task_0"/>
+            <TaskNode Identifier="node_2" Task="task_2"/>
+            <TaskNode Identifier="node_3" Task="task_3"/>
+            <TaskNode Identifier="node_4" Task="task_4"/>
+            <TaskNode Identifier="node_5" Task="task_5"/>
+            <TaskNode Identifier="node_6" Task="task_6"/>
+            <TaskNode Identifier="node_8" Task="task_8"/>
+            <TaskNode Identifier="node_7" Task="task_7"/>
+            <TaskNode Identifier="node_9" Task="task_9"/>
+            <TaskNode Identifier="node_10" Task="task_10"/>
+            <TaskNode Identifier="node_11" Task="task_11"/>
+            <TaskNode Identifier="node_12" Task="task_12"/>
+            <TaskNode Identifier="node_13" Task="task_13"/>
+            <TaskNode Identifier="node_14" Task="task_14"/>
+        </NodeList>
+        <TransitionList>
+            <Transition Identifier="transition_0" Source="node_0" Target="node_3"/>
+            <Transition Identifier="transition_9" Source="node_8" Target="node_2"/>
+            <Transition Identifier="transition_8" Source="node_7" Target="node_4"/>
+            <Transition Identifier="transition_10" Source="node_3" Target="node_7"/>
+            <Transition Identifier="transition_12" Source="node_4" Target="node_9"/>
+            <Transition Identifier="transition_13" Source="node_10" Target="node_5"/>
+            <Transition Identifier="transition_14" Source="node_9" Target="node_10"/>
+            <Transition Identifier="transition_11" Source="node_11" Target="node_6"/>
+            <Transition Identifier="transition_15" Source="node_5" Target="node_11"/>
+            <Transition Identifier="transition_17" Source="node_6" Target="node_12"/>
+            <Transition Identifier="transition_19" Source="node_12" Target="node_13"/>
+            <Transition Identifier="transition_16" Source="node_14" Target="node_8"/>
+            <Transition Identifier="transition_20" Source="node_13" Target="node_14"/>
+        </TransitionList>
+    </Body>
+    <Resources>
+        <ResourceSet Locale="en_US">
+            <Data Name="node_14#name"><![CDATA[Auto Loan Application Recommended Outcome]]></Data>
+            <Data Name="node_5#name"><![CDATA[Application Credit Risk Tier]]></Data>
+            <Data Name="node_2#name"><![CDATA[End node]]></Data>
+            <Data Name="node_10#label"><![CDATA[Total Debt Service Ratio]]></Data>
+            <Data Name="node_6#label"><![CDATA[Credit Bureau Report Functions]]></Data>
+            <Data Name="node_14#label"><![CDATA[Auto Loan Application Recommended Outcome]]></Data>
+            <Data Name="node_3#label"><![CDATA[Application PreBureau Eligibility]]></Data>
+            <Data Name="node_8#label"><![CDATA[Stipulations]]></Data>
+            <Data Name="node_11#name"><![CDATA[Loan Affordability Recommended Outcome]]></Data>
+            <Data Name="node_8#name"><![CDATA[Stipulations]]></Data>
+            <Data Name="node_12#label"><![CDATA[Application Credit History Recommended Outcome]]></Data>
+            <Data Name="node_11#label"><![CDATA[Loan Affordability Recommended Outcome]]></Data>
+            <Data Name="node_7#label"><![CDATA[Total Credit Bureau Monthly Debt Obligation]]></Data>
+            <Data Name="node_5#label"><![CDATA[Application Credit Risk Tier]]></Data>
+            <Data Name="node_13#label"><![CDATA[Conditional Approval Recommended Outcome]]></Data>
+            <Data Name="node_10#name"><![CDATA[Total Debt Service Ratio]]></Data>
+            <Data Name="node_4#name"><![CDATA[Total Monthly Debt Payment Obligation]]></Data>
+            <Data Name="node_7#name"><![CDATA[Total Credit Bureau Monthly Debt Obligation]]></Data>
+            <Data Name="node_6#name"><![CDATA[Credit Bureau Report Functions]]></Data>
+            <Data Name="node_9#name"><![CDATA[Maximum Payment]]></Data>
+            <Data Name="node_12#name"><![CDATA[Application Credit History Recommended Outcome]]></Data>
+            <Data Name="node_0#name"><![CDATA[Start node]]></Data>
+            <Data Name="node_4#label"><![CDATA[Total Monthly Debt Payment Obligation]]></Data>
+            <Data Name="node_9#label"><![CDATA[Maximum Payment]]></Data>
+            <Data Name="node_13#name"><![CDATA[Conditional Approval Recommended Outcome]]></Data>
+            <Data Name="node_3#name"><![CDATA[Application PreBureau Eligibility]]></Data>
+        </ResourceSet>
+    </Resources>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>
