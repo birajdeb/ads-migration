@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Exact Match</name>
+  <uuid>1f7e81c5-b3f8-44de-ab25-6a14469ea6e1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'a Answer of Car Price' to a Question Response in 'Question Response' where the Question ID of this Question Response is Q5 - Car Price;
+set 'a Exact Match Car' to a Car Approval List in 'Car Approval List' 
+	where the Car Price of this Car Approval List is utils.extractNumericValue( the Answer of 'a Answer of Car Price' ) ;
+if 'a Exact Match Car' is defined and 'Customer Eligibility' is Eligible and 'Approval Type' is Match 
+then
+set decision to a new Smart Agent Output where
+		Applied Indicator is true , 
+		the Approval is Approve , 
+		the Car ID is the Car ID of 'a Exact Match Car' , 
+		the Car Price is the Car Price of 'a Exact Match Car' , 
+		the Upsell Downsell is the Upsell Downsell of 'a Exact Match Car' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

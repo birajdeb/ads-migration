@@ -408,6 +408,54 @@ class Dressing
                 property com.fasterxml.jackson.annotation.JsonProperty "Velcro closures";
 }
 
+class Entity1
+        property ads.typeId "37"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Entity1"
+        #de.generated
+{
+    java.time.LocalDate atrr2
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "atrr2"
+                #update;
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2 atrr3
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "atrr3"
+                #update;
+    string attr1
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "attr1"
+                #update;
+    Entity1(java.time.LocalDate atrr2, ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2 atrr3, string attr1)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Entity1()
+                #dataio.default;
+}
+
+class Entity2
+        property ads.typeId "38"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Entity2"
+        #de.generated
+{
+    ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline attr1
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "attr1"
+                #update;
+    string newAttribute
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "newAttribute"
+                #update;
+    Entity2(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline attr1, string newAttribute)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Entity2()
+                #dataio.default;
+}
+
 class Failure$NotFailure
         extends java.lang.Enum
         property ads.typeId "20"

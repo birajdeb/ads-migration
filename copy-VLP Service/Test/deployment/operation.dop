@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Test">
+  <name>Test</name>
+  <uuid>cf81b374-a374-4311-93bd-9384c0ce0d4c</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#a5341d4a-c84c-4e1e-a28b-b48936dbd501"/>
+  <targetRuleProject href="../../Test#aec5099c-cc3d-4699-93fa-3a2ebf09a5a1"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

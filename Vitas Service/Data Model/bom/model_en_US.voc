@@ -133,6 +133,26 @@ ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.needsHelpSelect
 ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.noAssistanceNeeded#instance.label = No Assistance Needed
 ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Dressing.velcroClosures#instance.label = Velcro closures
 
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1#concept.label = Entity1
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.Entity1(java.time.LocalDate,ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2,java.lang.String)#phrase.navigation = a new {Entity1} where {0, atrr2} {1, atrr3} {2, attr1}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.atrr2#phrase.action = set the atrr2 of {this} to {atrr2}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.atrr2#phrase.navigation = {atrr2} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.atrr3#phrase.action = set the atrr3 of {this} to {atrr3}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.atrr3#phrase.clearer = clear the atrr3 of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.atrr3#phrase.navigation = {atrr3} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.attr1#phrase.action = set the attr1 of {this} to {attr1}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1.attr1#phrase.navigation = {attr1} of {this}
+
+# ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2#concept.label = Entity2
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2.Entity2(ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.FullOutputActivitiesOfDailyFunctionalDecline,java.lang.String)#phrase.navigation = a new {Entity2} where {0, attr1} {1, new attribute}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2.attr1#phrase.action = set the attr1 of {this} to {attr1}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2.attr1#phrase.clearer = clear the attr1 of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2.attr1#phrase.navigation = {attr1} of {this}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2.newAttribute#phrase.action = set the new attribute of {this} to {new attribute}
+ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity2.newAttribute#phrase.navigation = {new attribute} of {this}
+
 # ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure
 ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure#concept.label = Failure/NotFailure
 ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Failure$NotFailure.failure#instance.label = Failure

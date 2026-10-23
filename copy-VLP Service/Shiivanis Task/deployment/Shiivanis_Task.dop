@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="Shiivanis_Task" usingRuleflow="true" ruleflowName="New ruleflow" targetRuleProjectName="Shiivanis Task">
+  <name>Shiivanis_Task</name>
+  <uuid>2da32bdb-9860-440d-aa0b-1ed1e5938a87</uuid>
+  <ruleflow href="../rules/New%20ruleflow.rfl#9d831186-e10a-4132-b872-1ca4ec21471f"/>
+  <targetRuleProject href="../../Shiivanis%20Task#72d7ffa1-3340-4f65-abd9-6661edf6f8a6"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

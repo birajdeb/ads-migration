@@ -42,11 +42,6 @@
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ads.samples</groupId>
-            <artifactId>adsSampleLibrary</artifactId>
-            <version>1.1.46</version>
-        </dependency>
-        <dependency>
             <groupId>birajdeb_bluepolaris.com.biraj_test.testing_purpose</groupId>
             <artifactId>agentNextBestQuestion</artifactId>
             <version>LATEST-SNAPSHOT</version>

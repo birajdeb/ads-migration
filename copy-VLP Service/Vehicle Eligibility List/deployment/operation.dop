@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Vehicle Eligibility List">
+  <name>Vehicle_Eligibility_List</name>
+  <uuid>82cabe65-0ba0-4b4b-a3a9-9d4c16996852</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#fda3b10e-a679-4c5b-a5d8-2c41df0ac8b7"/>
+  <targetRuleProject href="../../Vehicle%20Eligibility%20List#a151889e-0986-4a45-ab7b-cf09b2be07f1"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

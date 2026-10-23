@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>19134638-d350-464a-970c-ea2a57e5f906</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Auto Loan Application Recommended Outcome Service where
+		the Amortization Acceptability is 'Amortization Acceptability' , 
+		the Amortization Threshold In Months is 'Amortization Threshold In Months' , 
+		the Amount to Finance Auto Approve Threshold is 'Amount to Finance Auto Approve Threshold' , 
+		the Amount to Finance Manual Review Threshold is 'Amount to Finance Manual Review Threshold' , 
+		the Amount to Finance Recommended Outcome is 'Amount to Finance Recommended Outcome' , 
+		the Application Loan Structure Recommended Outcome is 'Application Loan Structure Recommended Outcome' , 
+		the Asset Age is 'Asset Age' , 
+		the Asset Age Threshold is 'Asset Age Threshold' , 
+		the Asset Eligibility is 'Asset Eligibility' , 
+		the Auto Loan Application Recommended Outcome is 'Auto Loan Application Recommended Outcome' , 
+		the Dealer Acceptability Outcome is 'Dealer Acceptability Outcome' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

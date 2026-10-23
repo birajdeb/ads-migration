@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>5fdd5af4-76f6-4dee-a5a4-14c8bcec5eef</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new TDSR-Total Credit Bureau Monthly Debt Obligation Service where
+		the TDSR Balance Obligation Monthly Payment Amounts are 'TDSR Balance Obligation Monthly Payment Amount' , 
+		the TDSR Trade Obligation Factors are 'TDSR Trade Obligation Factor' , 
+		the Active Debts are 'Active Debt' , 
+		the Bankruptcy Insolvency Indicators are 'Bankruptcy Insolvency Indicator' , 
+		the Debt Manual Edits Qualifieds are 'Debt Manual Edits Qualified' , 
+		the Existing Loan To Be Paid In Full Stipulation Requireds are 'Existing Loan To Be Paid In Full Stipulation Required' , 
+		the Installment Debt Monthly Payments Remaining from Balance Amounts are 'Installment Debt Monthly Payments Remaining from Balance Amount' , 
+		the Installment Trade Monthly Debt Obligations are 'Installment Trade Monthly Debt Obligation' , 
+		the Months Since Trade Date Reporteds are 'Months Since Trade Date Reported' , 
+		the Revolving Trade Monthly Debt Obligations are 'Revolving Trade Monthly Debt Obligation' , 
+		the Subject To Trade In Stipulation Requireds are 'Subject To Trade In Stipulation Required' , 
+		the Total Credit Bureau Monthly Debt Obligation is 'Total Credit Bureau Monthly Debt Obligation' , 
+		the Total Installment Monthly Debt Obligation is 'Total Installment Monthly Debt Obligation' , 
+		the Total Revolving Monthly Debt Obligation is 'Total Revolving Monthly Debt Obligation' , 
+		the Trade Equivalent Monthly Payment Amounts are 'Trade Equivalent Monthly Payment Amount' , 
+		the Trade Payment Frequencies are 'Trade Payment Frequency' , 
+		the Trade Types are 'Trade Type' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

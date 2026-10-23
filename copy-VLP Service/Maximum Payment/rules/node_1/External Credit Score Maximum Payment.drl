@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>External Credit Score Maximum Payment</name>
+  <uuid>77d5ccd1-432a-46cc-8311-806c6f14c2bf</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'a Customer' to a Customer in Customer ; 
+    
+	set 'an External Credit Score' to an External Credit Score in the External Credit Scores of 'a Customer' ; 
+    
+if 
+	the recommendation of 'an External Credit Score' is "Valid" then 
+	set decision to the maximum of the paymentFroms of { 'an External Credit Score' } ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

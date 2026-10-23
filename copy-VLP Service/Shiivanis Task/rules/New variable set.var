@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" language="ARL">
+  <name>New variable set</name>
+  <uuid>bcc79550-ea57-4ea1-83da-3eb9360e263d</uuid>
+  <variables name="newVariable" type="java.lang.String" initialValue="" verbalization="the new variable" jsonName=""/>
+</ilog.rules.studio.model.base:VariableSet>

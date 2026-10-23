@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>New folder</name>
+  <uuid>973aa725-f4bf-49a3-a0a2-8a6703660ba9</uuid>
+</ilog.rules.studio.model.base:RulePackage>

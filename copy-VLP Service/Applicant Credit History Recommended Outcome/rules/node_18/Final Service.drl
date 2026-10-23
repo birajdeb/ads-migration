@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Final Service</name>
+  <uuid>e5db8d1f-7b55-4f89-895e-2a6ce4e917df</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Applicant Credit History Recommended Outcome Service where
+		the Age of Oldest Qualifying Tradeline is 'Age of Oldest Qualifying Tradeline' , 
+		the Applicant Credit History Recommended Outcomes are 'Applicant Credit History Recommended Outcome' , 
+		the Applicant Debt Late Payment Typeses are 'Applicant Debt Late Payment Types' , 
+		the Applicant Debt Negative Itemses are 'Applicant Debt Negative Items' , 
+		the Applicant Debt Problem Outcomes are 'Applicant Debt Problem Outcome' , 
+		the Application Credit History Recommended Outcome is 'Application Credit History Recommended Outcome' , 
+		the Bureau Thickness is 'Bureau Thickness' , 
+		the Count Number Of Qualifying New Tradelines In the Last 6 Months is 'Count Number Of Qualifying New Tradelines In the Last 6 Months' , 
+		the Credit Bureau Major Derogatory Outcome is 'Credit Bureau Major Derogatory Outcome' , 
+		the Number Of Qualifying New Tradelines In the Last 6 Monthses are 'Number Of Qualifying New Tradelines In the Last 6 Months' , 
+		the Number of Qualifying Tradelines is 'Number of Qualifying Tradelines' , 
+		the Oldest Qualifying Tradeline Date is 'Oldest Qualifying Tradeline Date' , 
+		the Qualifying Debt Date Lists are 'Qualifying Debt Date List' , 
+		the Six Month Date Threshold is 'Six Month Date Threshold' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

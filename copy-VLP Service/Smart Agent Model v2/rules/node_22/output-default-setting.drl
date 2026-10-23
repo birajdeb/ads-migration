@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>ca6ee039-5816-4c6b-9b59-3a39bc2291f8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Smart Agent Output where
+		Applied Indicator is false , 
+		the Approval is Decline , 
+		the Car ID is "Unknown" , 
+		the Car Price is 0 , 
+		the Upsell Downsell is Reject ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

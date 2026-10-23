@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Edge case</name>
+  <uuid>08ce53a1-8cc0-421f-8687-7497bece5ab7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new Ranking Output where
+		the Question is - , 
+		the A Ranking is 0 to decision  ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

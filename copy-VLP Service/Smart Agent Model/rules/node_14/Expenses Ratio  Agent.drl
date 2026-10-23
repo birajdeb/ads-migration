@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Expenses Ratio  Agent</name>
+  <uuid>f8234a0e-16e9-4530-a54b-3e0827db9139</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+ set 'variable1' to an Answer List in 'Answer List' ;
+if 
+ variable1 is defined and the A3 - Gross Monthly Income of variable1 does not equal 0 
+then 
+ set decision to round (( the A4 - Expenses of variable1 / the A3 - Gross Monthly Income of variable1) , 2) ;
+else 
+ set decision to null ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

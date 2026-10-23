@@ -11,18 +11,11 @@
             <FunctionTask Identifier="task_3">
                 <FinalActions Language="bal"><![CDATA[set 'the FinalOutput' to a new Final Outputs where 
 	the Order Pricing Table Assignments are 'the OrderPricingTableAssignment' ;]]></FinalActions>
-                <Invocation FunctionIdentifier="vkokate_bluepolaris.com.tactile_medical.tactile_medical_services.orderpricingtableassignment.Order_Pricing_Table_Assignment">
+                <Invocation FunctionIdentifier="ankurmore_bluepolaris.com.medical.tactile_medical_services.pursuedpolicy.Pursued_Policy">
                     <InputBindings>
-                        <Binding Language="bal" Name="network"><![CDATA[ 'the Network' ]]></Binding>
-                        <Binding Language="bal" Name="patient"><![CDATA[ 'the Patient' ]]></Binding>
-                        <Binding Language="bal" Name="policy"><![CDATA[ 'the Policy' ]]></Binding>
-                        <Binding Language="bal" Name="order"><![CDATA[ 'the Order' ]]></Binding>
-                        <Binding Language="bal" Name="policyActivity"><![CDATA[ 'the PolicyActivity' ]]></Binding>
-                        <Binding Language="bal" Name="payer"><![CDATA[ 'the PayerInsurance' ]]></Binding>
+                        <Binding Language="bal" Name="policy"/>
+                        <Binding Language="bal" Name="order"/>
                     </InputBindings>
-                    <OutputBindings>
-                        <Binding Language="bal" Name="OrderPricingTableAssignment"><![CDATA[ 'order pricing table assignment' ]]></Binding>
-                    </OutputBindings>
                 </Invocation>
             </FunctionTask>
             <FunctionTask Identifier="task_4">
@@ -185,6 +178,23 @@
                     </OutputBindings>
                 </Invocation>
             </FunctionTask>
+            <RuleTask ExecutionMode="Sequential" ExitCriteria="None" Identifier="task_14" Ordering="Default">
+                <InitialActions Language="bal"><![CDATA[asdas]]></InitialActions>
+                <FinalActions Language="arl"><![CDATA[asdasd]]></FinalActions>
+            </RuleTask>
+            <ActionTask Identifier="task_15">
+                <InitialActions Language="bal"><![CDATA[asdsa]]></InitialActions>
+                <FinalActions Language="bal"><![CDATA[asdasd]]></FinalActions>
+                <Actions Language="bal"><![CDATA[asdas]]></Actions>
+            </ActionTask>
+            <SubflowTask Identifier="task_16" Uuid="">
+                <InitialActions Language="bal"><![CDATA[asd]]></InitialActions>
+                <FinalActions Language="bal"><![CDATA[asdasd]]></FinalActions>
+            </SubflowTask>
+            <FunctionTask Identifier="task_17">
+                <Invocation/>
+            </FunctionTask>
+            <StartTask Identifier="task_18"/>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
@@ -200,6 +210,14 @@
             <TaskNode Identifier="node_11" Task="task_11"/>
             <TaskNode Identifier="node_12" Task="task_12"/>
             <TaskNode Identifier="node_13" Task="task_13"/>
+            <TaskNode Identifier="node_14" Task="task_14"/>
+            <TaskNode Identifier="node_15" Task="task_15"/>
+            <TaskNode Identifier="node_16" Task="task_16"/>
+            <TaskNode Identifier="node_17" Task="task_17"/>
+            <BranchNode Identifier="node_18"/>
+            <ForkNode Identifier="node_19"/>
+            <JoinNode Identifier="node_20"/>
+            <TaskNode Identifier="node_21" Task="task_18"/>
         </NodeList>
         <TransitionList>
             <Transition Identifier="transition_0" Source="node_0" Target="node_3"/>
@@ -218,29 +236,45 @@
     </Body>
     <Resources>
         <ResourceSet Locale="en_US">
-            <Data Name="node_11#label"><![CDATA[Year 1 and 2 Price]]></Data>
-            <Data Name="node_7#label"><![CDATA[Policy Benefit Level]]></Data>
+            <Data Name="node_17#name"><![CDATA[Function task 12]]></Data>
+            <Data Name="node_14#name"><![CDATA[Rule task 1]]></Data>
+            <Data Name="node_17#label"><![CDATA[Function task 12]]></Data>
             <Data Name="node_5#name"><![CDATA[Calculate Allowables]]></Data>
             <Data Name="node_2#name"><![CDATA[End node]]></Data>
-            <Data Name="node_5#label"><![CDATA[Calculate Allowables]]></Data>
             <Data Name="node_10#label"><![CDATA[Year 2 Deductible Remaining]]></Data>
+            <Data Name="node_19#label"><![CDATA[Fork node 1]]></Data>
+            <Data Name="node_20#label"><![CDATA[Join node 1]]></Data>
+            <Data Name="node_20#name"><![CDATA[Join node 1]]></Data>
+            <Data Name="node_6#label"><![CDATA[Error Message List]]></Data>
+            <Data Name="node_14#label"><![CDATA[Rule task 1]]></Data>
+            <Data Name="node_3#label"><![CDATA[Order Pricing Table Assignment]]></Data>
+            <Data Name="node_18#name"><![CDATA[Branch node 1]]></Data>
+            <Data Name="node_15#label"><![CDATA[Action task 1]]></Data>
+            <Data Name="node_8#label"><![CDATA[Pursued Policy]]></Data>
+            <Data Name="node_11#name"><![CDATA[Year 1 and 2 Price]]></Data>
+            <Data Name="node_8#name"><![CDATA[Pursued Policy]]></Data>
+            <Data Name="node_12#label"><![CDATA[Yearly Deductible]]></Data>
+            <Data Name="node_21#label"><![CDATA[Start node 2]]></Data>
+            <Data Name="node_21#name"><![CDATA[Start node 2]]></Data>
+            <Data Name="node_11#label"><![CDATA[Year 1 and 2 Price]]></Data>
+            <Data Name="node_18#label"><![CDATA[Branch node 1]]></Data>
+            <Data Name="node_7#label"><![CDATA[Policy Benefit Level]]></Data>
+            <Data Name="node_5#label"><![CDATA[Calculate Allowables]]></Data>
             <Data Name="node_13#label"><![CDATA[Policy Copay]]></Data>
             <Data Name="node_10#name"><![CDATA[Year 2 Deductible Remaining]]></Data>
             <Data Name="node_4#name"><![CDATA[Policy Months Remaining]]></Data>
-            <Data Name="node_6#label"><![CDATA[Error Message List]]></Data>
+            <Data Name="node_15#name"><![CDATA[Action task 1]]></Data>
             <Data Name="node_7#name"><![CDATA[Policy Benefit Level]]></Data>
             <Data Name="node_6#name"><![CDATA[Error Message List]]></Data>
             <Data Name="node_9#name"><![CDATA[Yearly Out of Pocket Left]]></Data>
-            <Data Name="node_3#label"><![CDATA[Order Pricing Table Assignment]]></Data>
             <Data Name="node_12#name"><![CDATA[Yearly Deductible]]></Data>
             <Data Name="node_0#name"><![CDATA[Start node]]></Data>
             <Data Name="node_4#label"><![CDATA[Policy Months Remaining]]></Data>
             <Data Name="node_9#label"><![CDATA[Yearly Out of Pocket Left]]></Data>
-            <Data Name="node_8#label"><![CDATA[Pursued Policy]]></Data>
             <Data Name="node_13#name"><![CDATA[Policy Copay]]></Data>
-            <Data Name="node_11#name"><![CDATA[Year 1 and 2 Price]]></Data>
-            <Data Name="node_8#name"><![CDATA[Pursued Policy]]></Data>
-            <Data Name="node_12#label"><![CDATA[Yearly Deductible]]></Data>
+            <Data Name="node_16#label"><![CDATA[Subflow task 1]]></Data>
+            <Data Name="node_16#name"><![CDATA[Subflow task 1]]></Data>
+            <Data Name="node_19#name"><![CDATA[Fork node 1]]></Data>
             <Data Name="node_3#name"><![CDATA[Order Pricing Table Assignment]]></Data>
         </ResourceSet>
     </Resources>

@@ -43,6 +43,27 @@
             <requiredInput href="#node_0"/>
         </informationRequirement>
     </decision>
+    <decision id="node_3" name="Decision 3">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1" collection="false" name="Input 4"/>
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1" collection="false" name="Decision 3"/>
+                <rule defaultRule="false" href="node_3/aaa.dmt" kind="DecisionTable" name="aaa"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Decision 3" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1"/>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_4" name="Input 4">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1" collection="false" name="Input 4"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Input 4" typeRef="ankurmore_bluepolaris.com.vitas.vitas_service.datamodel.Entity1"/>
+    </inputData>
 </definitions>
 </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
