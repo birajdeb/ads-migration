@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Test</name>
+  <uuid>9138a13d-9e06-4e4b-bb5a-ff02f1edf21e</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Local Pincode of 'Pincode' is <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to a new Final Customer Info where
+	the Info Line 1 is a new Personal Info where
+	the Age is <Age> , 
+	the Address is 'Pincode' , 
+	the Name is <Name> , 
+	the UIDAI NO is <UIDAI NO> , 
+	the Info Line 2 is a new Pincode where
+	the Local Pincode is <Local Pincode>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["411006"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[18]]></Param>
+                                <Param><![CDATA["XYZ"]]></Param>
+                                <Param><![CDATA["1234"]]></Param>
+                                <Param><![CDATA["411006"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["411032"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[21]]></Param>
+                                <Param><![CDATA["mnc"]]></Param>
+                                <Param><![CDATA["009977"]]></Param>
+                                <Param><![CDATA["4110032"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[806]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Local Pincode]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

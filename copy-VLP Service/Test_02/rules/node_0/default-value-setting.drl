@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>8a400451-a4cf-4bc1-8204-e99d544b57b5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set Pincode to a new Pincode where
+		the Local Pincode is "" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

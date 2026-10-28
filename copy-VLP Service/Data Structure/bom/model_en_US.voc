@@ -904,11 +904,13 @@ agull.auto_loan_demo.auto_loan_service.datastructure.Customer.totalHouseAutOblig
 
 # agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail
 agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail#concept.label = Customer Detail
-agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.CustomerDetail(java.util.List)#phrase.navigation = a new {Customer Detail} where {0, Customer Info}
+agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.CustomerDetail(java.util.List,java.lang.String)#phrase.navigation = a new {Customer Detail} where {0, Customer Info} {1, Policy ID}
 agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.addTo_customerInfo(agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo)#phrase.action = add {0} to the Customer Infoes of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.clear_customerInfo()#phrase.action = clear the Customer Infoes of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.customerInfo#phrase.action = set the Customer Infoes of {this} to {Customer Info}
 agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.customerInfo#phrase.navigation = {Customer Info} of {this}
+agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.policyID#phrase.action = set the Policy ID of {this} to {Policy ID}
+agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.policyID#phrase.navigation = {Policy ID} of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.CustomerDetail.removeFrom_customerInfo(agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo)#phrase.action = remove {0} from the Customer Infoes of {this}
 
 # agull.auto_loan_demo.auto_loan_service.datastructure.DealerAcceptabilityOutcome
@@ -1177,6 +1179,16 @@ agull.auto_loan_demo.auto_loan_service.datastructure.FinalApproval.tierOutput#ph
 agull.auto_loan_demo.auto_loan_service.datastructure.FinalApproval.tierOutput#phrase.clearer = clear the Tier Output of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.FinalApproval.tierOutput#phrase.navigation = {Tier Output} of {this}
 
+# agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo#concept.label = Final Customer Info
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.FinalCustomerInfo(agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo,agull.auto_loan_demo.auto_loan_service.datastructure.Pincode)#phrase.navigation = a new {Final Customer Info} where {0, Info Line 1} {1, Info Line 2}
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.infoLine1#phrase.action = set the Info Line 1 of {this} to {Info Line 1}
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.infoLine1#phrase.clearer = clear the Info Line 1 of {this}
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.infoLine1#phrase.navigation = {Info Line 1} of {this}
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.infoLine2#phrase.action = set the Info Line 2 of {this} to {Info Line 2 }
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.infoLine2#phrase.clearer = clear the Info Line 2 of {this}
+agull.auto_loan_demo.auto_loan_service.datastructure.FinalCustomerInfo.infoLine2#phrase.navigation = {Info Line 2 } of {this}
+
 # agull.auto_loan_demo.auto_loan_service.datastructure.FinalOutcome
 agull.auto_loan_demo.auto_loan_service.datastructure.FinalOutcome#concept.label = Final Outcome
 agull.auto_loan_demo.auto_loan_service.datastructure.FinalOutcome.congratulationsYouAreApproved$CheckOtherCarOptionsWeHaveForYou#instance.label = Congratulations you are approved! Check other car options we have for you
@@ -1329,12 +1341,12 @@ agull.auto_loan_demo.auto_loan_service.datastructure.PaymentTier.downPaymentUpse
 
 # agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo
 agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo#concept.label = Personal Info
-agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.PersonalInfo(java.lang.String,agull.auto_loan_demo.auto_loan_service.datastructure.Pincode,double,java.lang.String)#phrase.navigation = a new {Personal Info} where {0, UIDAI NO} {1, Addess} {2, Age} {3, Name}
+agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.PersonalInfo(java.lang.String,agull.auto_loan_demo.auto_loan_service.datastructure.Pincode,double,java.lang.String)#phrase.navigation = a new {Personal Info} where {0, UIDAI NO} {1, Address} {2, Age} {3, Name}
 agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.UIDAINO#phrase.action = set the UIDAI NO of {this} to {UIDAI NO}
 agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.UIDAINO#phrase.navigation = {UIDAI NO} of {this}
-agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.addess#phrase.action = set the Addess of {this} to {Addess}
-agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.addess#phrase.clearer = clear the Addess of {this}
-agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.addess#phrase.navigation = {Addess} of {this}
+agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.address#phrase.action = set the Address of {this} to {Address}
+agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.address#phrase.clearer = clear the Address of {this}
+agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.address#phrase.navigation = {Address} of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.age#phrase.action = set the Age of {this} to {Age}
 agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.age#phrase.addition_setter = add {Age} to the Age of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.age#phrase.navigation = {Age} of {this}
@@ -1344,11 +1356,9 @@ agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo.name#phrase.na
 
 # agull.auto_loan_demo.auto_loan_service.datastructure.Pincode
 agull.auto_loan_demo.auto_loan_service.datastructure.Pincode#concept.label = Pincode
-agull.auto_loan_demo.auto_loan_service.datastructure.Pincode.Pincode(double)#phrase.navigation = a new {Pincode} where {0, Local Pincode}
+agull.auto_loan_demo.auto_loan_service.datastructure.Pincode.Pincode(java.lang.String)#phrase.navigation = a new {Pincode} where {0, Local Pincode}
 agull.auto_loan_demo.auto_loan_service.datastructure.Pincode.localPincode#phrase.action = set the Local Pincode of {this} to {Local Pincode}
-agull.auto_loan_demo.auto_loan_service.datastructure.Pincode.localPincode#phrase.addition_setter = add {Local Pincode} to the Local Pincode of {this}
 agull.auto_loan_demo.auto_loan_service.datastructure.Pincode.localPincode#phrase.navigation = {Local Pincode} of {this}
-agull.auto_loan_demo.auto_loan_service.datastructure.Pincode.localPincode#phrase.subtraction_setter = subtract {Local Pincode} from the Local Pincode of {this}
 
 # agull.auto_loan_demo.auto_loan_service.datastructure.PrevQues
 agull.auto_loan_demo.auto_loan_service.datastructure.PrevQues#concept.label = Prev Ques

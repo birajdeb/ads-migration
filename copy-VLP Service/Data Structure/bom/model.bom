@@ -1839,7 +1839,12 @@ class CustomerDetail
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "CustomerInfo"
                 #update;
-    CustomerDetail(java.util.List customerInfo domain 0,* class agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo)
+    string policyID
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "PolicyID"
+                #update;
+    CustomerDetail(java.util.List customerInfo domain 0,* class agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo, 
+        string policyID)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
@@ -2448,6 +2453,28 @@ class FinalApproval
                 #dataio.default;
 }
 
+class FinalCustomerInfo
+        property ads.typeId "113"
+        property com.fasterxml.jackson.annotation.JsonTypeName "FinalCustomerInfo"
+        #de.generated
+{
+    agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo infoLine1
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "InfoLine1"
+                #update;
+    agull.auto_loan_demo.auto_loan_service.datastructure.Pincode infoLine2
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "InfoLine2"
+                #update;
+    FinalCustomerInfo(agull.auto_loan_demo.auto_loan_service.datastructure.PersonalInfo infoLine1, agull.auto_loan_demo.auto_loan_service.datastructure.Pincode infoLine2)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    FinalCustomerInfo()
+                #dataio.default;
+}
+
 class FinalOutcome
         extends java.lang.Enum
         property ads.typeId "60"
@@ -2794,9 +2821,9 @@ class PersonalInfo
                 property ads.attributeId "3"
                 property com.fasterxml.jackson.annotation.JsonProperty "UIDAINO"
                 #update;
-    agull.auto_loan_demo.auto_loan_service.datastructure.Pincode addess
+    agull.auto_loan_demo.auto_loan_service.datastructure.Pincode address
                 property ads.attributeId "4"
-                property com.fasterxml.jackson.annotation.JsonProperty "Addess"
+                property com.fasterxml.jackson.annotation.JsonProperty "Address"
                 #update;
     double age
                 property ads.attributeId "2"
@@ -2806,7 +2833,7 @@ class PersonalInfo
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "Name"
                 #update;
-    PersonalInfo(string UIDAINO, agull.auto_loan_demo.auto_loan_service.datastructure.Pincode addess, double age, string name)
+    PersonalInfo(string UIDAINO, agull.auto_loan_demo.auto_loan_service.datastructure.Pincode address, double age, string name)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
@@ -2820,11 +2847,11 @@ class Pincode
         property com.fasterxml.jackson.annotation.JsonTypeName "Pincode"
         #de.generated
 {
-    double localPincode
+    string localPincode
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "LocalPincode"
                 #update;
-    Pincode(double localPincode)
+    Pincode(string localPincode)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"

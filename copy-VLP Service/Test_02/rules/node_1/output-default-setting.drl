@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>1c0c03ab-af4a-418d-8060-d9d4388a6a88</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Final Customer Info where
+		the Info Line 1 is a new Personal Info where 
+	the Age is 0 , 
+	the Address is Pincode , 
+	the Name is "" , 
+	the UIDAI NO is "" , 
+		the Info Line 2 is Pincode ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
