@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Past_12_Months_Claim_Count</name>
+  <uuid>837440f4-45b8-414b-afd0-ae7f1b0f1933</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the Previous Claims Submitted of 'Previous Claims Submitted' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ilog.rules.studio.model.dt:DecisionTable xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+    <name>Catastrophic Diagnosis Code Count</name>
+    <uuid>5a1f5c26-0f0e-4009-a6a0-9683fd6ebef2</uuid>
+    <locale>en_US</locale>
+    <definition>
+        <DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+            <Body>
+                <Properties>
+                    <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+                    <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+                </Properties>
+                <Structure>
+                    <ConditionDefinitions>
+                        <ConditionDefinition Id="C0">
+                            <Properties>
+                                <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                                <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                            </Properties>
+                            <ExpressionDefinition>
+                                <Text><![CDATA['Claim Diagnosis Code List' is Catastrophic Ind is <a boolean>]]></Text>
+                            </ExpressionDefinition>
+                        </ConditionDefinition>
+                        <ConditionDefinition Id="C1">
+                            <Properties>
+                                <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                                <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                            </Properties>
+                            <ExpressionDefinition>
+                                <Text><![CDATA['Comorbidity Complexity' is <a string>]]></Text>
+                            </ExpressionDefinition>
+                        </ConditionDefinition>
+                    </ConditionDefinitions>
+                    <ActionDefinitions>
+                        <ActionDefinition Id="A0">
+                            <ExpressionDefinition>
+                                <Text><![CDATA[set decision to <a number>]]></Text>
+                            </ExpressionDefinition>
+                        </ActionDefinition>
+                    </ActionDefinitions>
+                </Structure>
+                <Contents>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[true]]></Param>
+                            </Expression>
+                            <Partition DefId="C1">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA["High"]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[3]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[false]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[0]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Contents>
+            </Body>
+            <Resources DefaultLocale="en_US">
+                <ResourceSet Locale="en_US">
+                    <Data Name="Definitions(C0)#HeaderText"><![CDATA[Catastrophic Ind]]></Data>
+                    <Data Name="Definitions(C1)#HeaderText"><![CDATA[Comorbidity Complexity]]></Data>
+                    <Data Name="Definitions(A0)#HeaderText"><![CDATA[Catastrophic Diagnosis Code Count]]></Data>
+                </ResourceSet>
+            </Resources>
+        </DT>
+    </definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Number_of_Treatment_Codes</name>
+  <uuid>204d0139-3681-4e65-a57b-04174d736874</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the Claim Treatment Code of 'Claim Treatment Code List' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
