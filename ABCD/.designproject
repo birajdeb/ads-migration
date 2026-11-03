@@ -1,0 +1,11 @@
+{
+  "description" : "",
+  "groupId" : "birajdeb_bluepolaris.com.biraj_test.abcd",
+  "locale" : "en_US",
+  "properties" : {
+    "refactoringEnabled" : false,
+    "indexingEnabled" : false,
+    "tags" : [ ]
+  },
+  "extraProperties" : { }
+}

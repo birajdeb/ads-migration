@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>user1.ABC</groupId>
-        <artifactId>aBC</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <groupId>birajdeb_bluepolaris.com.biraj_test.abcd</groupId>
+        <artifactId>ABCD</artifactId>
+        <version>LATEST-SNAPSHOT</version>
     </parent>
-    <groupId>user1.ABC</groupId>
+
+    <groupId>birajdeb_bluepolaris.com.biraj_test.abcd</groupId>
     <artifactId>test</artifactId>
     <version>LATEST-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
@@ -27,12 +29,13 @@
                             <name>Test</name>
                         </deployment>
                     </deployments>
-                    <packageName>user1.ABC.test</packageName>
+                <packageName>birajdeb_bluepolaris.com.biraj_test.abcd.test</packageName>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <dependencies>
+
+<dependencies>
         <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>

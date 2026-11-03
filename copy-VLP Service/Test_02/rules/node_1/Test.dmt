@@ -23,7 +23,6 @@
                         <Text><![CDATA[set 'decision' to a new Final Customer Info where
 	the Info Line 1 is a new Personal Info where
 	the Age is <Age> , 
-	the Address is 'Pincode' , 
 	the Name is <Name> , 
 	the UIDAI NO is <UIDAI NO> , 
 	the Info Line 2 is a new Pincode where
@@ -69,9 +68,9 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[806]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Local Pincode]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[806]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
         </ResourceSet>
     </Resources>
 </DT>
