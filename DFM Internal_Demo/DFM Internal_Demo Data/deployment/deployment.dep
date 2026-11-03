@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="user1.DFM_Internal_Demo:dFMInternal_DemoData" ruleAppVersion="1.0.0-SNAPSHOT" packageName="user1.DFM_Internal_Demo.bom" managingXom="true">
+  <name>DFM_Internal_Demo_Data</name>
+  <uuid>3de9bebb-e232-4afe-96bb-7222c78ccb3d</uuid>
+  <locales>en_US</locales>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Diagnosis_Code_Count</name>
+  <uuid>44beb501-ea4a-43bd-b557-3f0e5f56cbaa</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the Claim Diagnosis Code Count of 'Claim Diagnosis Code List' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

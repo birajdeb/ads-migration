@@ -1,0 +1,41 @@
+
+# user1.DFM_Internal_Demo.bom.ClaimDiagnosis
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis#concept.label = Claim Diagnosis
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.ClaimDiagnosis(boolean,java.lang.String,double,java.lang.String)#phrase.navigation = a new {Claim Diagnosis} where {0, Catastrophic Ind} {1, Claim Diagnosis Code 1} {2, Claim Diagnosis Code Count} {3, Claim Diagnosis Code 2}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.action[0] = {this} gets Catastrophic Ind only if {Catastrophic Ind}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.action[1] = make it {Catastrophic Ind} that {this} is Catastrophic Ind
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.action[1].deprecated = true
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.navigation = {this} is Catastrophic Ind
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.negative_predicate = {this} is not Catastrophic Ind
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.negative_predicate_setter = {this} does not get Catastrophic Ind
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.catastrophicInd#phrase.positive_predicate_setter = {this} gets Catastrophic Ind
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCode1#phrase.action = set the Claim Diagnosis Code 1 of {this} to {Claim Diagnosis Code 1}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCode1#phrase.clearer = clear the Claim Diagnosis Code 1 of {this}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCode1#phrase.navigation = {Claim Diagnosis Code 1} of {this}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCodeCount#phrase.action = set the Claim Diagnosis Code Count of {this} to {Claim Diagnosis Code Count}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCodeCount#phrase.addition_setter = add {Claim Diagnosis Code Count} to the Claim Diagnosis Code Count of {this}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCodeCount#phrase.navigation = {Claim Diagnosis Code Count} of {this}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCodeCount#phrase.subtraction_setter = subtract {Claim Diagnosis Code Count} from the Claim Diagnosis Code Count of {this}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCode2#phrase.action = set the Claim Diagnosis Code 2 of {this} to {Claim Diagnosis Code 2}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCode2#phrase.clearer = clear the Claim Diagnosis Code 2 of {this}
+user1.DFM_Internal_Demo.bom.ClaimDiagnosis.claimDiagnosisCode2#phrase.navigation = {Claim Diagnosis Code 2} of {this}
+
+# user1.DFM_Internal_Demo.bom.ClaimTreatment
+user1.DFM_Internal_Demo.bom.ClaimTreatment#concept.label = Claim Treatment
+user1.DFM_Internal_Demo.bom.ClaimTreatment.ClaimTreatment(double,double)#phrase.navigation = a new {Claim Treatment} where {0, Claim Treatment Code} {1, Treatment Severity Code}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.claimTreatmentCode#phrase.action = set the Claim Treatment Code of {this} to {Claim Treatment Code}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.claimTreatmentCode#phrase.addition_setter = add {Claim Treatment Code} to the Claim Treatment Code of {this}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.claimTreatmentCode#phrase.navigation = {Claim Treatment Code} of {this}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.claimTreatmentCode#phrase.subtraction_setter = subtract {Claim Treatment Code} from the Claim Treatment Code of {this}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.treatmentSeverityCode#phrase.action = set the Treatment Severity Code of {this} to {Treatment Severity Code}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.treatmentSeverityCode#phrase.addition_setter = add {Treatment Severity Code} to the Treatment Severity Code of {this}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.treatmentSeverityCode#phrase.navigation = {Treatment Severity Code} of {this}
+user1.DFM_Internal_Demo.bom.ClaimTreatment.treatmentSeverityCode#phrase.subtraction_setter = subtract {Treatment Severity Code} from the Treatment Severity Code of {this}
+
+# user1.DFM_Internal_Demo.bom.PreviousClaims
+user1.DFM_Internal_Demo.bom.PreviousClaims#concept.label = Previous Claims
+user1.DFM_Internal_Demo.bom.PreviousClaims.PreviousClaims(double)#phrase.navigation = a new {Previous Claims} where {0, Previous Claims Submitted}
+user1.DFM_Internal_Demo.bom.PreviousClaims.previousClaimsSubmitted#phrase.action = set the Previous Claims Submitted of {this} to {Previous Claims Submitted}
+user1.DFM_Internal_Demo.bom.PreviousClaims.previousClaimsSubmitted#phrase.addition_setter = add {Previous Claims Submitted} to the Previous Claims Submitted of {this}
+user1.DFM_Internal_Demo.bom.PreviousClaims.previousClaimsSubmitted#phrase.navigation = {Previous Claims Submitted} of {this}
+user1.DFM_Internal_Demo.bom.PreviousClaims.previousClaimsSubmitted#phrase.subtraction_setter = subtract {Previous Claims Submitted} from the Previous Claims Submitted of {this}

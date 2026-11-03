@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ilog.rules.studio.model.dt:DecisionTable xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+    <name>Comorbidity Complexity</name>
+    <uuid>f8e5ba1b-0c6e-4cda-a96c-0c955ca1cbcc</uuid>
+    <locale>en_US</locale>
+    <definition>
+        <DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+            <Body>
+                <Properties>
+                    <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+                    <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+                </Properties>
+                <Structure>
+                    <ConditionDefinitions>
+                        <ConditionDefinition Id="C0">
+                            <Properties>
+                                <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                                <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                            </Properties>
+                            <ExpressionDefinition>
+                                <Text><![CDATA[the Claim Diagnosis Code 1 of 'Claim Diagnosis Code List' is <a string>]]></Text>
+                            </ExpressionDefinition>
+                        </ConditionDefinition>
+                        <ConditionDefinition Id="C1">
+                            <Properties>
+                                <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                                <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                            </Properties>
+                            <ExpressionDefinition>
+                                <Text><![CDATA[the Claim Diagnosis Code 2 of 'Claim Diagnosis Code List' is <a string>]]></Text>
+                            </ExpressionDefinition>
+                        </ConditionDefinition>
+                    </ConditionDefinitions>
+                    <ActionDefinitions>
+                        <ActionDefinition Id="A0">
+                            <ExpressionDefinition>
+                                <Text><![CDATA[set decision to <a string>]]></Text>
+                            </ExpressionDefinition>
+                        </ActionDefinition>
+                    </ActionDefinitions>
+                </Structure>
+                <Contents>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ "E001", "E002", "F001", "F002", "F003", "F004" }]]></Param>
+                            </Expression>
+                            <Partition DefId="C1">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                        <Param><![CDATA[{ "EE", "FF" }]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA["High"]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ "C001", "C002", "D001", "D002" }]]></Param>
+                            </Expression>
+                            <Partition DefId="C1">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                        <Param><![CDATA[{ "CC", "DD" }]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA["Moderate"]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                <Param><![CDATA[{ "A001", "A002", "B001", "B002" }]]></Param>
+                            </Expression>
+                            <Partition DefId="C1">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                                        <Param><![CDATA[{ "AA", "BB" }]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA["Low"]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                                <Param><![CDATA[{ "A001", "A002", "B001", "B002", "C001", "C002", "D001", "D002", "E001", "E002", "F001", "F002", "F003", "F004" }]]></Param>
+                            </Expression>
+                            <Partition DefId="C1">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                                        <Param><![CDATA[{ "AA", "BB", "CC", "DD", "EE", "FF" }]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA["Moderate"]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Contents>
+            </Body>
+            <Resources DefaultLocale="en_US">
+                <ResourceSet Locale="en_US">
+                    <Data Name="Definitions(C0)#HeaderText"><![CDATA[Claim Diagnosis Code 1]]></Data>
+                    <Data Name="Definitions(C1)#HeaderText"><![CDATA[Claim Diagnosis Code 2]]></Data>
+                    <Data Name="Definitions(A0)#HeaderText"><![CDATA[Comorbidity Complexity]]></Data>
+                </ResourceSet>
+            </Resources>
+        </DT>
+    </definition>
+</ilog.rules.studio.model.dt:DecisionTable>
