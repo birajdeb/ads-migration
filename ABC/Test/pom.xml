@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>user1.ABC</groupId>
-        <artifactId>aBC</artifactId>
+        <artifactId>ABC</artifactId>
         <version>LATEST-SNAPSHOT</version>
     </parent>
     <groupId>user1.ABC</groupId>

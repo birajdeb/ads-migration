@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>user1.ABC</groupId>
-        <artifactId>aBC</artifactId>
+        <artifactId>ABC</artifactId>
         <version>LATEST-SNAPSHOT</version>
     </parent>
-    <artifactId>aBCDecisionService</artifactId>
+    <artifactId>ABCDecisionService</artifactId>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
@@ -64,7 +63,8 @@
             </build>
         </profile>
     </profiles>
-    <build>
+    
+<build>
         <resources>
             <resource>
                 <directory>${project.basedir}</directory>
@@ -120,6 +120,7 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/decision-providers</resource>
                                 </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
                             </transformers>
                             <artifactSet>
                                 <excludes>
