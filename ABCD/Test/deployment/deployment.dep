@@ -10,7 +10,7 @@
     </properties>
   </operations>
   <versionPolicies label="Increment minor version numbers" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
-    <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous versions.]]></description>
+    <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous  versions.]]></description>
   </versionPolicies>
   <versionPolicies label="Use the base version numbers" recurrent="true">
     <description><![CDATA[Uses the numbers provided in the deployment configuration. Replaces the latest version of each ruleset with this release. Used for hot fixes or development.]]></description>
