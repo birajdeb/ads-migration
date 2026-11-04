@@ -23,7 +23,7 @@
                 <rule defaultRule="false" href="node_1/TestA.dmt" kind="DecisionTable" name="TestA"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String"/>
+        <variable id="node_1_ii1" name="Decision" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
