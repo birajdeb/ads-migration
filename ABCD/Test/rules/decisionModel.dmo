@@ -13,7 +13,7 @@
                 <output bomType="java.lang.Boolean" collection="false" name="Input"/>
             </initialization>
         </extensionElements>
-        <variable id="node_0_ii" name="Input" typeRef="java.lang.Boolean"/>
+        <variable id="node_0_ii1234" name="Input" typeRef="java.lang.Boolean"/>
     </inputData>
     <decision id="node_1" name="Decision">
         <extensionElements>
