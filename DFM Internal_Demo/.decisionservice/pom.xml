@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>user1.DFM_Internal_Demo</groupId>
-        <artifactId>dFMInternal_Demo</artifactId>
+        <artifactId>DFMInternal_Demo</artifactId>
         <version>LATEST-SNAPSHOT</version>
     </parent>
-    <artifactId>dFMInternal_DemoDecisionService</artifactId>
+    <artifactId>DFMInternal_DemoDecisionService</artifactId>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>user1.DFM_Internal_Demo</groupId>
-            <artifactId>dFMInternal_DemoData</artifactId>
+            <artifactId>claimComplexity</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>user1.DFM_Internal_Demo</groupId>
-            <artifactId>claimComplexity</artifactId>
+            <artifactId>dFMInternal_DemoData</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -69,7 +68,8 @@
             </build>
         </profile>
     </profiles>
-    <build>
+    
+<build>
         <resources>
             <resource>
                 <directory>${project.basedir}</directory>
@@ -95,7 +95,7 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>user1.DFM_Internal_Demo</groupId>
-                                    <artifactId>dFMInternal_DemoData</artifactId>
+                                    <artifactId>claimComplexity</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
@@ -104,7 +104,7 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>user1.DFM_Internal_Demo</groupId>
-                                    <artifactId>claimComplexity</artifactId>
+                                    <artifactId>dFMInternal_DemoData</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
@@ -134,6 +134,7 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/decision-providers</resource>
                                 </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
                             </transformers>
                             <artifactSet>
                                 <excludes>
