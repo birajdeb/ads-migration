@@ -1,0 +1,317 @@
+
+# user1.SOP1.bom.BidEvaluationRecord
+user1.SOP1.bom.BidEvaluationRecord#concept.label = Bid Evaluation Record
+user1.SOP1.bom.BidEvaluationRecord.BidEvaluationRecord(user1.SOP1.bom.PurchaseRequest,java.lang.String,user1.SOP1.bom.EvaluationCriteriaEnums,user1.SOP1.bom.VendorQuotation,java.lang.String)#phrase.navigation = a new {Bid Evaluation Record} where {0, Purchase Request} {1, Evaluation Outcome} {2, Evaluation Criteria} {3, Vendor Quotation} {4, Bid Evaluation Record Id}
+user1.SOP1.bom.BidEvaluationRecord.purchaseRequest#phrase.action = set the Purchase Request of {this} to {Purchase Request}
+user1.SOP1.bom.BidEvaluationRecord.purchaseRequest#phrase.clearer = clear the Purchase Request of {this}
+user1.SOP1.bom.BidEvaluationRecord.purchaseRequest#phrase.navigation = {Purchase Request} of {this}
+user1.SOP1.bom.BidEvaluationRecord.evaluationOutcome#phrase.action = set the Evaluation Outcome of {this} to {Evaluation Outcome}
+user1.SOP1.bom.BidEvaluationRecord.evaluationOutcome#phrase.clearer = clear the Evaluation Outcome of {this}
+user1.SOP1.bom.BidEvaluationRecord.evaluationOutcome#phrase.navigation = {Evaluation Outcome} of {this}
+user1.SOP1.bom.BidEvaluationRecord.evaluationCriteria#phrase.action = set the Evaluation Criteria of {this} to {Evaluation Criteria}
+user1.SOP1.bom.BidEvaluationRecord.evaluationCriteria#phrase.clearer = clear the Evaluation Criteria of {this}
+user1.SOP1.bom.BidEvaluationRecord.evaluationCriteria#phrase.navigation = {Evaluation Criteria} of {this}
+user1.SOP1.bom.BidEvaluationRecord.vendorQuotation#phrase.action = set the Vendor Quotation of {this} to {Vendor Quotation}
+user1.SOP1.bom.BidEvaluationRecord.vendorQuotation#phrase.clearer = clear the Vendor Quotation of {this}
+user1.SOP1.bom.BidEvaluationRecord.vendorQuotation#phrase.navigation = {Vendor Quotation} of {this}
+user1.SOP1.bom.BidEvaluationRecord.bidEvaluationRecordId#phrase.action = set the Bid Evaluation Record Id of {this} to {Bid Evaluation Record Id}
+user1.SOP1.bom.BidEvaluationRecord.bidEvaluationRecordId#phrase.clearer = clear the Bid Evaluation Record Id of {this}
+user1.SOP1.bom.BidEvaluationRecord.bidEvaluationRecordId#phrase.navigation = {Bid Evaluation Record Id} of {this}
+
+# user1.SOP1.bom.CancellationReasonEnums
+user1.SOP1.bom.CancellationReasonEnums#concept.label = Cancellation Reason
+user1.SOP1.bom.CancellationReasonEnums.budgetwithdrawal#instance.label = Budget withdrawal
+user1.SOP1.bom.CancellationReasonEnums.changesinbusinessrequirements#instance.label = Changes in business requirements
+user1.SOP1.bom.CancellationReasonEnums.non-compliantvendorresponses#instance.label = Non-compliant vendor responses
+
+# user1.SOP1.bom.CancellationRecord
+user1.SOP1.bom.CancellationRecord#concept.label = Cancellation Record
+user1.SOP1.bom.CancellationRecord.CancellationRecord(user1.SOP1.bom.PurchaseRequest,java.lang.String,user1.SOP1.bom.CancellationReasonEnums,boolean)#phrase.navigation = a new {Cancellation Record} where {0, Purchase Request} {1, Cancellation Record Id} {2, Cancellation Reason} {3, Cancellation Approved By Procurement Manager}
+user1.SOP1.bom.CancellationRecord.purchaseRequest#phrase.action = set the Purchase Request of {this} to {Purchase Request}
+user1.SOP1.bom.CancellationRecord.purchaseRequest#phrase.clearer = clear the Purchase Request of {this}
+user1.SOP1.bom.CancellationRecord.purchaseRequest#phrase.navigation = {Purchase Request} of {this}
+user1.SOP1.bom.CancellationRecord.cancellationRecordId#phrase.action = set the Cancellation Record Id of {this} to {Cancellation Record Id}
+user1.SOP1.bom.CancellationRecord.cancellationRecordId#phrase.clearer = clear the Cancellation Record Id of {this}
+user1.SOP1.bom.CancellationRecord.cancellationRecordId#phrase.navigation = {Cancellation Record Id} of {this}
+user1.SOP1.bom.CancellationRecord.cancellationReason#phrase.action = set the Cancellation Reason of {this} to {Cancellation Reason}
+user1.SOP1.bom.CancellationRecord.cancellationReason#phrase.clearer = clear the Cancellation Reason of {this}
+user1.SOP1.bom.CancellationRecord.cancellationReason#phrase.navigation = {Cancellation Reason} of {this}
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.action[0] = {this} gets Cancellation Approved By Procurement Manager only if {Cancellation Approved By Procurement Manager}
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.action[1] = make it {Cancellation Approved By Procurement Manager} that {this} is Cancellation Approved By Procurement Manager
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.action[1].deprecated = true
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.navigation = {this} is Cancellation Approved By Procurement Manager
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.negative_predicate = {this} is not Cancellation Approved By Procurement Manager
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.negative_predicate_setter = {this} does not get Cancellation Approved By Procurement Manager
+user1.SOP1.bom.CancellationRecord.cancellationApprovedByProcurementManager#phrase.positive_predicate_setter = {this} gets Cancellation Approved By Procurement Manager
+
+# user1.SOP1.bom.DeliveryReceipt
+user1.SOP1.bom.DeliveryReceipt#concept.label = Delivery Receipt
+user1.SOP1.bom.DeliveryReceipt.DeliveryReceipt(boolean,java.lang.String,boolean,user1.SOP1.bom.PurchaseOrder)#phrase.navigation = a new {Delivery Receipt} where {0, Receipt Confirmed} {1, Delivery Receipt Id} {2, Discrepancy Reported} {3, Purchase Order}
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.action[0] = {this} gets Receipt Confirmed only if {Receipt Confirmed}
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.action[1] = make it {Receipt Confirmed} that {this} is Receipt Confirmed
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.action[1].deprecated = true
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.navigation = {this} is Receipt Confirmed
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.negative_predicate = {this} is not Receipt Confirmed
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.negative_predicate_setter = {this} does not get Receipt Confirmed
+user1.SOP1.bom.DeliveryReceipt.receiptConfirmed#phrase.positive_predicate_setter = {this} gets Receipt Confirmed
+user1.SOP1.bom.DeliveryReceipt.deliveryReceiptId#phrase.action = set the Delivery Receipt Id of {this} to {Delivery Receipt Id}
+user1.SOP1.bom.DeliveryReceipt.deliveryReceiptId#phrase.clearer = clear the Delivery Receipt Id of {this}
+user1.SOP1.bom.DeliveryReceipt.deliveryReceiptId#phrase.navigation = {Delivery Receipt Id} of {this}
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.action[0] = {this} gets Discrepancy Reported only if {Discrepancy Reported}
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.action[1] = make it {Discrepancy Reported} that {this} is Discrepancy Reported
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.action[1].deprecated = true
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.navigation = {this} is Discrepancy Reported
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.negative_predicate = {this} is not Discrepancy Reported
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.negative_predicate_setter = {this} does not get Discrepancy Reported
+user1.SOP1.bom.DeliveryReceipt.discrepancyReported#phrase.positive_predicate_setter = {this} gets Discrepancy Reported
+user1.SOP1.bom.DeliveryReceipt.purchaseOrder#phrase.action = set the Purchase Order of {this} to {Purchase Order}
+user1.SOP1.bom.DeliveryReceipt.purchaseOrder#phrase.clearer = clear the Purchase Order of {this}
+user1.SOP1.bom.DeliveryReceipt.purchaseOrder#phrase.navigation = {Purchase Order} of {this}
+
+# user1.SOP1.bom.EvaluationCriteriaEnums
+user1.SOP1.bom.EvaluationCriteriaEnums#concept.label = Evaluation Criteria
+user1.SOP1.bom.EvaluationCriteriaEnums.cost#instance.label = Cost
+user1.SOP1.bom.EvaluationCriteriaEnums.deliverycapability#instance.label = Delivery capability
+user1.SOP1.bom.EvaluationCriteriaEnums.technicalcompliance#instance.label = Technical compliance
+user1.SOP1.bom.EvaluationCriteriaEnums.vendorreliabilityandpastperformance#instance.label = Vendor reliability and past performance
+
+# user1.SOP1.bom.FinanceDepartment
+user1.SOP1.bom.FinanceDepartment#concept.label = Finance Department
+user1.SOP1.bom.FinanceDepartment.FinanceDepartment(java.lang.String,java.lang.String)#phrase.navigation = a new {Finance Department} where {0, Finance Department Id} {1, Department Name}
+user1.SOP1.bom.FinanceDepartment.financeDepartmentId#phrase.action = set the Finance Department Id of {this} to {Finance Department Id}
+user1.SOP1.bom.FinanceDepartment.financeDepartmentId#phrase.clearer = clear the Finance Department Id of {this}
+user1.SOP1.bom.FinanceDepartment.financeDepartmentId#phrase.navigation = {Finance Department Id} of {this}
+user1.SOP1.bom.FinanceDepartment.departmentName#phrase.action = set the Department Name of {this} to {Department Name}
+user1.SOP1.bom.FinanceDepartment.departmentName#phrase.clearer = clear the Department Name of {this}
+user1.SOP1.bom.FinanceDepartment.departmentName#phrase.navigation = {Department Name} of {this}
+
+# user1.SOP1.bom.POStatusEnums
+user1.SOP1.bom.POStatusEnums#concept.label = PO Status
+user1.SOP1.bom.POStatusEnums.accepted#instance.label = Accepted
+user1.SOP1.bom.POStatusEnums.closed#instance.label = Closed
+user1.SOP1.bom.POStatusEnums.issued#instance.label = Issued
+
+# user1.SOP1.bom.PaymentConfirmation
+user1.SOP1.bom.PaymentConfirmation#concept.label = Payment Confirmation
+user1.SOP1.bom.PaymentConfirmation.PaymentConfirmation(java.lang.String,java.time.LocalDate,user1.SOP1.bom.PurchaseOrder,double)#phrase.navigation = a new {Payment Confirmation} where {0, Payment Confirmation Id} {1, Payment Date} {2, Purchase Order} {3, Payment Amount}
+user1.SOP1.bom.PaymentConfirmation.paymentConfirmationId#phrase.action = set the Payment Confirmation Id of {this} to {Payment Confirmation Id}
+user1.SOP1.bom.PaymentConfirmation.paymentConfirmationId#phrase.clearer = clear the Payment Confirmation Id of {this}
+user1.SOP1.bom.PaymentConfirmation.paymentConfirmationId#phrase.navigation = {Payment Confirmation Id} of {this}
+user1.SOP1.bom.PaymentConfirmation.paymentDate#phrase.action = set the Payment Date of {this} to {Payment Date}
+user1.SOP1.bom.PaymentConfirmation.paymentDate#phrase.clearer = clear the Payment Date of {this}
+user1.SOP1.bom.PaymentConfirmation.paymentDate#phrase.navigation = {Payment Date} of {this}
+user1.SOP1.bom.PaymentConfirmation.purchaseOrder#phrase.action = set the Purchase Order of {this} to {Purchase Order}
+user1.SOP1.bom.PaymentConfirmation.purchaseOrder#phrase.clearer = clear the Purchase Order of {this}
+user1.SOP1.bom.PaymentConfirmation.purchaseOrder#phrase.navigation = {Purchase Order} of {this}
+user1.SOP1.bom.PaymentConfirmation.paymentAmount#phrase.action = set the Payment Amount of {this} to {Payment Amount}
+user1.SOP1.bom.PaymentConfirmation.paymentAmount#phrase.addition_setter = add {Payment Amount} to the Payment Amount of {this}
+user1.SOP1.bom.PaymentConfirmation.paymentAmount#phrase.navigation = {Payment Amount} of {this}
+user1.SOP1.bom.PaymentConfirmation.paymentAmount#phrase.subtraction_setter = subtract {Payment Amount} from the Payment Amount of {this}
+
+# user1.SOP1.bom.ProcurementRecord
+user1.SOP1.bom.ProcurementRecord#concept.label = Procurement Record
+user1.SOP1.bom.ProcurementRecord.ProcurementRecord(java.lang.String,java.lang.String,user1.SOP1.bom.RecordTypeEnums,user1.SOP1.bom.PurchaseRequest)#phrase.navigation = a new {Procurement Record} where {0, Retention Period} {1, Procurement Record Id} {2, Record Type} {3, Purchase Request}
+user1.SOP1.bom.ProcurementRecord.retentionPeriod#phrase.action = set the Retention Period of {this} to {Retention Period}
+user1.SOP1.bom.ProcurementRecord.retentionPeriod#phrase.clearer = clear the Retention Period of {this}
+user1.SOP1.bom.ProcurementRecord.retentionPeriod#phrase.navigation = {Retention Period} of {this}
+user1.SOP1.bom.ProcurementRecord.procurementRecordId#phrase.action = set the Procurement Record Id of {this} to {Procurement Record Id}
+user1.SOP1.bom.ProcurementRecord.procurementRecordId#phrase.clearer = clear the Procurement Record Id of {this}
+user1.SOP1.bom.ProcurementRecord.procurementRecordId#phrase.navigation = {Procurement Record Id} of {this}
+user1.SOP1.bom.ProcurementRecord.recordType#phrase.action = set the Record Type of {this} to {Record Type}
+user1.SOP1.bom.ProcurementRecord.recordType#phrase.clearer = clear the Record Type of {this}
+user1.SOP1.bom.ProcurementRecord.recordType#phrase.navigation = {Record Type} of {this}
+user1.SOP1.bom.ProcurementRecord.purchaseRequest#phrase.action = set the Purchase Request of {this} to {Purchase Request}
+user1.SOP1.bom.ProcurementRecord.purchaseRequest#phrase.clearer = clear the Purchase Request of {this}
+user1.SOP1.bom.ProcurementRecord.purchaseRequest#phrase.navigation = {Purchase Request} of {this}
+
+# user1.SOP1.bom.ProcurementSystem
+user1.SOP1.bom.ProcurementSystem#concept.label = Procurement System
+user1.SOP1.bom.ProcurementSystem.ProcurementSystem(java.lang.String,java.lang.String)#phrase.navigation = a new {Procurement System} where {0, Procurement System Id} {1, System Name}
+user1.SOP1.bom.ProcurementSystem.procurementSystemId#phrase.action = set the Procurement System Id of {this} to {Procurement System Id}
+user1.SOP1.bom.ProcurementSystem.procurementSystemId#phrase.clearer = clear the Procurement System Id of {this}
+user1.SOP1.bom.ProcurementSystem.procurementSystemId#phrase.navigation = {Procurement System Id} of {this}
+user1.SOP1.bom.ProcurementSystem.systemName#phrase.action = set the System Name of {this} to {System Name}
+user1.SOP1.bom.ProcurementSystem.systemName#phrase.clearer = clear the System Name of {this}
+user1.SOP1.bom.ProcurementSystem.systemName#phrase.navigation = {System Name} of {this}
+
+# user1.SOP1.bom.ProcurementTeam
+user1.SOP1.bom.ProcurementTeam#concept.label = Procurement Team
+user1.SOP1.bom.ProcurementTeam.ProcurementTeam(java.lang.String,java.lang.String)#phrase.navigation = a new {Procurement Team} where {0, Procurement Team Id} {1, Team Name}
+user1.SOP1.bom.ProcurementTeam.procurementTeamId#phrase.action = set the Procurement Team Id of {this} to {Procurement Team Id}
+user1.SOP1.bom.ProcurementTeam.procurementTeamId#phrase.clearer = clear the Procurement Team Id of {this}
+user1.SOP1.bom.ProcurementTeam.procurementTeamId#phrase.navigation = {Procurement Team Id} of {this}
+user1.SOP1.bom.ProcurementTeam.teamName#phrase.action = set the Team Name of {this} to {Team Name}
+user1.SOP1.bom.ProcurementTeam.teamName#phrase.clearer = clear the Team Name of {this}
+user1.SOP1.bom.ProcurementTeam.teamName#phrase.navigation = {Team Name} of {this}
+
+# user1.SOP1.bom.PurchaseOrder
+user1.SOP1.bom.PurchaseOrder#concept.label = Purchase Order
+user1.SOP1.bom.PurchaseOrder.PurchaseOrder(user1.SOP1.bom.PurchaseRequest,user1.SOP1.bom.POStatusEnums,user1.SOP1.bom.Vendor,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Purchase Order} where {0, Purchase Request} {1, PO Status} {2, Vendor} {3, Pricing And Payment Terms} {4, Scope Of Supply} {5, Contractual Conditions} {6, Delivery Requirements} {7, Purchase Order Id}
+user1.SOP1.bom.PurchaseOrder.purchaseRequest#phrase.action = set the Purchase Request of {this} to {Purchase Request}
+user1.SOP1.bom.PurchaseOrder.purchaseRequest#phrase.clearer = clear the Purchase Request of {this}
+user1.SOP1.bom.PurchaseOrder.purchaseRequest#phrase.navigation = {Purchase Request} of {this}
+user1.SOP1.bom.PurchaseOrder.pOStatus#phrase.action = set the PO Status of {this} to {PO Status}
+user1.SOP1.bom.PurchaseOrder.pOStatus#phrase.clearer = clear the PO Status of {this}
+user1.SOP1.bom.PurchaseOrder.pOStatus#phrase.navigation = {PO Status} of {this}
+user1.SOP1.bom.PurchaseOrder.vendor#phrase.action = set the Vendor of {this} to {Vendor}
+user1.SOP1.bom.PurchaseOrder.vendor#phrase.clearer = clear the Vendor of {this}
+user1.SOP1.bom.PurchaseOrder.vendor#phrase.navigation = {Vendor} of {this}
+user1.SOP1.bom.PurchaseOrder.pricingAndPaymentTerms#phrase.action = set the Pricing And Payment Terms of {this} to {Pricing And Payment Terms}
+user1.SOP1.bom.PurchaseOrder.pricingAndPaymentTerms#phrase.clearer = clear the Pricing And Payment Terms of {this}
+user1.SOP1.bom.PurchaseOrder.pricingAndPaymentTerms#phrase.navigation = {Pricing And Payment Terms} of {this}
+user1.SOP1.bom.PurchaseOrder.scopeOfSupply#phrase.action = set the Scope Of Supply of {this} to {Scope Of Supply}
+user1.SOP1.bom.PurchaseOrder.scopeOfSupply#phrase.clearer = clear the Scope Of Supply of {this}
+user1.SOP1.bom.PurchaseOrder.scopeOfSupply#phrase.navigation = {Scope Of Supply} of {this}
+user1.SOP1.bom.PurchaseOrder.contractualConditions#phrase.action = set the Contractual Conditions of {this} to {Contractual Conditions}
+user1.SOP1.bom.PurchaseOrder.contractualConditions#phrase.clearer = clear the Contractual Conditions of {this}
+user1.SOP1.bom.PurchaseOrder.contractualConditions#phrase.navigation = {Contractual Conditions} of {this}
+user1.SOP1.bom.PurchaseOrder.deliveryRequirements#phrase.action = set the Delivery Requirements of {this} to {Delivery Requirements}
+user1.SOP1.bom.PurchaseOrder.deliveryRequirements#phrase.clearer = clear the Delivery Requirements of {this}
+user1.SOP1.bom.PurchaseOrder.deliveryRequirements#phrase.navigation = {Delivery Requirements} of {this}
+user1.SOP1.bom.PurchaseOrder.purchaseOrderId#phrase.action = set the Purchase Order Id of {this} to {Purchase Order Id}
+user1.SOP1.bom.PurchaseOrder.purchaseOrderId#phrase.clearer = clear the Purchase Order Id of {this}
+user1.SOP1.bom.PurchaseOrder.purchaseOrderId#phrase.navigation = {Purchase Order Id} of {this}
+
+# user1.SOP1.bom.PurchaseRequest
+user1.SOP1.bom.PurchaseRequest#concept.label = Purchase Request
+user1.SOP1.bom.PurchaseRequest.PurchaseRequest(user1.SOP1.bom.ProcurementSystem,java.lang.String,user1.SOP1.bom.RequestingDepartment,java.lang.String,boolean,java.time.LocalDate,boolean,user1.SOP1.bom.RequestStatusEnums,java.lang.String,java.lang.String)#phrase.navigation = a new {Purchase Request} where {0, Procurement System} {1, Description Of Goods Or Services} {2, Requesting Department} {3, Purchase Request Id} {4, Budget Approval Obtained} {5, Expected Delivery Timeframe} {6, Meets Requirements} {7, Request Status} {8, Quantity And Specifications} {9, Business Justification}
+user1.SOP1.bom.PurchaseRequest.procurementSystem#phrase.action = set the Procurement System of {this} to {Procurement System}
+user1.SOP1.bom.PurchaseRequest.procurementSystem#phrase.clearer = clear the Procurement System of {this}
+user1.SOP1.bom.PurchaseRequest.procurementSystem#phrase.navigation = {Procurement System} of {this}
+user1.SOP1.bom.PurchaseRequest.descriptionOfGoodsOrServices#phrase.action = set the Description Of Goods Or Services of {this} to {Description Of Goods Or Services}
+user1.SOP1.bom.PurchaseRequest.descriptionOfGoodsOrServices#phrase.clearer = clear the Description Of Goods Or Services of {this}
+user1.SOP1.bom.PurchaseRequest.descriptionOfGoodsOrServices#phrase.navigation = {Description Of Goods Or Services} of {this}
+user1.SOP1.bom.PurchaseRequest.requestingDepartment#phrase.action = set the Requesting Department of {this} to {Requesting Department}
+user1.SOP1.bom.PurchaseRequest.requestingDepartment#phrase.clearer = clear the Requesting Department of {this}
+user1.SOP1.bom.PurchaseRequest.requestingDepartment#phrase.navigation = {Requesting Department} of {this}
+user1.SOP1.bom.PurchaseRequest.purchaseRequestId#phrase.action = set the Purchase Request Id of {this} to {Purchase Request Id}
+user1.SOP1.bom.PurchaseRequest.purchaseRequestId#phrase.clearer = clear the Purchase Request Id of {this}
+user1.SOP1.bom.PurchaseRequest.purchaseRequestId#phrase.navigation = {Purchase Request Id} of {this}
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.action[0] = {this} gets Budget Approval Obtained only if {Budget Approval Obtained}
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.action[1] = make it {Budget Approval Obtained} that {this} is Budget Approval Obtained
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.action[1].deprecated = true
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.navigation = {this} is Budget Approval Obtained
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.negative_predicate = {this} is not Budget Approval Obtained
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.negative_predicate_setter = {this} does not get Budget Approval Obtained
+user1.SOP1.bom.PurchaseRequest.budgetApprovalObtained#phrase.positive_predicate_setter = {this} gets Budget Approval Obtained
+user1.SOP1.bom.PurchaseRequest.expectedDeliveryTimeframe#phrase.action = set the Expected Delivery Timeframe of {this} to {Expected Delivery Timeframe}
+user1.SOP1.bom.PurchaseRequest.expectedDeliveryTimeframe#phrase.clearer = clear the Expected Delivery Timeframe of {this}
+user1.SOP1.bom.PurchaseRequest.expectedDeliveryTimeframe#phrase.navigation = {Expected Delivery Timeframe} of {this}
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.action[0] = {this} gets Meets Requirements only if {Meets Requirements}
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.action[1] = make it {Meets Requirements} that {this} is Meets Requirements
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.action[1].deprecated = true
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.navigation = {this} is Meets Requirements
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.negative_predicate = {this} is not Meets Requirements
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.negative_predicate_setter = {this} does not get Meets Requirements
+user1.SOP1.bom.PurchaseRequest.meetsRequirements#phrase.positive_predicate_setter = {this} gets Meets Requirements
+user1.SOP1.bom.PurchaseRequest.requestStatus#phrase.action = set the Request Status of {this} to {Request Status}
+user1.SOP1.bom.PurchaseRequest.requestStatus#phrase.clearer = clear the Request Status of {this}
+user1.SOP1.bom.PurchaseRequest.requestStatus#phrase.navigation = {Request Status} of {this}
+user1.SOP1.bom.PurchaseRequest.quantityAndSpecifications#phrase.action = set the Quantity And Specifications of {this} to {Quantity And Specifications}
+user1.SOP1.bom.PurchaseRequest.quantityAndSpecifications#phrase.clearer = clear the Quantity And Specifications of {this}
+user1.SOP1.bom.PurchaseRequest.quantityAndSpecifications#phrase.navigation = {Quantity And Specifications} of {this}
+user1.SOP1.bom.PurchaseRequest.businessJustification#phrase.action = set the Business Justification of {this} to {Business Justification}
+user1.SOP1.bom.PurchaseRequest.businessJustification#phrase.clearer = clear the Business Justification of {this}
+user1.SOP1.bom.PurchaseRequest.businessJustification#phrase.navigation = {Business Justification} of {this}
+
+# user1.SOP1.bom.RecordTypeEnums
+user1.SOP1.bom.RecordTypeEnums#concept.label = Record Type
+user1.SOP1.bom.RecordTypeEnums.bidevaluationrecord#instance.label = Bid Evaluation Record
+user1.SOP1.bom.RecordTypeEnums.deliveryreceipt#instance.label = Delivery Receipt
+user1.SOP1.bom.RecordTypeEnums.paymentconfirmation#instance.label = Payment Confirmation
+user1.SOP1.bom.RecordTypeEnums.purchaseorder#instance.label = Purchase Order
+user1.SOP1.bom.RecordTypeEnums.purchaserequest#instance.label = Purchase Request
+user1.SOP1.bom.RecordTypeEnums.vendorquotation#instance.label = Vendor Quotation
+
+# user1.SOP1.bom.RequestStatusEnums
+user1.SOP1.bom.RequestStatusEnums#concept.label = Request Status
+user1.SOP1.bom.RequestStatusEnums.approved#instance.label = Approved
+user1.SOP1.bom.RequestStatusEnums.cancelled#instance.label = Cancelled
+user1.SOP1.bom.RequestStatusEnums.re-issued#instance.label = Re-issued
+user1.SOP1.bom.RequestStatusEnums.returnedforcorrection#instance.label = Returned for Correction
+user1.SOP1.bom.RequestStatusEnums.revised#instance.label = Revised
+user1.SOP1.bom.RequestStatusEnums.submitted#instance.label = Submitted
+
+# user1.SOP1.bom.RequestingDepartment
+user1.SOP1.bom.RequestingDepartment#concept.label = Requesting Department
+user1.SOP1.bom.RequestingDepartment.RequestingDepartment(java.lang.String,java.lang.String)#phrase.navigation = a new {Requesting Department} where {0, Requesting Department Id} {1, Department Name}
+user1.SOP1.bom.RequestingDepartment.requestingDepartmentId#phrase.action = set the Requesting Department Id of {this} to {Requesting Department Id}
+user1.SOP1.bom.RequestingDepartment.requestingDepartmentId#phrase.clearer = clear the Requesting Department Id of {this}
+user1.SOP1.bom.RequestingDepartment.requestingDepartmentId#phrase.navigation = {Requesting Department Id} of {this}
+user1.SOP1.bom.RequestingDepartment.departmentName#phrase.action = set the Department Name of {this} to {Department Name}
+user1.SOP1.bom.RequestingDepartment.departmentName#phrase.clearer = clear the Department Name of {this}
+user1.SOP1.bom.RequestingDepartment.departmentName#phrase.navigation = {Department Name} of {this}
+
+# user1.SOP1.bom.Vendor
+user1.SOP1.bom.Vendor#concept.label = Vendor
+user1.SOP1.bom.Vendor.Vendor(java.lang.String,java.lang.String,java.lang.String,boolean)#phrase.navigation = a new {Vendor} where {0, Vendor Id} {1, Vendor Name} {2, Past Performance Rating} {3, Compliant Bid Identified}
+user1.SOP1.bom.Vendor.vendorId#phrase.action = set the Vendor Id of {this} to {Vendor Id}
+user1.SOP1.bom.Vendor.vendorId#phrase.clearer = clear the Vendor Id of {this}
+user1.SOP1.bom.Vendor.vendorId#phrase.navigation = {Vendor Id} of {this}
+user1.SOP1.bom.Vendor.vendorName#phrase.action = set the Vendor Name of {this} to {Vendor Name}
+user1.SOP1.bom.Vendor.vendorName#phrase.clearer = clear the Vendor Name of {this}
+user1.SOP1.bom.Vendor.vendorName#phrase.navigation = {Vendor Name} of {this}
+user1.SOP1.bom.Vendor.pastPerformanceRating#phrase.action = set the Past Performance Rating of {this} to {Past Performance Rating}
+user1.SOP1.bom.Vendor.pastPerformanceRating#phrase.clearer = clear the Past Performance Rating of {this}
+user1.SOP1.bom.Vendor.pastPerformanceRating#phrase.navigation = {Past Performance Rating} of {this}
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.action[0] = {this} gets Compliant Bid Identified only if {Compliant Bid Identified}
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.action[1] = make it {Compliant Bid Identified} that {this} is Compliant Bid Identified
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.action[1].deprecated = true
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.navigation = {this} is Compliant Bid Identified
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.negative_predicate = {this} is not Compliant Bid Identified
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.negative_predicate_setter = {this} does not get Compliant Bid Identified
+user1.SOP1.bom.Vendor.compliantBidIdentified#phrase.positive_predicate_setter = {this} gets Compliant Bid Identified
+
+# user1.SOP1.bom.VendorCommunicationLog
+user1.SOP1.bom.VendorCommunicationLog#concept.label = Vendor Communication Log
+user1.SOP1.bom.VendorCommunicationLog.VendorCommunicationLog(user1.SOP1.bom.Vendor,boolean,java.time.LocalDate,java.lang.String,java.lang.String)#phrase.navigation = a new {Vendor Communication Log} where {0, Vendor} {1, Ethical Sourcing Compliant} {2, Communication Date} {3, Vendor Communication Log Id} {4, Communication Content}
+user1.SOP1.bom.VendorCommunicationLog.vendor#phrase.action = set the Vendor of {this} to {Vendor}
+user1.SOP1.bom.VendorCommunicationLog.vendor#phrase.clearer = clear the Vendor of {this}
+user1.SOP1.bom.VendorCommunicationLog.vendor#phrase.navigation = {Vendor} of {this}
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.action[0] = {this} gets Ethical Sourcing Compliant only if {Ethical Sourcing Compliant}
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.action[1] = make it {Ethical Sourcing Compliant} that {this} is Ethical Sourcing Compliant
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.action[1].deprecated = true
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.navigation = {this} is Ethical Sourcing Compliant
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.negative_predicate = {this} is not Ethical Sourcing Compliant
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.negative_predicate_setter = {this} does not get Ethical Sourcing Compliant
+user1.SOP1.bom.VendorCommunicationLog.ethicalSourcingCompliant#phrase.positive_predicate_setter = {this} gets Ethical Sourcing Compliant
+user1.SOP1.bom.VendorCommunicationLog.communicationDate#phrase.action = set the Communication Date of {this} to {Communication Date}
+user1.SOP1.bom.VendorCommunicationLog.communicationDate#phrase.clearer = clear the Communication Date of {this}
+user1.SOP1.bom.VendorCommunicationLog.communicationDate#phrase.navigation = {Communication Date} of {this}
+user1.SOP1.bom.VendorCommunicationLog.vendorCommunicationLogId#phrase.action = set the Vendor Communication Log Id of {this} to {Vendor Communication Log Id}
+user1.SOP1.bom.VendorCommunicationLog.vendorCommunicationLogId#phrase.clearer = clear the Vendor Communication Log Id of {this}
+user1.SOP1.bom.VendorCommunicationLog.vendorCommunicationLogId#phrase.navigation = {Vendor Communication Log Id} of {this}
+user1.SOP1.bom.VendorCommunicationLog.communicationContent#phrase.action = set the Communication Content of {this} to {Communication Content}
+user1.SOP1.bom.VendorCommunicationLog.communicationContent#phrase.clearer = clear the Communication Content of {this}
+user1.SOP1.bom.VendorCommunicationLog.communicationContent#phrase.navigation = {Communication Content} of {this}
+
+# user1.SOP1.bom.VendorQuotation
+user1.SOP1.bom.VendorQuotation#concept.label = Vendor Quotation
+user1.SOP1.bom.VendorQuotation.VendorQuotation(java.lang.String,boolean,user1.SOP1.bom.Vendor,boolean,double,user1.SOP1.bom.PurchaseRequest)#phrase.navigation = a new {Vendor Quotation} where {0, Vendor Quotation Id} {1, Delivery Capability} {2, Vendor} {3, Technical Compliance} {4, Quotation Amount} {5, Purchase Request}
+user1.SOP1.bom.VendorQuotation.vendorQuotationId#phrase.action = set the Vendor Quotation Id of {this} to {Vendor Quotation Id}
+user1.SOP1.bom.VendorQuotation.vendorQuotationId#phrase.clearer = clear the Vendor Quotation Id of {this}
+user1.SOP1.bom.VendorQuotation.vendorQuotationId#phrase.navigation = {Vendor Quotation Id} of {this}
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.action[0] = {this} gets Delivery Capability only if {Delivery Capability}
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.action[1] = make it {Delivery Capability} that {this} is Delivery Capability
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.action[1].deprecated = true
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.navigation = {this} is Delivery Capability
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.negative_predicate = {this} is not Delivery Capability
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.negative_predicate_setter = {this} does not get Delivery Capability
+user1.SOP1.bom.VendorQuotation.deliveryCapability#phrase.positive_predicate_setter = {this} gets Delivery Capability
+user1.SOP1.bom.VendorQuotation.vendor#phrase.action = set the Vendor of {this} to {Vendor}
+user1.SOP1.bom.VendorQuotation.vendor#phrase.clearer = clear the Vendor of {this}
+user1.SOP1.bom.VendorQuotation.vendor#phrase.navigation = {Vendor} of {this}
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.action[0] = {this} gets Technical Compliance only if {Technical Compliance}
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.action[1] = make it {Technical Compliance} that {this} is Technical Compliance
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.action[1].deprecated = true
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.navigation = {this} is Technical Compliance
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.negative_predicate = {this} is not Technical Compliance
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.negative_predicate_setter = {this} does not get Technical Compliance
+user1.SOP1.bom.VendorQuotation.technicalCompliance#phrase.positive_predicate_setter = {this} gets Technical Compliance
+user1.SOP1.bom.VendorQuotation.quotationAmount#phrase.action = set the Quotation Amount of {this} to {Quotation Amount}
+user1.SOP1.bom.VendorQuotation.quotationAmount#phrase.addition_setter = add {Quotation Amount} to the Quotation Amount of {this}
+user1.SOP1.bom.VendorQuotation.quotationAmount#phrase.navigation = {Quotation Amount} of {this}
+user1.SOP1.bom.VendorQuotation.quotationAmount#phrase.subtraction_setter = subtract {Quotation Amount} from the Quotation Amount of {this}
+user1.SOP1.bom.VendorQuotation.purchaseRequest#phrase.action = set the Purchase Request of {this} to {Purchase Request}
+user1.SOP1.bom.VendorQuotation.purchaseRequest#phrase.clearer = clear the Purchase Request of {this}
+user1.SOP1.bom.VendorQuotation.purchaseRequest#phrase.navigation = {Purchase Request} of {this}

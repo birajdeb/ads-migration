@@ -1,0 +1,575 @@
+
+package user1.SOP1.bom;
+
+
+class BidEvaluationRecord
+        property ads.typeId "7"
+        property com.fasterxml.jackson.annotation.JsonTypeName "BidEvaluationRecord"
+        #de.generated
+{
+    string bidEvaluationRecordId
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "bidEvaluationRecordId"
+                #update;
+    user1.SOP1.bom.EvaluationCriteriaEnums evaluationCriteria
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "evaluationCriteria"
+                #update;
+    string evaluationOutcome
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "evaluationOutcome"
+                #update;
+    user1.SOP1.bom.PurchaseRequest purchaseRequest
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseRequest"
+                #update;
+    user1.SOP1.bom.VendorQuotation vendorQuotation
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendorQuotation"
+                #update;
+    BidEvaluationRecord(string bidEvaluationRecordId, user1.SOP1.bom.EvaluationCriteriaEnums evaluationCriteria, string evaluationOutcome, user1.SOP1.bom.PurchaseRequest purchaseRequest, user1.SOP1.bom.VendorQuotation vendorQuotation)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    BidEvaluationRecord()
+                #dataio.default;
+}
+
+class CancellationReasonEnums
+        extends java.lang.Enum
+        property ads.typeId "16"
+        property com.fasterxml.jackson.annotation.JsonTypeName "CancellationReasonEnums"
+        #de.generated
+{
+    domain {static "non-compliantvendorresponses", static budgetwithdrawal, static changesinbusinessrequirements}
+    static final readonly user1.SOP1.bom.CancellationReasonEnums budgetwithdrawal
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Budget withdrawal";
+    static final readonly user1.SOP1.bom.CancellationReasonEnums changesinbusinessrequirements
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Changes in business requirements";
+    static final readonly user1.SOP1.bom.CancellationReasonEnums "non-compliantvendorresponses"
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Non-compliant vendor responses";
+}
+
+class CancellationRecord
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "CancellationRecord"
+        #de.generated
+{
+    boolean cancellationApprovedByProcurementManager
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "cancellationApprovedByProcurementManager"
+                #update;
+    user1.SOP1.bom.CancellationReasonEnums cancellationReason
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "cancellationReason"
+                #update;
+    string cancellationRecordId
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "cancellationRecordId"
+                #update;
+    user1.SOP1.bom.PurchaseRequest purchaseRequest
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseRequest"
+                #update;
+    CancellationRecord(boolean cancellationApprovedByProcurementManager, user1.SOP1.bom.CancellationReasonEnums cancellationReason, string cancellationRecordId, user1.SOP1.bom.PurchaseRequest purchaseRequest)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    CancellationRecord()
+                #dataio.default;
+}
+
+class DeliveryReceipt
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "DeliveryReceipt"
+        #de.generated
+{
+    string deliveryReceiptId
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "deliveryReceiptId"
+                #update;
+    boolean discrepancyReported
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "discrepancyReported"
+                #update;
+    user1.SOP1.bom.PurchaseOrder purchaseOrder
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseOrder"
+                #update;
+    boolean receiptConfirmed
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "receiptConfirmed"
+                #update;
+    DeliveryReceipt(string deliveryReceiptId, boolean discrepancyReported, user1.SOP1.bom.PurchaseOrder purchaseOrder, boolean receiptConfirmed)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    DeliveryReceipt()
+                #dataio.default;
+}
+
+class EvaluationCriteriaEnums
+        extends java.lang.Enum
+        property ads.typeId "17"
+        property com.fasterxml.jackson.annotation.JsonTypeName "EvaluationCriteriaEnums"
+        #de.generated
+{
+    domain {static cost, static technicalcompliance, static deliverycapability, static vendorreliabilityandpastperformance}
+    static final readonly user1.SOP1.bom.EvaluationCriteriaEnums cost
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Cost";
+    static final readonly user1.SOP1.bom.EvaluationCriteriaEnums deliverycapability
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Delivery capability";
+    static final readonly user1.SOP1.bom.EvaluationCriteriaEnums technicalcompliance
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Technical compliance";
+    static final readonly user1.SOP1.bom.EvaluationCriteriaEnums vendorreliabilityandpastperformance
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Vendor reliability and past performance";
+}
+
+class FinanceDepartment
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "FinanceDepartment"
+        #de.generated
+{
+    string departmentName
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "departmentName"
+                #update;
+    string financeDepartmentId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "financeDepartmentId"
+                #update;
+    FinanceDepartment(string departmentName, string financeDepartmentId)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    FinanceDepartment()
+                #dataio.default;
+}
+
+class POStatusEnums
+        extends java.lang.Enum
+        property ads.typeId "15"
+        property com.fasterxml.jackson.annotation.JsonTypeName "POStatusEnums"
+        #de.generated
+{
+    domain {static issued, static accepted, static closed}
+    static final readonly user1.SOP1.bom.POStatusEnums accepted
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Accepted";
+    static final readonly user1.SOP1.bom.POStatusEnums closed
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Closed";
+    static final readonly user1.SOP1.bom.POStatusEnums issued
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Issued";
+}
+
+class PaymentConfirmation
+        property ads.typeId "8"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PaymentConfirmation"
+        #de.generated
+{
+    double paymentAmount
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "paymentAmount"
+                #update;
+    string paymentConfirmationId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "paymentConfirmationId"
+                #update;
+    java.time.LocalDate paymentDate
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "paymentDate"
+                #update;
+    user1.SOP1.bom.PurchaseOrder purchaseOrder
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseOrder"
+                #update;
+    PaymentConfirmation(double paymentAmount, string paymentConfirmationId, java.time.LocalDate paymentDate, user1.SOP1.bom.PurchaseOrder purchaseOrder)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PaymentConfirmation()
+                #dataio.default;
+}
+
+class ProcurementRecord
+        property ads.typeId "14"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ProcurementRecord"
+        #de.generated
+{
+    string procurementRecordId
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "procurementRecordId"
+                #update;
+    user1.SOP1.bom.PurchaseRequest purchaseRequest
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseRequest"
+                #update;
+    user1.SOP1.bom.RecordTypeEnums recordType
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "recordType"
+                #update;
+    string retentionPeriod
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "retentionPeriod"
+                #update;
+    ProcurementRecord(string procurementRecordId, user1.SOP1.bom.PurchaseRequest purchaseRequest, user1.SOP1.bom.RecordTypeEnums recordType, string retentionPeriod)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ProcurementRecord()
+                #dataio.default;
+}
+
+class ProcurementSystem
+        property ads.typeId "13"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ProcurementSystem"
+        #de.generated
+{
+    string procurementSystemId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "procurementSystemId"
+                #update;
+    string systemName
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "systemName"
+                #update;
+    ProcurementSystem(string procurementSystemId, string systemName)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ProcurementSystem()
+                #dataio.default;
+}
+
+class ProcurementTeam
+        property ads.typeId "9"
+        property com.fasterxml.jackson.annotation.JsonTypeName "ProcurementTeam"
+        #de.generated
+{
+    string procurementTeamId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "procurementTeamId"
+                #update;
+    string teamName
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "teamName"
+                #update;
+    ProcurementTeam(string procurementTeamId, string teamName)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    ProcurementTeam()
+                #dataio.default;
+}
+
+class PurchaseOrder
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PurchaseOrder"
+        #de.generated
+{
+    string contractualConditions
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "contractualConditions"
+                #update;
+    string deliveryRequirements
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "deliveryRequirements"
+                #update;
+    user1.SOP1.bom.POStatusEnums pOStatus
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "pOStatus"
+                #update;
+    string pricingAndPaymentTerms
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "pricingAndPaymentTerms"
+                #update;
+    string purchaseOrderId
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseOrderId"
+                #update;
+    user1.SOP1.bom.PurchaseRequest purchaseRequest
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseRequest"
+                #update;
+    string scopeOfSupply
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "scopeOfSupply"
+                #update;
+    user1.SOP1.bom.Vendor vendor
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendor"
+                #update;
+    PurchaseOrder(string contractualConditions, 
+        string deliveryRequirements, 
+        user1.SOP1.bom.POStatusEnums pOStatus, 
+        string pricingAndPaymentTerms, 
+        string purchaseOrderId, 
+        user1.SOP1.bom.PurchaseRequest purchaseRequest, 
+        string scopeOfSupply, 
+        user1.SOP1.bom.Vendor vendor)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PurchaseOrder()
+                #dataio.default;
+}
+
+class PurchaseRequest
+        property ads.typeId "12"
+        property com.fasterxml.jackson.annotation.JsonTypeName "PurchaseRequest"
+        #de.generated
+{
+    boolean budgetApprovalObtained
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "budgetApprovalObtained"
+                #update;
+    string businessJustification
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "businessJustification"
+                #update;
+    string descriptionOfGoodsOrServices
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "descriptionOfGoodsOrServices"
+                #update;
+    java.time.LocalDate expectedDeliveryTimeframe
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "expectedDeliveryTimeframe"
+                #update;
+    boolean meetsRequirements
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "meetsRequirements"
+                #update;
+    user1.SOP1.bom.ProcurementSystem procurementSystem
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "procurementSystem"
+                #update;
+    string purchaseRequestId
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseRequestId"
+                #update;
+    string quantityAndSpecifications
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "quantityAndSpecifications"
+                #update;
+    user1.SOP1.bom.RequestStatusEnums requestStatus
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "requestStatus"
+                #update;
+    user1.SOP1.bom.RequestingDepartment requestingDepartment
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "requestingDepartment"
+                #update;
+    PurchaseRequest(boolean budgetApprovalObtained, 
+        string businessJustification, 
+        string descriptionOfGoodsOrServices, 
+        java.time.LocalDate expectedDeliveryTimeframe, 
+        boolean meetsRequirements, 
+        user1.SOP1.bom.ProcurementSystem procurementSystem, 
+        string purchaseRequestId, 
+        string quantityAndSpecifications, 
+        user1.SOP1.bom.RequestStatusEnums requestStatus, 
+        user1.SOP1.bom.RequestingDepartment requestingDepartment)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    PurchaseRequest()
+                #dataio.default;
+}
+
+class RecordTypeEnums
+        extends java.lang.Enum
+        property ads.typeId "19"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RecordTypeEnums"
+        #de.generated
+{
+    domain {static purchaserequest, static vendorquotation, static bidevaluationrecord, static purchaseorder, static deliveryreceipt, static paymentconfirmation}
+    static final readonly user1.SOP1.bom.RecordTypeEnums bidevaluationrecord
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Bid Evaluation Record";
+    static final readonly user1.SOP1.bom.RecordTypeEnums deliveryreceipt
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Delivery Receipt";
+    static final readonly user1.SOP1.bom.RecordTypeEnums paymentconfirmation
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Payment Confirmation";
+    static final readonly user1.SOP1.bom.RecordTypeEnums purchaseorder
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Purchase Order";
+    static final readonly user1.SOP1.bom.RecordTypeEnums purchaserequest
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Purchase Request";
+    static final readonly user1.SOP1.bom.RecordTypeEnums vendorquotation
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Vendor Quotation";
+}
+
+class RequestStatusEnums
+        extends java.lang.Enum
+        property ads.typeId "18"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RequestStatusEnums"
+        #de.generated
+{
+    domain {static submitted, static returnedforcorrection, static approved, static cancelled, static revised, static "re-issued"}
+    static final readonly user1.SOP1.bom.RequestStatusEnums approved
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Approved";
+    static final readonly user1.SOP1.bom.RequestStatusEnums cancelled
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Cancelled";
+    static final readonly user1.SOP1.bom.RequestStatusEnums "re-issued"
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Re-issued";
+    static final readonly user1.SOP1.bom.RequestStatusEnums returnedforcorrection
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Returned for Correction";
+    static final readonly user1.SOP1.bom.RequestStatusEnums revised
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Revised";
+    static final readonly user1.SOP1.bom.RequestStatusEnums submitted
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Submitted";
+}
+
+class RequestingDepartment
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RequestingDepartment"
+        #de.generated
+{
+    string departmentName
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "departmentName"
+                #update;
+    string requestingDepartmentId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "requestingDepartmentId"
+                #update;
+    RequestingDepartment(string departmentName, string requestingDepartmentId)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    RequestingDepartment()
+                #dataio.default;
+}
+
+class Vendor
+        property ads.typeId "10"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Vendor"
+        #de.generated
+{
+    boolean compliantBidIdentified
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "compliantBidIdentified"
+                #update;
+    string pastPerformanceRating
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "pastPerformanceRating"
+                #update;
+    string vendorId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendorId"
+                #update;
+    string vendorName
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendorName"
+                #update;
+    Vendor(boolean compliantBidIdentified, string pastPerformanceRating, string vendorId, string vendorName)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Vendor()
+                #dataio.default;
+}
+
+class VendorCommunicationLog
+        property ads.typeId "11"
+        property com.fasterxml.jackson.annotation.JsonTypeName "VendorCommunicationLog"
+        #de.generated
+{
+    string communicationContent
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "communicationContent"
+                #update;
+    java.time.LocalDate communicationDate
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "communicationDate"
+                #update;
+    boolean ethicalSourcingCompliant
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "ethicalSourcingCompliant"
+                #update;
+    user1.SOP1.bom.Vendor vendor
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendor"
+                #update;
+    string vendorCommunicationLogId
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendorCommunicationLogId"
+                #update;
+    VendorCommunicationLog(string communicationContent, java.time.LocalDate communicationDate, boolean ethicalSourcingCompliant, user1.SOP1.bom.Vendor vendor, string vendorCommunicationLogId)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    VendorCommunicationLog()
+                #dataio.default;
+}
+
+class VendorQuotation
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "VendorQuotation"
+        #de.generated
+{
+    boolean deliveryCapability
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "deliveryCapability"
+                #update;
+    user1.SOP1.bom.PurchaseRequest purchaseRequest
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "purchaseRequest"
+                #update;
+    double quotationAmount
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "quotationAmount"
+                #update;
+    boolean technicalCompliance
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "technicalCompliance"
+                #update;
+    user1.SOP1.bom.Vendor vendor
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendor"
+                #update;
+    string vendorQuotationId
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "vendorQuotationId"
+                #update;
+    VendorQuotation(boolean deliveryCapability, user1.SOP1.bom.PurchaseRequest purchaseRequest, double quotationAmount, boolean technicalCompliance, user1.SOP1.bom.Vendor vendor, string vendorQuotationId)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    VendorQuotation()
+                #dataio.default;
+}
+

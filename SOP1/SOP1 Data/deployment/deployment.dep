@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="user1.SOP1:sOP1Data" ruleAppVersion="LATEST-SNAPSHOT" packageName="user1.SOP1.bom" managingXom="true">
+  <name>SOP1_Data</name>
+  <uuid>9a1d31fb-cf15-429e-a509-1aeb5388d797</uuid>
+  <locales>en_US</locales>
+</com.ibm.rules.studio.model.decisionservice:Deployment>
