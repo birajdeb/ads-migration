@@ -18,8 +18,8 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA[the GeographicCount of  aClaim is <a number> ]]></Text>
@@ -27,8 +27,8 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C2">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA[the GeographicArea of  aClaim is one of <GeographicAreas> ]]></Text>
@@ -41,11 +41,20 @@
                 </ConditionDefinition>
                 <ConditionDefinition Id="C4">
                     <Properties>
-                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
                         <Text><![CDATA[the Currency of aClaim is <a Currency> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C5">
+                    <Properties>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the SubType of 'aClaim' is <an object> ]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -81,14 +90,21 @@
                                             <Expression>
                                                 <Param><![CDATA[USD]]></Param>
                                             </Expression>
-                                            <ActionSet>
-                                                <Action DefId="A0">
+                                            <Partition DefId="C5">
+                                                <Condition>
                                                     <Expression>
-                                                        <Param><![CDATA[Eligible]]></Param>
-                                                        <Param><![CDATA["1 STP Eligible USA"]]></Param>
+                                                        <Param><![CDATA[Surgery]]></Param>
                                                     </Expression>
-                                                </Action>
-                                            </ActionSet>
+                                                    <ActionSet>
+                                                        <Action DefId="A0">
+                                                            <Expression>
+                                                                <Param><![CDATA[Eligible]]></Param>
+                                                                <Param><![CDATA["1 STP Eligible USA"]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
                                         </Condition>
                                     </Partition>
                                 </Condition>
@@ -292,6 +308,7 @@
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Medical Center Geographic Count]]></Data>
             <Data Name="Definitions(C4)#HeaderText"><![CDATA[Billed Amount Currency]]></Data>
+            <Data Name="Definitions(C5)#HeaderText"><![CDATA[SubType]]></Data>
             <Data Name="Definitions(C2)#HeaderText"><![CDATA[Medical Center Geographic Area]]></Data>
             <Data Name="Definitions(C3)#HeaderText"><![CDATA[Billed Amount For Claim]]></Data>
             <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[Output]]></Data>
